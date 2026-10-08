@@ -1,0 +1,1 @@
+{"peripheral": "IWDG", "symbol": "PY32F420_HAL_IWDG_H", "expression": "H", "source": "py32f420_hal_iwdg.h:33", "tokenize_ok": true, "parse_ok": true, "missing_idents": ["H"], "all_idents": ["H"], "verdict": {"category": "include_guard", "source": "rule:r1_include_guard", "confidence": "n/a", "notes": "`PY32F420_HAL_IWDG_H` has literal expression `H` — leftover header guard."}}

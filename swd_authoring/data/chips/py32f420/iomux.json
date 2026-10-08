@@ -1,0 +1,3056 @@
+{
+  "chip": "PY32F420",
+  "source": "iomux.xlsx",
+  "version": "1.5",
+  "packages": [
+    "QFN32_2",
+    "LQFP32_1",
+    "LQFP48_2",
+    "LQFP48_1",
+    "LQFP64"
+  ],
+  "ports": {
+    "PortA": {
+      "pins": [
+        {
+          "pin_name": "PA00-WKUP",
+          "packages": {
+            "QFN32_2": 10,
+            "LQFP32_1": 14,
+            "LQFP48_2": 10,
+            "LQFP48_1": 14,
+            "LQFP64": 14
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TRACECK",
+            "AF1": "TIM3_CH3",
+            "AF2": "TIM2_ETR",
+            "AF3": "TIM2_CH1",
+            "AF4": "TIM1_CH1",
+            "AF5": "COMP1_OUT",
+            "AF6": "TIM1_ETR",
+            "AF7": "TIM8_ETR",
+            "AF8": "TIM1_BKIN",
+            "AF9": "TIM8_BKIN",
+            "AF10": "HRPWM_IN0",
+            "AF11": "I2C2_SMBA",
+            "AF12": "USART_CTS",
+            "AF13": "UART1_RX",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN4",
+            "dac": null,
+            "comp": "COMP123_VINN",
+            "opa": null,
+            "vref": "VREFBUF_OUT"
+          },
+          "test": {
+            "scan": "TRST",
+            "fbist": "fbist_nrst"
+          },
+          "additional": {
+            "wakeup": "WKUP3",
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA01",
+          "packages": {
+            "QFN32_2": 11,
+            "LQFP32_1": 15,
+            "LQFP48_2": 11,
+            "LQFP48_1": 15,
+            "LQFP64": 15
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM3_CH2",
+            "AF2": null,
+            "AF3": "TIM2_CH2",
+            "AF4": "TIM1_CH1N",
+            "AF5": "TIM1_ETR",
+            "AF6": "TIM8_ETR",
+            "AF7": "I2C1_SMBA",
+            "AF8": "TIM1_BKIN2",
+            "AF9": "USART_CK",
+            "AF10": "HRPWM_IN1",
+            "AF11": "I2C1_SCL",
+            "AF12": "USART_RTS_DE",
+            "AF13": "UART1_TX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN8",
+            "dac": null,
+            "comp": "COMP2_VINP0",
+            "opa": "OPA2_VINP0",
+            "vref": null
+          },
+          "test": {
+            "scan": "TMS",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA02",
+          "packages": {
+            "QFN32_2": 12,
+            "LQFP32_1": 16,
+            "LQFP48_2": 12,
+            "LQFP48_1": 16,
+            "LQFP64": 16
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TIM3_BKIN",
+            "AF1": "TIM3_CH1",
+            "AF2": "TIM3_ETR",
+            "AF3": "TIM2_CH3",
+            "AF4": "TIM2_ETR",
+            "AF5": "COMP2_OUT",
+            "AF6": "TIM2_BKIN2",
+            "AF7": "TIM3_BKIN2",
+            "AF8": "TIM8_BKIN2",
+            "AF9": "TIM2_BKIN",
+            "AF10": "HRPWM_IN2",
+            "AF11": "I2C1_SDA",
+            "AF12": "USART_TX",
+            "AF13": "UART1_TX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN9",
+            "dac": null,
+            "comp": "COMP2_VINN0",
+            "opa": "OPA2_VINN0",
+            "vref": null
+          },
+          "test": {
+            "scan": "TCK",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA03",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 17,
+            "LQFP48_2": 13,
+            "LQFP48_1": 17,
+            "LQFP64": 17
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM3_CH2",
+            "AF2": "I2C1_SCL",
+            "AF3": "TIM2_CH4",
+            "AF4": "TIM1_CH2N",
+            "AF5": "I2C2_SMBA",
+            "AF6": null,
+            "AF7": "TIM1_ETR",
+            "AF8": "LPTIM_IN1",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN3",
+            "AF11": "LPUART_RX",
+            "AF12": "USART_RX",
+            "AF13": "UART1_RX",
+            "AF14": "UART2_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN8",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA2_VINP1",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA04",
+          "packages": {
+            "QFN32_2": 14,
+            "LQFP32_1": null,
+            "LQFP48_2": 14,
+            "LQFP48_1": 20,
+            "LQFP64": 20
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "MCO2",
+            "AF1": "SPI1_NSS",
+            "AF2": null,
+            "AF3": null,
+            "AF4": null,
+            "AF5": "USART_CK",
+            "AF6": "I2C1_SCL",
+            "AF7": "TIM3_ETR",
+            "AF8": "TIM1_BKIN2",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN4",
+            "AF11": "USART_RX",
+            "AF12": "UART2_RX",
+            "AF13": "UART1_RX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN11",
+            "dac": "DAC_OUT1",
+            "comp": "COMP3_VINP1",
+            "opa": "OPA3_VINN1",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA05",
+          "packages": {
+            "QFN32_2": 15,
+            "LQFP32_1": null,
+            "LQFP48_2": 15,
+            "LQFP48_1": 21,
+            "LQFP64": 21
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "SPI1_SCK",
+            "AF2": "TIM2_ETR",
+            "AF3": "TIM2_CH1",
+            "AF4": null,
+            "AF5": null,
+            "AF6": null,
+            "AF7": "LPTIM_IN1",
+            "AF8": "TIM8_BKIN2",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN5",
+            "AF11": "UART1_TX",
+            "AF12": "I2C2_SDA",
+            "AF13": "UART2_RX",
+            "AF14": "USART_CK",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN10",
+            "dac": "DAC_OUT2",
+            "comp": "COMP3_VINP0",
+            "opa": "OPA3_VINP0",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA06",
+          "packages": {
+            "QFN32_2": 16,
+            "LQFP32_1": null,
+            "LQFP48_2": 16,
+            "LQFP48_1": 22,
+            "LQFP64": 22
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "SPI1_MISO",
+            "AF2": "TIM3_CH1",
+            "AF3": "TIM1_BKIN",
+            "AF4": "TIM8_BKIN",
+            "AF5": "COMP1_OUT",
+            "AF6": "TIM2_CH1",
+            "AF7": "TIM2_BKIN2",
+            "AF8": "TIM3_BKIN2",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN6",
+            "AF11": null,
+            "AF12": "I2C2_SCL",
+            "AF13": "UART2_RX",
+            "AF14": "UART1_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN11",
+            "dac": null,
+            "comp": "COMP3_VINN0",
+            "opa": "OPA3_VINN0",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA07-WKUP",
+          "packages": {
+            "QFN32_2": 17,
+            "LQFP32_1": 19,
+            "LQFP48_2": 17,
+            "LQFP48_1": 23,
+            "LQFP64": 23
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TIM8_CH1N",
+            "AF1": "SPI1_MOSI",
+            "AF2": "TIM3_CH2",
+            "AF3": "TIM1_CH1N",
+            "AF4": "TIM2_CH4",
+            "AF5": "COMP2_OUT",
+            "AF6": "LPUART_CTS",
+            "AF7": "USART_CTS",
+            "AF8": "LPUART_TX",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN7",
+            "AF11": "USART_TX",
+            "AF12": "I2C2_SCL",
+            "AF13": "UART2_TX",
+            "AF14": "USART_RTS_DE",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN5",
+            "dac": "DAC_OUT",
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": "WKUP4",
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA08",
+          "packages": {
+            "QFN32_2": 21,
+            "LQFP32_1": 23,
+            "LQFP48_2": 29,
+            "LQFP48_1": 33,
+            "LQFP64": 41
+          },
+          "gpio_structure": "PLKBSUDODT8",
+          "alternate_functions": {
+            "AF0": "MCO2",
+            "AF1": "USART_RTS_DE",
+            "AF2": "TIM3_CH3",
+            "AF3": "TIM1_CH1",
+            "AF4": "TIM2_CH2",
+            "AF5": null,
+            "AF6": "TIM8_CH1",
+            "AF7": "TIM2_ETR",
+            "AF8": "I2C1_SCL",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN8",
+            "AF11": "HRPWM2_PWMA",
+            "AF12": "LPUART_TX",
+            "AF13": "UART1_TX",
+            "AF14": "USART_CK",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "EDT_UPDATE",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA09-WKUP",
+          "packages": {
+            "QFN32_2": 22,
+            "LQFP32_1": 24,
+            "LQFP48_2": 30,
+            "LQFP48_1": 34,
+            "LQFP64": 42
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "UART1_TX",
+            "AF2": "TIM8_CH1",
+            "AF3": "TIM1_CH2",
+            "AF4": "TIM2_CH1",
+            "AF5": "I2C1_SCL",
+            "AF6": "TIM8_CH2",
+            "AF7": "TIM3_ETR",
+            "AF8": "SPI1_SCK",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN9",
+            "AF11": "HRPWM2_PWMB",
+            "AF12": "LPUART_TX",
+            "AF13": "USART_TX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_EN",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": "WKUP5",
+            "other": "GPIO_TP"
+          }
+        },
+        {
+          "pin_name": "PA10-WKUP",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 31,
+            "LQFP48_1": null,
+            "LQFP64": 43
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "COMP1_OUT",
+            "AF2": "COMP2_OUT",
+            "AF3": "TIM1_CH3",
+            "AF4": "TIM1_BKIN",
+            "AF5": "I2C1_SCL",
+            "AF6": "TIM8_CH3",
+            "AF7": "COMP3_OUT",
+            "AF8": "SPI1_SCK",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN10",
+            "AF11": "HRPWM3_PWMA",
+            "AF12": "UART1_RX",
+            "AF13": "USART_RX",
+            "AF14": "LPTIM_IN1",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": "WKUP2",
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA11-SWCLK",
+          "packages": {
+            "QFN32_2": 23,
+            "LQFP32_1": 25,
+            "LQFP48_2": 32,
+            "LQFP48_1": 35,
+            "LQFP64": 44
+          },
+          "gpio_structure": "PLKBSUDODTV8",
+          "alternate_functions": {
+            "AF0": "SWCLK_JTCK",
+            "AF1": null,
+            "AF2": null,
+            "AF3": "TIM1_CH4",
+            "AF4": null,
+            "AF5": "COMP1_OUT",
+            "AF6": null,
+            "AF7": "I2C1_SMBA",
+            "AF8": null,
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN11",
+            "AF11": "HRPWM3_PWMB",
+            "AF12": "UART1_TX",
+            "AF13": "USART_CTS",
+            "AF14": "LPTIM_IN2",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_CLK",
+            "fbist": "fbist_tck"
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA12",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 33,
+            "LQFP48_1": null,
+            "LQFP64": 45
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "JTRST",
+            "AF1": null,
+            "AF2": "I2C2_SMBA",
+            "AF3": "TIM1_ETR",
+            "AF4": null,
+            "AF5": "COMP2_OUT",
+            "AF6": null,
+            "AF7": null,
+            "AF8": "LPTIM_IN2",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN12",
+            "AF11": "HRPWM_SCOUT",
+            "AF12": null,
+            "AF13": "USART_RTS_DE",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA13-SWDIO",
+          "packages": {
+            "QFN32_2": 24,
+            "LQFP32_1": 26,
+            "LQFP48_2": 34,
+            "LQFP48_1": 36,
+            "LQFP64": 46
+          },
+          "gpio_structure": "PLKBSUDODT8",
+          "alternate_functions": {
+            "AF0": "SWDIO_JTMS",
+            "AF1": null,
+            "AF2": null,
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": "I2C1_SDA",
+            "AF7": null,
+            "AF8": "SPI1_MISO",
+            "AF9": null,
+            "AF10": "HRPWM_IN13",
+            "AF11": null,
+            "AF12": "UART1_RX",
+            "AF13": null,
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_IN0",
+            "fbist": "fbist_tdo/fbist_tdi"
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA14-SWCLK",
+          "packages": {
+            "QFN32_2": 25,
+            "LQFP32_1": 27,
+            "LQFP48_2": 37,
+            "LQFP48_1": 37,
+            "LQFP64": 49
+          },
+          "gpio_structure": "PLKBSUDODT8",
+          "alternate_functions": {
+            "AF0": "SWCLK_JTCK",
+            "AF1": "I2C1_SCL",
+            "AF2": null,
+            "AF3": "UART2_TX",
+            "AF4": "TIM1_CH1",
+            "AF5": null,
+            "AF6": "I2C1_SMBA",
+            "AF7": "TIM8_CH1",
+            "AF8": "SPI1_MOSI",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN14",
+            "AF11": "HRPWM1_PWMA",
+            "AF12": "LPTIM_ETR",
+            "AF13": "UART1_TX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_IN1",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PA15",
+          "packages": {
+            "QFN32_2": 26,
+            "LQFP32_1": 28,
+            "LQFP48_2": 38,
+            "LQFP48_1": 38,
+            "LQFP64": 50
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "ADC_SOCBO",
+            "AF1": "I2C1_SDA",
+            "AF2": "TIM2_ETR",
+            "AF3": "TIM2_CH1",
+            "AF4": "TIM1_CH2",
+            "AF5": "TIM1_CH1N",
+            "AF6": "TIM8_CH1N",
+            "AF7": "TIM8_CH2",
+            "AF8": "SPI1_NSS",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN15",
+            "AF11": "HRPWM1_PWMB",
+            "AF12": "LPTIM_OUT",
+            "AF13": "UART1_RX",
+            "AF14": "LPUART_RTS_DE",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_OUT0",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        }
+      ],
+      "pin_count": 16
+    },
+    "PortB": {
+      "pins": [
+        {
+          "pin_name": "PB00",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 18,
+            "LQFP48_1": 26,
+            "LQFP64": 26
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "TIM3_CH3",
+            "AF3": "TIM1_CH2N",
+            "AF4": "TIM8_CH2N",
+            "AF5": "USART_CTS",
+            "AF6": "TIM2_ETR",
+            "AF7": "FDCAN_TX",
+            "AF8": "SPI1_MISO",
+            "AF9": "USART_TX",
+            "AF10": "HRPWM_IN16",
+            "AF11": "I2C1_SCL",
+            "AF12": null,
+            "AF13": "UART1_RX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN12",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA4_VINP0",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB01",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 19,
+            "LQFP48_1": 27,
+            "LQFP64": 27
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "TIM3_CH4",
+            "AF3": "TIM1_CH3N",
+            "AF4": "TIM8_CH3N",
+            "AF5": "USART_CK",
+            "AF6": "TIM3_ETR",
+            "AF7": "FDCAN_RX",
+            "AF8": "SPI1_MOSI",
+            "AF9": "USART_RX",
+            "AF10": "HRPWM_IN17",
+            "AF11": "HRPWM_SCOUT",
+            "AF12": "LPUART_RX",
+            "AF13": "UART1_TX",
+            "AF14": "I2C2_SDA",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN13",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA4_VINN0",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB02",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 20,
+            "LQFP48_1": 28,
+            "LQFP64": 28
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "COMP3_OUT",
+            "AF2": "TIM3_ETR",
+            "AF3": null,
+            "AF4": null,
+            "AF5": "TIM2_ETR",
+            "AF6": null,
+            "AF7": "FDCAN_TX",
+            "AF8": "I2C1_SMBA",
+            "AF9": "USART_TX",
+            "AF10": "HRPWM_IN18",
+            "AF11": null,
+            "AF12": "LPUART_TX",
+            "AF13": null,
+            "AF14": "I2C2_SCL",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN4",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA3_VOUT",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB03",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 55
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "SPI1_SCK",
+            "AF2": "SPI1_MISO",
+            "AF3": "TIM2_CH2",
+            "AF4": "SPI1_MOSI",
+            "AF5": "SPI1_NSS",
+            "AF6": "TIM1_CH4",
+            "AF7": "TIM8_CH4",
+            "AF8": "I2C1_SCL",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN19",
+            "AF11": "HRPWM_SCOUT",
+            "AF12": "LPUART_TX",
+            "AF13": "USART_RTS_DE",
+            "AF14": "UART2_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB04",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 56
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "I2C2_SMBA",
+            "AF1": "SPI1_MISO",
+            "AF2": "TIM3_CH1",
+            "AF3": "SPI1_SCK",
+            "AF4": "SPI1_MOSI",
+            "AF5": "SPI1_NSS",
+            "AF6": "TIM1_CH4N",
+            "AF7": "TIM8_CH4N",
+            "AF8": "I2C1_SDA",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN20",
+            "AF11": "UART2_RX",
+            "AF12": "USART_RX",
+            "AF13": "USART_CTS",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB05",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 57
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "SPI1_MISO",
+            "AF1": "SPI1_MOSI",
+            "AF2": "TIM3_CH2",
+            "AF3": "SPI1_SCK",
+            "AF4": "I2C1_SMBA",
+            "AF5": "SPI1_NSS",
+            "AF6": "TIM8_CH4",
+            "AF7": "TIM1_CH4",
+            "AF8": "I2C1_SCL",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN21",
+            "AF11": "UART1_TX",
+            "AF12": "USART_TX",
+            "AF13": "USART_CK",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB06",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 58
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "SPI1_NSS",
+            "AF2": "I2C1_SCL",
+            "AF3": "SPI1_SCK",
+            "AF4": "SPI1_MOSI",
+            "AF5": "SPI1_MISO",
+            "AF6": "TIM8_CH4N",
+            "AF7": "TIM1_CH4N",
+            "AF8": "TIM3_CH1",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN22",
+            "AF11": "UART1_TX",
+            "AF12": "UART2_TX",
+            "AF13": "USART_TX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB07",
+          "packages": {
+            "QFN32_2": 31,
+            "LQFP32_1": null,
+            "LQFP48_2": 43,
+            "LQFP48_1": 43,
+            "LQFP64": 59
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "SPI2_SCK",
+            "AF1": "SPI2_MISO",
+            "AF2": "I2C1_SDA",
+            "AF3": "SPI2_NSS",
+            "AF4": "TIM8_CH1",
+            "AF5": "TIM2_CH1",
+            "AF6": "TIM1_CH4",
+            "AF7": "SPI2_MOSI",
+            "AF8": "TIM3_CH2",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN23",
+            "AF11": "HRPWM4_PWMA",
+            "AF12": null,
+            "AF13": "USART_RX",
+            "AF14": "LPUART_CTS",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB08",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 45,
+            "LQFP48_1": 45,
+            "LQFP64": 61
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "SPI2_MOSI",
+            "AF1": "SPI2_SCK",
+            "AF2": "I2C1_SCL",
+            "AF3": "COMP1_OUT",
+            "AF4": "TIM8_CH3",
+            "AF5": "TIM8_CH2",
+            "AF6": "I2C2_SDA",
+            "AF7": "SPI2_MISO",
+            "AF8": "SPI2_NSS",
+            "AF9": null,
+            "AF10": "HRPWM_IN24",
+            "AF11": "HRPWM5_PWMA",
+            "AF12": "FDCAN_RX",
+            "AF13": "USART_TX",
+            "AF14": "TIM3_CH3",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB09",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 46,
+            "LQFP48_1": 46,
+            "LQFP64": 62
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "SPI2_NSS",
+            "AF1": "SPI2_SCK",
+            "AF2": "I2C1_SDA",
+            "AF3": "COMP2_OUT",
+            "AF4": "TIM8_CH1N",
+            "AF5": "TIM8_CH2N",
+            "AF6": "I2C2_SCL",
+            "AF7": "SPI2_MISO",
+            "AF8": "SPI2_NSS",
+            "AF9": "I2C2_SMBA",
+            "AF10": "HRPWM_IN25",
+            "AF11": "HRPWM5_PWMB",
+            "AF12": "FDCAN_TX",
+            "AF13": "UART1_TX",
+            "AF14": "TIM3_CH4",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB10",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 21,
+            "LQFP48_1": 29,
+            "LQFP64": 29
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "COMP2_OUT",
+            "AF2": "TIM2_CH4",
+            "AF3": "TIM2_CH3",
+            "AF4": "TIM1_CH2",
+            "AF5": "TIM3_ETR",
+            "AF6": "TIM2_BKIN",
+            "AF7": "TIM3_BKIN",
+            "AF8": "LPUART_TX",
+            "AF9": "USART_TX",
+            "AF10": "HRPWM_IN26",
+            "AF11": "I2C2_SCL",
+            "AF12": "LPTIM_IN1",
+            "AF13": "UART2_TX",
+            "AF14": "FDCAN_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN5",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA4_VOUT",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB11",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 22,
+            "LQFP48_1": null,
+            "LQFP64": 30
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "COMP1_OUT",
+            "AF3": "TIM2_CH4",
+            "AF4": null,
+            "AF5": null,
+            "AF6": "TIM1_BKIN",
+            "AF7": "TIM8_BKIN",
+            "AF8": "LPUART_RX",
+            "AF9": "USART_RX",
+            "AF10": "HRPWM_IN27",
+            "AF11": "I2C2_SDA",
+            "AF12": "LPTIM_IN2",
+            "AF13": "UART2_RX",
+            "AF14": "FDCAN_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB12",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 25,
+            "LQFP48_1": null,
+            "LQFP64": 33
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM8_BKIN",
+            "AF2": "TIM1_ETR",
+            "AF3": "TIM1_BKIN",
+            "AF4": "I2C2_SMBA",
+            "AF5": null,
+            "AF6": "TIM2_CH4",
+            "AF7": "TIM3_CH4",
+            "AF8": "SPI1_NSS",
+            "AF9": "I2C1_SMBA",
+            "AF10": "HRPWM_IN28",
+            "AF11": "HRPWM4_PWMA",
+            "AF12": "HRPWM_SCOUT",
+            "AF13": "USART_CK",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB13",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 26,
+            "LQFP48_1": null,
+            "LQFP64": 34
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": "I2C1_SDA",
+            "AF1": "TIM8_BKIN",
+            "AF2": "TIM8_ETR",
+            "AF3": "TIM1_CH1N",
+            "AF4": null,
+            "AF5": "TIM8_CH1N",
+            "AF6": "LPUART_RTS_DE",
+            "AF7": "COMP1_OUT",
+            "AF8": "SPI1_SCK",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN29",
+            "AF11": "HRPWM4_PWMB",
+            "AF12": "USART_CTS",
+            "AF13": "USART_RX",
+            "AF14": "LPTIM_ETR",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB14",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 27,
+            "LQFP48_1": null,
+            "LQFP64": 35
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": "I2C2_SCL",
+            "AF1": "TIM2_BKIN",
+            "AF2": "TIM2_ETR",
+            "AF3": "TIM1_CH2N",
+            "AF4": "TIM3_CH4",
+            "AF5": "TIM8_CH2N",
+            "AF6": "LPUART_CTS",
+            "AF7": "COMP2_OUT",
+            "AF8": "SPI1_MISO",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN30",
+            "AF11": "HRPWM5_PWMA",
+            "AF12": "USART_RTS_DE",
+            "AF13": "USART_TX",
+            "AF14": "LPTIM_OUT",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PB15",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 28,
+            "LQFP48_1": null,
+            "LQFP64": 36
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": "I2C2_SDA",
+            "AF1": "TIM3_BKIN",
+            "AF2": "TIM3_ETR",
+            "AF3": "TIM1_CH3N",
+            "AF4": "TIM3_CH3",
+            "AF5": "TIM8_CH3N",
+            "AF6": "USART_CK",
+            "AF7": "COMP3_OUT",
+            "AF8": "SPI1_MOSI",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN31",
+            "AF11": "HRPWM5_PWMB",
+            "AF12": "UART2_RX",
+            "AF13": "USART_RX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        }
+      ],
+      "pin_count": 16
+    },
+    "PortC": {
+      "pins": [
+        {
+          "pin_name": "PC00",
+          "packages": {
+            "QFN32_2": 4,
+            "LQFP32_1": 8,
+            "LQFP48_2": null,
+            "LQFP48_1": 8,
+            "LQFP64": 8
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TRACED0",
+            "AF1": "TIM3_CH3",
+            "AF2": "TIM8_CH4",
+            "AF3": "TIM1_CH4",
+            "AF4": "UART2_TX",
+            "AF5": "UART1_TX",
+            "AF6": "I2C2_SMBA",
+            "AF7": "FDCAN_TX",
+            "AF8": "I2C1_SCL",
+            "AF9": "LPTIM_ETR",
+            "AF10": "HRPWM_IN32",
+            "AF11": "LPUART_TX",
+            "AF12": "USART_TX",
+            "AF13": "I2C1_SMBA",
+            "AF14": "USART_CK",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN6",
+            "dac": null,
+            "comp": "COMP1_VINP2",
+            "opa": "OPA1_VINP1",
+            "vref": null
+          },
+          "test": {
+            "scan": "DUMMY1",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC01",
+          "packages": {
+            "QFN32_2": 5,
+            "LQFP32_1": 9,
+            "LQFP48_2": null,
+            "LQFP48_1": 9,
+            "LQFP64": 9
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TRACED1",
+            "AF1": "TIM3_CH4",
+            "AF2": "TIM8_CH4N",
+            "AF3": "TIM1_CH4N",
+            "AF4": "UART2_RX",
+            "AF5": "UART1_RX",
+            "AF6": "SPI1_MOSI",
+            "AF7": "FDCAN_RX",
+            "AF8": "I2C1_SDA",
+            "AF9": "LPTIM_OUT",
+            "AF10": "HRPWM_IN33",
+            "AF11": "LPUART_RX",
+            "AF12": "USART_RX",
+            "AF13": "I2C1_SMBA",
+            "AF14": "USART_CTS",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN7",
+            "dac": null,
+            "comp": "COMP1_VINP1",
+            "opa": "OPA1_VINN1",
+            "vref": null
+          },
+          "test": {
+            "scan": "DUMMY2",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC02",
+          "packages": {
+            "QFN32_2": 6,
+            "LQFP32_1": 10,
+            "LQFP48_2": null,
+            "LQFP48_1": 10,
+            "LQFP64": 10
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TRACED2",
+            "AF1": "TIM2_BKIN",
+            "AF2": "TIM2_BKIN2",
+            "AF3": "TIM3_BKIN",
+            "AF4": "TIM3_BKIN2",
+            "AF5": "TIM1_BKIN",
+            "AF6": "TIM1_BKIN2",
+            "AF7": "TIM8_BKIN",
+            "AF8": "TIM8_BKIN2",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN34",
+            "AF11": "LPUART_RTS_DE",
+            "AF12": "UART1_TX",
+            "AF13": "I2C2_SCL",
+            "AF14": "USART_RTS_DE",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN6",
+            "dac": null,
+            "comp": "COMP1_VINP0",
+            "opa": "OPA1_VINP0",
+            "vref": null
+          },
+          "test": {
+            "scan": "ATE_CLK0",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC03",
+          "packages": {
+            "QFN32_2": 7,
+            "LQFP32_1": 11,
+            "LQFP48_2": null,
+            "LQFP48_1": 11,
+            "LQFP64": 11
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TRACED3",
+            "AF1": null,
+            "AF2": "TIM3_BKIN",
+            "AF3": "TIM3_BKIN2",
+            "AF4": null,
+            "AF5": null,
+            "AF6": null,
+            "AF7": null,
+            "AF8": "LPTIM_IN2",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN35",
+            "AF11": "LPUART_CTS",
+            "AF12": "UART1_RX",
+            "AF13": "I2C2_SDA",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN7",
+            "dac": null,
+            "comp": "COMP1_VINN0",
+            "opa": "OPA1_VINN0",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC04",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": 24,
+            "LQFP64": 24
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "TIM3_CH1",
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": "TIM1_ETR",
+            "AF7": "FDCAN_TX",
+            "AF8": "LPUART_TX",
+            "AF9": "USART_TX",
+            "AF10": "HRPWM_IN36",
+            "AF11": "I2C2_SCL",
+            "AF12": "UART1_TX",
+            "AF13": "UART2_TX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN12",
+            "dac": null,
+            "comp": "COMP4_VINP0",
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC05",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": 25,
+            "LQFP64": 25
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "TIM3_CH2",
+            "AF3": null,
+            "AF4": "I2C2_SMBA",
+            "AF5": "USART_RTS_DE",
+            "AF6": "TIM8_ETR",
+            "AF7": "FDCAN_RX",
+            "AF8": "LPUART_RX",
+            "AF9": "USART_RX",
+            "AF10": "HRPWM_IN37",
+            "AF11": "I2C1_SDA",
+            "AF12": "UART1_RX",
+            "AF13": "UART2_RX",
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN13",
+            "dac": null,
+            "comp": "COMP4_VINN0",
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC06",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 37
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM3_CH1",
+            "AF2": "I2C1_SCL",
+            "AF3": "TIM1_CH1",
+            "AF4": "TIM3_CH2",
+            "AF5": "UART1_TX",
+            "AF6": "USART_RTS_DE",
+            "AF7": "COMP4_OUT",
+            "AF8": "TIM8_CH1",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN38",
+            "AF11": "HRPWM1_PWMA",
+            "AF12": "UART2_TX",
+            "AF13": "USART_TX",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC07",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 38
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM3_CH2",
+            "AF2": "I2C1_SDA",
+            "AF3": "TIM1_CH2",
+            "AF4": "TIM3_CH1",
+            "AF5": "UART1_RX",
+            "AF6": "USART_CTS",
+            "AF7": "LPTIM_OUT",
+            "AF8": "TIM8_CH2",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN39",
+            "AF11": "HRPWM1_PWMB",
+            "AF12": "UART2_RX",
+            "AF13": "USART_RX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC08",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": null,
+            "LQFP64": 39
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM3_CH3",
+            "AF2": "I2C2_SMBA",
+            "AF3": "TIM1_CH3",
+            "AF4": "TIM2_CH4",
+            "AF5": "TIM8_CH3",
+            "AF6": null,
+            "AF7": "LPTIM_ETR",
+            "AF8": "I2C1_SCL",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN40",
+            "AF11": "HRPWM6_PWMA",
+            "AF12": "UART2_TX",
+            "AF13": null,
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC09",
+          "packages": {
+            "QFN32_2": 20,
+            "LQFP32_1": 22,
+            "LQFP48_2": null,
+            "LQFP48_1": 32,
+            "LQFP64": 40
+          },
+          "gpio_structure": "PLKBSUDODT8",
+          "alternate_functions": {
+            "AF0": "MCO1",
+            "AF1": "TIM3_CH4",
+            "AF2": "USART_RTS_DE",
+            "AF3": "TIM1_CH4",
+            "AF4": "TIM2_CH3",
+            "AF5": "TIM8_CH4",
+            "AF6": "TIM1_CH3N",
+            "AF7": "TIM8_ETR",
+            "AF8": "I2C1_SDA",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN41",
+            "AF11": "HRPWM6_PWMB",
+            "AF12": "UART2_RX",
+            "AF13": null,
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "EDT_CLK",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC10",
+          "packages": {
+            "QFN32_2": 27,
+            "LQFP32_1": 29,
+            "LQFP48_2": 39,
+            "LQFP48_1": 39,
+            "LQFP64": 51
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "ADC_SOCAO",
+            "AF1": "I2C2_SCL",
+            "AF2": "USART_TX",
+            "AF3": "TIM2_CH2",
+            "AF4": "TIM1_CH3",
+            "AF5": "TIM1_CH2",
+            "AF6": "TIM8_CH2",
+            "AF7": "TIM8_CH3",
+            "AF8": "SPI1_SCK",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN42",
+            "AF11": "HRPWM2_PWMA",
+            "AF12": "HRPWM_SCOUT",
+            "AF13": "UART2_TX",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_OUT1",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC11",
+          "packages": {
+            "QFN32_2": 28,
+            "LQFP32_1": 30,
+            "LQFP48_2": 40,
+            "LQFP48_1": 40,
+            "LQFP64": 52
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "I2C2_SCL",
+            "AF2": "USART_RX",
+            "AF3": "TIM3_CH1",
+            "AF4": "TIM1_CH1N",
+            "AF5": "TIM1_CH2N",
+            "AF6": "TIM8_CH2N",
+            "AF7": "TIM8_CH1N",
+            "AF8": "SPI1_MISO",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN43",
+            "AF11": "HRPWM2_PWMB",
+            "AF12": null,
+            "AF13": "UART2_RX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "PLL_DIVOUT",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC12",
+          "packages": {
+            "QFN32_2": 29,
+            "LQFP32_1": 31,
+            "LQFP48_2": 41,
+            "LQFP48_1": 41,
+            "LQFP64": 53
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TIM3_CH2",
+            "AF1": "I2C2_SDA",
+            "AF2": "USART_RX",
+            "AF3": "USART_CK",
+            "AF4": "TIM1_CH2N",
+            "AF5": "TIM1_CH3",
+            "AF6": "TIM8_CH3",
+            "AF7": "TIM8_CH2N",
+            "AF8": "SPI1_MOSI",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN44",
+            "AF11": "HRPWM3_PWMA",
+            "AF12": "I2C1_SMBA",
+            "AF13": "UART2_TX",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "TDO",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PC13-TAMPER-WKUP",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 2,
+            "LQFP48_2": 2,
+            "LQFP48_1": 2,
+            "LQFP64": 2
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM1_CH4N",
+            "AF2": "TIM8_CH4N",
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": null,
+            "AF7": "TIM8_BKIN2",
+            "AF8": null,
+            "AF9": "UART1_RX",
+            "AF10": "HRPWM_IN45",
+            "AF11": "UART2_RX",
+            "AF12": "LPUART_RX",
+            "AF13": "USART_RX",
+            "AF14": "LPUART_RTS_DE",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN1/ADC2_IN1",
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": "WKUP1",
+            "other": "TAMP_RTC"
+          }
+        },
+        {
+          "pin_name": "PC14-OSC32_IN",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 3,
+            "LQFP48_2": 3,
+            "LQFP48_1": 3,
+            "LQFP64": 3
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "MCO1",
+            "AF1": "TIM3_CH1",
+            "AF2": "TIM1_ETR",
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": null,
+            "AF7": "TIM2_BKIN2",
+            "AF8": "I2C1_SCL",
+            "AF9": "UART1_TX",
+            "AF10": "HRPWM_IN46",
+            "AF11": "UART2_TX",
+            "AF12": "LPUART_TX",
+            "AF13": "USART_TX",
+            "AF14": "USART_CTS",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN2/ADC2_IN2",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA2_VOUT",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "OSC32_IN"
+          }
+        },
+        {
+          "pin_name": "PC15-OSC32_OUT",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 4,
+            "LQFP48_2": 4,
+            "LQFP48_1": 4,
+            "LQFP64": 4
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": "MCO2",
+            "AF1": "TIM3_CH2",
+            "AF2": "TIM8_ETR",
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": "SPI2_NSS",
+            "AF7": "TIM3_BKIN2",
+            "AF8": "I2C1_SDA",
+            "AF9": "UART1_RX",
+            "AF10": "HRPWM_IN47",
+            "AF11": "UART2_RX",
+            "AF12": "LPUART_RX",
+            "AF13": "USART_RX",
+            "AF14": "USART_RTS_DE",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN3/ADC2_IN3",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA1_VOUT",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "OSC32_OUT"
+          }
+        }
+      ],
+      "pin_count": 16
+    },
+    "PortD": {
+      "pins": [
+        {
+          "pin_name": "PD00-OSC_IN",
+          "packages": {
+            "QFN32_2": 1,
+            "LQFP32_1": 5,
+            "LQFP48_2": 5,
+            "LQFP48_1": 5,
+            "LQFP64": 5
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": null,
+            "AF3": "TIM1_CH1",
+            "AF4": null,
+            "AF5": null,
+            "AF6": null,
+            "AF7": "TIM3_BKIN",
+            "AF8": "I2C2_SCL",
+            "AF9": "USART_CTS",
+            "AF10": "HRPWM_IN48",
+            "AF11": "LPUART_RX",
+            "AF12": "LPUART_CTS",
+            "AF13": null,
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "PLL_REF",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "OSC_IN"
+          }
+        },
+        {
+          "pin_name": "PD01-OSC_OUT",
+          "packages": {
+            "QFN32_2": 2,
+            "LQFP32_1": 6,
+            "LQFP48_2": 6,
+            "LQFP48_1": 6,
+            "LQFP64": 6
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "MCO1",
+            "AF1": null,
+            "AF2": null,
+            "AF3": "TIM1_CH2N",
+            "AF4": "COMP1_OUT",
+            "AF5": "COMP2_OUT",
+            "AF6": "COMP3_OUT",
+            "AF7": "COMP4_OUT",
+            "AF8": "I2C2_SDA",
+            "AF9": "USART_RTS_DE",
+            "AF10": "HRPWM_IN49",
+            "AF11": "LPUART_TX",
+            "AF12": "LPUART_RTS_DE",
+            "AF13": null,
+            "AF14": null,
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "PLL_LOCK",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "OSC_OUT"
+          }
+        },
+        {
+          "pin_name": "PD02",
+          "packages": {
+            "QFN32_2": 30,
+            "LQFP32_1": 32,
+            "LQFP48_2": 42,
+            "LQFP48_1": 42,
+            "LQFP64": 54
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "TIM3_CH1",
+            "AF1": "TIM3_ETR",
+            "AF2": "I2C1_SCL",
+            "AF3": "I2C2_SDA",
+            "AF4": "TIM1_CH3N",
+            "AF5": null,
+            "AF6": "LPTIM_OUT",
+            "AF7": "TIM8_CH3N",
+            "AF8": "LPUART_RX",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN50",
+            "AF11": "HRPWM3_PWMB",
+            "AF12": "UART2_RX",
+            "AF13": "USART_TX",
+            "AF14": "USART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "TDI",
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD03-BOOT0",
+          "packages": {
+            "QFN32_2": 32,
+            "LQFP32_1": null,
+            "LQFP48_2": 44,
+            "LQFP48_1": 44,
+            "LQFP64": 60
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "SPI2_MISO",
+            "AF1": "SPI2_MOSI",
+            "AF2": null,
+            "AF3": "SPI2_NSS",
+            "AF4": "TIM8_CH2",
+            "AF5": "TIM8_CH1N",
+            "AF6": "TIM1_CH4N",
+            "AF7": "SPI2_SCK",
+            "AF8": "USART_CTS",
+            "AF9": null,
+            "AF10": "HRPWM_IN51",
+            "AF11": "HRPWM4_PWMB",
+            "AF12": null,
+            "AF13": null,
+            "AF14": "UART1_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "BOOT0"
+          }
+        },
+        {
+          "pin_name": "PD04",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 18,
+            "LQFP48_2": null,
+            "LQFP48_1": 18,
+            "LQFP64": 18
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": "I2C1_SDA",
+            "AF3": "TIM2_CH1",
+            "AF4": null,
+            "AF5": "SPI1_SCK",
+            "AF6": "USART_TX",
+            "AF7": "TIM8_ETR",
+            "AF8": "USART_RTS_DE",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN52",
+            "AF11": "UART1_TX",
+            "AF12": "UART2_TX",
+            "AF13": null,
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN9",
+            "dac": null,
+            "comp": null,
+            "opa": "OPA2_VINN1",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD05",
+          "packages": {
+            "QFN32_2": 13,
+            "LQFP32_1": null,
+            "LQFP48_2": null,
+            "LQFP48_1": 19,
+            "LQFP64": 19
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "MCO1",
+            "AF1": "I2C2_SMBA",
+            "AF2": "I2C1_SCL",
+            "AF3": "TIM2_CH2",
+            "AF4": null,
+            "AF5": null,
+            "AF6": "USART_TX",
+            "AF7": "TIM2_ETR",
+            "AF8": null,
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN53",
+            "AF11": "UART1_TX",
+            "AF12": "UART2_TX",
+            "AF13": null,
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC2_IN10",
+            "dac": null,
+            "comp": "COMP3_VINP2",
+            "opa": "OPA3_VINP1",
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD06",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 35,
+            "LQFP48_1": null,
+            "LQFP64": 47
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "JTDI",
+            "AF1": null,
+            "AF2": null,
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": "USART_RX",
+            "AF7": "SPI1_SCK",
+            "AF8": "I2C2_SDA",
+            "AF9": "FDCAN_RX",
+            "AF10": "HRPWM_IN54",
+            "AF11": "UART1_RX",
+            "AF12": "UART2_RX",
+            "AF13": null,
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD07",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 36,
+            "LQFP48_1": null,
+            "LQFP64": 48
+          },
+          "gpio_structure": "PLKBSUDOD8",
+          "alternate_functions": {
+            "AF0": "JTDO",
+            "AF1": null,
+            "AF2": "SPI1_MISO",
+            "AF3": "TIM1_CH2",
+            "AF4": null,
+            "AF5": null,
+            "AF6": "USART_TX",
+            "AF7": "USART_CK",
+            "AF8": "I2C2_SCL",
+            "AF9": "FDCAN_TX",
+            "AF10": "HRPWM_IN55",
+            "AF11": "UART1_TX",
+            "AF12": "UART2_TX",
+            "AF13": null,
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD08",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 47,
+            "LQFP48_1": 47,
+            "LQFP64": 63
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": null,
+            "AF2": null,
+            "AF3": "UART1_TX",
+            "AF4": "TIM8_CH2N",
+            "AF5": "TIM8_CH3",
+            "AF6": "FDCAN_TX",
+            "AF7": "SPI2_MOSI",
+            "AF8": null,
+            "AF9": "I2C2_SCL",
+            "AF10": "HRPWM_IN56",
+            "AF11": "HRPWM6_PWMA",
+            "AF12": "UART2_TX",
+            "AF13": "USART_TX",
+            "AF14": "LPUART_TX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD09",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": null,
+            "LQFP48_2": 48,
+            "LQFP48_1": 48,
+            "LQFP64": 64
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "SPI2_NSS",
+            "AF2": null,
+            "AF3": "UART1_RX",
+            "AF4": "TIM8_CH3N",
+            "AF5": null,
+            "AF6": "FDCAN_RX",
+            "AF7": "SPI2_MISO",
+            "AF8": null,
+            "AF9": "I2C2_SDA",
+            "AF10": "HRPWM_IN57",
+            "AF11": "HRPWM6_PWMB",
+            "AF12": "UART2_RX",
+            "AF13": "USART_RX",
+            "AF14": "LPUART_RX",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD10",
+          "packages": {
+            "QFN32_2": null,
+            "LQFP32_1": 1,
+            "LQFP48_2": 1,
+            "LQFP48_1": 1,
+            "LQFP64": 1
+          },
+          "gpio_structure": "PLKBSUDODH8",
+          "alternate_functions": {
+            "AF0": null,
+            "AF1": "TIM1_CH4",
+            "AF2": "TIM8_CH4",
+            "AF3": null,
+            "AF4": null,
+            "AF5": null,
+            "AF6": "SPI2_SCK",
+            "AF7": "TIM1_BKIN2",
+            "AF8": "USART_CK",
+            "AF9": "I2C1_SCL",
+            "AF10": "HRPWM_IN58",
+            "AF11": "UART1_TX",
+            "AF12": "LPUART_TX",
+            "AF13": "USART_TX",
+            "AF14": "LPUART_CTS",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": "ADC1_IN0/ADC2_IN0",
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": null,
+            "fbist": null
+          },
+          "additional": {
+            "wakeup": null,
+            "other": null
+          }
+        },
+        {
+          "pin_name": "PD11-NRST",
+          "packages": {
+            "QFN32_2": 3,
+            "LQFP32_1": 7,
+            "LQFP48_2": 7,
+            "LQFP48_1": 7,
+            "LQFP64": 7
+          },
+          "gpio_structure": "PLKBSUDODLTV8",
+          "alternate_functions": {
+            "AF0": "MCO2",
+            "AF1": "TIM1_BKIN",
+            "AF2": null,
+            "AF3": null,
+            "AF4": "COMP1_OUT",
+            "AF5": "COMP2_OUT",
+            "AF6": "COMP3_OUT",
+            "AF7": "COMP4_OUT",
+            "AF8": "USART_CTS",
+            "AF9": null,
+            "AF10": "HRPWM_IN59",
+            "AF11": "HRPWM_SCOUT",
+            "AF12": "TIM1_BKIN2",
+            "AF13": "TIM8_BKIN",
+            "AF14": "TIM8_BKIN2",
+            "AF15": "EVENTOUT"
+          },
+          "analog": {
+            "adc": null,
+            "dac": null,
+            "comp": null,
+            "opa": null,
+            "vref": null
+          },
+          "test": {
+            "scan": "SCAN_RSTN",
+            "fbist": "fbist_nrst"
+          },
+          "additional": {
+            "wakeup": null,
+            "other": "NRST"
+          }
+        }
+      ],
+      "pin_count": 12
+    }
+  },
+  "total_pins": 60,
+  "special_pins": {
+    "耐高压FT": [
+      "PA08",
+      "PA11-SWCLK",
+      "PA13-SWDIO",
+      "PA14-SWCLK",
+      "PC09"
+    ],
+    "高速SPI①": [
+      "PB12",
+      "PB13",
+      "PB14",
+      "PB15"
+    ],
+    "高速SPI②": [
+      "PD8",
+      "PD9",
+      "PD10",
+      "PC15"
+    ]
+  },
+  "package_usage": [
+    {
+      "封装": "LQFP64",
+      "用途": "(1)电机控制; (2)兼容小华448,可用于奥克斯定制; (3)兼容STMF103,可用于扫地机器人; (4)兼容小华334,用于数字电源",
+      "高速SPI": "PA14-SWCLK"
+    },
+    {
+      "封装": "LQFP48_1",
+      "用途": "主推型号,电机控制",
+      "高速SPI": "PA11-SWCLK"
+    },
+    {
+      "封装": "LQFP48_2",
+      "用途": "(1)兼容STMF103,用于扫地机器人; (2)兼容小华334,用于数字电源",
+      "高速SPI": "PA14-SWCLK"
+    },
+    {
+      "封装": "LQFP32_1",
+      "用途": "电机控制",
+      "高速SPI": "PA11-SWCLK"
+    },
+    {
+      "封装": "LQFP32_2",
+      "用途": "数字电源控制",
+      "高速SPI": "PA11-SWCLK"
+    }
+  ],
+  "peripheral_completeness": {
+    "adc": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "comp1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "comp2": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "comp3": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "comp4": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "uncategorized": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "fdcan": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm2": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm3": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm4": {
+      "qfn32_2": [],
+      "lqfp32_1": [
+        "hrpwm4_pwma",
+        "hrpwm4_pwmb"
+      ],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm5": {
+      "qfn32_2": [
+        "hrpwm5_pwma",
+        "hrpwm5_pwmb"
+      ],
+      "lqfp32_1": [
+        "hrpwm5_pwma",
+        "hrpwm5_pwmb"
+      ],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm6": {
+      "qfn32_2": [
+        "hrpwm6_pwma"
+      ],
+      "lqfp32_1": [
+        "hrpwm6_pwma"
+      ],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "hrpwm": {
+      "qfn32_2": [
+        "hrpwm_in3",
+        "hrpwm_in10",
+        "hrpwm_in12",
+        "hrpwm_in16",
+        "hrpwm_in17",
+        "hrpwm_in18",
+        "hrpwm_in19",
+        "hrpwm_in20",
+        "hrpwm_in21",
+        "hrpwm_in22",
+        "hrpwm_in24",
+        "hrpwm_in25",
+        "hrpwm_in26",
+        "hrpwm_in27",
+        "hrpwm_in28",
+        "hrpwm_in29",
+        "hrpwm_in30",
+        "hrpwm_in31",
+        "hrpwm_in36",
+        "hrpwm_in37",
+        "hrpwm_in38",
+        "hrpwm_in39",
+        "hrpwm_in40",
+        "hrpwm_in45",
+        "hrpwm_in46",
+        "hrpwm_in47",
+        "hrpwm_in52",
+        "hrpwm_in54",
+        "hrpwm_in55",
+        "hrpwm_in56",
+        "hrpwm_in57",
+        "hrpwm_in58"
+      ],
+      "lqfp32_1": [
+        "hrpwm_in4",
+        "hrpwm_in5",
+        "hrpwm_in6",
+        "hrpwm_in10",
+        "hrpwm_in12",
+        "hrpwm_in16",
+        "hrpwm_in17",
+        "hrpwm_in18",
+        "hrpwm_in19",
+        "hrpwm_in20",
+        "hrpwm_in21",
+        "hrpwm_in22",
+        "hrpwm_in23",
+        "hrpwm_in24",
+        "hrpwm_in25",
+        "hrpwm_in26",
+        "hrpwm_in27",
+        "hrpwm_in28",
+        "hrpwm_in29",
+        "hrpwm_in30",
+        "hrpwm_in31",
+        "hrpwm_in36",
+        "hrpwm_in37",
+        "hrpwm_in38",
+        "hrpwm_in39",
+        "hrpwm_in40",
+        "hrpwm_in51",
+        "hrpwm_in53",
+        "hrpwm_in54",
+        "hrpwm_in55",
+        "hrpwm_in56",
+        "hrpwm_in57"
+      ],
+      "lqfp48_2": [
+        "hrpwm_in19",
+        "hrpwm_in20",
+        "hrpwm_in21",
+        "hrpwm_in22",
+        "hrpwm_in32",
+        "hrpwm_in33",
+        "hrpwm_in34",
+        "hrpwm_in35",
+        "hrpwm_in36",
+        "hrpwm_in37",
+        "hrpwm_in38",
+        "hrpwm_in39",
+        "hrpwm_in40",
+        "hrpwm_in41",
+        "hrpwm_in52",
+        "hrpwm_in53"
+      ],
+      "lqfp48_1": [
+        "hrpwm_in10",
+        "hrpwm_in12",
+        "hrpwm_in19",
+        "hrpwm_in20",
+        "hrpwm_in21",
+        "hrpwm_in22",
+        "hrpwm_in27",
+        "hrpwm_in28",
+        "hrpwm_in29",
+        "hrpwm_in30",
+        "hrpwm_in31",
+        "hrpwm_in38",
+        "hrpwm_in39",
+        "hrpwm_in40",
+        "hrpwm_in54",
+        "hrpwm_in55"
+      ],
+      "lqfp64": []
+    },
+    "i2c1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "i2c2": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "debug": {
+      "qfn32_2": [
+        "jtdi",
+        "jtdo",
+        "jtrst"
+      ],
+      "lqfp32_1": [
+        "jtdi",
+        "jtdo",
+        "jtrst"
+      ],
+      "lqfp48_2": [
+        "traced0",
+        "traced1",
+        "traced2",
+        "traced3"
+      ],
+      "lqfp48_1": [
+        "jtdi",
+        "jtdo",
+        "jtrst"
+      ],
+      "lqfp64": []
+    },
+    "lptim": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "lpuart": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "spi1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "spi2": {
+      "qfn32_2": [
+        "spi2_miso",
+        "spi2_mosi",
+        "spi2_nss",
+        "spi2_sck"
+      ],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "tim1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "tim2": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "tim3": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "tim8": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "uart1": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "uart2": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    },
+    "usart": {
+      "qfn32_2": [],
+      "lqfp32_1": [],
+      "lqfp48_2": [],
+      "lqfp48_1": [],
+      "lqfp64": []
+    }
+  }
+}

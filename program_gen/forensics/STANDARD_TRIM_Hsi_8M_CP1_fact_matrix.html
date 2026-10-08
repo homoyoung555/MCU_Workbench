@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>STANDARD_TRIM / Hsi_8M CP1 事实矩阵（待确认）</title>
+<style>
+  body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; margin: 2rem; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; } h2 { font-size: 1.15rem; margin-top: 2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; }
+  th, td { border: 1px solid #bbb; padding: 0.4rem 0.6rem; font-size: 0.85rem;
+           vertical-align: top; text-align: left; }
+  th { background: #f0f0f0; }
+  .CONFIRMED { color: #1a7f37; font-weight: 600; }
+  .MISSING { color: #b35900; font-weight: 600; }
+  .CONTRADICTED { color: #cf222e; font-weight: 600; }
+  .verdict { border: 1px solid; border-radius: 6px; padding: 0.75rem 1rem; }
+  .verdict.pending { background: #fff8e1; border-color: #e0a800; }
+  .verdict.ok { background: #e6ffec; border-color: #1a7f37; }
+  .meta { color: #555; font-size: 0.85rem; }
+  code { background: #f6f8fa; padding: 0 0.25rem; }
+</style>
+</head>
+<body>
+<h1>STANDARD_TRIM / Hsi_8M CP1 的 domain-fact 取证包</h1>
+<p class="meta">
+  目标：<code>CP1 / Hsi_8M / chroma / lab / V_TEST_CP1</code><br>
+  作用域：CP1（CP）/ chroma+s100（平台）/ lab（variant）<br>
+  输入：仅消费 WorkbookModel / ProductCompilation 中已显式编译的 typed facts
+  （TrimSpec、Canonical Schedule、TestDefinition、TargetKey、TargetPlatformProfile、
+  EnvironmentGroup、LifecycleGroup、HelpersGroup、ResourcesGroup、RuntimeSymbol）。<br>
+  未使用：Excel 原始对象、G、旧 writer、Golden / 旧输出、文件名 / item 名推导。<br>
+  Workbook identity：<code>0EA84FE6E2866FAD686F8B3BAB303729B9C408267D1FC30F89C87EBB6B0D564C</code><br>
+  Compilation identity：<code>66FD45D8F7FCBCE527E48CF0A49BF1DDEFC6C0206ECF7BC451DD08DE55075184</code>
+</p>
+<p class="verdict pending"><strong>结论：待确认。</strong> 并非全部七项契约都具备完整权威 typed 来源，本轮停止于事实矩阵，不提出模型接口草案、不生成 tester 文本 / Contribution / SectionFragment、不注册、不编译。</p>
+<h2>逐项事实矩阵</h2>
+<table>
+<thead>
+<tr><th>事实名</th><th>作用域</th><th>当前 typed producer</th><th>权威来源</th>
+<th>状态</th><th>已确认值 / 缺失原因</th><th>需要裁决的问题</th></tr>
+</thead>
+<tbody>
+<tr><td>供电轨 Vcc 值</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.vcc</td><td>FLOW &#x27;Vcc&#x27; 单元格 → program_gen/core/trim_spec.py _compile_spec</td><td class="CONFIRMED">CONFIRMED</td><td>VCC_TYP</td><td>VCC_TYP 是符号轨名还是电压字面量？POWER_ON 消费哪个轨名？</td></tr>
+<tr><td>POWER_ON 上电序列</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>ProductCompilation 无 PowerPlan；EnvironmentGroup 仅声明 &#x27;LEVEL&#x27; 目录名</td><td class="MISSING">MISSING</td><td>缺失原因：typed 层未编译任何上电序列事实；PlatformRenderPlanner/旧 writer 中的 POWER_ON 实现不属于本包可消费的 typed 来源</td><td>STANDARD_TRIM 的 POWER_ON 序列是否固定（如 RELAY→POWER_ON(Vcc)→FBIST 进入）？归属 PowerContract 还是 SkeletonProducer 默认骨架？</td></tr>
+<tr><td>POWER_OFF 下电序列</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>同上：typed 层无下电序列事实</td><td class="MISSING">MISSING</td><td>缺失原因：与 POWER_ON 相同，typed 层无任何下电/安全释放事实</td><td>POWER_OFF 是否每次测试函数结尾固定执行？失败路径是否相同？</td></tr>
+<tr><td>电源建立/稳定时间</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>TrimSpec/TrimOperation 无 power 等待字段</td><td class="MISSING">MISSING</td><td>缺失原因：typed 层不存在电源稳定时间字段</td><td>电源稳定时间是否需要 typed 字段，还是固定由平台默认（不允许默认值的裁决项）？</td></tr>
+<tr><td>平台电源能力 Profile</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>TargetPlatformProfile 仅含文件命名事实，无电源轨/API 能力</td><td class="MISSING">MISSING</td><td>缺失原因：无平台电源能力 typed 事实（轨集合、DPS 通道、API 形态）</td><td>PowerContract 是否需要按平台注册电源轨集合与 POWER_ON/OFF API 契约？</td></tr>
+<tr><td>FBIST 进入 Pattern 逻辑名</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.protocol.enter_pattern (TrimProtocolPlan)</td><td>program_gen/core/trim_spec.py _compile_spec（硬编码常量，非母本输入）</td><td class="CONFIRMED">CONFIRMED</td><td>enter_fbist_mode</td><td>该值为 typed 层硬编码而非母本输入：是否权威？两平台是否同名？</td></tr>
+<tr><td>FBIST 退出 Pattern 逻辑名</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.protocol.exit_pattern (TrimProtocolPlan)</td><td>program_gen/core/trim_spec.py _compile_spec（硬编码常量，非母本输入）</td><td class="CONFIRMED">CONFIRMED</td><td>exit_fbist_mode</td><td>退出 Pattern 是否每次 FBIST 结束都执行？</td></tr>
+<tr><td>FBIST 进入 Pattern 平台文件映射</td><td>CP1 / chroma+s100 / lab</td><td>TargetPlatformProfile.pattern_path</td><td>program_gen/shadow/profile.py（chroma &#x27;pat/...&#x27;、s100 &#x27;&#x27; 前缀 + 扩展名）</td><td class="CONFIRMED">CONFIRMED</td><td>chroma: pat/enter_fbist_mode.pat; s100: enter_fbist_mode.sd</td><td></td></tr>
+<tr><td>FBIST 进入/退出时序（WAIT）</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>TrimProtocolPlan 无等待字段；TrimOperation.wait 属于 ENTER 模块而非 FBIST 协议</td><td class="MISSING">MISSING</td><td>缺失原因：FBIST 协议层无任何时序事实</td><td>进入 FBIST 后是否固定需要 WAIT？默认值由谁裁决？</td></tr>
+<tr><td>per-item ENTER 与共享 FBIST 协议 Pattern 的关系</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.operations[ENTER].reference + TrimSpec.protocol</td><td>typed 层同时存在 enter_hsi_8m（ENTER 模块）与 enter_fbist_mode（协议）</td><td class="MISSING">MISSING</td><td>缺失原因：typed 层无事实说明两者执行顺序/嵌套关系；resources 闭包含 enter_hsi_8m 但不含 enter_fbist_mode（见 CONTRADICTED 项）</td><td>执行顺序：先 FBIST 协议 Pattern 再 per-item ENTER Pattern？还是二选一？</td></tr>
+<tr><td>FBIST 协议 Pattern 的资源闭包归属</td><td>CP1 / platform-neutral / lab</td><td>CpProgramPlan.resources.identities（Recipe→closure 单一所有权）vs standard_trim_contribution.standard_trim_pattern_names（closure→reference）</td><td>program_plan.py _resource_identities（含协议 Pattern）vs core/standard_trim_contribution.py _validate_resource_closure</td><td class="CONFIRMED">CONFIRMED</td><td>一致：CpProgramPlan.resources 与 Contribution 的 standard_trim_pattern_names 均包含 enter_fbist_mode/exit_fbist_mode（单一所有权：Recipe → closure → reference；闭包缺失任一 Recipe 资源声明时以 SC.RESOURCE.CLOSURE_MISSING 阻断）</td><td></td></tr>
+<tr><td>测量族 family</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.family</td><td>FLOW &#x27;UNIT&#x27; 单元格 → trim_spec._compile_measurement</td><td class="CONFIRMED">CONFIRMED</td><td>FREQUENCY</td><td></td></tr>
+<tr><td>测量单位 unit</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.unit</td><td>FLOW &#x27;UNIT&#x27; 单元格（原样保留）</td><td class="CONFIRMED">CONFIRMED</td><td>KHz</td><td></td></tr>
+<tr><td>测量 pin</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.pin</td><td>FLOW &#x27;meas pin&#x27; 单元格</td><td class="CONFIRMED">CONFIRMED</td><td>TP</td><td></td></tr>
+<tr><td>Force 类型 (FV/FI)</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.force</td><td>FLOW &#x27;FV/FI&#x27; 单元格</td><td class="CONFIRMED">CONFIRMED</td><td>/</td><td>Hsi_8M 为 &#x27;/&#x27;（无 force）：FREQUENCY 测量是否需要 Force 语义？</td></tr>
+<tr><td>target 目标值</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.target</td><td>FLOW &#x27;target&#x27; 单元格（保留 int/float 原始类型）</td><td class="CONFIRMED">CONFIRMED</td><td>125</td><td></td></tr>
+<tr><td>low/high limit 百分比</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.measurement.low_limit / high_limit</td><td>FLOW &#x27;low_range(%)&#x27; / &#x27;high_range(%)&#x27; 单元格</td><td class="CONFIRMED">CONFIRMED</td><td>low=0.4%, high=0.4%</td><td>limit 解释（相对 target 的百分比？）是否有权威 typed 定义？</td></tr>
+<tr><td>每点测量动作 MEASURE</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.search.per_point_actions (TrimOperation &#x27;MEASURE&#x27;)</td><td>trim_spec._compile_spec：per_point = SET_DAC → [PE] → MEASURE</td><td class="CONFIRMED">CONFIRMED</td><td>EACH_SEARCH_POINT MEASURE 存在于搜索逐点动作中</td><td></td></tr>
+<tr><td>测量方法/积分/采样方式</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>MeasurementPlan 无测量方法字段</td><td class="MISSING">MISSING</td><td>缺失原因：FREQUENCY 测量的积分/采样/判断方法无 typed 事实</td><td>频率测量方法（周期平均？采样数？）由 MeasurementContract 定义还是平台 Profile？</td></tr>
+<tr><td>JUDGE 判定与 Datalog 语义</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.operations[JUDGE] + TestDefinition.datalog_points</td><td>JUDGE 动作存在于 TrimSpec；Datalog 身份来自 canonical definition</td><td class="CONFIRMED">CONFIRMED</td><td>JUDGE 动作存在；datalog_points=(&#x27;/&#x27;,)</td><td>JUDGE 的 pass/fail 判定与 Datalog 输出是否需要独立 typed 契约？</td></tr>
+<tr><td>JUDGE limit 应用语义</td><td>CP1 / platform-neutral / lab</td><td>无 typed producer</td><td>MeasurementPlan 仅有 limit 字面量，无应用规则</td><td class="MISSING">MISSING</td><td>缺失原因：limit 如何应用到 target（比例/绝对）无 typed 事实</td><td>±0.4% 的判定公式由谁权威定义？</td></tr>
+<tr><td>Recipe 时间参数能力（WAIT/FWAIT/SWAIT 解析）</td><td>CP1 / chroma+s100 / lab</td><td>flow_recipe.RecipeDuration + TrimOperation.wait/force_wait/set_wait</td><td>flow_recipe.py _MODULE_TIME_PARAMETERS + recipe_trim.py</td><td class="CONFIRMED">CONFIRMED</td><td>typed 字段存在（amount+unit，US/MS）；母本可显式填写</td><td></td></tr>
+<tr><td>ENTER WAIT</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.wait</td><td>Recipe &#x27;ENTER(WAIT=...)&#x27; 参数；本 item 未填写</td><td class="MISSING">MISSING</td><td>缺失原因：母本 Recipe 未填写 ENTER WAIT，typed 层为 None（本包不注入默认值）</td><td>未填写时是否允许平台默认时序？（本包不注入默认值）</td></tr>
+<tr><td>TRIM FWAIT（Force 等待）</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.force_wait</td><td>Recipe &#x27;TRIM(FWAIT=...)&#x27; 参数；本 item 未填写</td><td class="MISSING">MISSING</td><td>缺失原因：母本 Recipe 未填写 TRIM FWAIT，typed 层为 None（本包不注入默认值）</td><td>TRIM 循环内 Force 后是否需要等待？</td></tr>
+<tr><td>TRIM SWAIT（Set DAC 等待）</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.set_wait</td><td>Recipe &#x27;TRIM(SWAIT=...)&#x27; 参数；本 item 未填写</td><td class="MISSING">MISSING</td><td>缺失原因：母本 Recipe 未填写 TRIM SWAIT，typed 层为 None（本包不注入默认值）</td><td>SET_DAC 后是否需要等待？</td></tr>
+<tr><td>JUDGE FWAIT / SWAIT</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.force_wait / set_wait (JUDGE)</td><td>Recipe &#x27;JUDGE(FWAIT=...,SWAIT=...)&#x27; 参数；本 item 未填写</td><td class="MISSING">MISSING</td><td>缺失原因：母本 Recipe 未填写 JUDGE 时序，typed 层为 None（本包不注入默认值）</td><td>JUDGE 前是否需要重新 Force/Set 并等待？</td></tr>
+<tr><td>逐点 SET_DAC/MEASURE 间时序</td><td>CP1 / platform-neutral / lab</td><td>TrimSpec.search.per_point_actions</td><td>per_point 动作无 wait 字段值</td><td class="MISSING">MISSING</td><td>缺失原因：EACH_SEARCH_POINT 的 SET_DAC/MEASURE 无任何等待事实</td><td>逐点测量是否需要固定等待？</td></tr>
+<tr><td>平台等待语义（WAIT → tester 语句/电平稳定）</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>typed 层仅保留 RecipeDuration，无平台语义</td><td class="MISSING">MISSING</td><td>缺失原因：WAIT 如何落到各平台语句无 typed 事实</td><td>TimingContract 与平台 Profile 的分工？</td></tr>
+<tr><td>RELAY 环境目录声明</td><td>CP1 / platform-neutral / lab</td><td>CpProgramPlan.environment.configured_catalogs</td><td>program_plan.py compile_program_plan（硬编码目录元组）</td><td class="CONFIRMED">CONFIRMED</td><td>(&#x27;PIN&#x27;, &#x27;LEVEL&#x27;, &#x27;TIMING&#x27;, &#x27;RELAY&#x27;, &#x27;BIN&#x27;)（含 &#x27;RELAY&#x27;）</td><td></td></tr>
+<tr><td>每目标 relay 值（FLOW &#x27;relay&#x27; 列）</td><td>CP1 / platform-neutral / lab</td><td>无 typed producer</td><td>ProductCompilation 未编译 relay 列；platform_render.resolve_standard_trim_context 在 render 层直接读 workbook FLOW/PIN DEC（不属于本包可消费的 typed 来源）</td><td class="MISSING">MISSING</td><td>缺失原因：relay 单元格未被编译进 ProductCompilation 的任何 typed 计划；本包不读 Excel 原始对象，故该值不可作为 typed 事实</td><td>FLOW &#x27;relay&#x27; 列是否应编译进 typed RelayContract（逐目标）？PIN DEC 校验（relay 必须声明）权威落在哪层？</td></tr>
+<tr><td>CBIT 策略（relay ON/OFF 时序）</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>typed 层无 CBIT/relay 时序事实（5mS 等仅存在于旧 writer，不作为事实源）</td><td class="MISSING">MISSING</td><td>缺失原因：无 CBIT 开关时序的 typed 事实</td><td>relay ON/OFF 时序（如 5mS）与 FBIST 进出场的关系由谁裁决？</td></tr>
+<tr><td>平台 relay API 契约</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>SET_CBIT/RELAY_ON 等仅存在于 legacy platform writers</td><td class="MISSING">MISSING</td><td>缺失原因：无平台 relay API 的 typed 注册事实</td><td>RelayContract 是否需要按平台声明 relay API 能力？</td></tr>
+<tr><td>DEPEND helper_name 字段存在性</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.helper_name (DEPEND)</td><td>program_gen/core/trim_spec.py _compile_dependency_operation</td><td class="CONFIRMED">CONFIRMED</td><td>(&#x27;set_hsi_vrega_trim_data&#x27;, &#x27;set_iref1u_trim_data&#x27;, &#x27;set_vref0p8_abs_trim_data&#x27;)</td><td>helper 名由 item 名经 recipe_trim.trim_data_helper_name 字符串推导——按取证规则不得作为事实来源；真实 helper 名需确认</td></tr>
+<tr><td>本 item 自身 trim-data helper 引用</td><td>CP1 / platform-neutral / lab</td><td>standard_trim_contribution 的 HELPER SymbolRequirement (trim_data_helper_name(spec.item))</td><td>core/standard_trim_contribution.py：requires HELPER trim_data_helper_name(spec.item)</td><td class="MISSING">MISSING</td><td>缺失原因：helper 名 &#x27;set_hsi_8m_trim_data&#x27; 由 item 名推导，无权威 typed 来源；该 Contribution 投影本身被 Gap Model 阻断（SG.PROJECTION.UNAVAILABLE）</td><td>set_hsi_8m_trim_data 的真实签名/命名由谁确认？</td></tr>
+<tr><td>helper 签名/参数契约</td><td>CP1 / platform-neutral / lab</td><td>无 typed producer</td><td>typed 层仅有 helper_name 字符串，无签名</td><td class="MISSING">MISSING</td><td>缺失原因：无 helper 参数（如 DAC 值来源）、返回/副作用契约</td><td>helper 接收什么参数（REG 值？DAC code？）？</td></tr>
+<tr><td>helper 形态（函数/宏）与平台命名</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>CpProgramPlan.helpers.identities 仅含模块名（OS_TEST/DEPEND/...），不含 helper 函数名</td><td class="MISSING">MISSING</td><td>缺失原因：helpers 组是模块级身份，非 helper 函数契约</td><td>helper 是函数还是宏？两平台命名是否一致？</td></tr>
+<tr><td>DEPEND 的 Set-DAC 需求声明</td><td>CP1 / platform-neutral / lab</td><td>TrimOperation.source_symbol + helper_name (DEPEND)</td><td>trim_spec._compile_dependency_operation（DAC_FINAL 来源 + helper）</td><td class="CONFIRMED">CONFIRMED</td><td>DEPEND 引用 DAC_FINAL 来源（VREF0P8_ABS_DAC_FINAL 等）并声明 set-helper 需求</td><td></td></tr>
+<tr><td>Chroma section 顺序</td><td>CP1 / chroma / lab</td><td>TargetPlatformProfile.section_order</td><td>program_gen/shadow/profile.py CHROMA_PROFILE</td><td class="CONFIRMED">CONFIRMED</td><td>(&#x27;HEADER&#x27;, &#x27;GLOBALS&#x27;, &#x27;STARTUP&#x27;, &#x27;TESTS&#x27;, &#x27;FLOW&#x27;)</td><td></td></tr>
+<tr><td>S100 section 顺序</td><td>CP1 / s100 / lab</td><td>TargetPlatformProfile.section_order</td><td>program_gen/shadow/profile.py S100_PROFILE</td><td class="CONFIRMED">CONFIRMED</td><td>(&#x27;HEADER&#x27;, &#x27;GLOBALS&#x27;, &#x27;TESTS&#x27;, &#x27;FLOW&#x27;)</td><td></td></tr>
+<tr><td>程序扩展名与 Pattern 前缀</td><td>CP1 / chroma+s100 / lab</td><td>TargetPlatformProfile.program_extension / pattern_prefix</td><td>program_gen/shadow/profile.py</td><td class="CONFIRMED">CONFIRMED</td><td>chroma .pln / pat/; s100 .prg / 无前缀</td><td></td></tr>
+<tr><td>Lifecycle 贡献组（空）</td><td>CP1 / platform-neutral / lab</td><td>CpProgramPlan.lifecycle (LifecycleGroup)</td><td>program_plan.py compile_program_plan：LifecycleGroup(())</td><td class="CONFIRMED">CONFIRMED</td><td>lifecycle.contributions=()（当前无 typed 生产者提交）</td><td>Lifecycle Hook（START_UP/test_start/TEST_PRO/test_end/RELEASE）的 typed 形态由 SkeletonProducer 定义？</td></tr>
+<tr><td>骨架内容（START_UP/test_start/TEST_PRO/test_end/RELEASE）</td><td>CP1 / chroma+s100 / lab</td><td>无 typed producer</td><td>typed 层无 SkeletonProducer；骨架文本仅存在于 legacy platform writers （不作为事实源）</td><td class="MISSING">MISSING</td><td>缺失原因：无 typed 骨架生产者；Gap Model 声明 SkeletonProducer 缺失</td><td>骨架内容是否每个平台固定生成、不可裁掉（CONTEXT.md 语义）？</td></tr>
+<tr><td>环境目录声明（PIN/LEVEL/TIMING/RELAY/BIN）</td><td>CP1 / platform-neutral / lab</td><td>CpProgramPlan.environment.configured_catalogs</td><td>program_plan.py compile_program_plan（硬编码目录元组）</td><td class="CONFIRMED">CONFIRMED</td><td>(&#x27;PIN&#x27;, &#x27;LEVEL&#x27;, &#x27;TIMING&#x27;, &#x27;RELAY&#x27;, &#x27;BIN&#x27;)</td><td>环境目录与各 Contract 的对应关系是否需要在模型层显式化？</td></tr>
+</tbody>
+</table>
+<h2>契约汇总</h2>
+<table>
+<thead><tr><th>契约</th><th>CONFIRMED</th><th>MISSING</th><th>CONTRADICTED</th></tr></thead>
+<tbody>
+<tr><td>PowerContract</td><td class="CONFIRMED">1</td><td class="MISSING">4</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>FbistContract</td><td class="CONFIRMED">4</td><td class="MISSING">2</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>MeasurementContract</td><td class="CONFIRMED">8</td><td class="MISSING">2</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>TimingContract</td><td class="CONFIRMED">1</td><td class="MISSING">6</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>RelayContract</td><td class="CONFIRMED">1</td><td class="MISSING">3</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>HelperContract</td><td class="CONFIRMED">2</td><td class="MISSING">3</td><td class="CONTRADICTED">0</td></tr>
+<tr><td>SkeletonProducer</td><td class="CONFIRMED">5</td><td class="MISSING">1</td><td class="CONTRADICTED">0</td></tr>
+</tbody>
+</table>
+<h2>待蛤蟆羊先生裁决的问题（30 项）</h2>
+<ol>
+    <li>VCC_TYP 是符号轨名还是电压字面量？POWER_ON 消费哪个轨名？</li>
+    <li>STANDARD_TRIM 的 POWER_ON 序列是否固定（如 RELAY→POWER_ON(Vcc)→FBIST 进入）？归属 PowerContract 还是 SkeletonProducer 默认骨架？</li>
+    <li>POWER_OFF 是否每次测试函数结尾固定执行？失败路径是否相同？</li>
+    <li>电源稳定时间是否需要 typed 字段，还是固定由平台默认（不允许默认值的裁决项）？</li>
+    <li>PowerContract 是否需要按平台注册电源轨集合与 POWER_ON/OFF API 契约？</li>
+    <li>该值为 typed 层硬编码而非母本输入：是否权威？两平台是否同名？</li>
+    <li>退出 Pattern 是否每次 FBIST 结束都执行？</li>
+    <li>进入 FBIST 后是否固定需要 WAIT？默认值由谁裁决？</li>
+    <li>执行顺序：先 FBIST 协议 Pattern 再 per-item ENTER Pattern？还是二选一？</li>
+    <li>Hsi_8M 为 &#x27;/&#x27;（无 force）：FREQUENCY 测量是否需要 Force 语义？</li>
+    <li>limit 解释（相对 target 的百分比？）是否有权威 typed 定义？</li>
+    <li>频率测量方法（周期平均？采样数？）由 MeasurementContract 定义还是平台 Profile？</li>
+    <li>JUDGE 的 pass/fail 判定与 Datalog 输出是否需要独立 typed 契约？</li>
+    <li>±0.4% 的判定公式由谁权威定义？</li>
+    <li>未填写时是否允许平台默认时序？（本包不注入默认值）</li>
+    <li>TRIM 循环内 Force 后是否需要等待？</li>
+    <li>SET_DAC 后是否需要等待？</li>
+    <li>JUDGE 前是否需要重新 Force/Set 并等待？</li>
+    <li>逐点测量是否需要固定等待？</li>
+    <li>TimingContract 与平台 Profile 的分工？</li>
+    <li>FLOW &#x27;relay&#x27; 列是否应编译进 typed RelayContract（逐目标）？PIN DEC 校验（relay 必须声明）权威落在哪层？</li>
+    <li>relay ON/OFF 时序（如 5mS）与 FBIST 进出场的关系由谁裁决？</li>
+    <li>RelayContract 是否需要按平台声明 relay API 能力？</li>
+    <li>helper 名由 item 名经 recipe_trim.trim_data_helper_name 字符串推导——按取证规则不得作为事实来源；真实 helper 名需确认</li>
+    <li>set_hsi_8m_trim_data 的真实签名/命名由谁确认？</li>
+    <li>helper 接收什么参数（REG 值？DAC code？）？</li>
+    <li>helper 是函数还是宏？两平台命名是否一致？</li>
+    <li>Lifecycle Hook（START_UP/test_start/TEST_PRO/test_end/RELEASE）的 typed 形态由 SkeletonProducer 定义？</li>
+    <li>骨架内容是否每个平台固定生成、不可裁掉（CONTEXT.md 语义）？</li>
+    <li>环境目录与各 Contract 的对应关系是否需要在模型层显式化？</li>
+</ol>
+<p class="meta">本报告由 program_gen/forensics/standard_trim_matrix.py（纯函数，无 G / legacy writer /
+Golden / filesystem 扫描依赖）生成。</p>
+</body>
+</html>

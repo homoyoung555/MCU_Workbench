@@ -1,0 +1,435 @@
+{
+  "peripheral": "EXTI",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "EXTI",
+      "register": "IMR",
+      "field": "IMR0",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "EXTI_MODE_INTERRUPT",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "register": "EMR",
+      "field": "EMR0",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "EXTI_MODE_EVENT",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "register": "EXTICR1",
+      "field": "EXTI0",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "EXTI_GPIOA",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "GPIOSel",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "register": "EXTICR1",
+      "field": "EXTI1",
+      "bit_offset": 4,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "EXTI_GPIOB",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "GPIOSel",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "register": "EXTICR1",
+      "field": "EXTI2",
+      "bit_offset": 8,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "EXTI_GPIOC",
+          "value": 2,
+          "description": "",
+          "abs_value": 512
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "GPIOSel",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "register": "EXTICR1",
+      "field": "EXTI3",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "EXTI_GPIOD",
+          "value": 3,
+          "description": "",
+          "abs_value": 12288
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "GPIOSel",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_0",
+      "abs_value": 100663296,
+      "fields": [
+        {
+          "register": "IMR",
+          "field": "IMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        },
+        {
+          "register": "EMR",
+          "field": "EMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Line",
+      "description": "External interrupt line 0",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_DIRECT",
+      "abs_value": 16777216,
+      "fields": [
+        {
+          "register": "IMR",
+          "field": "IMR24",
+          "value": 1,
+          "bit_offset": 24,
+          "bit_width": 1
+        },
+        {
+          "register": "EMR",
+          "field": "EMR24",
+          "value": 1,
+          "bit_offset": 24,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_EXTI_GetHandle",
+      "init_struct_field": "ExtiLine",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_CONFIG",
+      "abs_value": 33554432,
+      "fields": [
+        {
+          "register": "IMR",
+          "field": "IMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        },
+        {
+          "register": "EMR",
+          "field": "EMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_EXTI_GetHandle",
+      "init_struct_field": "ExtiLine",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_GPIO",
+      "abs_value": 100663296,
+      "fields": [
+        {
+          "register": "IMR",
+          "field": "IMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        },
+        {
+          "register": "EMR",
+          "field": "EMR25",
+          "value": 1,
+          "bit_offset": 25,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_EXTI_GetHandle",
+      "init_struct_field": "ExtiLine",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_MODE_NONE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "IMR",
+          "field": "IMR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "EMR",
+          "field": "EMR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_TRIGGER_NONE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "RTSR",
+          "field": "RTSR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "FTSR",
+          "field": "FTSR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Trigger",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_TRIGGER_RISING",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "RTSR",
+          "field": "RTSR0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "FTSR",
+          "field": "FTSR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Trigger",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_TRIGGER_FALLING",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "RTSR",
+          "field": "RTSR0",
+          "value": 0,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "FTSR",
+          "field": "FTSR0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Trigger",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_TRIGGER_RISING_FALLING",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "RTSR",
+          "field": "RTSR0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "FTSR",
+          "field": "FTSR0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "EXTI_ConfigTypeDef",
+      "init_struct_field": "Trigger",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    }
+  ],
+  "numeric_fields": [],
+  "config_units": [
+    {
+      "struct": "EXTI_ConfigTypeDef",
+      "field": "Line",
+      "ref": "EXTI_Line",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "EXTI_ConfigTypeDef",
+      "field": "Mode",
+      "ref": "EXTI_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "EXTI_ConfigTypeDef",
+      "field": "Trigger",
+      "ref": "EXTI_Trigger",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "EXTI_ConfigTypeDef",
+      "field": "GPIOSel",
+      "ref": "EXTI_GPIOSel",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_EXTI_GetHandle",
+      "field": "ExtiLine",
+      "ref": "IS:IS_EXTI_LINE",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 6,
+    "multi_field_count": 4,
+    "total_encodings": 0,
+    "unresolved_count": 38,
+    "numeric_field_count": 0,
+    "llm_applied": true
+  }
+}

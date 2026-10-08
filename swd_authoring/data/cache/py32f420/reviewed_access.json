@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "source": "gui/data/py32f420_svd_cache.json",
+  "sourceSha256": "c068e728cdc121cce63abbb909cdb9a50e1bc2dd19c2e2bcfa1fab8c2ebcb2fa",
+  "scope": "GPIOA.AFRL explicit field access only; no reset inference",
+  "fields": [
+    {
+      "address": 1073889312,
+      "pos": 0,
+      "width": 4,
+      "field": "AFSEL0",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 4,
+      "width": 4,
+      "field": "AFSEL1",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 8,
+      "width": 4,
+      "field": "AFSEL2",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 12,
+      "width": 4,
+      "field": "AFSEL3",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 16,
+      "width": 4,
+      "field": "AFSEL4",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 20,
+      "width": 4,
+      "field": "AFSEL5",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 24,
+      "width": 4,
+      "field": "AFSEL6",
+      "access": "RW"
+    },
+    {
+      "address": 1073889312,
+      "pos": 28,
+      "width": 4,
+      "field": "AFSEL7",
+      "access": "RW"
+    }
+  ]
+}

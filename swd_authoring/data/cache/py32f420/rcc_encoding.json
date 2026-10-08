@@ -1,0 +1,1510 @@
+{
+  "peripheral": "RCC",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "RCC",
+      "register": "PLLCFGR1",
+      "field": "PLLSRC",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_PLLSOURCE_HSE",
+          "value": 1,
+          "description": "HSE clock selected as PLL entry clock source",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_PLLSOURCE_HSI",
+          "value": 0,
+          "description": "HSI clock selected as PLL entry clock source",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_PLLInitTypeDef",
+      "init_struct_field": "PLLSource",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "PLLCFGR1",
+      "field": "PLLMUL",
+      "bit_offset": 2,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "RCC_PLL_MUL3",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "RCC_PLL_MUL4",
+          "value": 2,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "RCC_PLL_MUL5",
+          "value": 3,
+          "description": "",
+          "abs_value": 12
+        },
+        {
+          "symbol": "RCC_PLL_MUL6",
+          "value": 4,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "RCC_PLL_MUL7",
+          "value": 5,
+          "description": "",
+          "abs_value": 20
+        },
+        {
+          "symbol": "RCC_PLL_MUL8",
+          "value": 6,
+          "description": "",
+          "abs_value": 24
+        },
+        {
+          "symbol": "RCC_PLL_MUL9",
+          "value": 7,
+          "description": "",
+          "abs_value": 28
+        },
+        {
+          "symbol": "RCC_PLL_MUL10",
+          "value": 8,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "RCC_PLL_MUL11",
+          "value": 9,
+          "description": "",
+          "abs_value": 36
+        },
+        {
+          "symbol": "RCC_PLL_MUL12",
+          "value": 10,
+          "description": "",
+          "abs_value": 40
+        },
+        {
+          "symbol": "RCC_PLL_MUL13",
+          "value": 11,
+          "description": "",
+          "abs_value": 44
+        },
+        {
+          "symbol": "RCC_PLL_MUL14",
+          "value": 12,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "RCC_PLL_MUL15",
+          "value": 13,
+          "description": "",
+          "abs_value": 52
+        },
+        {
+          "symbol": "RCC_PLL_MUL16",
+          "value": 14,
+          "description": "",
+          "abs_value": 56
+        },
+        {
+          "symbol": "RCC_PLL_MUL2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_PLLInitTypeDef",
+      "init_struct_field": "PLLMUL",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CR",
+      "field": "HSEON",
+      "bit_offset": 16,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_HSE_ON",
+          "value": 1,
+          "description": "HSE clock activation",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "RCC_HSE_OFF",
+          "value": 0,
+          "description": "HSE clock deactivation",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSEState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "ECSCR",
+      "field": "HSE_DRV",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_HSE_8_16MHz",
+          "value": 1,
+          "description": "HSE medium drive capability",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_HSE_16_24MHz",
+          "value": 1,
+          "description": "HSE hign drive capability",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_HSE_24_32MHz",
+          "value": 1,
+          "description": "HSE very high drive capability",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_HSE_4_8MHz",
+          "value": 0,
+          "description": "HSE low drive capability",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSEFreq",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "BDCR",
+      "field": "LSEON",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_LSE_ON",
+          "value": 1,
+          "description": "LSE clock activation",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_LSE_OFF",
+          "value": 0,
+          "description": "LSE clock deactivation",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "LSEState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "BDCR",
+      "field": "LSEDRV",
+      "bit_offset": 3,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_LSEDRIVE_MEDIUM",
+          "value": 1,
+          "description": "LSE medium drive capability",
+          "abs_value": 8
+        },
+        {
+          "symbol": "RCC_LSEDRIVE_HIGH",
+          "value": 2,
+          "description": "LSE high drive capability",
+          "abs_value": 16
+        },
+        {
+          "symbol": "RCC_LSEDRIVE_VERY_HIGH",
+          "value": 3,
+          "description": "LSE vrey high drive capability",
+          "abs_value": 24
+        },
+        {
+          "symbol": "RCC_LSEDRIVE_LOW",
+          "value": 0,
+          "description": "LSE low drive capability",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "LSEDriver",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CR",
+      "field": "HSION",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_HSI_ON",
+          "value": 1,
+          "description": "HSI clock activation",
+          "abs_value": 256
+        },
+        {
+          "symbol": "RCC_HSI_OFF",
+          "value": 0,
+          "description": "HSI clock deactivation",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSIState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CR",
+      "field": "HSIDIV",
+      "bit_offset": 11,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_HSI_DIV2",
+          "value": 1,
+          "description": "HSI clock is divided by 2",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "RCC_HSI_DIV4",
+          "value": 2,
+          "description": "HSI clock is divided by 4",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "RCC_HSI_DIV8",
+          "value": 3,
+          "description": "HSI clock is divided by 8",
+          "abs_value": 6144
+        },
+        {
+          "symbol": "RCC_HSI_DIV1",
+          "value": 0,
+          "description": "HSI clock is not divided",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSIDiv",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "BDCR",
+      "field": "LSION",
+      "bit_offset": 26,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_LSI_ON",
+          "value": 1,
+          "description": "LSI clock activation",
+          "abs_value": 67108864
+        },
+        {
+          "symbol": "RCC_LSI_OFF",
+          "value": 0,
+          "description": "LSI clock deactivation",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "LSIState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "SW",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_SYSCLKSOURCE_HSISYS",
+          "value": 0,
+          "description": "HSISYS selected as system clock",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_SYSCLKSOURCE_HSE",
+          "value": 1,
+          "description": "HSE selected as system clock",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_SYSCLKSOURCE_PLLCLK",
+          "value": 2,
+          "description": "PLL selected as system clock",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "RCC_ClkInitTypeDef",
+      "init_struct_field": "SYSCLKSource",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "HPRE",
+      "bit_offset": 8,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "RCC_SYSCLK_DIV2",
+          "value": 8,
+          "description": "SYSCLK divided by 2",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV4",
+          "value": 9,
+          "description": "SYSCLK divided by 4",
+          "abs_value": 2304
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV8",
+          "value": 10,
+          "description": "SYSCLK divided by 8",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV16",
+          "value": 11,
+          "description": "SYSCLK divided by 16",
+          "abs_value": 2816
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV64",
+          "value": 12,
+          "description": "SYSCLK divided by 64",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV128",
+          "value": 13,
+          "description": "SYSCLK divided by 128",
+          "abs_value": 3328
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV256",
+          "value": 14,
+          "description": "SYSCLK divided by 256",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV512",
+          "value": 15,
+          "description": "SYSCLK divided by 512",
+          "abs_value": 3840
+        },
+        {
+          "symbol": "RCC_SYSCLK_DIV1",
+          "value": 0,
+          "description": "SYSCLK not divided",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_ClkInitTypeDef",
+      "init_struct_field": "AHBCLKDivider",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "PPRE1",
+      "bit_offset": 12,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "RCC_HCLK_DIV2",
+          "value": 4,
+          "description": "HCLK divided by 2",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "RCC_HCLK_DIV4",
+          "value": 5,
+          "description": "HCLK divided by 4",
+          "abs_value": 20480
+        },
+        {
+          "symbol": "RCC_HCLK_DIV8",
+          "value": 6,
+          "description": "HCLK divided by 8",
+          "abs_value": 24576
+        },
+        {
+          "symbol": "RCC_HCLK_DIV16",
+          "value": 7,
+          "description": "HCLK divided by 16",
+          "abs_value": 28672
+        },
+        {
+          "symbol": "RCC_HCLK_DIV1",
+          "value": 0,
+          "description": "HCLK divided by 1",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_ClkInitTypeDef",
+      "init_struct_field": "APB1CLKDivider",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "PPRE1",
+      "bit_offset": 12,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "RCC_HCLK_DIV2",
+          "value": 4,
+          "description": "HCLK divided by 2",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "RCC_HCLK_DIV4",
+          "value": 5,
+          "description": "HCLK divided by 4",
+          "abs_value": 20480
+        },
+        {
+          "symbol": "RCC_HCLK_DIV8",
+          "value": 6,
+          "description": "HCLK divided by 8",
+          "abs_value": 24576
+        },
+        {
+          "symbol": "RCC_HCLK_DIV16",
+          "value": 7,
+          "description": "HCLK divided by 16",
+          "abs_value": 28672
+        },
+        {
+          "symbol": "RCC_HCLK_DIV1",
+          "value": 0,
+          "description": "HCLK divided by 1",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_ClkInitTypeDef",
+      "init_struct_field": "APB2CLKDivider",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "BDCR",
+      "field": "RTCSEL",
+      "bit_offset": 8,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_RTCCLKSOURCE_LSE",
+          "value": 1,
+          "description": "LSE oscillator clock used as RTC clock",
+          "abs_value": 256
+        },
+        {
+          "symbol": "RCC_RTCCLKSOURCE_LSI",
+          "value": 2,
+          "description": "LSI oscillator clock used as RTC clock",
+          "abs_value": 512
+        },
+        {
+          "symbol": "RCC_RTCCLKSOURCE_HSE_DIV32",
+          "value": 3,
+          "description": "HSE oscillator clock divided by 32 used as RTC clock",
+          "abs_value": 768
+        },
+        {
+          "symbol": "RCC_RTCCLKSOURCE_NONE",
+          "value": 0,
+          "description": "No clock",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "RtcClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "USARTSEL",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_USARTCLKSOURCE_PCLK2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_USARTCLKSOURCE_SYSCLK",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_USARTCLKSOURCE_LSE",
+          "value": 3,
+          "description": "",
+          "abs_value": 3
+        },
+        {
+          "symbol": "RCC_USARTCLKSOURCE_HSI",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "UsartClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "LPUARTSEL",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_LPUARTCLKSOURCE_PCLK1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_LPUARTCLKSOURCE_SYSCLK",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "RCC_LPUARTCLKSOURCE_LSE",
+          "value": 3,
+          "description": "",
+          "abs_value": 12288
+        },
+        {
+          "symbol": "RCC_LPUARTCLKSOURCE_HSI",
+          "value": 2,
+          "description": "",
+          "abs_value": 8192
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "LpuartClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "COMP1SEL",
+      "bit_offset": 20,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_COMP1CLKSOURCE_PCLK2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_COMP1CLKSOURCE_LSI",
+          "value": 1,
+          "description": "",
+          "abs_value": 1048576
+        },
+        {
+          "symbol": "RCC_COMP1CLKSOURCE_LSE",
+          "value": 2,
+          "description": "",
+          "abs_value": 2097152
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "Comp1ClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "COMP2SEL",
+      "bit_offset": 22,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_COMP2CLKSOURCE_PCLK2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_COMP2CLKSOURCE_LSI",
+          "value": 1,
+          "description": "",
+          "abs_value": 4194304
+        },
+        {
+          "symbol": "RCC_COMP2CLKSOURCE_LSE",
+          "value": 2,
+          "description": "",
+          "abs_value": 8388608
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "Comp2ClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "COMP3SEL",
+      "bit_offset": 24,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_COMP3CLKSOURCE_PCLK2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_COMP3CLKSOURCE_LSI",
+          "value": 1,
+          "description": "",
+          "abs_value": 16777216
+        },
+        {
+          "symbol": "RCC_COMP3CLKSOURCE_LSE",
+          "value": 2,
+          "description": "",
+          "abs_value": 33554432
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "Comp3ClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "COMP4SEL",
+      "bit_offset": 26,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_COMP4CLKSOURCE_PCLK2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_COMP4CLKSOURCE_LSI",
+          "value": 1,
+          "description": "",
+          "abs_value": 67108864
+        },
+        {
+          "symbol": "RCC_COMP4CLKSOURCE_LSE",
+          "value": 2,
+          "description": "",
+          "abs_value": 134217728
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "Comp4ClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR1",
+      "field": "PVDSEL",
+      "bit_offset": 29,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_PVDFILTERCLK_LSI",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_PVDFILTERCLK_LSE",
+          "value": 1,
+          "description": "",
+          "abs_value": 536870912
+        },
+        {
+          "symbol": "RCC_PVDFILTERCLK_PCLK1",
+          "value": 2,
+          "description": "",
+          "abs_value": 1073741824
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "PvdFilterClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR2",
+      "field": "FDCANCKSEL",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_FDCANCLKSOURCE_PLL",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_FDCANCLKSOURCE_PCLK1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "RCC_FDCANCLKSOURCE_HSE",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "FdcanClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR2",
+      "field": "ADC12SEL",
+      "bit_offset": 8,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_ADCCLKSOURCE_SYSCLK",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_ADCCLKSOURCE_PLL",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "RCC_ADCCLKSOURCE_HSI",
+          "value": 2,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "RCC_ADCCLKSOURCE_HSE",
+          "value": 3,
+          "description": "",
+          "abs_value": 768
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "AdcClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CCIPR2",
+      "field": "LPTIMSEL",
+      "bit_offset": 16,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "RCC_LPTIMCLKSOURCE_PCLK1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_LPTIMCLKSOURCE_LSI",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "RCC_LPTIMCLKSOURCE_HSI",
+          "value": 2,
+          "description": "",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "RCC_LPTIMCLKSOURCE_LSE",
+          "value": 3,
+          "description": "",
+          "abs_value": 196608
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "LptimClockSelection",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "MCO1PRE",
+      "bit_offset": 20,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "RCC_MCODIV_1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_MCODIV_2",
+          "value": 8,
+          "description": "",
+          "abs_value": 8388608
+        },
+        {
+          "symbol": "RCC_MCODIV_4",
+          "value": 9,
+          "description": "",
+          "abs_value": 9437184
+        },
+        {
+          "symbol": "RCC_MCODIV_8",
+          "value": 10,
+          "description": "",
+          "abs_value": 10485760
+        },
+        {
+          "symbol": "RCC_MCODIV_16",
+          "value": 11,
+          "description": "",
+          "abs_value": 11534336
+        },
+        {
+          "symbol": "RCC_MCODIV_32",
+          "value": 12,
+          "description": "",
+          "abs_value": 12582912
+        },
+        {
+          "symbol": "RCC_MCODIV_64",
+          "value": 13,
+          "description": "",
+          "abs_value": 13631488
+        },
+        {
+          "symbol": "RCC_MCODIV_128",
+          "value": 14,
+          "description": "",
+          "abs_value": 14680064
+        },
+        {
+          "symbol": "RCC_MCODIV_256",
+          "value": 15,
+          "description": "",
+          "abs_value": 15728640
+        }
+      ],
+      "init_struct": "fn:HAL_RCC_MCOConfig",
+      "init_struct_field": "RCC_MCODiv",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CFGR1",
+      "field": "MCO1SEL",
+      "bit_offset": 16,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "RCC_MCOSOURCE_NOCLOCK",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_SYSCLK",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_HSI",
+          "value": 2,
+          "description": "",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_HSE",
+          "value": 3,
+          "description": "",
+          "abs_value": 196608
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_PLLCLK",
+          "value": 4,
+          "description": "",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_LSI",
+          "value": 5,
+          "description": "",
+          "abs_value": 327680
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_LSE",
+          "value": 6,
+          "description": "",
+          "abs_value": 393216
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_HSI10M",
+          "value": 9,
+          "description": "",
+          "abs_value": 589824
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_HCLK",
+          "value": 10,
+          "description": "",
+          "abs_value": 655360
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_PCLK1",
+          "value": 11,
+          "description": "",
+          "abs_value": 720896
+        },
+        {
+          "symbol": "RCC_MCOSOURCE_PCLK2",
+          "value": 12,
+          "description": "",
+          "abs_value": 786432
+        }
+      ],
+      "init_struct": "fn:HAL_RCC_MCOConfig",
+      "init_struct_field": "RCC_MCOSource",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "RCC",
+      "register": "CR",
+      "field": "PLLON",
+      "bit_offset": 24,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RCC_PLL_OFF",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "RCC_PLL_ON",
+          "value": 1,
+          "description": "",
+          "abs_value": 16777216
+        }
+      ],
+      "init_struct": "RCC_PLLInitTypeDef",
+      "init_struct_field": "PLLState",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_HSE_BYPASS",
+      "abs_value": 327680,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "HSEON",
+          "value": 1,
+          "bit_offset": 16,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "HSEBYP",
+          "value": 1,
+          "bit_offset": 18,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSEState",
+      "description": "External clock source for HSE clock",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_LSE_BYPASS",
+      "abs_value": 5,
+      "fields": [
+        {
+          "register": "BDCR",
+          "field": "LSEON",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "BDCR",
+          "field": "LSEBYP",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "LSEState",
+      "description": "External clock source for LSE clock",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_RTCCLKSOURCE_HSE_DIV128",
+      "abs_value": 4195072,
+      "fields": [
+        {
+          "register": "CCIPR2",
+          "field": "ADC12SEL",
+          "value": 3,
+          "bit_offset": 8,
+          "bit_width": 2
+        },
+        {
+          "register": "CCIPR2",
+          "field": "RTC_HSEDIV_SEL",
+          "value": 1,
+          "bit_offset": 22,
+          "bit_width": 2
+        },
+        {
+          "register": "BDCR",
+          "field": "RTCSEL",
+          "value": 3,
+          "bit_offset": 8,
+          "bit_width": 2
+        },
+        {
+          "register": "BDCR",
+          "field": "LSI_TRIMCR",
+          "value": 32,
+          "bit_offset": 17,
+          "bit_width": 9
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "RtcClockSelection",
+      "description": "HSE oscillator clock divided by 128 used as RTC clock",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_RTCCLKSOURCE_HSE_DIV8",
+      "abs_value": 8389376,
+      "fields": [
+        {
+          "register": "CCIPR2",
+          "field": "ADC12SEL",
+          "value": 3,
+          "bit_offset": 8,
+          "bit_width": 2
+        },
+        {
+          "register": "CCIPR2",
+          "field": "RTC_HSEDIV_SEL",
+          "value": 2,
+          "bit_offset": 22,
+          "bit_width": 2
+        },
+        {
+          "register": "BDCR",
+          "field": "RTCSEL",
+          "value": 3,
+          "bit_offset": 8,
+          "bit_width": 2
+        },
+        {
+          "register": "BDCR",
+          "field": "LSI_TRIMCR",
+          "value": 64,
+          "bit_offset": 17,
+          "bit_width": 9
+        }
+      ],
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "RtcClockSelection",
+      "description": "HSE oscillator clock divided by 8 used as RTC clock",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSICalibrationValue",
+      "is_macro": null,
+      "min": 0,
+      "max": 3,
+      "placement": {
+        "register": "ICSCR",
+        "field": "HSI_FS"
+      },
+      "source": "manual",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "RCC_OscInitTypeDef",
+      "init_struct_field": "HSICalibrationValue",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "ICSCR",
+        "field": "HSI_TRIMCR"
+      },
+      "source": "manual",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "AdcPLLDiv",
+      "is_macro": null,
+      "min": 0,
+      "max": 3,
+      "placement": {
+        "register": "CCIPR3",
+        "field": "PLL_ADC_DIV"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "RCC_PeriphCLKInitTypeDef",
+      "init_struct_field": "FdcanPLLDiv",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "CCIPR3",
+        "field": "PLL_FDCAN_DIV"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "RCC_PLLInitTypeDef",
+      "field": "PLLState",
+      "ref": "RCC_PLL_Config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PLLInitTypeDef",
+      "field": "PLLSource",
+      "ref": "RCC_PLL_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PLLInitTypeDef",
+      "field": "PLLMUL",
+      "ref": "RCC_PLL_Multiplication_Factor",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "OscillatorType",
+      "ref": "RCC_Oscillator_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "HSEState",
+      "ref": "RCC_HSE_Config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "HSEFreq",
+      "ref": "RCC_HSE_Freq",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "LSEState",
+      "ref": "RCC_LSE_Config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "LSEDriver",
+      "ref": "RCC_LSE_Driver",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "HSIState",
+      "ref": "RCC_HSI_Config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "HSICalibrationValue",
+      "ref": "RCC_HSI_Calibration",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "HSIDiv",
+      "ref": "RCC_HSI_Div",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_OscInitTypeDef",
+      "field": "LSIState",
+      "ref": "RCC_LSI_Config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_ClkInitTypeDef",
+      "field": "ClockType",
+      "ref": "RCC_System_Clock_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_ClkInitTypeDef",
+      "field": "SYSCLKSource",
+      "ref": "RCC_System_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_ClkInitTypeDef",
+      "field": "AHBCLKDivider",
+      "ref": "RCC_AHB_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_ClkInitTypeDef",
+      "field": "APB1CLKDivider",
+      "ref": "RCC_APB1_APB2_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_ClkInitTypeDef",
+      "field": "APB2CLKDivider",
+      "ref": "RCC_APB1_APB2_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "PeriphClockSelection",
+      "ref": "RCCEx_Periph_Clock_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "RtcClockSelection",
+      "ref": "RCC_RTC_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "UsartClockSelection",
+      "ref": "IS:IS_RCC_USARTCLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "LpuartClockSelection",
+      "ref": "IS:IS_RCC_LPUARTCLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "Comp1ClockSelection",
+      "ref": "IS:IS_RCC_COMP1CLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "Comp2ClockSelection",
+      "ref": "IS:IS_RCC_COMP2CLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "Comp3ClockSelection",
+      "ref": "IS:IS_RCC_COMP3CLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "Comp4ClockSelection",
+      "ref": "IS:IS_RCC_COMP4CLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "PvdFilterClockSelection",
+      "ref": "IS:IS_RCC_PVDFILTERCLK",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "FdcanClockSelection",
+      "ref": "IS:IS_RCC_FDCANCLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "FdcanPLLDiv",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "AdcClockSelection",
+      "ref": "IS:IS_RCC_ADCCLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "AdcPLLDiv",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RCC_PeriphCLKInitTypeDef",
+      "field": "LptimClockSelection",
+      "ref": "IS:IS_RCC_LPTIMCLKSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_RCC_MCOConfig",
+      "field": "RCC_MCOx",
+      "ref": "IS:IS_RCC_MCO",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RCC_MCOConfig",
+      "field": "RCC_MCODiv",
+      "ref": "IS:IS_RCC_MCODIV",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RCC_MCOConfig",
+      "field": "RCC_MCOSource",
+      "ref": "IS:IS_RCC_MCOSOURCE",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 27,
+    "multi_field_count": 4,
+    "total_encodings": 117,
+    "unresolved_count": 28,
+    "numeric_field_count": 4,
+    "llm_applied": true
+  }
+}

@@ -1,0 +1,774 @@
+{
+  "peripheral": "I2C",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "I2C",
+      "register": "CCR",
+      "field": "DUTY",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_DUTYCYCLE_16_9",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "I2C_DUTYCYCLE_2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "DutyCycle",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "TRISE",
+      "field": "THOLDDATA_SEL",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_DATA_HOLD_TIME_SOFTWARE",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "I2C_DATA_HOLD_TIME_HARDWARE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "DataHoldTimeSel",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "OAR1",
+      "field": "ADDMODE",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_ADDRESSINGMODE_10BIT",
+          "value": 1,
+          "description": "",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "I2C_ADDRESSINGMODE_7BIT",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "AddressingMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "OAR2",
+      "field": "ENDUAL",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_DUALADDRESS_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "I2C_DUALADDRESS_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "DualAddressMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "OAR2",
+      "field": "OA2MSK",
+      "bit_offset": 8,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "I2C_OA2_MASK01",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "I2C_OA2_MASK02",
+          "value": 2,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "I2C_OA2_MASK03",
+          "value": 3,
+          "description": "",
+          "abs_value": 768
+        },
+        {
+          "symbol": "I2C_OA2_MASK04",
+          "value": 4,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "I2C_OA2_MASK05",
+          "value": 5,
+          "description": "",
+          "abs_value": 1280
+        },
+        {
+          "symbol": "I2C_OA2_MASK06",
+          "value": 6,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "I2C_OA2_MASK07",
+          "value": 7,
+          "description": "",
+          "abs_value": 1792
+        },
+        {
+          "symbol": "I2C_OA2_NOMASK",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "OwnAddress2Masks",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "OAR3",
+      "field": "ENTRIPLE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_TRIPLEADDRESS_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "I2C_TRIPLEADDRESS_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "TripleAddressMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "CR1",
+      "field": "ENGC",
+      "bit_offset": 6,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_GENERALCALL_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "I2C_GENERALCALL_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "GeneralCallMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "CR1",
+      "field": "NOSTRETCH",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "I2C_NOSTRETCH_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "I2C_NOSTRETCH_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "NoStretchMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "CR1",
+      "field": "WKUP_DIV",
+      "bit_offset": 16,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CLK_DIV_128",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CLK_DIV_256",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CLK_DIV_512",
+          "value": 2,
+          "description": "",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CLK_DIV_1024",
+          "value": 3,
+          "description": "",
+          "abs_value": 196608
+        }
+      ],
+      "init_struct": "fn:HAL_I2CEx_EnableWakeUp",
+      "init_struct_field": "ToutDiv",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "I2C",
+      "register": "CR1",
+      "field": "WKUP_CNT",
+      "bit_offset": 18,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CNT_2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CNT_8",
+          "value": 1,
+          "description": "",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CNT_32",
+          "value": 2,
+          "description": "",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "I2C_WAKEUP_TIMEOUT_CNT_128",
+          "value": 3,
+          "description": "",
+          "abs_value": 786432
+        }
+      ],
+      "init_struct": "fn:HAL_I2CEx_EnableWakeUp",
+      "init_struct_field": "ToutCnt",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Master_Seq_Transmit_IT",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Master_Seq_Transmit_DMA",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Master_Seq_Receive_IT",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Master_Seq_Receive_DMA",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Slave_Seq_Transmit_IT",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Slave_Seq_Transmit_DMA",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Slave_Seq_Receive_IT",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_AND_LAST_FRAME",
+      "abs_value": 2852126720,
+      "fields": [
+        {
+          "register": "TIMEOUTR",
+          "field": "TIMEOUTB",
+          "value": 2560,
+          "bit_offset": 16,
+          "bit_width": 12
+        },
+        {
+          "register": "TIMEOUTR",
+          "field": "TEXTEN",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_I2C_Slave_Seq_Receive_DMA",
+      "init_struct_field": "XferOptions",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "ClockSpeed",
+      "is_macro": "IS_I2C_CLOCK_SPEED",
+      "min": 0,
+      "max": 1600000,
+      "placement": null
+    },
+    {
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "OwnAddress1",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "OAR1",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "OwnAddress2",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "OAR2",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "I2C_InitTypeDef",
+      "init_struct_field": "OwnAddress3",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "OAR3",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "ClockSpeed",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "DutyCycle",
+      "ref": "I2C_duty_cycle_in_fast_fast_plus_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "DataHoldTimeSel",
+      "ref": "I2C_data_hold_time_sel",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "OwnAddress1",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "AddressingMode",
+      "ref": "I2C_addressing_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "DualAddressMode",
+      "ref": "I2C_dual_addressing_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "OwnAddress2",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "OwnAddress2Masks",
+      "ref": "I2C_OWN_ADDRESS2_MASKS",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "TripleAddressMode",
+      "ref": "I2C_Triple_addressing_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "OwnAddress3",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "GeneralCallMode",
+      "ref": "I2C_general_call_addressing_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "I2C_InitTypeDef",
+      "field": "NoStretchMode",
+      "ref": "I2C_nostretch_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Write",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Read",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Write_IT",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Read_IT",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Write_DMA",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Mem_Read_DMA",
+      "field": "MemAddSize",
+      "ref": "IS:IS_I2C_MEMADD_SIZE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Master_Seq_Transmit_IT",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Master_Seq_Transmit_DMA",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Master_Seq_Receive_IT",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Master_Seq_Receive_DMA",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Slave_Seq_Transmit_IT",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Slave_Seq_Transmit_DMA",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Slave_Seq_Receive_IT",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2C_Slave_Seq_Receive_DMA",
+      "field": "XferOptions",
+      "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2CEx_EnableWakeUp",
+      "field": "ToutDiv",
+      "ref": "IS:IS_I2C_WAKEUP_TIMEOUT_CLK_DIV",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_I2CEx_EnableWakeUp",
+      "field": "ToutCnt",
+      "ref": "IS:IS_I2C_WAKEUP_TIMEOUT_CNT",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 10,
+    "multi_field_count": 8,
+    "total_encodings": 30,
+    "unresolved_count": 11,
+    "numeric_field_count": 4
+  }
+}

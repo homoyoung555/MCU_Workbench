@@ -1,0 +1,98 @@
+{
+  "peripheral": "IWDG",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "IWDG",
+      "register": "PR",
+      "field": "PR",
+      "bit_offset": 0,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "IWDG_PRESCALER_8",
+          "value": 1,
+          "description": "IWDG prescaler set to 8",
+          "abs_value": 1
+        },
+        {
+          "symbol": "IWDG_PRESCALER_16",
+          "value": 2,
+          "description": "IWDG prescaler set to 16",
+          "abs_value": 2
+        },
+        {
+          "symbol": "IWDG_PRESCALER_32",
+          "value": 3,
+          "description": "IWDG prescaler set to 32",
+          "abs_value": 3
+        },
+        {
+          "symbol": "IWDG_PRESCALER_64",
+          "value": 4,
+          "description": "IWDG prescaler set to 64",
+          "abs_value": 4
+        },
+        {
+          "symbol": "IWDG_PRESCALER_128",
+          "value": 5,
+          "description": "IWDG prescaler set to 128",
+          "abs_value": 5
+        },
+        {
+          "symbol": "IWDG_PRESCALER_256",
+          "value": 6,
+          "description": "IWDG prescaler set to 256",
+          "abs_value": 6
+        },
+        {
+          "symbol": "IWDG_PRESCALER_4",
+          "value": 0,
+          "description": "IWDG prescaler set to 4",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "IWDG_InitTypeDef",
+      "init_struct_field": "Prescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [],
+  "numeric_fields": [
+    {
+      "init_struct": "IWDG_InitTypeDef",
+      "init_struct_field": "Reload",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "RLR",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "IWDG_InitTypeDef",
+      "field": "Prescaler",
+      "ref": "IWDG_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "IWDG_InitTypeDef",
+      "field": "Reload",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 1,
+    "multi_field_count": 0,
+    "total_encodings": 7,
+    "unresolved_count": 1,
+    "numeric_field_count": 1
+  }
+}

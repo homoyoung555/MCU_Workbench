@@ -1,0 +1,742 @@
+{
+  "peripheral": "SCI",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "SCI",
+      "register": "CR2",
+      "field": "STOP",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "SCI_STOPBITS_1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "StopBits",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR3",
+      "field": "OVER8",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_OVERSAMPLING_16",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "OverSampling",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR1",
+      "field": "TX_INV",
+      "bit_offset": 26,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_TXINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "TxPinLevelInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR1",
+      "field": "RX_INV",
+      "bit_offset": 25,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_RXINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "RxPinLevelInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR1",
+      "field": "DATAINV",
+      "bit_offset": 27,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_DATAINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "DataInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR1",
+      "field": "SWAP",
+      "bit_offset": 18,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_SWAP_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "Swap",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR3",
+      "field": "ABREN",
+      "bit_offset": 12,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_AUTOBAUDRATE_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "SCI_ADVFEATURE_AUTOBAUDRATE_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "AutoBaudRateEnable",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR1",
+      "field": "MSB",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_MSBFIRST_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "MSBFirst",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "register": "CR3",
+      "field": "ABRMOD",
+      "bit_offset": 13,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "SCI_ADVFEATURE_AUTOBAUDRATE_ONSTARTBIT",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SCI_AdvFeatureInitTypeDef",
+      "init_struct_field": "AutoBaudRateMode",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_HWCONTROL_NONE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "RTSE",
+          "value": 0,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "CTSE",
+          "value": 0,
+          "bit_offset": 9,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "HwFlowCtl",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_WORDLENGTH_8B",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 0,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 0,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_WORDLENGTH_9B",
+      "abs_value": 4096,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 0,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_WORDLENGTH_7B",
+      "abs_value": 16384,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 0,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_PARITY_NONE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "PCE",
+          "value": 0,
+          "bit_offset": 10,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "PS",
+          "value": 0,
+          "bit_offset": 9,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "Parity",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "fn:HAL_MultiProcessor_Init",
+      "init_struct_field": "Address",
+      "is_macro": "IS_SCI_ADDRESS",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_ReceiverTimeout_Config",
+      "init_struct_field": "TimeoutValue",
+      "is_macro": "IS_SCI_RECEIVER_TIMEOUT_VALUE",
+      "min": 0,
+      "max": 16777215,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_RS485Ex_Init",
+      "init_struct_field": "AssertionTime",
+      "is_macro": "IS_SCI_ASSERTIONTIME",
+      "min": 0,
+      "max": 31,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_RS485Ex_Init",
+      "init_struct_field": "DeassertionTime",
+      "is_macro": "IS_SCI_DEASSERTIONTIME",
+      "min": 0,
+      "max": 31,
+      "placement": null
+    },
+    {
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": "IS_SCI_BAUDRATE",
+      "min": 0,
+      "max": 4500000,
+      "placement": null
+    },
+    {
+      "init_struct": "SCI_WakeUpTypeDef",
+      "init_struct_field": "Address",
+      "is_macro": "IS_SCI_ADDRESS",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_MultiProcessor_Init",
+      "init_struct_field": "Address",
+      "is_macro": "IS_SCI_ADDRESS",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_ReceiverTimeout_Config",
+      "init_struct_field": "TimeoutValue",
+      "is_macro": "IS_SCI_RECEIVER_TIMEOUT_VALUE",
+      "min": 0,
+      "max": 16777215,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_RS485Ex_Init",
+      "init_struct_field": "AssertionTime",
+      "is_macro": "IS_SCI_ASSERTIONTIME",
+      "min": 0,
+      "max": 31,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_SCI_RS485Ex_Init",
+      "init_struct_field": "DeassertionTime",
+      "is_macro": "IS_SCI_DEASSERTIONTIME",
+      "min": 0,
+      "max": 31,
+      "placement": null
+    },
+    {
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "Mode",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "RE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SCI_InitTypeDef",
+      "init_struct_field": "Mode",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "TE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SCI_WakeUpTypeDef",
+      "init_struct_field": "AddressLength",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "ADDM7"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_LIN_Init",
+      "init_struct_field": "BreakDetectLength",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR2",
+        "field": "LBDL"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_MultiProcessor_Init",
+      "init_struct_field": "WakeUpMethod",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "WAKE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_SCI_RS485Ex_Init",
+      "init_struct_field": "Polarity",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR2",
+        "field": "DEP"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_SCIEx_SetTxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "is_macro": null,
+      "min": 0,
+      "max": 7,
+      "placement": {
+        "register": "CR1",
+        "field": "TXFTCFG"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_SCIEx_SetRxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "is_macro": null,
+      "min": 0,
+      "max": 7,
+      "placement": {
+        "register": "CR1",
+        "field": "RXFTCFG"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "BaudRate",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "WordLength",
+      "ref": "IS:IS_SCI_WORD_LENGTH",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "StopBits",
+      "ref": "SCI_Stop_Bits",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "Parity",
+      "ref": "SCI_Parity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "Mode",
+      "ref": "SCI_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "HwFlowCtl",
+      "ref": "SCI_Hardware_Flow_Control",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_InitTypeDef",
+      "field": "OverSampling",
+      "ref": "SCI_Over_Sampling",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "AdvFeatureInit",
+      "ref": "SCI_Advanced_Features_Initialization_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "TxPinLevelInvert",
+      "ref": "SCI_Tx_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "RxPinLevelInvert",
+      "ref": "SCI_Rx_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "DataInvert",
+      "ref": "SCI_Data_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "Swap",
+      "ref": "SCI_Rx_Tx_Swap",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "AutoBaudRateEnable",
+      "ref": "SCI_AutoBaudRate_Enable",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "AutoBaudRateMode",
+      "ref": "SCI_AutoBaud_Rate_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_AdvFeatureInitTypeDef",
+      "field": "MSBFirst",
+      "ref": "SCI_MSB_First",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SCI_WakeUpTypeDef",
+      "field": "AddressLength",
+      "ref": "SCIEx_WakeUp_Address_Length",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SCI_WakeUpTypeDef",
+      "field": "Address",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "fn:HAL_LIN_Init",
+      "field": "BreakDetectLength",
+      "ref": "IS:IS_SCI_LIN_BREAK_DETECT_LENGTH",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_MultiProcessor_Init",
+      "field": "WakeUpMethod",
+      "ref": "IS:IS_SCI_WAKEUPMETHOD",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_MultiProcessor_Init",
+      "field": "Address",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCI_ReceiverTimeout_Config",
+      "field": "TimeoutValue",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCI_RS485Ex_Init",
+      "field": "Polarity",
+      "ref": "IS:IS_SCI_DE_POLARITY",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCI_RS485Ex_Init",
+      "field": "AssertionTime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCI_RS485Ex_Init",
+      "field": "DeassertionTime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCI_MultiProcessorEx_AddressLength_Set",
+      "field": "AddressLength",
+      "ref": "IS:IS_SCI_ADDRESSLENGTH_DETECT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCIEx_SetTxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_SCI_TXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SCIEx_SetRxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_SCI_RXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 9,
+    "multi_field_count": 0,
+    "total_encodings": 0,
+    "unresolved_count": 86,
+    "numeric_field_count": 18,
+    "llm_applied": true
+  }
+}

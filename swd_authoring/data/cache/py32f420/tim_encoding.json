@@ -1,0 +1,4985 @@
+{
+  "peripheral": "TIM",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "TIM",
+      "register": "CR1",
+      "field": "DIR",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_COUNTERMODE_DOWN",
+          "value": 1,
+          "description": "Counter used as down-counter",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "CounterMode",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR1",
+      "field": "CMS",
+      "bit_offset": 5,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_COUNTERMODE_CENTERALIGNED1",
+          "value": 1,
+          "description": "Center-aligned mode 1",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_COUNTERMODE_CENTERALIGNED2",
+          "value": 2,
+          "description": "Center-aligned mode 2",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_COUNTERMODE_CENTERALIGNED3",
+          "value": 3,
+          "description": "Center-aligned mode 3",
+          "abs_value": 96
+        }
+      ],
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "CounterMode",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR1",
+      "field": "CKD",
+      "bit_offset": 8,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKDIVISION_DIV2",
+          "value": 1,
+          "description": "Clock division: tDTS=2*tCK_INT",
+          "abs_value": 256
+        },
+        {
+          "symbol": "TIM_CLOCKDIVISION_DIV4",
+          "value": 2,
+          "description": "Clock division: tDTS=4*tCK_INT",
+          "abs_value": 512
+        },
+        {
+          "symbol": "TIM_CLOCKDIVISION_DIV1",
+          "value": 0,
+          "description": "Clock division: tDTS=tCK_INT",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "ClockDivision",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR1",
+      "field": "ARPE",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_AUTORELOAD_PRELOAD_ENABLE",
+          "value": 1,
+          "description": "TIMx_ARR register is buffered",
+          "abs_value": 128
+        },
+        {
+          "symbol": "TIM_AUTORELOAD_PRELOAD_DISABLE",
+          "value": 0,
+          "description": "TIMx_ARR register is not buffered",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "AutoReloadPreload",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCPOLARITY_LOW",
+          "value": 1,
+          "description": "Capture/Compare output polarity",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_OCPOLARITY_HIGH",
+          "value": 0,
+          "description": "Capture/Compare output polarity",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1NP",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCNPOLARITY_LOW",
+          "value": 1,
+          "description": "Capture/Compare complementary output polarity",
+          "abs_value": 8
+        },
+        {
+          "symbol": "TIM_OCNPOLARITY_HIGH",
+          "value": 0,
+          "description": "Capture/Compare complementary output polarity",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCNPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "OIS1",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCIDLESTATE_SET",
+          "value": 1,
+          "description": "Output Idle state: OCx=1 when MOE=0",
+          "abs_value": 256
+        },
+        {
+          "symbol": "TIM_OCIDLESTATE_RESET",
+          "value": 0,
+          "description": "Output Idle state: OCx=0 when MOE=0",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCIdleState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "OIS1N",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCNIDLESTATE_SET",
+          "value": 1,
+          "description": "Complementary output Idle state: OCxN=1 when MOE=0",
+          "abs_value": 512
+        },
+        {
+          "symbol": "TIM_OCNIDLESTATE_RESET",
+          "value": 0,
+          "description": "Complementary output Idle state: OCxN=0 when MOE=0",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCNIdleState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCPOLARITY_LOW",
+          "value": 1,
+          "description": "Capture/Compare output polarity",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_OCPOLARITY_HIGH",
+          "value": 0,
+          "description": "Capture/Compare output polarity",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1NP",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCNPOLARITY_LOW",
+          "value": 1,
+          "description": "Capture/Compare complementary output polarity",
+          "abs_value": 8
+        },
+        {
+          "symbol": "TIM_OCNPOLARITY_HIGH",
+          "value": 0,
+          "description": "Capture/Compare complementary output polarity",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCNPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "OIS1",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCIDLESTATE_SET",
+          "value": 1,
+          "description": "Output Idle state: OCx=1 when MOE=0",
+          "abs_value": 256
+        },
+        {
+          "symbol": "TIM_OCIDLESTATE_RESET",
+          "value": 0,
+          "description": "Output Idle state: OCx=0 when MOE=0",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCIdleState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "OIS1N",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OCNIDLESTATE_SET",
+          "value": 1,
+          "description": "Complementary output Idle state: OCxN=1 when MOE=0",
+          "abs_value": 512
+        },
+        {
+          "symbol": "TIM_OCNIDLESTATE_RESET",
+          "value": 0,
+          "description": "Complementary output Idle state: OCxN=0 when MOE=0",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCNIdleState",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_ICPOLARITY_RISING",
+          "value": 0,
+          "description": "Capture triggered by rising edge on timer input",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ICPOLARITY_FALLING",
+          "value": 1,
+          "description": "Capture triggered by falling edge on timer input",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "ICPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCMR1",
+      "field": "CC1S",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ICSELECTION_DIRECTTI",
+          "value": 1,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_ICSELECTION_INDIRECTTI",
+          "value": 2,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ICSELECTION_TRC",
+          "value": 3,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to TRC",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "ICSelection",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_ICPOLARITY_RISING",
+          "value": 0,
+          "description": "Capture triggered by rising edge on timer input",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ICPOLARITY_FALLING",
+          "value": 1,
+          "description": "Capture triggered by falling edge on timer input",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCMR1",
+      "field": "CC1S",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ICSELECTION_DIRECTTI",
+          "value": 1,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_ICSELECTION_INDIRECTTI",
+          "value": 2,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ICSELECTION_TRC",
+          "value": 3,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to TRC",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICSelection",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "SMS",
+      "bit_offset": 0,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERMODE_TI1",
+          "value": 1,
+          "description": "Quadrature encoder mode 1, x2 mode, counts up/down on TI1FP1 edge depending on TI2FP2 level",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_ENCODERMODE_TI2",
+          "value": 2,
+          "description": "Quadrature encoder mode 2, x2 mode, counts up/down on TI2FP2 edge depending on TI1FP1 level.",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ENCODERMODE_TI12",
+          "value": 3,
+          "description": "Quadrature encoder mode 3, x4 mode, counts up/down on both TI1FP1 and TI2FP2 edges depending on the level of the other input.",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "EncoderMode",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERINPUTPOLARITY_RISING",
+          "value": 0,
+          "description": "Encoder input with rising edge polarity",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINPUTPOLARITY_FALLING",
+          "value": 1,
+          "description": "Encoder input with falling edge polarity",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Polarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCMR1",
+      "field": "CC1S",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ICSELECTION_DIRECTTI",
+          "value": 1,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_ICSELECTION_INDIRECTTI",
+          "value": 2,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ICSELECTION_TRC",
+          "value": 3,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to TRC",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Selection",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERINPUTPOLARITY_RISING",
+          "value": 0,
+          "description": "Encoder input with rising edge polarity",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINPUTPOLARITY_FALLING",
+          "value": 1,
+          "description": "Encoder input with falling edge polarity",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Polarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCMR1",
+      "field": "CC1S",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ICSELECTION_DIRECTTI",
+          "value": 1,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_ICSELECTION_INDIRECTTI",
+          "value": 2,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ICSELECTION_TRC",
+          "value": 3,
+          "description": "TIM Input 1, 2, 3 or 4 is selected to be connected to TRC",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Selection",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETPS",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKSOURCE_INTERNAL",
+          "value": 1,
+          "description": "Internal clock source",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ETRMODE2",
+          "value": 2,
+          "description": "External clock source mode 2",
+          "abs_value": 8192
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "TS",
+      "bit_offset": 4,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKSOURCE_ETRMODE1",
+          "value": 7,
+          "description": "External clock source mode 1 (ETRF)",
+          "abs_value": 112
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_TI1ED",
+          "value": 4,
+          "description": "External clock source mode 1 (TTI1FP1 + edge detect.)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_TI1",
+          "value": 5,
+          "description": "External clock source mode 1 (TTI1FP1)",
+          "abs_value": 80
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_TI2",
+          "value": 6,
+          "description": "External clock source mode 1 (TTI2FP2)",
+          "abs_value": 96
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR1",
+          "value": 1,
+          "description": "External clock source mode 1 (ITR1)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR2",
+          "value": 2,
+          "description": "External clock source mode 1 (ITR2)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR3",
+          "value": 3,
+          "description": "External clock source mode 1 (ITR3)",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR5",
+          "value": 1,
+          "description": "External clock source mode 1 (ITR5)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR6",
+          "value": 2,
+          "description": "External clock source mode 1 (ITR6)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR7",
+          "value": 3,
+          "description": "External clock source mode 1 (ITR7)",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR8",
+          "value": 4,
+          "description": "External clock source mode 1 (ITR8)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_CLOCKSOURCE_ITR9",
+          "value": 5,
+          "description": "External clock source mode 1 (ITR9)",
+          "abs_value": 80
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETP",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKPOLARITY_INVERTED",
+          "value": 1,
+          "description": "Polarity for ETRx clock sources",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockPolarity",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKPOLARITY_FALLING",
+          "value": 1,
+          "description": "Polarity for TIx clock sources",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockPolarity",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETPS",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_CLOCKPRESCALER_DIV1",
+          "value": 0,
+          "description": "No prescaler is used",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_CLOCKPRESCALER_DIV2",
+          "value": 1,
+          "description": "Prescaler for External ETR Clock: Capture performed once every 2 events.",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "TIM_CLOCKPRESCALER_DIV4",
+          "value": 2,
+          "description": "Prescaler for External ETR Clock: Capture performed once every 4 events.",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "TIM_CLOCKPRESCALER_DIV8",
+          "value": 3,
+          "description": "Prescaler for External ETR Clock: Capture performed once every 8 events.",
+          "abs_value": 12288
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockPrescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF2",
+      "field": "OCRSEL",
+      "bit_offset": 16,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "TIM_CLEARINPUTSOURCE_COMP2",
+          "value": 1,
+          "description": "OCREF_CLR_INT is connected to COMP2 output",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "TIM_CLEARINPUTSOURCE_COMP3",
+          "value": 2,
+          "description": "OCREF_CLR_INT is connected to COMP3 output",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "TIM_CLEARINPUTSOURCE_COMP4",
+          "value": 3,
+          "description": "OCREF_CLR_INT is connected to COMP4 output",
+          "abs_value": 196608
+        },
+        {
+          "symbol": "TIM_CLEARINPUTSOURCE_ETR",
+          "value": 1,
+          "description": "OCREF_CLR is connected to ETRF input",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "TIM_CLEARINPUTSOURCE_COMP1",
+          "value": 0,
+          "description": "OCREF_CLR_INT is connected to COMP1 output",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputSource",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETP",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_CLEARINPUTPOLARITY_INVERTED",
+          "value": 1,
+          "description": "Polarity for ETRx pin",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "TIM_CLEARINPUTPOLARITY_NONINVERTED",
+          "value": 0,
+          "description": "Polarity for ETRx pin",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETPS",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_CLEARINPUTPRESCALER_DIV1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_CLEARINPUTPRESCALER_DIV2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "TIM_CLEARINPUTPRESCALER_DIV4",
+          "value": 2,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "TIM_CLEARINPUTPRESCALER_DIV8",
+          "value": 3,
+          "description": "",
+          "abs_value": 12288
+        }
+      ],
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputPrescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "MMS",
+      "bit_offset": 4,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "TIM_TRGO_ENABLE",
+          "value": 1,
+          "description": "TIMx_CR1.CEN bit is used as trigger output (TRGO)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TRGO_UPDATE",
+          "value": 2,
+          "description": "Update event is used as trigger output (TRGO)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TRGO_OC1",
+          "value": 3,
+          "description": "Capture or compare match 1 is used as trigger output (TRGO)",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TRGO_OC1REF",
+          "value": 4,
+          "description": "OC1REF signal is used as trigger output(TRGO)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TRGO_OC2REF",
+          "value": 5,
+          "description": "OC2REF signal is used as trigger output(TRGO)",
+          "abs_value": 80
+        },
+        {
+          "symbol": "TIM_TRGO_OC3REF",
+          "value": 6,
+          "description": "OC3REF signal is used as trigger output(TRGO)",
+          "abs_value": 96
+        },
+        {
+          "symbol": "TIM_TRGO_OC4REF",
+          "value": 7,
+          "description": "OC4REF signal is used as trigger output(TRGO)",
+          "abs_value": 112
+        },
+        {
+          "symbol": "TIM_TRGO_RESET",
+          "value": 0,
+          "description": "TIMx_EGR.UG bit is used as trigger output (TRGO)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_MasterConfigTypeDef",
+      "init_struct_field": "MasterOutputTrigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR2",
+      "field": "MMS2",
+      "bit_offset": 20,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "TIM_TRGO2_ENABLE",
+          "value": 1,
+          "description": "TIMx_CR1.CEN bit is used as trigger output (TRGO2)",
+          "abs_value": 1048576
+        },
+        {
+          "symbol": "TIM_TRGO2_UPDATE",
+          "value": 2,
+          "description": "Update event is used as trigger output (TRGO2)",
+          "abs_value": 2097152
+        },
+        {
+          "symbol": "TIM_TRGO2_OC1",
+          "value": 3,
+          "description": "Capture or a compare match 1 is used as trigger output (TRGO2)",
+          "abs_value": 3145728
+        },
+        {
+          "symbol": "TIM_TRGO2_OC1REF",
+          "value": 4,
+          "description": "OC1REF signal is used as trigger output (TRGO2)",
+          "abs_value": 4194304
+        },
+        {
+          "symbol": "TIM_TRGO2_OC2REF",
+          "value": 5,
+          "description": "OC2REF signal is used as trigger output (TRGO2)",
+          "abs_value": 5242880
+        },
+        {
+          "symbol": "TIM_TRGO2_OC3REF",
+          "value": 6,
+          "description": "OC3REF signal is used as trigger output (TRGO2)",
+          "abs_value": 6291456
+        },
+        {
+          "symbol": "TIM_TRGO2_OC4REF",
+          "value": 7,
+          "description": "OC4REF signal is used as trigger output (TRGO2)",
+          "abs_value": 7340032
+        },
+        {
+          "symbol": "TIM_TRGO2_OC5REF",
+          "value": 8,
+          "description": "OC5REF signal is used as trigger output (TRGO2)",
+          "abs_value": 8388608
+        },
+        {
+          "symbol": "TIM_TRGO2_OC6REF",
+          "value": 9,
+          "description": "OC6REF signal is used as trigger output (TRGO2)",
+          "abs_value": 9437184
+        },
+        {
+          "symbol": "TIM_TRGO2_OC4REF_RISINGFALLING",
+          "value": 10,
+          "description": "OC4REF rising or falling edges generate pulses on TRGO2",
+          "abs_value": 10485760
+        },
+        {
+          "symbol": "TIM_TRGO2_OC6REF_RISINGFALLING",
+          "value": 11,
+          "description": "OC6REF rising or falling edges generate pulses on TRGO2",
+          "abs_value": 11534336
+        },
+        {
+          "symbol": "TIM_TRGO2_OC4REF_RISING_OC6REF_RISING",
+          "value": 12,
+          "description": "OC4REF or OC6REF rising edges generate pulses on TRGO2",
+          "abs_value": 12582912
+        },
+        {
+          "symbol": "TIM_TRGO2_OC4REF_RISING_OC6REF_FALLING",
+          "value": 13,
+          "description": "OC4REF rising or OC6REF falling edges generate pulses on TRGO2",
+          "abs_value": 13631488
+        },
+        {
+          "symbol": "TIM_TRGO2_OC5REF_RISING_OC6REF_RISING",
+          "value": 14,
+          "description": "OC5REF or OC6REF rising edges generate pulses on TRGO2",
+          "abs_value": 14680064
+        },
+        {
+          "symbol": "TIM_TRGO2_OC5REF_RISING_OC6REF_FALLING",
+          "value": 15,
+          "description": "OC5REF rising or OC6REF falling edges generate pulses on TRGO2",
+          "abs_value": 15728640
+        },
+        {
+          "symbol": "TIM_TRGO2_RESET",
+          "value": 0,
+          "description": "TIMx_EGR.UG bit is used as trigger output (TRGO2)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_MasterConfigTypeDef",
+      "init_struct_field": "MasterOutputTrigger2",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "SMS",
+      "bit_offset": 0,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "TIM_SLAVEMODE_RESET",
+          "value": 4,
+          "description": "Reset Mode",
+          "abs_value": 4
+        },
+        {
+          "symbol": "TIM_SLAVEMODE_GATED",
+          "value": 5,
+          "description": "Gated Mode",
+          "abs_value": 5
+        },
+        {
+          "symbol": "TIM_SLAVEMODE_TRIGGER",
+          "value": 6,
+          "description": "Trigger Mode",
+          "abs_value": 6
+        },
+        {
+          "symbol": "TIM_SLAVEMODE_EXTERNAL1",
+          "value": 7,
+          "description": "External Clock Mode 1",
+          "abs_value": 7
+        },
+        {
+          "symbol": "TIM_SLAVEMODE_DISABLE",
+          "value": 0,
+          "description": "Slave mode disabled",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "SlaveMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "TS",
+      "bit_offset": 4,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_TS_ITR1",
+          "value": 1,
+          "description": "Internal Trigger 1 (ITR1)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR2",
+          "value": 2,
+          "description": "Internal Trigger 2 (ITR2)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR3",
+          "value": 3,
+          "description": "Internal Trigger 3 (ITR3)",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_TI1F_ED",
+          "value": 4,
+          "description": "TI1 Edge Detector (TI1F_ED)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TS_TI1FP1",
+          "value": 5,
+          "description": "Filtered Timer Input 1 (TI1FP1)",
+          "abs_value": 80
+        },
+        {
+          "symbol": "TIM_TS_TI2FP2",
+          "value": 6,
+          "description": "Filtered Timer Input 2 (TI2FP2)",
+          "abs_value": 96
+        },
+        {
+          "symbol": "TIM_TS_ETRF",
+          "value": 7,
+          "description": "Filtered External Trigger input (ETRF)",
+          "abs_value": 112
+        },
+        {
+          "symbol": "TIM_TS_ITR5",
+          "value": 1,
+          "description": "Internal Trigger 5 (ITR5)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR6",
+          "value": 2,
+          "description": "Internal Trigger 6 (ITR6)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR7",
+          "value": 3,
+          "description": "Internal Trigger 7 (ITR7)",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR8",
+          "value": 4,
+          "description": "Internal Trigger 8 (ITR8)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TS_ITR9",
+          "value": 5,
+          "description": "Internal Trigger 9 (ITR9)",
+          "abs_value": 80
+        },
+        {
+          "symbol": "TIM_TS_ITR0",
+          "value": 0,
+          "description": "Internal Trigger 0 (ITR0)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "InputTrigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETP",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_TRIGGERPOLARITY_INVERTED",
+          "value": 1,
+          "description": "Polarity for ETRx trigger sources",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "TriggerPolarity",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_TRIGGERPOLARITY_FALLING",
+          "value": 1,
+          "description": "Polarity for TIxFPx or TI1_ED trigger sources",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "TriggerPolarity",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETPS",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_TRIGGERPRESCALER_DIV1",
+          "value": 0,
+          "description": "No prescaler is used",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_TRIGGERPRESCALER_DIV2",
+          "value": 1,
+          "description": "Prescaler for External ETR Trigger: Capture performed once every 2 events.",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "TIM_TRIGGERPRESCALER_DIV4",
+          "value": 2,
+          "description": "Prescaler for External ETR Trigger: Capture performed once every 4 events.",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "TIM_TRIGGERPRESCALER_DIV8",
+          "value": 3,
+          "description": "Prescaler for External ETR Trigger: Capture performed once every 8 events.",
+          "abs_value": 12288
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "TriggerPrescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CCER",
+      "field": "CC1P",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_ICPOLARITY_RISING",
+          "value": 0,
+          "description": "Capture triggered by rising edge on timer input",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ICPOLARITY_FALLING",
+          "value": 1,
+          "description": "Capture triggered by falling edge on timer input",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "IC1Polarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "ETPS",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERINDEX_PRESCALER_DIV1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_PRESCALER_DIV2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_PRESCALER_DIV4",
+          "value": 2,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_PRESCALER_DIV8",
+          "value": 3,
+          "description": "",
+          "abs_value": 12288
+        }
+      ],
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Prescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "ECR",
+      "field": "IPOS",
+      "bit_offset": 6,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_00",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_01",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_10",
+          "value": 2,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_11",
+          "value": 3,
+          "description": "",
+          "abs_value": 192
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_POSITION_1",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        }
+      ],
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Position",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "ECR",
+      "field": "IDIR",
+      "bit_offset": 1,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "TIM_ENCODERINDEX_DIRECTION_UP_DOWN",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_DIRECTION_UP",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_ENCODERINDEX_DIRECTION_DOWN",
+          "value": 2,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Direction",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "CR1",
+      "field": "OPM",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_OPMODE_SINGLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "TIM_OPMODE_REPETITIVE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "fn:HAL_TIM_OnePulse_Init",
+      "init_struct_field": "OnePulseMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "TS",
+      "bit_offset": 4,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_TS_ITR0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_TS_ITR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR2",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR3",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR5",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR6",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR7",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR8",
+          "value": 4,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TS_ITR9",
+          "value": 5,
+          "description": "",
+          "abs_value": 80
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_ConfigCommutEvent",
+      "init_struct_field": "InputTrigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "TS",
+      "bit_offset": 4,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_TS_ITR0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_TS_ITR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR2",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR3",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR5",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR6",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR7",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR8",
+          "value": 4,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TS_ITR9",
+          "value": 5,
+          "description": "",
+          "abs_value": 80
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_ConfigCommutEvent_IT",
+      "init_struct_field": "InputTrigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "SMCR",
+      "field": "TS",
+      "bit_offset": 4,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_TS_ITR0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "TIM_TS_ITR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR2",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR3",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR5",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_TS_ITR6",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "TIM_TS_ITR7",
+          "value": 3,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "TIM_TS_ITR8",
+          "value": 4,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "TIM_TS_ITR9",
+          "value": 5,
+          "description": "",
+          "abs_value": 80
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_ConfigCommutEvent_DMA",
+      "init_struct_field": "InputTrigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "MTZEROE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_ZERO",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "MTARRE",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_ARR",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR1E",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR1HE",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR1H",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR2E",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR2",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR2HE",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR2H",
+          "value": 1,
+          "description": "",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR3E",
+      "bit_offset": 6,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR3",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR3HE",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR3H",
+          "value": 1,
+          "description": "",
+          "abs_value": 128
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR4E",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR4",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR4HE",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR4H",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR1E",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1024
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR1HE",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR1H",
+          "value": 1,
+          "description": "",
+          "abs_value": 2048
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR2E",
+      "bit_offset": 12,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR2HE",
+      "bit_offset": 13,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR2H",
+          "value": 1,
+          "description": "",
+          "abs_value": 8192
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR3E",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR3",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR3HE",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR3H",
+          "value": 1,
+          "description": "",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR4E",
+      "bit_offset": 16,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR4",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR4HE",
+      "bit_offset": 17,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR4H",
+          "value": 1,
+          "description": "",
+          "abs_value": 131072
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "MTZEROE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_ZERO",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "MTARRE",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_ARR",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR1E",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR1HE",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR1H",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR2E",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR2",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR2HE",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR2H",
+          "value": 1,
+          "description": "",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR3E",
+      "bit_offset": 6,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR3",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR3HE",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR3H",
+          "value": 1,
+          "description": "",
+          "abs_value": 128
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR4E",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR4",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "UMTCCR4HE",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_UP_CCR4H",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR1E",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1024
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR1HE",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR1H",
+          "value": 1,
+          "description": "",
+          "abs_value": 2048
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR2E",
+      "bit_offset": 12,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR2HE",
+      "bit_offset": 13,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR2H",
+          "value": 1,
+          "description": "",
+          "abs_value": 8192
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR3E",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR3",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR3HE",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR3H",
+          "value": 1,
+          "description": "",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR4E",
+      "bit_offset": 16,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR4",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "MTADCCR",
+      "field": "DMTCCR4HE",
+      "bit_offset": 17,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_MULTIPLE_TRIGGER_ADC_DOWN_CCR4H",
+          "value": 1,
+          "description": "",
+          "abs_value": 131072
+        }
+      ],
+      "init_struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "init_struct_field": "TriggerSource",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "DCR",
+      "field": "DBA",
+      "bit_offset": 0,
+      "bit_width": 5,
+      "encodings": [
+        {
+          "symbol": "TIM_DMABASE_CR2",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "TIM_DMABASE_SMCR",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "TIM_DMABASE_DIER",
+          "value": 3,
+          "description": "",
+          "abs_value": 3
+        },
+        {
+          "symbol": "TIM_DMABASE_SR",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "TIM_DMABASE_EGR",
+          "value": 5,
+          "description": "",
+          "abs_value": 5
+        },
+        {
+          "symbol": "TIM_DMABASE_CCMR1",
+          "value": 6,
+          "description": "",
+          "abs_value": 6
+        },
+        {
+          "symbol": "TIM_DMABASE_CCMR2",
+          "value": 7,
+          "description": "",
+          "abs_value": 7
+        },
+        {
+          "symbol": "TIM_DMABASE_CCER",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "TIM_DMABASE_CNT",
+          "value": 9,
+          "description": "",
+          "abs_value": 9
+        },
+        {
+          "symbol": "TIM_DMABASE_PSC",
+          "value": 10,
+          "description": "",
+          "abs_value": 10
+        },
+        {
+          "symbol": "TIM_DMABASE_ARR",
+          "value": 11,
+          "description": "",
+          "abs_value": 11
+        },
+        {
+          "symbol": "TIM_DMABASE_RCR",
+          "value": 12,
+          "description": "",
+          "abs_value": 12
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR1",
+          "value": 13,
+          "description": "",
+          "abs_value": 13
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR2",
+          "value": 14,
+          "description": "",
+          "abs_value": 14
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR3",
+          "value": 15,
+          "description": "",
+          "abs_value": 15
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR4",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "TIM_DMABASE_BDTR",
+          "value": 17,
+          "description": "",
+          "abs_value": 17
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR5",
+          "value": 18,
+          "description": "",
+          "abs_value": 18
+        },
+        {
+          "symbol": "TIM_DMABASE_CCR6",
+          "value": 19,
+          "description": "",
+          "abs_value": 19
+        },
+        {
+          "symbol": "TIM_DMABASE_CCMR3",
+          "value": 20,
+          "description": "",
+          "abs_value": 20
+        },
+        {
+          "symbol": "TIM_DMABASE_DTR2",
+          "value": 21,
+          "description": "",
+          "abs_value": 21
+        },
+        {
+          "symbol": "TIM_DMABASE_ECR",
+          "value": 22,
+          "description": "",
+          "abs_value": 22
+        },
+        {
+          "symbol": "TIM_DMABASE_TISEL",
+          "value": 23,
+          "description": "",
+          "abs_value": 23
+        },
+        {
+          "symbol": "TIM_DMABASE_AF1",
+          "value": 24,
+          "description": "",
+          "abs_value": 24
+        },
+        {
+          "symbol": "TIM_DMABASE_AF2",
+          "value": 25,
+          "description": "",
+          "abs_value": 25
+        },
+        {
+          "symbol": "TIM_DMABASE_MTADCCR",
+          "value": 27,
+          "description": "",
+          "abs_value": 27
+        }
+      ],
+      "init_struct": "fn:HAL_TIM_DMABurst_MultiWriteStart",
+      "init_struct_field": "BurstBaseAddress",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF1",
+      "field": "BKINE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_BREAKINPUTSOURCE_BKIN",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF1",
+      "field": "BKCMP1E",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_BREAKINPUTSOURCE_COMP1",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF1",
+      "field": "BKCMP2E",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_BREAKINPUTSOURCE_COMP2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF1",
+      "field": "BKCMP3E",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_BREAKINPUTSOURCE_COMP3",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "TIM",
+      "register": "AF1",
+      "field": "BKCMP4E",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "TIM_BREAKINPUTSOURCE_COMP4",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ACTIVE",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Set channel to active level on match",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_INACTIVE",
+      "abs_value": 32,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Set channel to inactive level on match",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_TOGGLE",
+      "abs_value": 48,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Toggle",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_FORCED_INACTIVE",
+      "abs_value": 64,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Force inactive level",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_FORCED_ACTIVE",
+      "abs_value": 80,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Force active level",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PWM1",
+      "abs_value": 96,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PWM2",
+      "abs_value": 112,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_RETRIGERRABLE_OPM2",
+      "abs_value": 65552,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Retrigerrable OPM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_COMBINED_PWM1",
+      "abs_value": 65600,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Combined PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_COMBINED_PWM2",
+      "abs_value": 65616,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Combined PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ASYMMETRIC_PWM1",
+      "abs_value": 65632,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Asymmetric PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ASYMMETRIC_PWM2",
+      "abs_value": 65648,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Asymmetric PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PULSE_ON_COMPARE",
+      "abs_value": 65568,
+      "fields": [
+        {
+          "register": "CCMR2",
+          "field": "OC3M",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR2",
+          "field": "IC3F",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Pulse on compare (CH3&CH4 only)",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_DIRECTION_OUTPUT",
+      "abs_value": 65584,
+      "fields": [
+        {
+          "register": "CCMR2",
+          "field": "OC3M",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR2",
+          "field": "IC3F",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Direction output (CH3&CH4 only)",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCFAST_ENABLE",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "OCFastMode",
+      "description": "Output Compare fast enable",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ACTIVE",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Set channel to active level on match",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_INACTIVE",
+      "abs_value": 32,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Set channel to inactive level on match",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_TOGGLE",
+      "abs_value": 48,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Toggle",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_FORCED_INACTIVE",
+      "abs_value": 64,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Force inactive level",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_FORCED_ACTIVE",
+      "abs_value": 80,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Force active level",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PWM1",
+      "abs_value": 96,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PWM2",
+      "abs_value": 112,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_RETRIGERRABLE_OPM2",
+      "abs_value": 65552,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Retrigerrable OPM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_COMBINED_PWM1",
+      "abs_value": 65600,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Combined PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_COMBINED_PWM2",
+      "abs_value": 65616,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 5,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Combined PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ASYMMETRIC_PWM1",
+      "abs_value": 65632,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 6,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Asymmetric PWM mode 1",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_ASYMMETRIC_PWM2",
+      "abs_value": 65648,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1M",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1F",
+          "value": 7,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Asymmetric PWM mode 2",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_PULSE_ON_COMPARE",
+      "abs_value": 65568,
+      "fields": [
+        {
+          "register": "CCMR2",
+          "field": "OC3M",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR2",
+          "field": "IC3F",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Pulse on compare (CH3&CH4 only)",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_DIRECTION_OUTPUT",
+      "abs_value": 65584,
+      "fields": [
+        {
+          "register": "CCMR2",
+          "field": "OC3M",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CCMR2",
+          "field": "IC3F",
+          "value": 3,
+          "bit_offset": 4,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "OCMode",
+      "description": "Direction output (CH3&CH4 only)",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "ICPolarity",
+      "description": "Capture triggered by both rising and falling edges on timer input",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICPolarity",
+      "description": "Capture triggered by both rising and falling edges on timer input",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV2",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICPrescaler",
+      "description": "Capture performed once every 2 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICPrescaler",
+      "description": "Capture performed once every 4 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV8",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 3,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICPrescaler",
+      "description": "Capture performed once every 8 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ENCODERINPUTPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Polarity",
+      "description": "Encoder input with rising and falling edge polarity",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV2",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 2 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 4 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV8",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 3,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 8 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ENCODERINPUTPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Polarity",
+      "description": "Encoder input with rising and falling edge polarity",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV2",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Prescaler",
+      "description": "Capture performed once every 2 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Prescaler",
+      "description": "Capture performed once every 4 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV8",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 3,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Prescaler",
+      "description": "Capture performed once every 8 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CLOCKPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockPolarity",
+      "description": "Polarity for TIx clock sources",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_MASTERSLAVEMODE_ENABLE",
+      "abs_value": 128,
+      "fields": [
+        {
+          "register": "SMCR",
+          "field": "TS",
+          "value": 8,
+          "bit_offset": 4,
+          "bit_width": 5
+        },
+        {
+          "register": "SMCR",
+          "field": "MSM",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_MasterConfigTypeDef",
+      "init_struct_field": "MasterSlaveMode",
+      "description": "Master/slave mode is selected",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_TRIGGERPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "TriggerPolarity",
+      "description": "Polarity for TIxFPx or TI1_ED trigger sources",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPOLARITY_BOTHEDGE",
+      "abs_value": 10,
+      "fields": [
+        {
+          "register": "CCER",
+          "field": "CC1P",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CCER",
+          "field": "CC1NP",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "IC1Polarity",
+      "description": "Capture triggered by both rising and falling edges on timer input",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV2",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 2 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 4 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV8",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CCMR1",
+          "field": "OC1FE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "OC1PE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CCMR1",
+          "field": "IC1PSC",
+          "value": 3,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "IC1Prescaler",
+      "description": "Capture performed once every 8 events",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_TI1SELECTION_XORCOMBINATION",
+      "abs_value": 128,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "MMS",
+          "value": 8,
+          "bit_offset": 4,
+          "bit_width": 4
+        },
+        {
+          "register": "CR2",
+          "field": "TI1S",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_TIM_ConfigTI1Input",
+      "init_struct_field": "TI1_Selection",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_BREAKINPUTSOURCE_ENABLE",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "AF1",
+          "field": "BKINE",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "AF2",
+          "field": "BK2INE",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "TIMEx_BreakInputConfigTypeDef",
+      "init_struct_field": "Enable",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "init_struct_field": "PulseWidth",
+      "is_macro": "IS_TIM_PULSEONCOMPARE_WIDTH",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "init_struct_field": "PulseWidthPrescaler",
+      "is_macro": "IS_TIM_PULSEONCOMPARE_WIDTHPRESCALER",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_ConfigDeadTime",
+      "init_struct_field": "Deadtime",
+      "is_macro": "IS_TIM_DEADTIME",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_ConfigAsymmetricalDeadTime",
+      "init_struct_field": "FallingDeadtime",
+      "is_macro": "IS_TIM_DEADTIME",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_OnePulse_InitTypeDef",
+      "init_struct_field": "ICFilter",
+      "is_macro": "IS_TIM_IC_FILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_IC_InitTypeDef",
+      "init_struct_field": "ICFilter",
+      "is_macro": "IS_TIM_IC_FILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC2Filter",
+      "is_macro": "IS_TIM_IC_FILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_ClockConfigTypeDef",
+      "init_struct_field": "ClockFilter",
+      "is_macro": "IS_TIM_CLOCKFILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputFilter",
+      "is_macro": "IS_TIM_CLEARINPUT_FILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_SlaveConfigTypeDef",
+      "init_struct_field": "TriggerFilter",
+      "is_macro": "IS_TIM_TRIGGERFILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Filter",
+      "is_macro": "IS_TIM_ENCODERINDEX_FILTER",
+      "min": 0,
+      "max": 15,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "init_struct_field": "PulseWidth",
+      "is_macro": "IS_TIM_PULSEONCOMPARE_WIDTH",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "init_struct_field": "PulseWidthPrescaler",
+      "is_macro": "IS_TIM_PULSEONCOMPARE_WIDTHPRESCALER",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_ConfigDeadTime",
+      "init_struct_field": "Deadtime",
+      "is_macro": "IS_TIM_DEADTIME",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_TIMEx_ConfigAsymmetricalDeadTime",
+      "init_struct_field": "FallingDeadtime",
+      "is_macro": "IS_TIM_DEADTIME",
+      "min": 0,
+      "max": 255,
+      "placement": null
+    },
+    {
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "FirstIndexEnable",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    },
+    {
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "Prescaler",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "PSC",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "Period",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "ARR",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "TIM_Base_InitTypeDef",
+      "init_struct_field": "RepetitionCounter",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "RCR",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR1",
+        "field": "CCR1"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR2",
+        "field": "CCR2"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR3",
+        "field": "CCR3"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR4",
+        "field": "CCR4"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR5",
+        "field": "CCR5"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_OC_InitTypeDef",
+      "init_struct_field": "Pulse",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR6",
+        "field": "CCR6"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_Encoder_InitTypeDef",
+      "init_struct_field": "IC1Filter",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "CCMR1",
+        "field": "IC1F"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR1",
+        "field": "OC1CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR1",
+        "field": "OC2CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR2",
+        "field": "OC3CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR2",
+        "field": "OC4CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR3",
+        "field": "OC5CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_ClearInputConfigTypeDef",
+      "init_struct_field": "ClearInputState",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCMR3",
+        "field": "OC6CE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIM_HallSensor_InitTypeDef",
+      "init_struct_field": "Commutation_Delay",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "CCR2",
+        "field": "CCR2"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Polarity",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCER",
+        "field": "CC1P"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "init_struct_field": "Polarity",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCER",
+        "field": "CC2P"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+      "init_struct_field": "OutputChannel",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCER",
+        "field": "CC1E"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+      "init_struct_field": "OutputChannel",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CCER",
+        "field": "CC2E"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+      "init_struct_field": "InputChannel",
+      "is_macro": null,
+      "min": 0,
+      "max": 3,
+      "placement": {
+        "register": "CCMR1",
+        "field": "CC1S"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_TIM_DMABurst_MultiReadStart",
+      "init_struct_field": "BurstBaseAddress",
+      "is_macro": null,
+      "min": 0,
+      "max": 31,
+      "placement": {
+        "register": "DCR",
+        "field": "DBA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "Prescaler",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "CounterMode",
+      "ref": "TIM_Counter_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "Period",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "ClockDivision",
+      "ref": "TIM_ClockDivision",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "RepetitionCounter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Base_InitTypeDef",
+      "field": "AutoReloadPreload",
+      "ref": "TIM_AutoReloadPreload",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCMode",
+      "ref": "TIM_Output_Compare_and_PWM_modes",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCPolarity",
+      "ref": "TIM_Output_Compare_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCNPolarity",
+      "ref": "TIM_Output_Compare_N_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCFastMode",
+      "ref": "TIM_Output_Fast_State",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCIdleState",
+      "ref": "TIM_Output_Compare_Idle_State",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OC_InitTypeDef",
+      "field": "OCNIdleState",
+      "ref": "TIM_Output_Compare_N_Idle_State",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "OCMode",
+      "ref": "TIM_Output_Compare_and_PWM_modes",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "OCPolarity",
+      "ref": "TIM_Output_Compare_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "OCNPolarity",
+      "ref": "TIM_Output_Compare_N_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "OCIdleState",
+      "ref": "TIM_Output_Compare_Idle_State",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "OCNIdleState",
+      "ref": "TIM_Output_Compare_N_Idle_State",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "ICPolarity",
+      "ref": "TIM_Input_Capture_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "ICSelection",
+      "ref": "TIM_Input_Capture_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_OnePulse_InitTypeDef",
+      "field": "ICFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_IC_InitTypeDef",
+      "field": "ICPolarity",
+      "ref": "TIM_Input_Capture_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_IC_InitTypeDef",
+      "field": "ICSelection",
+      "ref": "TIM_Input_Capture_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_IC_InitTypeDef",
+      "field": "ICPrescaler",
+      "ref": "TIM_Input_Capture_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_IC_InitTypeDef",
+      "field": "ICFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "EncoderMode",
+      "ref": "TIM_Encoder_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC1Polarity",
+      "ref": "TIM_Encoder_Input_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC1Selection",
+      "ref": "TIM_Input_Capture_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC1Prescaler",
+      "ref": "TIM_Input_Capture_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC1Filter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC2Polarity",
+      "ref": "TIM_Encoder_Input_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC2Selection",
+      "ref": "TIM_Input_Capture_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC2Prescaler",
+      "ref": "TIM_Input_Capture_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_Encoder_InitTypeDef",
+      "field": "IC2Filter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClockConfigTypeDef",
+      "field": "ClockSource",
+      "ref": "TIM_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClockConfigTypeDef",
+      "field": "ClockPolarity",
+      "ref": "TIM_Clock_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClockConfigTypeDef",
+      "field": "ClockPrescaler",
+      "ref": "TIM_Clock_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClockConfigTypeDef",
+      "field": "ClockFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClearInputConfigTypeDef",
+      "field": "ClearInputState",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClearInputConfigTypeDef",
+      "field": "ClearInputSource",
+      "ref": "TIM_ClearInput_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClearInputConfigTypeDef",
+      "field": "ClearInputPolarity",
+      "ref": "TIM_ClearInput_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClearInputConfigTypeDef",
+      "field": "ClearInputPrescaler",
+      "ref": "IS:IS_TIM_CLEARINPUT_PRESCALER",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_ClearInputConfigTypeDef",
+      "field": "ClearInputFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_MasterConfigTypeDef",
+      "field": "MasterOutputTrigger",
+      "ref": "TIM_Master_Mode_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_MasterConfigTypeDef",
+      "field": "MasterOutputTrigger2",
+      "ref": "TIM_Master_Mode_Selection_2",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_MasterConfigTypeDef",
+      "field": "MasterSlaveMode",
+      "ref": "TIM_Master_Slave_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_SlaveConfigTypeDef",
+      "field": "SlaveMode",
+      "ref": "TIM_Slave_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_SlaveConfigTypeDef",
+      "field": "InputTrigger",
+      "ref": "TIM_Trigger_Selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_SlaveConfigTypeDef",
+      "field": "TriggerPolarity",
+      "ref": "TIM_Trigger_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_SlaveConfigTypeDef",
+      "field": "TriggerPrescaler",
+      "ref": "TIM_Trigger_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_SlaveConfigTypeDef",
+      "field": "TriggerFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_HallSensor_InitTypeDef",
+      "field": "IC1Polarity",
+      "ref": "TIM_Input_Capture_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_HallSensor_InitTypeDef",
+      "field": "IC1Prescaler",
+      "ref": "TIM_Input_Capture_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_HallSensor_InitTypeDef",
+      "field": "IC1Filter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIM_HallSensor_InitTypeDef",
+      "field": "Commutation_Delay",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_BreakInputConfigTypeDef",
+      "field": "Source",
+      "ref": "IS:IS_TIM_BREAKINPUTSOURCE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_BreakInputConfigTypeDef",
+      "field": "Enable",
+      "ref": "IS:IS_TIM_BREAKINPUTSOURCE_STATE",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_BreakInputConfigTypeDef",
+      "field": "Polarity",
+      "ref": "TIMEx_Break_Input_Source_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "Polarity",
+      "ref": "TIMEx_Encoder_Index_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "Prescaler",
+      "ref": "IS:IS_TIM_ENCODERINDEX_PRESCALER",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "Filter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "FirstIndexEnable",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "Position",
+      "ref": "IS:IS_TIM_ENCODERINDEX_POSITION",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "TIMEx_EncoderIndexConfigTypeDef",
+      "field": "Direction",
+      "ref": "IS:IS_TIM_ENCODERINDEX_DIRECTION",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_TIM_OnePulse_Init",
+      "field": "OnePulseMode",
+      "ref": "IS:IS_TIM_OPM_MODE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_OC_ConfigChannel",
+      "field": "Channel",
+      "ref": "IS:IS_TIM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_PWM_SetCCRH",
+      "field": "Channel",
+      "ref": "IS:IS_TIM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_PWM_ConfigChannel",
+      "field": "Channel",
+      "ref": "IS:IS_TIM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+      "field": "OutputChannel",
+      "ref": "IS:IS_TIM_OPM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+      "field": "InputChannel",
+      "ref": "IS:IS_TIM_OPM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_DMABurst_MultiWriteStart",
+      "field": "BurstBaseAddress",
+      "ref": "IS:IS_TIM_DMA_BASE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_DMABurst_MultiWriteStart",
+      "field": "BurstLength",
+      "ref": "IS:IS_TIM_DMA_LENGTH",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_DMABurst_MultiReadStart",
+      "field": "BurstBaseAddress",
+      "ref": "IS:IS_TIM_DMA_BASE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_DMABurst_MultiReadStart",
+      "field": "BurstLength",
+      "ref": "IS:IS_TIM_DMA_LENGTH",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIM_ConfigTI1Input",
+      "field": "TI1_Selection",
+      "ref": "IS:IS_TIM_TI1SELECTION",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:TIM_CCxChannelCmd",
+      "field": "Channel",
+      "ref": "IS:IS_TIM_CHANNELS",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigCommutEvent",
+      "field": "InputTrigger",
+      "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigCommutEvent_IT",
+      "field": "InputTrigger",
+      "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigCommutEvent_DMA",
+      "field": "InputTrigger",
+      "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigBreakInput",
+      "field": "BreakInput",
+      "ref": "IS:IS_TIM_BREAKINPUT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_DisarmBreakInput",
+      "field": "BreakInput",
+      "ref": "IS:IS_TIM_BREAKINPUT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ReArmBreakInput",
+      "field": "BreakInput",
+      "ref": "IS:IS_TIM_BREAKINPUT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "field": "PulseWidth",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+      "field": "PulseWidthPrescaler",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigDeadTime",
+      "field": "Deadtime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_ConfigAsymmetricalDeadTime",
+      "field": "FallingDeadtime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+      "field": "TriggerSource",
+      "ref": "IS:IS_TIM_MULTIPLE_TRIGGER_ADC_SOURCE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+      "field": "TriggerSource",
+      "ref": "IS:IS_TIM_MULTIPLE_TRIGGER_ADC_SOURCE",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 86,
+    "multi_field_count": 50,
+    "total_encodings": 207,
+    "unresolved_count": 77,
+    "numeric_field_count": 39,
+    "llm_applied": true
+  }
+}

@@ -1,0 +1,958 @@
+{
+  "peripheral": "LPTIM",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "CKSEL",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "LPTIM_CLOCKSOURCE_ULPTIM",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "LPTIM_CLOCKSOURCE_APBCLOCK_LPOSC",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_ClockConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "PRESC",
+      "bit_offset": 9,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "LPTIM_PRESCALER_DIV2",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV4",
+          "value": 2,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV8",
+          "value": 3,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV16",
+          "value": 4,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV32",
+          "value": 5,
+          "description": "",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV64",
+          "value": 6,
+          "description": "",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV128",
+          "value": 7,
+          "description": "",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "LPTIM_PRESCALER_DIV1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_ClockConfigTypeDef",
+      "init_struct_field": "Prescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "CKPOL",
+      "bit_offset": 1,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "LPTIM_CLOCKPOLARITY_FALLING",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "LPTIM_CLOCKPOLARITY_RISING_FALLING",
+          "value": 2,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "LPTIM_CLOCKPOLARITY_RISING",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_ULPClockConfigTypeDef",
+      "init_struct_field": "Polarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "CKFLT",
+      "bit_offset": 3,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "LPTIM_CLOCKSAMPLETIME_2TRANSITIONS",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "LPTIM_CLOCKSAMPLETIME_4TRANSITIONS",
+          "value": 2,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "LPTIM_CLOCKSAMPLETIME_8TRANSITIONS",
+          "value": 3,
+          "description": "",
+          "abs_value": 24
+        },
+        {
+          "symbol": "LPTIM_CLOCKSAMPLETIME_DIRECTTRANSITION",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_ULPClockConfigTypeDef",
+      "init_struct_field": "SampleTime",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "TRIGSEL",
+      "bit_offset": 13,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "LPTIM_TRIGSOURCE_1",
+          "value": 1,
+          "description": "RTC_ALARM",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "LPTIM_TRIGSOURCE_2",
+          "value": 2,
+          "description": "COMP1 OUT",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "LPTIM_TRIGSOURCE_3",
+          "value": 3,
+          "description": "COMP2 OUT",
+          "abs_value": 24576
+        },
+        {
+          "symbol": "LPTIM_TRIGSOURCE_4",
+          "value": 4,
+          "description": "COMP3 OUT",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "LPTIM_TRIGSOURCE_5",
+          "value": 5,
+          "description": "COMP4 OUT",
+          "abs_value": 40960
+        },
+        {
+          "symbol": "LPTIM_TRIGSOURCE_0",
+          "value": 0,
+          "description": "GPIO",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_TriggerConfigTypeDef",
+      "init_struct_field": "Source",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "TRIGEN",
+      "bit_offset": 17,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "LPTIM_ACTIVEEDGE_RISING",
+          "value": 1,
+          "description": "",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "LPTIM_ACTIVEEDGE_FALLING",
+          "value": 2,
+          "description": "",
+          "abs_value": 262144
+        }
+      ],
+      "init_struct": "LPTIM_TriggerConfigTypeDef",
+      "init_struct_field": "ActiveEdge",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "TRGFLT",
+      "bit_offset": 6,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "LPTIM_TRIGSAMPLETIME_2TRANSITIONS",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "LPTIM_TRIGSAMPLETIME_4TRANSITIONS",
+          "value": 2,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "LPTIM_TRIGSAMPLETIME_8TRANSITIONS",
+          "value": 3,
+          "description": "",
+          "abs_value": 192
+        },
+        {
+          "symbol": "LPTIM_TRIGSAMPLETIME_DIRECTTRANSITION",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_TriggerConfigTypeDef",
+      "init_struct_field": "SampleTime",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "WAVPOL",
+      "bit_offset": 21,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "LPTIM_OUTPUTPOLARITY_LOW",
+          "value": 1,
+          "description": "",
+          "abs_value": 2097152
+        },
+        {
+          "symbol": "LPTIM_OUTPUTPOLARITY_HIGH",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "OutputPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "CFGR",
+      "field": "PRELOAD",
+      "bit_offset": 22,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "LPTIM_UPDATE_ENDOFPERIOD",
+          "value": 1,
+          "description": "",
+          "abs_value": 4194304
+        },
+        {
+          "symbol": "LPTIM_UPDATE_IMMEDIATE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "UpdateMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "LPTIM",
+      "register": "OR",
+      "field": "IN1",
+      "bit_offset": 0,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "LPTIM_INPUT1SOURCE_COMP1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "LPTIM_INPUT1SOURCE_GPIO",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "Input1Source",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "LPTIM",
+      "symbol": "LPTIM_INPUT1SOURCE_COMP2",
+      "abs_value": 5,
+      "fields": [
+        {
+          "register": "OR",
+          "field": "IN1",
+          "value": 5,
+          "bit_offset": 0,
+          "bit_width": 3
+        },
+        {
+          "register": "OR",
+          "field": "IN2",
+          "value": 2,
+          "bit_offset": 1,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "Input1Source",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "LPTIM",
+      "symbol": "LPTIM_INPUT2SOURCE_COMP1",
+      "abs_value": 2,
+      "fields": [
+        {
+          "register": "OR",
+          "field": "IN1",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 3
+        },
+        {
+          "register": "OR",
+          "field": "IN2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "Input2Source",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "LPTIM",
+      "symbol": "LPTIM_INPUT2SOURCE_COMP2",
+      "abs_value": 18,
+      "fields": [
+        {
+          "register": "OR",
+          "field": "IN1",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 3
+        },
+        {
+          "register": "OR",
+          "field": "IN2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "LPTIM_InitTypeDef",
+      "init_struct_field": "Input2Source",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Encoder_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Encoder_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start",
+      "init_struct_field": "Timeout",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+      "init_struct_field": "Timeout",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Counter_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Counter_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "init_struct_field": "Pulse",
+      "is_macro": "IS_LPTIM_PULSE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Encoder_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Encoder_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Counter_Start",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_LPTIM_Counter_Start_IT",
+      "init_struct_field": "Period",
+      "is_macro": "IS_LPTIM_PERIOD",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "LPTIM_ClockConfigTypeDef",
+      "field": "Source",
+      "ref": "LPTIM_Clock_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_ClockConfigTypeDef",
+      "field": "Prescaler",
+      "ref": "LPTIM_Clock_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_ULPClockConfigTypeDef",
+      "field": "Polarity",
+      "ref": "LPTIM_Clock_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_ULPClockConfigTypeDef",
+      "field": "SampleTime",
+      "ref": "LPTIM_Clock_Sample_Time",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_TriggerConfigTypeDef",
+      "field": "Source",
+      "ref": "LPTIM_Trigger_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_TriggerConfigTypeDef",
+      "field": "ActiveEdge",
+      "ref": "LPTIM_External_Trigger_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_TriggerConfigTypeDef",
+      "field": "SampleTime",
+      "ref": "LPTIM_Trigger_Sample_Time",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_InitTypeDef",
+      "field": "OutputPolarity",
+      "ref": "LPTIM_Output_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_InitTypeDef",
+      "field": "UpdateMode",
+      "ref": "LPTIM_Updating_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_InitTypeDef",
+      "field": "Input1Source",
+      "ref": "LPTIM_Input1_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "LPTIM_InitTypeDef",
+      "field": "Input2Source",
+      "ref": "LPTIM_Input2_Source",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_PWM_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_PWM_Start",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_PWM_Start_IT",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_OnePulse_Start",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_SetOnce_Start",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+      "field": "Pulse",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_Encoder_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_Encoder_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_TimeOut_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_TimeOut_Start",
+      "field": "Timeout",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+      "field": "Timeout",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_Counter_Start",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_LPTIM_Counter_Start_IT",
+      "field": "Period",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 10,
+    "multi_field_count": 3,
+    "total_encodings": 35,
+    "unresolved_count": 4,
+    "numeric_field_count": 38
+  }
+}

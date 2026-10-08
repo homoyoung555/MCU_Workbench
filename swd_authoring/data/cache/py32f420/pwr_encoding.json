@@ -1,0 +1,1311 @@
+{
+  "peripheral": "PWR",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "PWR",
+      "register": "CR2",
+      "field": "PVDT",
+      "bit_offset": 1,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "PWR_PVDLEVEL_1",
+          "value": 1,
+          "description": "PVD threshold around 2.9 V",
+          "abs_value": 2
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_2",
+          "value": 2,
+          "description": "PVD threshold around 3.1 V",
+          "abs_value": 4
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_3",
+          "value": 3,
+          "description": "PVD threshold around 3.3 V",
+          "abs_value": 6
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_4",
+          "value": 4,
+          "description": "PVD threshold around 3.8 V",
+          "abs_value": 8
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_5",
+          "value": 5,
+          "description": "PVD threshold around 4.0 V",
+          "abs_value": 10
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_6",
+          "value": 6,
+          "description": "PVD threshold around 4.2 V",
+          "abs_value": 12
+        },
+        {
+          "symbol": "PWR_PVDLEVEL_7",
+          "value": 7,
+          "description": "PVD threshold around 4.5 V",
+          "abs_value": 14
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDLevel",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "PWR",
+      "register": "CR2",
+      "field": "FLTEN",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "PWR_PVD_FILTER_1CLOCK",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "PWR_PVD_FILTER_NONE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "PWR",
+      "register": "CR1",
+      "field": "VR_MODE_SLP",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "PWR_MAINREGULATOR_ON",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "PWR_LOWPOWERREGULATOR_ON",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnterSLEEPMode",
+      "init_struct_field": "Regulator",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "PWR",
+      "register": "CR1",
+      "field": "VR_MODE_SLP",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "PWR_MAINREGULATOR_ON",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "PWR_LOWPOWERREGULATOR_ON",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnterSTOPMode",
+      "init_struct_field": "Regulator",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "PWR",
+      "register": "CR1",
+      "field": "LPMS_ACTIVE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "PWR_STOPENTRY_WFI",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_PWREx_EnterSTOP1Mode",
+      "init_struct_field": "STOPEntry",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "PWR",
+      "register": "CR1",
+      "field": "LPMS_SLP",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "PWR_STOPENTRY_WFE",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWREx_EnterSTOP1Mode",
+      "init_struct_field": "STOPEntry",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_2CLOCK",
+      "abs_value": 768,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_4CLOCK",
+      "abs_value": 1280,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 2,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_16CLOCK",
+      "abs_value": 1792,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 3,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_64CLOCK",
+      "abs_value": 2304,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 4,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_128CLOCK",
+      "abs_value": 2816,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 5,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_FILTER_1024CLOCK",
+      "abs_value": 3328,
+      "fields": [
+        {
+          "register": "CR2",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CR2",
+          "field": "FLT_CTRL",
+          "value": 6,
+          "bit_offset": 9,
+          "bit_width": 3
+        }
+      ],
+      "init_struct": "PWR_PVDTypeDef",
+      "init_struct_field": "PVDFilter",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2",
+      "abs_value": 2,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1_HIGH",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2_HIGH",
+      "abs_value": 2,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3_HIGH",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4_HIGH",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5_HIGH",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1_LOW",
+      "abs_value": 33,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP3",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2_LOW",
+      "abs_value": 130,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP1",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP4",
+          "value": 2,
+          "bit_offset": 6,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3_LOW",
+      "abs_value": 516,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP2",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP5",
+          "value": 2,
+          "bit_offset": 8,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4_LOW",
+      "abs_value": 2056,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP2",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5_LOW",
+      "abs_value": 8208,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP3",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "init_struct_field": "WakeUpPinPolarity",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2",
+      "abs_value": 2,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1_HIGH",
+      "abs_value": 1,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2_HIGH",
+      "abs_value": 2,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3_HIGH",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4_HIGH",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5_HIGH",
+      "abs_value": 16,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN1_LOW",
+      "abs_value": 33,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP1",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP3",
+          "value": 2,
+          "bit_offset": 4,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN2_LOW",
+      "abs_value": 130,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP2",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP1",
+          "value": 2,
+          "bit_offset": 0,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP4",
+          "value": 2,
+          "bit_offset": 6,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN3_LOW",
+      "abs_value": 516,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP3",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 4,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP2",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 2
+        },
+        {
+          "register": "CR4",
+          "field": "WUP5",
+          "value": 2,
+          "bit_offset": 8,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN4_LOW",
+      "abs_value": 2056,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP4",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP2",
+          "value": 2,
+          "bit_offset": 2,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_WAKEUP_PIN5_LOW",
+      "abs_value": 8208,
+      "fields": [
+        {
+          "register": "CR3",
+          "field": "EWUP5",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "CR3",
+          "field": "EWUP",
+          "value": 16,
+          "bit_offset": 0,
+          "bit_width": 5
+        },
+        {
+          "register": "CR4",
+          "field": "WUP3",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "init_struct_field": "WakeUpPinx",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [],
+  "config_units": [
+    {
+      "struct": "PWR_PVDTypeDef",
+      "field": "PVDLevel",
+      "ref": "PWR_PVD_detection_level",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "PWR_PVDTypeDef",
+      "field": "PVDFilter",
+      "ref": "PWR_PVD_Filter",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "PWR_PVDTypeDef",
+      "field": "Mode",
+      "ref": "PWR_PVD_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_PWR_EnableWakeUpPin",
+      "field": "WakeUpPinPolarity",
+      "ref": "IS:IS_PWR_WAKEUP_PIN",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWR_DisableWakeUpPin",
+      "field": "WakeUpPinx",
+      "ref": "IS:IS_PWR_WAKEUP_PIN",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWR_EnterSLEEPMode",
+      "field": "Regulator",
+      "ref": "IS:IS_PWR_REGULATOR",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWR_EnterSLEEPMode",
+      "field": "SLEEPEntry",
+      "ref": "IS:IS_PWR_SLEEP_ENTRY",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWR_EnterSTOPMode",
+      "field": "Regulator",
+      "ref": "IS:IS_PWR_REGULATOR",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWREx_EnterSTOP0Mode",
+      "field": "STOPEntry",
+      "ref": "IS:IS_PWR_STOP_ENTRY",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_PWREx_EnterSTOP1Mode",
+      "field": "STOPEntry",
+      "ref": "IS:IS_PWR_STOP_ENTRY",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 6,
+    "multi_field_count": 36,
+    "total_encodings": 13,
+    "unresolved_count": 13,
+    "numeric_field_count": 0,
+    "llm_applied": true
+  }
+}

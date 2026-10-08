@@ -1,0 +1,130 @@
+{
+  "peripheral": "WWDG",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "WWDG",
+      "register": "CFR",
+      "field": "WDGTB",
+      "bit_offset": 7,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "WWDG_PRESCALER_2",
+          "value": 1,
+          "description": "WWDG counter clock = (PCLK1/4096)/2",
+          "abs_value": 128
+        },
+        {
+          "symbol": "WWDG_PRESCALER_4",
+          "value": 2,
+          "description": "WWDG counter clock = (PCLK1/4096)/4",
+          "abs_value": 256
+        },
+        {
+          "symbol": "WWDG_PRESCALER_8",
+          "value": 3,
+          "description": "WWDG counter clock = (PCLK1/4096)/8",
+          "abs_value": 384
+        },
+        {
+          "symbol": "WWDG_PRESCALER_1",
+          "value": 0,
+          "description": "WWDG counter clock = (PCLK1/4096)/1",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "WWDG_InitTypeDef",
+      "init_struct_field": "Prescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "WWDG",
+      "register": "CFR",
+      "field": "EWI",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "WWDG_EWI_ENABLE",
+          "value": 1,
+          "description": "EWI Enable",
+          "abs_value": 512
+        },
+        {
+          "symbol": "WWDG_EWI_DISABLE",
+          "value": 0,
+          "description": "EWI Disable",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "WWDG_InitTypeDef",
+      "init_struct_field": "EWIMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [],
+  "numeric_fields": [
+    {
+      "init_struct": "WWDG_InitTypeDef",
+      "init_struct_field": "Window",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "CFR",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "WWDG_InitTypeDef",
+      "init_struct_field": "Counter",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "CR",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "WWDG_InitTypeDef",
+      "field": "Prescaler",
+      "ref": "WWDG_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "WWDG_InitTypeDef",
+      "field": "Window",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "WWDG_InitTypeDef",
+      "field": "Counter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "WWDG_InitTypeDef",
+      "field": "EWIMode",
+      "ref": "WWDG_EWI_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 2,
+    "multi_field_count": 0,
+    "total_encodings": 6,
+    "unresolved_count": 1,
+    "numeric_field_count": 2
+  }
+}

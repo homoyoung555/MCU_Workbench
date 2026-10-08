@@ -1,0 +1,273 @@
+{
+ "shared": [
+  "ADDR_MAP",
+  "BASE_DIR",
+  "FLASH_EPR",
+  "FLOW",
+  "NM_PATTERN",
+  "PATTERN",
+  "PIN_DEC_128",
+  "VERSION",
+  "a",
+  "data",
+  "exegesis",
+  "f",
+  "flash_epr_pattern",
+  "flash_mode_dic",
+  "function_name",
+  "i",
+  "j",
+  "set_vposp_name",
+  "trash",
+  "vref",
+  "wc",
+  "ws"
+ ],
+ "module_only": [
+  "CP32bit_data",
+  "F0_C",
+  "F0_R",
+  "F1_C",
+  "F1_R",
+  "FLAG",
+  "KP_RELAY",
+  "Lbale_s",
+  "No",
+  "addr",
+  "code_name",
+  "df_variable",
+  "dict_1",
+  "dict_F0",
+  "dict_F1",
+  "epr_pattern_dict",
+  "fclk_ts",
+  "flash_test_pattern",
+  "hex_item_trush",
+  "hex_trim_flag",
+  "item",
+  "lvl_vcc",
+  "main_variable",
+  "name",
+  "nm_pattern_dict",
+  "nm_pattern_name",
+  "num",
+  "open_name",
+  "opr_mode_dic",
+  "os_count",
+  "otp_pattern_dict",
+  "pass_main",
+  "path",
+  "path2",
+  "pattern",
+  "pattern_name",
+  "pattern_sd",
+  "pin_dec",
+  "pinname",
+  "read_bit",
+  "s",
+  "sample",
+  "sample_path",
+  "site",
+  "size",
+  "temp_file",
+  "temp_list",
+  "temp_path",
+  "trim_count",
+  "uid_count",
+  "uid_variable_1",
+  "uid_variable_2",
+  "verify_count",
+  "wb",
+  "x",
+  "z0",
+  "z1",
+  "z2",
+  "z4",
+  "z5",
+  "z6",
+  "z7",
+  "zz"
+ ],
+ "by_name": {
+  "ADDR_MAP": [
+   "flash_pattern_lable_created",
+   "item_variable_created",
+   "temp_data_capture",
+   "trim_data_read_wirte",
+   "uid_write",
+   "verify_item_wirte"
+  ],
+  "BASE_DIR": [
+   "copy_file",
+   "fbist_mode_pattern_created",
+   "fbist_pattern_created",
+   "flash_pattern_lable_created",
+   "flash_test_pattern_created",
+   "id_write",
+   "main_write",
+   "pln_file_created",
+   "start_up_write",
+   "sub_fllow_write",
+   "tim_hed_write",
+   "trim_data_read_wirte",
+   "trim_item_write",
+   "uid_write",
+   "verify_item_wirte",
+   "vt_write",
+   "write_hed_file",
+   "write_prj_file"
+  ],
+  "FLASH_EPR": [
+   "flash_mode_value_get",
+   "flash_pattern_dic_created",
+   "flash_pattern_lable_created",
+   "flash_read",
+   "flash_test_pattern_created"
+  ],
+  "FLOW": [
+   "Hw_Sw_Bin",
+   "TEST_PRO",
+   "hex_code_item_write",
+   "hex_pattern_write",
+   "hex_trim_item_write",
+   "hex_verify_item_wirte",
+   "id_write",
+   "item_variable_created",
+   "main_write",
+   "margin_write",
+   "os_wirte",
+   "pattern_testitem_merge_rname",
+   "pattern_testitem_merge_rpattern",
+   "set_all_final_vposp",
+   "start_up_write",
+   "sub_fllow_write",
+   "temp_data_capture",
+   "trim_data_read_wirte",
+   "trim_item_write",
+   "uid_write",
+   "verify_item_wirte",
+   "vt_write"
+  ],
+  "NM_PATTERN": [
+   "flash_pattern_get",
+   "main_write",
+   "margin_write",
+   "trim_data_read_wirte",
+   "trim_item_write",
+   "verify_item_wirte",
+   "vt_write"
+  ],
+  "PATTERN": [
+   "fbist_pattern_created",
+   "fbist_pattern_get",
+   "pattern_testitem_merge_rname",
+   "pattern_testitem_merge_rpattern",
+   "sub_fllow_write",
+   "trim_item_write"
+  ],
+  "PIN_DEC_128": [
+   "VCC_pin_rebulid",
+   "get_pin_data",
+   "process_trace_name"
+  ],
+  "VERSION": [
+   "dec_file_created",
+   "fbist_mode_pattern_created",
+   "fbist_pattern_created",
+   "flash_erase",
+   "flash_pattern_lable_created",
+   "flash_program",
+   "flash_read",
+   "flash_test_pattern_created",
+   "hex_pattern_write",
+   "hex_trim_item_write",
+   "item_variable_created",
+   "pln_file_created",
+   "set_all_final_vposp",
+   "sub_fllow_write",
+   "temp_data_capture",
+   "tim_hed_write",
+   "trim_data_read_wirte",
+   "trim_item_write",
+   "uid_write",
+   "verify_item_wirte",
+   "write_pat_mem"
+  ],
+  "a": [
+   "VCC_pin_rebulid"
+  ],
+  "data": [
+   "VCC_pin_rebulid"
+  ],
+  "exegesis": [
+   "fbist_pattern_created"
+  ],
+  "f": [
+   "TEST_PRO"
+  ],
+  "flash_epr_pattern": [
+   "SEQ_1230",
+   "flash_erase",
+   "flash_program",
+   "flash_read"
+  ],
+  "flash_mode_dic": [
+   "SEQ_1230",
+   "fbist_mode_pattern_created",
+   "flash_erase",
+   "flash_program",
+   "flash_read",
+   "flash_test_pattern_created"
+  ],
+  "function_name": [
+   "pattern_testitem_merge_rname",
+   "pattern_testitem_merge_rpattern"
+  ],
+  "i": [
+   "Hw_Sw_Bin",
+   "TEST_PRO",
+   "hex_code_item_write",
+   "hex_pattern_write",
+   "hex_trim_item_write",
+   "hex_verify_item_wirte",
+   "id_write",
+   "item_variable_created",
+   "main_write",
+   "margin_write",
+   "os_wirte",
+   "pattern_testitem_merge_rname",
+   "pattern_testitem_merge_rpattern",
+   "set_all_final_vposp",
+   "start_up_write",
+   "sub_fllow_write",
+   "tim_hed_write",
+   "trim_data_read_wirte",
+   "trim_item_write",
+   "uid_write",
+   "verify_item_wirte",
+   "vt_write",
+   "write_pat_mem"
+  ],
+  "j": [
+   "hex_trim_item_write"
+  ],
+  "set_vposp_name": [
+   "set_all_final_vposp",
+   "trim_data_read_wirte"
+  ],
+  "trash": [
+   "trim_item_write",
+   "verify_item_wirte"
+  ],
+  "vref": [
+   "trim_item_write"
+  ],
+  "wc": [
+   "fbist_pattern_created",
+   "fbist_pattern_get"
+  ],
+  "ws": [
+   "trim_item_write"
+  ]
+ }
+}

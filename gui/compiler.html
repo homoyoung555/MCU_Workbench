@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>厂商编译工作台</title>
+  <link rel="stylesheet" href="/workbench.css">
+  <style>
+    .compiler-page{min-height:100vh}
+    .compiler-drop-hint{padding:10px 14px;border:1px dashed #9fc6bb;border-radius:6px;background:#f2faf7;color:#397568}.compiler-page[data-dragging=true]{outline:3px dashed #08796a;outline-offset:-8px}.compiler-page[data-dragging=true] .compiler-drop-hint{background:#d8f2e8;color:#075f53}
+    .compiler-mode{display:flex;align-items:center;gap:6px;margin:0;font-size:12px}.compiler-mode select{min-width:145px;max-width:100%;padding:4px 6px;border:1px solid #c7d9d4;border-radius:4px;background:white;color:inherit;font:inherit}
+    :root{--c-ink:#263d49;--c-muted:#718692;--c-line:#d8e3e7;--c-panel:#fff;--c-canvas:#f2f6f7;--c-brand:#08796a;--c-tint:#e5f4ee;--c-warn:#a66c1b;--c-danger:#a63131}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--c-canvas);color:var(--c-ink);font:13px/1.45 "Segoe UI","Microsoft YaHei",sans-serif}button,input{font:inherit;color:inherit}button{cursor:pointer}button:disabled{opacity:.48;cursor:not-allowed}
+    .compiler-page{max-width:1500px;margin:auto;padding:22px 28px 55px}.compiler-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}.compiler-heading h1{margin:0;font-size:25px;font-weight:600}.compiler-heading p{margin:5px 0 0;color:var(--c-muted)}.compiler-heading .wb-badge{margin-top:6px}
+    .compiler-toolbar,.compiler-panel{background:var(--c-panel);border:1px solid var(--c-line);border-radius:8px;box-shadow:0 5px 18px #173d4d0b}.compiler-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 12px;margin-bottom:14px}.compiler-toolbar .compiler-hint{flex:1;min-width:180px}.compiler-hint,.compiler-muted{color:var(--c-muted);font-size:12px}.compiler-layout{display:grid;grid-template-columns:minmax(330px,1fr) minmax(370px,1.2fr);gap:14px;align-items:start}.compiler-panel{min-width:0;padding:15px}.compiler-panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.compiler-panel-head h2{font-size:16px;margin:0}.compiler-list{display:grid;gap:7px;max-height:calc(100vh - 260px);overflow:auto}.compiler-empty{padding:38px 18px;text-align:center;color:var(--c-muted)}.compiler-task{border:1px solid #e0e9eb;border-radius:6px;padding:9px 10px;background:#fff;cursor:pointer}.compiler-task:hover{border-color:#9cc9bf}.compiler-task[aria-current=true]{border-color:#82b8aa;background:#f2faf7}.compiler-task-top{display:flex;align-items:flex-start;gap:8px}.compiler-task-top input{accent-color:var(--c-brand);width:16px;height:16px;margin-top:2px}.compiler-task-main{min-width:0;flex:1}.compiler-task-name{font-weight:600;overflow-wrap:anywhere}.compiler-task-meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:4px}.compiler-task-phase{margin:5px 0 0;color:var(--c-muted);font-size:11px;overflow-wrap:anywhere}.compiler-task-error{margin:5px 0 0;color:var(--c-danger);font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}.compiler-detail{min-height:400px}.compiler-detail h3{margin:14px 0 6px;font-size:13px}.compiler-detail h3:first-child{margin-top:0}.compiler-stage-list{display:flex;gap:6px;flex-wrap:wrap}.compiler-stage{padding:5px 8px;border:1px solid var(--c-line);border-radius:5px;background:#f8fafb;color:var(--c-muted);font-size:11px}.compiler-stage[data-ok=true]{border-color:#95cdbd;background:var(--c-tint);color:var(--c-brand)}.compiler-stage[data-ok=false]{border-color:#e6b1b1;background:#fff5f5;color:var(--c-danger)}.compiler-diagnostics{display:grid;gap:6px}.compiler-diagnostic{border-left:3px solid #b3c5ca;padding:7px 9px;background:#f7f9fa;font-size:12px}.compiler-diagnostic[data-severity=error]{border-left-color:var(--c-danger);background:#fff5f5}.compiler-diagnostic[data-severity=warning]{border-left-color:#d3a151;background:#fff9ed}.compiler-diagnostic strong{font-weight:600}.compiler-diagnostic p{margin:2px 0;white-space:pre-wrap;overflow-wrap:anywhere}.compiler-diagnostic code{font:11px Consolas,monospace}.compiler-log{width:100%;min-height:170px;max-height:350px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:0;padding:10px;border:1px solid var(--c-line);border-radius:5px;background:#f5f8f9;font:12px/1.55 Consolas,"Microsoft YaHei",monospace}.compiler-actions{display:flex;gap:6px;flex-wrap:wrap}.compiler-status{min-height:19px;margin:8px 0 0;color:var(--c-muted)}.compiler-alert{padding:8px 10px;margin:8px 0;border-left:3px solid #d5a04c;background:#fff8e9;color:#805718;font-size:12px}.compiler-tools{padding:8px 10px;border:1px solid #e0e9eb;border-radius:5px;background:#f8fafb;font-size:12px}.compiler-tools div+div{margin-top:4px}.compiler-tools code{font:11px Consolas,monospace;overflow-wrap:anywhere}.compiler-detail-placeholder{padding:70px 15px;text-align:center;color:var(--c-muted)}[hidden]{display:none!important}@media(max-width:850px){.compiler-page{padding:18px 14px 40px}.compiler-layout{grid-template-columns:1fr}.compiler-list{max-height:360px}.compiler-heading h1{font-size:21px}}
+  </style>
+</head>
+<body>
+  <main id="compiler-app" class="compiler-page">
+    <header class="compiler-heading"><div><div class="wb-eyebrow">VENDOR COMPILER</div><h1>厂商编译工作台</h1><p>每个程序文件夹建立一个任务，可连续添加，后台按队列串行编译。</p></div><span id="compiler-connection" class="wb-badge wb-badge-muted">正在连接</span></header>
+    <div class="compiler-toolbar" role="toolbar" aria-label="编译任务工具栏">
+      <button id="compiler-pick-folder" class="wb-button wb-primary" type="button">添加程序文件夹（可多次添加）</button>
+      <input id="compiler-folder-picker" type="file" webkitdirectory multiple hidden>
+      <button id="compiler-clear" class="wb-button" type="button" disabled title="清空历史列表，保留磁盘文件">清空列表</button>
+      <button id="compiler-select-all" class="wb-button" type="button">全选任务</button>
+      <button id="compiler-start" class="wb-button wb-primary" type="button" disabled>编译选中任务</button>
+      <div id="compiler-mode-controls" style="display:flex;gap:12px;flex-wrap:wrap"></div>
+
+    </div>
+    <div class="compiler-drop-hint">将程序文件夹拖到此页面即可上传，可一次拖入多个文件夹；也可点击“添加程序文件夹”。</div>
+    <p id="compiler-toolbar-hint" class="compiler-hint"></p>
+    <p class="compiler-hint">顶部按平台统一选择模式，适用于单个及批量编译。局部编译复用本任务上次成功的副本；缺少依赖时请先全部编译。仅 PAT 会编译工程内的全部 Pattern。</p>
+    <div id="compiler-status" class="compiler-status" role="status" aria-live="polite"></div>
+    <div class="compiler-layout">
+      <section class="compiler-panel" aria-labelledby="compiler-task-title"><div class="compiler-panel-head"><h2 id="compiler-task-title">编译任务</h2><span id="compiler-task-count" class="wb-badge wb-badge-muted">0 个</span></div><div id="compiler-task-list" class="compiler-list"><div class="compiler-empty">尚未添加程序文件夹。</div></div></section>
+      <section id="compiler-detail" class="compiler-panel compiler-detail" aria-labelledby="compiler-detail-title"><div class="compiler-panel-head"><h2 id="compiler-detail-title">任务详情</h2><div id="compiler-detail-actions" class="compiler-actions" hidden><button id="compiler-start-one" class="wb-button wb-primary" type="button">编译此程序</button><button id="compiler-download-log" class="wb-button" type="button">下载编译日志</button><button id="compiler-download-output" class="wb-button" type="button" disabled>下载编译输出</button></div></div><div id="compiler-detail-body"><div class="compiler-detail-placeholder">选择任务查看阶段、日志与诊断。</div></div></section>
+    </div>
+  </main>
+  <script defer src="/compiler.js"></script>
+</body>
+</html>

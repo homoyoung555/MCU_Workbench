@@ -1,0 +1,2068 @@
+{
+  "peripheral": "DAC",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "DAC",
+      "register": "CR",
+      "field": "TEN1",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DAC_TRIGGER_SOFTWARE",
+          "value": 1,
+          "description": "conversion started by software trigger for DAC channel",
+          "abs_value": 4
+        },
+        {
+          "symbol": "DAC_TRIGGER_NONE",
+          "value": 0,
+          "description": "conversion is automatic once the DAC_DHRxxxx register has been loaded, and not by external trigger",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "CR",
+      "field": "TEN1",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DAC_TRIGGER_SOFTWARE",
+          "value": 1,
+          "description": "conversion started by software trigger for DAC channel",
+          "abs_value": 4
+        },
+        {
+          "symbol": "DAC_TRIGGER_NONE",
+          "value": 0,
+          "description": "conversion is automatic once the DAC_DHRxxxx register has been loaded, and not by external trigger",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "OC",
+      "field": "DAC_INTER1_CR",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DAC_CHIPCONNECT_INTERNAL_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "DAC_CHIPCONNECT_INTERNAL_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_ConnectOnChipPeripheral",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "OC",
+      "field": "DAC_VREFSEL",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DAC_VREFSELECT_VREFBUF",
+          "value": 1,
+          "description": "Select VREFBUF",
+          "abs_value": 8
+        },
+        {
+          "symbol": "DAC_VREFSELECT_VCC",
+          "value": 0,
+          "description": "Select VCC",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_VrefSelect",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "OC",
+      "field": "DAC_EXTEN",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DAC_OUTPUT_ENABLE_BUFFER_ENABLE",
+          "value": 1,
+          "description": "External output enable with buffer",
+          "abs_value": 1
+        },
+        {
+          "symbol": "DAC_OUTPUT_ENABLE_BUFFER_DISABLE",
+          "value": 2,
+          "description": "External output enable without buffer",
+          "abs_value": 2
+        },
+        {
+          "symbol": "DAC_OUTPUT_DISABLE",
+          "value": 0,
+          "description": "External output disable",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ExtOutputConfTypeDef",
+      "init_struct_field": "DAC_OutputMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "OC",
+      "field": "DAC_EXTCH_CR",
+      "bit_offset": 9,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DAC_OUTPUTSELECT_VOUT1_EXT",
+          "value": 1,
+          "description": "External output VOUT1",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DAC_OUTPUTSELECT_VOUT2_EXT",
+          "value": 2,
+          "description": "External output VOUT2",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DAC_OUTPUTSELECT_VOUT_EXT",
+          "value": 0,
+          "description": "External output VOUT",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DAC_ExtOutputConfTypeDef",
+      "init_struct_field": "DAC_OutputSelect",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "CR",
+      "field": "MAMP1",
+      "bit_offset": 9,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "DAC_LFSRUNMASK_BIT0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS1_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS2_0",
+          "value": 2,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS3_0",
+          "value": 3,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS4_0",
+          "value": 4,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS5_0",
+          "value": 5,
+          "description": "",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS6_0",
+          "value": 6,
+          "description": "",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS7_0",
+          "value": 7,
+          "description": "",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS8_0",
+          "value": 8,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS9_0",
+          "value": 9,
+          "description": "",
+          "abs_value": 4608
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS10_0",
+          "value": 10,
+          "description": "",
+          "abs_value": 5120
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS11_0",
+          "value": 11,
+          "description": "",
+          "abs_value": 5632
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_3",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_7",
+          "value": 2,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_15",
+          "value": 3,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_31",
+          "value": 4,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_63",
+          "value": 5,
+          "description": "",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_127",
+          "value": 6,
+          "description": "",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_255",
+          "value": 7,
+          "description": "",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_511",
+          "value": 8,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_1023",
+          "value": 9,
+          "description": "",
+          "abs_value": 4608
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_2047",
+          "value": 10,
+          "description": "",
+          "abs_value": 5120
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_4095",
+          "value": 11,
+          "description": "",
+          "abs_value": 5632
+        }
+      ],
+      "init_struct": "fn:HAL_DACEx_TriangleWaveGenerate",
+      "init_struct_field": "Amplitude",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DAC",
+      "register": "CR",
+      "field": "MAMP1",
+      "bit_offset": 9,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "DAC_LFSRUNMASK_BIT0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS1_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS2_0",
+          "value": 2,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS3_0",
+          "value": 3,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS4_0",
+          "value": 4,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS5_0",
+          "value": 5,
+          "description": "",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS6_0",
+          "value": 6,
+          "description": "",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS7_0",
+          "value": 7,
+          "description": "",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS8_0",
+          "value": 8,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS9_0",
+          "value": 9,
+          "description": "",
+          "abs_value": 4608
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS10_0",
+          "value": 10,
+          "description": "",
+          "abs_value": 5120
+        },
+        {
+          "symbol": "DAC_LFSRUNMASK_BITS11_0",
+          "value": 11,
+          "description": "",
+          "abs_value": 5632
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_1",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_3",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_7",
+          "value": 2,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_15",
+          "value": 3,
+          "description": "",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_31",
+          "value": 4,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_63",
+          "value": 5,
+          "description": "",
+          "abs_value": 2560
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_127",
+          "value": 6,
+          "description": "",
+          "abs_value": 3072
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_255",
+          "value": 7,
+          "description": "",
+          "abs_value": 3584
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_511",
+          "value": 8,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_1023",
+          "value": 9,
+          "description": "",
+          "abs_value": 4608
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_2047",
+          "value": 10,
+          "description": "",
+          "abs_value": 5120
+        },
+        {
+          "symbol": "DAC_TRIANGLEAMPLITUDE_4095",
+          "value": 11,
+          "description": "",
+          "abs_value": 5632
+        }
+      ],
+      "init_struct": "fn:HAL_DACEx_NoiseWaveGenerate",
+      "init_struct_field": "Amplitude",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T8_TRGO",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM8 TRGO selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T1_TRGO",
+      "abs_value": 20,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 2,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM1 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T1_TRGO2",
+      "abs_value": 28,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 3,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM1 TRGO2 selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T2_TRGO",
+      "abs_value": 36,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 4,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM2 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T8_TRGO2",
+      "abs_value": 44,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 5,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM8 TRGO2 selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EXT_IT9",
+      "abs_value": 52,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 6,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EXTI Line9 event selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EXT_IT10",
+      "abs_value": 52,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 6,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EXTI Line10 event selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM1_SYNCPER",
+      "abs_value": 60,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 7,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM1 SYNCPER selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T3_TRGO",
+      "abs_value": 68,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 8,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "TIM3 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM2_SYNCPER",
+      "abs_value": 76,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 9,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM2 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM3_SYNCPER",
+      "abs_value": 84,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 10,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM3 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM4_SYNCPER",
+      "abs_value": 92,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 11,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM4 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_RST_COMP1_OUT",
+      "abs_value": 100,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 12,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP1 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM5_SYNCPER",
+      "abs_value": 100,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 12,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM5 SYNCPER selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_RST_COMP2_OUT",
+      "abs_value": 108,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 13,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP2 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM6_SYNCPER",
+      "abs_value": 108,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 13,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "EPWM6 SYNCPER selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_COMP3_OUT",
+      "abs_value": 116,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 14,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP3 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_STEP_COMP1_OUT",
+      "abs_value": 116,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 14,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP1 OUT selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_COMP4_OUT",
+      "abs_value": 124,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 15,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP4 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_STEP_COMP2_OUT",
+      "abs_value": 124,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 15,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger",
+      "description": "COMP2 OUT selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T8_TRGO",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM8 TRGO selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T1_TRGO",
+      "abs_value": 20,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 2,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM1 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T1_TRGO2",
+      "abs_value": 28,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 3,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM1 TRGO2 selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T2_TRGO",
+      "abs_value": 36,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 4,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM2 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T8_TRGO2",
+      "abs_value": 44,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 5,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM8 TRGO2 selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EXT_IT9",
+      "abs_value": 52,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 6,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EXTI Line9 event selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EXT_IT10",
+      "abs_value": 52,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 6,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EXTI Line10 event selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM1_SYNCPER",
+      "abs_value": 60,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 7,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM1 SYNCPER selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_T3_TRGO",
+      "abs_value": 68,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 8,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "TIM3 TRGO selected as external conversion trigger for DAC channel",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM2_SYNCPER",
+      "abs_value": 76,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 9,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM2 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM3_SYNCPER",
+      "abs_value": 84,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 10,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM3 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM4_SYNCPER",
+      "abs_value": 92,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 11,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM4 SYNCPER selected as external conversion trigger for DAC channel.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_RST_COMP1_OUT",
+      "abs_value": 100,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 12,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP1 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM5_SYNCPER",
+      "abs_value": 100,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 12,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM5 SYNCPER selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_RST_COMP2_OUT",
+      "abs_value": 108,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 13,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP2 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_EPWM6_SYNCPER",
+      "abs_value": 108,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 13,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "EPWM6 SYNCPER selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_COMP3_OUT",
+      "abs_value": 116,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 14,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP3 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_STEP_COMP1_OUT",
+      "abs_value": 116,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 14,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP1 OUT selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_COMP4_OUT",
+      "abs_value": 124,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 15,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP4 OUT selected as external conversion trigger for DAC channel. Note: only to be used as update or reset (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_TRIGGER_STEP_COMP2_OUT",
+      "abs_value": 124,
+      "fields": [
+        {
+          "register": "CR",
+          "field": "TEN1",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR",
+          "field": "TSEL1",
+          "value": 15,
+          "bit_offset": 3,
+          "bit_width": 4
+        }
+      ],
+      "init_struct": "DAC_ChannelConfTypeDef",
+      "init_struct_field": "DAC_Trigger2",
+      "description": "COMP2 OUT selected as external conversion trigger for DAC channel. Note: only to be used as step (sawtooth generation) trigger.",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_ALIGN_12B_L",
+      "abs_value": 64,
+      "fields": [
+        {
+          "register": "DHR12L1",
+          "field": "DACC1DHR",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 12
+        },
+        {
+          "register": "DHR12L2",
+          "field": "DACC2DHR",
+          "value": 4,
+          "bit_offset": 4,
+          "bit_width": 12
+        }
+      ],
+      "init_struct": "fn:HAL_DAC_SetValue",
+      "init_struct_field": "Alignment",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_ALIGN_8B_R",
+      "abs_value": 8,
+      "fields": [
+        {
+          "register": "DHR8R1",
+          "field": "DACC1DHR",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 8
+        },
+        {
+          "register": "DHR8R2",
+          "field": "DACC2DHR",
+          "value": 8,
+          "bit_offset": 0,
+          "bit_width": 8
+        }
+      ],
+      "init_struct": "fn:HAL_DAC_SetValue",
+      "init_struct_field": "Alignment",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "fn:HAL_DAC_SetValue",
+      "init_struct_field": "Data",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "init_struct_field": "ResetData",
+      "is_macro": "IS_DAC_RESET_DATA",
+      "min": 0,
+      "max": 4095,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "init_struct_field": "StepData",
+      "is_macro": "IS_DAC_STEP_DATA",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampDelayConfig",
+      "init_struct_field": "value",
+      "is_macro": "IS_DAC_RAMPDELAY_DATA",
+      "min": 0,
+      "max": 4095,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "HoldTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "HighTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "SetupTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_DualSetValue",
+      "init_struct_field": "Data1",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_DualSetValue",
+      "init_struct_field": "Data2",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DAC_SetValue",
+      "init_struct_field": "Data",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "init_struct_field": "ResetData",
+      "is_macro": "IS_DAC_RESET_DATA",
+      "min": 0,
+      "max": 4095,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "init_struct_field": "StepData",
+      "is_macro": "IS_DAC_STEP_DATA",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_RampDelayConfig",
+      "init_struct_field": "value",
+      "is_macro": "IS_DAC_RAMPDELAY_DATA",
+      "min": 0,
+      "max": 4095,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "HoldTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "HighTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_ClockConfig",
+      "init_struct_field": "SetupTime",
+      "is_macro": "IS_DAC_CLK",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_DualSetValue",
+      "init_struct_field": "Data1",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DACEx_DualSetValue",
+      "init_struct_field": "Data2",
+      "is_macro": "IS_DAC_DATA",
+      "min": 0,
+      "max": 65520,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "DHR12R1",
+        "field": "DACC1DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "DHR12L1",
+        "field": "DACC1DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "DHR8R1",
+        "field": "DACC1DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "DHR12R2",
+        "field": "DACC2DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "DHR12L2",
+        "field": "DACC2DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_DAC_Start_DMA",
+      "init_struct_field": "Alignment",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "DHR8R2",
+        "field": "DACC2DHR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "DAC_ChannelConfTypeDef",
+      "field": "DAC_Trigger",
+      "ref": "DAC_trigger_selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DAC_ChannelConfTypeDef",
+      "field": "DAC_Trigger2",
+      "ref": "DAC_trigger_selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DAC_ChannelConfTypeDef",
+      "field": "DAC_ConnectOnChipPeripheral",
+      "ref": "DAC_connect_onchip_peripheral",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DAC_ChannelConfTypeDef",
+      "field": "DAC_VrefSelect",
+      "ref": "DAC_vref_select",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DAC_ExtOutputConfTypeDef",
+      "field": "DAC_OutputMode",
+      "ref": "DAC_output_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DAC_ExtOutputConfTypeDef",
+      "field": "DAC_OutputSelect",
+      "ref": "DAC_output_select",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_DAC_Start",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_Stop",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_Start_DMA",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_Start_DMA",
+      "field": "Alignment",
+      "ref": "IS:IS_DAC_ALIGN",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_Stop_DMA",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_SetValue",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_SetValue",
+      "field": "Alignment",
+      "ref": "IS:IS_DAC_ALIGN",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_SetValue",
+      "field": "Data",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_GetValue",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_ConfigChannel",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DAC_ConfigExtOutput",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_TriangleWaveGenerate",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_TriangleWaveGenerate",
+      "field": "Amplitude",
+      "ref": "IS:IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_NoiseWaveGenerate",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_NoiseWaveGenerate",
+      "field": "Amplitude",
+      "ref": "IS:IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "field": "ResetData",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampWaveGenerate",
+      "field": "StepData",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampWaveDataStop",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampWaveDataUpdate",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampDelayConfig",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampDelayConfig",
+      "field": "value",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampDelayEnable",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_RampDelayDisable",
+      "field": "Channel",
+      "ref": "IS:IS_DAC_CHANNEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_ClockConfig",
+      "field": "HoldTime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_ClockConfig",
+      "field": "HighTime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_ClockConfig",
+      "field": "SetupTime",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_DualSetValue",
+      "field": "Alignment",
+      "ref": "IS:IS_DAC_ALIGN",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_DualSetValue",
+      "field": "Data1",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_DACEx_DualSetValue",
+      "field": "Data2",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 8,
+    "multi_field_count": 40,
+    "total_encodings": 62,
+    "unresolved_count": 5,
+    "numeric_field_count": 24,
+    "llm_applied": true
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "peripheral": "USART",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "M1",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_WORDLENGTH_7B",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "M0",
+      "bit_offset": 12,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_WORDLENGTH_9B",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR2",
+      "field": "STOP",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "USART_STOPBITS_0_5",
+          "value": 1,
+          "description": "USART frame with 0.5 stop bit",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "USART_STOPBITS_1_5",
+          "value": 3,
+          "description": "USART frame with 1.5 stop bits",
+          "abs_value": 12288
+        },
+        {
+          "symbol": "USART_STOPBITS_2",
+          "value": 2,
+          "description": "USART frame with 2 stop bits",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "USART_STOPBITS_1",
+          "value": 0,
+          "description": "USART frame with 1 stop bit",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "StopBits",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "PCE",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_PARITY_EVEN",
+          "value": 1,
+          "description": "Even parity",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "USART_PARITY_NONE",
+          "value": 0,
+          "description": "No parity",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "Parity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "RE",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_MODE_RX",
+          "value": 1,
+          "description": "RX mode",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "TE",
+      "bit_offset": 3,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_MODE_TX",
+          "value": 1,
+          "description": "TX mode",
+          "abs_value": 8
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR2",
+      "field": "CPOL",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_POLARITY_HIGH",
+          "value": 1,
+          "description": "Driver enable signal is active low",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "USART_POLARITY_LOW",
+          "value": 0,
+          "description": "Driver enable signal is active high",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "CLKPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR2",
+      "field": "CPHA",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_PHASE_2EDGE",
+          "value": 1,
+          "description": "USART frame phase on second clock transition",
+          "abs_value": 512
+        },
+        {
+          "symbol": "USART_PHASE_1EDGE",
+          "value": 0,
+          "description": "USART frame phase on first clock transition",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "CLKPhase",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR2",
+      "field": "LBCL",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "USART_LASTBIT_ENABLE",
+          "value": 1,
+          "description": "USART frame last data bit clock pulse output to SCLK pin",
+          "abs_value": 256
+        },
+        {
+          "symbol": "USART_LASTBIT_DISABLE",
+          "value": 0,
+          "description": "USART frame last data bit clock pulse not output to SCLK pin",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "CLKLastBit",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "TXFTCFG",
+      "bit_offset": 19,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_1_8",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_1_4",
+          "value": 1,
+          "description": "",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_1_2",
+          "value": 2,
+          "description": "",
+          "abs_value": 1048576
+        },
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_3_4",
+          "value": 3,
+          "description": "",
+          "abs_value": 1572864
+        },
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_7_8",
+          "value": 4,
+          "description": "",
+          "abs_value": 2097152
+        },
+        {
+          "symbol": "USART_TXFIFO_THRESHOLD_8_8",
+          "value": 5,
+          "description": "",
+          "abs_value": 2621440
+        }
+      ],
+      "init_struct": "fn:HAL_USARTEx_SetTxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "USART",
+      "register": "CR1",
+      "field": "RXFTCFG",
+      "bit_offset": 22,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_1_8",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_1_4",
+          "value": 1,
+          "description": "",
+          "abs_value": 4194304
+        },
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_1_2",
+          "value": 2,
+          "description": "",
+          "abs_value": 8388608
+        },
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_3_4",
+          "value": 3,
+          "description": "",
+          "abs_value": 12582912
+        },
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_7_8",
+          "value": 4,
+          "description": "",
+          "abs_value": 16777216
+        },
+        {
+          "symbol": "USART_RXFIFO_THRESHOLD_8_8",
+          "value": 5,
+          "description": "",
+          "abs_value": 20971520
+        }
+      ],
+      "init_struct": "fn:HAL_USARTEx_SetRxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "USART",
+      "symbol": "USART_PARITY_ODD",
+      "abs_value": 1536,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "PS",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "PCE",
+          "value": 1,
+          "bit_offset": 10,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "Parity",
+      "description": "Odd parity",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "USART",
+      "symbol": "USART_MODE_TX_RX",
+      "abs_value": 12,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "RE",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "TE",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "RX and TX mode",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "USART",
+      "symbol": "USART_WORDLENGTH_8B",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 0,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 0,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "USART",
+      "symbol": "USART_WORDLENGTH_9B",
+      "abs_value": 4096,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 0,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "USART",
+      "symbol": "USART_WORDLENGTH_7B",
+      "abs_value": 16384,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 0,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "USART_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": "IS_USART_BAUDRATE",
+      "min": 0,
+      "max": 4500000,
+      "placement": {
+        "register": "BRR",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "BaudRate",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "WordLength",
+      "ref": "IS:IS_USART_WORD_LENGTH",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "StopBits",
+      "ref": "USART_Stop_Bits",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "Parity",
+      "ref": "USART_Parity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "Mode",
+      "ref": "USART_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "CLKPolarity",
+      "ref": "USART_Clock_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "CLKPhase",
+      "ref": "USART_Clock_Phase",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "USART_InitTypeDef",
+      "field": "CLKLastBit",
+      "ref": "USART_Last_Bit",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_USARTEx_SetTxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_USART_TXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_USARTEx_SetRxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_USART_RXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 11,
+    "multi_field_count": 2,
+    "total_encodings": 28,
+    "unresolved_count": 2,
+    "numeric_field_count": 1,
+    "llm_applied": true
+  }
+}

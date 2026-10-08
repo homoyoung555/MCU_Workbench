@@ -1,0 +1,1552 @@
+{
+  "chip": "py32f420",
+  "total": 185,
+  "by_class": {
+    "inheritable": 67,
+    "dark_field": 69,
+    "selector_mask": 49
+  },
+  "by_peri": {
+    "ADC": {
+      "inheritable": 4
+    },
+    "DAC": {
+      "dark_field": 1
+    },
+    "DMA": {
+      "inheritable": 1
+    },
+    "EXTI": {
+      "inheritable": 25
+    },
+    "FDCAN": {
+      "inheritable": 4,
+      "dark_field": 16
+    },
+    "FLASH": {
+      "selector_mask": 7,
+      "inheritable": 6
+    },
+    "GPIO": {
+      "selector_mask": 18
+    },
+    "I2C": {
+      "dark_field": 2,
+      "inheritable": 7
+    },
+    "LPTIM": {
+      "inheritable": 2
+    },
+    "LPUART": {
+      "inheritable": 1,
+      "selector_mask": 8
+    },
+    "PWR": {
+      "dark_field": 9
+    },
+    "RCC": {
+      "inheritable": 1,
+      "selector_mask": 9,
+      "dark_field": 8
+    },
+    "RTC": {
+      "dark_field": 2,
+      "inheritable": 1
+    },
+    "SCI": {
+      "selector_mask": 7
+    },
+    "SPI": {
+      "inheritable": 2
+    },
+    "TIM": {
+      "inheritable": 12,
+      "dark_field": 31
+    },
+    "UART": {
+      "inheritable": 1
+    }
+  },
+  "entries": [
+    {
+      "peripheral": "ADC",
+      "symbol": "ADC_SCAN_ENABLE",
+      "expression": "(0x00000001UL)",
+      "defgroup": "ADC_Scan_mode",
+      "init_struct_field": "ScanConvMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "ADC",
+      "symbol": "ADC_OFFSET_NONE",
+      "expression": "(literal value 0x4)",
+      "defgroup": null,
+      "init_struct_field": "OffsetNumber",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "ADC",
+      "symbol": "ADC_ANALOGWATCHDOG_NONE",
+      "expression": "(0x00000000UL)",
+      "defgroup": "ADC_analog_watchdog_mode",
+      "init_struct_field": "WatchdogMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "ADC",
+      "symbol": "ADC_DMAACCESSMODE_DISABLED",
+      "expression": "(0x00000000UL)",
+      "defgroup": "ADC_HAL_EC_MULTI_MODE",
+      "init_struct_field": "Mode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "DAC",
+      "symbol": "DAC_CHANNEL_2",
+      "expression": "(literal value 0x10)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "DMA",
+      "symbol": "DMA_PERIPH_TO_MEMORY",
+      "expression": "(0x00000000U)",
+      "defgroup": "DMA_Data_transfer_direction",
+      "init_struct_field": "Direction",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_1",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x01u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_2",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x02u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_3",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x03u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_4",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x04u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_5",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x05u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_6",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x06u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_7",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x07u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_8",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x08u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_9",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x09u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_10",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Au)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_11",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Bu)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_12",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Cu)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_13",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Du)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_14",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Eu)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_15",
+      "expression": "(EXTI_GPIO        | EXTI_REG1 | 0x0Fu)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_16",
+      "expression": "(EXTI_CONFIG      | EXTI_REG1 | 0x10u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_17",
+      "expression": "(EXTI_CONFIG      | EXTI_REG1 | 0x11u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_18",
+      "expression": "(EXTI_CONFIG      | EXTI_REG1 | 0x12u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_19",
+      "expression": "(EXTI_CONFIG      | EXTI_REG1 | 0x13u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_20",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x14u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_21",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x15u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_22",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x16u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_23",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x17u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_24",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x18u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "EXTI",
+      "symbol": "EXTI_LINE_25",
+      "expression": "(EXTI_DIRECT      | EXTI_REG1 | 0x19u)",
+      "defgroup": "EXTI_Line",
+      "init_struct_field": "Line",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_DATA_BYTES_24",
+      "expression": "(literal value 0x8)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo0ElmtSize",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_DATA_BYTES_32",
+      "expression": "(literal value 0xA)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo0ElmtSize",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_DATA_BYTES_48",
+      "expression": "(literal value 0xE)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo0ElmtSize",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_DATA_BYTES_64",
+      "expression": "(literal value 0x12)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo0ElmtSize",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_STANDARD_ID",
+      "expression": "((uint32_t)0x00000000U)",
+      "defgroup": "FDCAN_id_type",
+      "init_struct_field": "IdType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_EXTENDED_ID",
+      "expression": "((uint32_t)0x40000000U)",
+      "defgroup": "FDCAN_id_type",
+      "init_struct_field": "IdType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_RANGE",
+      "expression": "((uint32_t)0x00000000U)",
+      "defgroup": "FDCAN_filter_type",
+      "init_struct_field": "FilterType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_DUAL",
+      "expression": "((uint32_t)0x00000001U)",
+      "defgroup": "FDCAN_filter_type",
+      "init_struct_field": "FilterType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_MASK",
+      "expression": "((uint32_t)0x00000002U)",
+      "defgroup": "FDCAN_filter_type",
+      "init_struct_field": "FilterType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_RANGE_NO_EIDM",
+      "expression": "((uint32_t)0x00000003U)",
+      "defgroup": "FDCAN_filter_type",
+      "init_struct_field": "FilterType",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_DISABLE",
+      "expression": "((uint32_t)0x00000000U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_TO_RXFIFO0",
+      "expression": "((uint32_t)0x00000001U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_TO_RXFIFO1",
+      "expression": "((uint32_t)0x00000002U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_REJECT",
+      "expression": "((uint32_t)0x00000003U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_HP",
+      "expression": "((uint32_t)0x00000004U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_TO_RXFIFO0_HP",
+      "expression": "((uint32_t)0x00000005U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_TO_RXFIFO1_HP",
+      "expression": "((uint32_t)0x00000006U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FILTER_TO_RXBUFFER",
+      "expression": "((uint32_t)0x00000007U)",
+      "defgroup": "FDCAN_filter_config",
+      "init_struct_field": "FilterConfig",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_RX_FIFO0",
+      "expression": "(literal value 0x40)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_RX_FIFO1",
+      "expression": "(literal value 0x41)",
+      "defgroup": null,
+      "init_struct_field": "RxFifo",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_WRP",
+      "expression": "0x01U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_RDP",
+      "expression": "0x02U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_USER",
+      "expression": "0x04U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_PCROP",
+      "expression": "0x08U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_BFB",
+      "expression": "0x10U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_SEC",
+      "expression": "0x20U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OPTIONBYTE_BOOT_LOCK",
+      "expression": "0x40U",
+      "defgroup": "FLASH_Option_Type",
+      "init_struct_field": "OptionType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_ACC_PRFTEN",
+      "expression": "(FLASH_OPTR2_ACC_CTRL_0 << 26)",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_ACC_ICEN",
+      "expression": "(FLASH_OPTR2_ACC_CTRL_1 << 26)",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_ACC_DCEN",
+      "expression": "(FLASH_OPTR2_ACC_CTRL_2 << 26)",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_PLL_UNLOCKRST",
+      "expression": "(FLASH_OPTR2_PLL_UNLOCK_RSTEN << 26)",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_VERIFY_READ",
+      "expression": "(FLASH_OPTR2_VERIFY_READ_EN << 26)",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_OPTR2_MSK",
+      "expression": "(OB_USER_ACC_DCEN      | OB_USER_ACC_PRFTEN | OB_USER_ACC_ICEN  |                                           OB_USER_PLL_UNLOCKRST | OB_USER_VERIFY_READ )",
+      "defgroup": "FLASH_OB_USER_Type",
+      "init_struct_field": "USERType",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_0",
+      "expression": "((uint16_t)0x0001)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_1",
+      "expression": "((uint16_t)0x0002)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_2",
+      "expression": "((uint16_t)0x0004)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_3",
+      "expression": "((uint16_t)0x0008)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_4",
+      "expression": "((uint16_t)0x0010)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_5",
+      "expression": "((uint16_t)0x0020)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_6",
+      "expression": "((uint16_t)0x0040)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_7",
+      "expression": "((uint16_t)0x0080)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_8",
+      "expression": "((uint16_t)0x0100)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_9",
+      "expression": "((uint16_t)0x0200)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_10",
+      "expression": "((uint16_t)0x0400)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_11",
+      "expression": "((uint16_t)0x0800)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_12",
+      "expression": "((uint16_t)0x1000)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_13",
+      "expression": "((uint16_t)0x2000)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_14",
+      "expression": "((uint16_t)0x4000)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_15",
+      "expression": "((uint16_t)0x8000)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_All",
+      "expression": "((uint16_t)0xFFFF)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_MASK",
+      "expression": "(0x0000FFFFu)",
+      "defgroup": "GPIO_pins",
+      "init_struct_field": "Pin",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_MEMADD_SIZE_8BIT",
+      "expression": "(literal value 0x1)",
+      "defgroup": null,
+      "init_struct_field": "MemAddSize",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_MEMADD_SIZE_16BIT",
+      "expression": "(literal value 0x10)",
+      "defgroup": null,
+      "init_struct_field": "MemAddSize",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_FIRST_FRAME",
+      "expression": "(literal value 0x1)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_FIRST_AND_NEXT_FRAME",
+      "expression": "(literal value 0x2)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_NEXT_FRAME",
+      "expression": "(literal value 0x4)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_FIRST_AND_LAST_FRAME",
+      "expression": "(literal value 0x8)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_LAST_FRAME",
+      "expression": "(literal value 0x20)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_LAST_FRAME_NO_STOP",
+      "expression": "(literal value 0x10)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "I2C",
+      "symbol": "I2C_OTHER_FRAME",
+      "expression": "(literal value 0xAA0000)",
+      "defgroup": null,
+      "init_struct_field": "XferOptions",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "LPTIM",
+      "symbol": "LPTIM_TRIGSOURCE_SOFTWARE",
+      "expression": "0x0000FFFFU",
+      "defgroup": "LPTIM_Trigger_Source",
+      "init_struct_field": "Source",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "LPTIM",
+      "symbol": "LPTIM_INPUT2SOURCE_GPIO",
+      "expression": "0x00000000U",
+      "defgroup": "LPTIM_Input2_Source",
+      "init_struct_field": "Input2Source",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_HWCONTROL_NONE",
+      "expression": "0x00000000U",
+      "defgroup": "LPUART_Hardware_Flow_Control",
+      "init_struct_field": "HwFlowCtl",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_NO_INIT",
+      "expression": "0x00000000U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_TXINVERT_INIT",
+      "expression": "0x00000001U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_RXINVERT_INIT",
+      "expression": "0x00000002U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_DATAINVERT_INIT",
+      "expression": "0x00000004U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_SWAP_INIT",
+      "expression": "0x00000008U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_RXOVERRUNDISABLE_INIT",
+      "expression": "0x00000010U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_DMADISABLEONERROR_INIT",
+      "expression": "0x00000020U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "LPUART",
+      "symbol": "LPUART_ADVFEATURE_MSBFIRST_INIT",
+      "expression": "0x00000080U",
+      "defgroup": "LPUART_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_NORMAL",
+      "expression": "((uint32_t)0x00000000)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_IT_RISING",
+      "expression": "((uint32_t)0x00010001)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_IT_FALLING",
+      "expression": "((uint32_t)0x00010002)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_IT_RISING_FALLING",
+      "expression": "((uint32_t)0x00010003)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_EVENT_RISING",
+      "expression": "((uint32_t)0x00020001)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_EVENT_FALLING",
+      "expression": "((uint32_t)0x00020002)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_PVD_MODE_EVENT_RISING_FALLING",
+      "expression": "((uint32_t)0x00020003)",
+      "defgroup": "PWR_PVD_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_SLEEPENTRY_WFI",
+      "expression": "PWR_SLEEPENTRY_WFI",
+      "defgroup": "IS:IS_PWR_SLEEP_ENTRY",
+      "init_struct_field": "SLEEPEntry",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "PWR",
+      "symbol": "PWR_SLEEPENTRY_WFE",
+      "expression": "PWR_SLEEPENTRY_WFE",
+      "defgroup": "IS:IS_PWR_SLEEP_ENTRY",
+      "init_struct_field": "SLEEPEntry",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_PLL_NONE",
+      "expression": "0x00000000U",
+      "defgroup": "RCC_PLL_Config",
+      "init_struct_field": "PLLState",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_OSCILLATORTYPE_NONE",
+      "expression": "0x00000000U",
+      "defgroup": "RCC_Oscillator_Type",
+      "init_struct_field": "OscillatorType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_OSCILLATORTYPE_HSE",
+      "expression": "0x00000001U",
+      "defgroup": "RCC_Oscillator_Type",
+      "init_struct_field": "OscillatorType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_OSCILLATORTYPE_HSI",
+      "expression": "0x00000002U",
+      "defgroup": "RCC_Oscillator_Type",
+      "init_struct_field": "OscillatorType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_OSCILLATORTYPE_LSE",
+      "expression": "0x00000004U",
+      "defgroup": "RCC_Oscillator_Type",
+      "init_struct_field": "OscillatorType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_OSCILLATORTYPE_LSI",
+      "expression": "0x00000008U",
+      "defgroup": "RCC_Oscillator_Type",
+      "init_struct_field": "OscillatorType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_CLOCKTYPE_SYSCLK",
+      "expression": "0x00000001U",
+      "defgroup": "RCC_System_Clock_Type",
+      "init_struct_field": "ClockType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_CLOCKTYPE_HCLK",
+      "expression": "0x00000002U",
+      "defgroup": "RCC_System_Clock_Type",
+      "init_struct_field": "ClockType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_CLOCKTYPE_PCLK1",
+      "expression": "0x00000004U",
+      "defgroup": "RCC_System_Clock_Type",
+      "init_struct_field": "ClockType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_CLOCKTYPE_PCLK2",
+      "expression": "0x00000008U",
+      "defgroup": "RCC_System_Clock_Type",
+      "init_struct_field": "ClockType",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO1_PC9",
+      "expression": "RCC_MCO1_PC9",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO1_PC14",
+      "expression": "RCC_MCO1_PC14",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO1_PD1",
+      "expression": "RCC_MCO1_PD1",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO1_PD5",
+      "expression": "RCC_MCO1_PD5",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO2_PA4",
+      "expression": "RCC_MCO2_PA4",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO2_PA8",
+      "expression": "RCC_MCO2_PA8",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO2_PC15",
+      "expression": "RCC_MCO2_PC15",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RCC",
+      "symbol": "RCC_MCO2_PD11",
+      "expression": "RCC_MCO2_PD11",
+      "defgroup": "IS:IS_RCC_MCO",
+      "init_struct_field": "RCC_MCOx",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RTC",
+      "symbol": "RTC_AUTO_1_SECOND",
+      "expression": "RTC_AUTO_1_SECOND",
+      "defgroup": "IS:IS_RTC_ASYNCH_PREDIV",
+      "init_struct_field": "AsynchPrediv",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "RTC",
+      "symbol": "RTC_OUTPUTSOURCE_NONE",
+      "expression": "0x00000000U",
+      "defgroup": "RTC_output_source_to_output_on_the_Tamper_pin",
+      "init_struct_field": "OutPut",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "RTC",
+      "symbol": "RTC_FORMAT_BCD",
+      "expression": "(literal value 0x1)",
+      "defgroup": null,
+      "init_struct_field": "Format",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_NO_INIT",
+      "expression": "0x00000000U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_TXINVERT_INIT",
+      "expression": "0x00000001U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_RXINVERT_INIT",
+      "expression": "0x00000002U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_DATAINVERT_INIT",
+      "expression": "0x00000004U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_SWAP_INIT",
+      "expression": "0x00000008U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_AUTOBAUDRATE_INIT",
+      "expression": "0x00000010U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SCI",
+      "symbol": "SCI_ADVFEATURE_MSBFIRST_INIT",
+      "expression": "0x00000020U",
+      "defgroup": "SCI_Advanced_Features_Initialization_Type",
+      "init_struct_field": "AdvFeatureInit",
+      "inventory_class": "selector_mask"
+    },
+    {
+      "peripheral": "SPI",
+      "symbol": "SPI_MODE_SLAVE",
+      "expression": "(0x00000000U)",
+      "defgroup": "SPI_Mode",
+      "init_struct_field": "Mode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "SPI",
+      "symbol": "SPI_DIRECTION_2LINES",
+      "expression": "(0x00000000U)",
+      "defgroup": "SPI_Direction",
+      "init_struct_field": "Direction",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_COUNTERMODE_UP",
+      "expression": "0x00000000U",
+      "defgroup": "TIM_Counter_Mode",
+      "init_struct_field": "CounterMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_TIMING",
+      "expression": "(literal value 0x0)",
+      "defgroup": null,
+      "init_struct_field": "OCMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCMODE_RETRIGERRABLE_OPM1",
+      "expression": "(literal value 0x10000)",
+      "defgroup": null,
+      "init_struct_field": "OCMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_OCFAST_DISABLE",
+      "expression": "0x00000000U",
+      "defgroup": "TIM_Output_Fast_State",
+      "init_struct_field": "OCFastMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_ICPSC_DIV1",
+      "expression": "(literal value 0x0)",
+      "defgroup": null,
+      "init_struct_field": "ICPrescaler",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CLOCKSOURCE_ITR4",
+      "expression": "TIM_TS_ITR4",
+      "defgroup": "TIM_Clock_Source",
+      "init_struct_field": "ClockSource",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CLEARINPUTSOURCE_NONE",
+      "expression": "0xFFFFFFFFU",
+      "defgroup": "TIM_ClearInput_Source",
+      "init_struct_field": "ClearInputSource",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_TRGO_ENCODER_CLK",
+      "expression": "TIM_CR2_MMS_3",
+      "defgroup": "TIM_Master_Mode_Selection",
+      "init_struct_field": "MasterOutputTrigger",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_MASTERSLAVEMODE_DISABLE",
+      "expression": "0x00000000U",
+      "defgroup": "TIM_Master_Slave_Mode",
+      "init_struct_field": "MasterSlaveMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_SLAVEMODE_COMBINED_RESETTRIGGER",
+      "expression": "TIM_SMCR_SMS_3",
+      "defgroup": "TIM_Slave_Mode",
+      "init_struct_field": "SlaveMode",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_TS_ITR4",
+      "expression": "TIM_SMCR_TS_3",
+      "defgroup": "TIM_Trigger_Selection",
+      "init_struct_field": "InputTrigger",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_TS_NONE",
+      "expression": "0x0000FFFFU",
+      "defgroup": "TIM_Trigger_Selection",
+      "init_struct_field": "InputTrigger",
+      "inventory_class": "inheritable"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_2",
+      "expression": "(literal value 0x4)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_3",
+      "expression": "(literal value 0x8)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_4",
+      "expression": "(literal value 0xC)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_5",
+      "expression": "(literal value 0x10)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_6",
+      "expression": "(literal value 0x14)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_CHANNEL_ALL",
+      "expression": "(literal value 0x3C)",
+      "defgroup": null,
+      "init_struct_field": "Channel",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_2TRANSFERS",
+      "expression": "(literal value 0x100)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_3TRANSFERS",
+      "expression": "(literal value 0x200)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_4TRANSFERS",
+      "expression": "(literal value 0x300)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_5TRANSFERS",
+      "expression": "(literal value 0x400)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_6TRANSFERS",
+      "expression": "(literal value 0x500)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_7TRANSFERS",
+      "expression": "(literal value 0x600)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_8TRANSFERS",
+      "expression": "(literal value 0x700)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_9TRANSFERS",
+      "expression": "(literal value 0x800)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_10TRANSFERS",
+      "expression": "(literal value 0x900)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_11TRANSFERS",
+      "expression": "(literal value 0xA00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_12TRANSFERS",
+      "expression": "(literal value 0xB00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_13TRANSFERS",
+      "expression": "(literal value 0xC00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_14TRANSFERS",
+      "expression": "(literal value 0xD00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_15TRANSFERS",
+      "expression": "(literal value 0xE00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_16TRANSFERS",
+      "expression": "(literal value 0xF00)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_17TRANSFERS",
+      "expression": "(literal value 0x1000)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_18TRANSFERS",
+      "expression": "(literal value 0x1100)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_19TRANSFERS",
+      "expression": "(literal value 0x1200)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_20TRANSFERS",
+      "expression": "(literal value 0x1300)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_21TRANSFERS",
+      "expression": "(literal value 0x1400)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_22TRANSFERS",
+      "expression": "(literal value 0x1500)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_23TRANSFERS",
+      "expression": "(literal value 0x1600)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_DMABURSTLENGTH_24TRANSFERS",
+      "expression": "(literal value 0x1700)",
+      "defgroup": null,
+      "init_struct_field": "BurstLength",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_BREAKINPUT_BRK",
+      "expression": "(literal value 0x1)",
+      "defgroup": null,
+      "init_struct_field": "BreakInput",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "TIM",
+      "symbol": "TIM_BREAKINPUT_BRK2",
+      "expression": "(literal value 0x2)",
+      "defgroup": null,
+      "init_struct_field": "BreakInput",
+      "inventory_class": "dark_field"
+    },
+    {
+      "peripheral": "UART",
+      "symbol": "UART_WORDLENGTH_9B",
+      "expression": "0xFFFFFFFFU",
+      "defgroup": "UART_Word_Length",
+      "init_struct_field": "WordLength",
+      "inventory_class": "inheritable"
+    }
+  ]
+}

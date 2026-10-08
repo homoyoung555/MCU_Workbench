@@ -1,0 +1,482 @@
+{
+  "peripheral": "DMA",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "DIR",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_MEMORY_TO_PERIPH",
+          "value": 1,
+          "description": "Memory to peripheral direction",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "Direction",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "MEM2MEM",
+      "bit_offset": 19,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_MEMORY_TO_MEMORY",
+          "value": 1,
+          "description": "Memory to memory direction",
+          "abs_value": 524288
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "Direction",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "PINC",
+      "bit_offset": 8,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DMA_PADDR_INC",
+          "value": 1,
+          "description": "Peripheral address increment",
+          "abs_value": 256
+        },
+        {
+          "symbol": "DMA_PADDR_DEC",
+          "value": 2,
+          "description": "Peripheral address decrement",
+          "abs_value": 512
+        },
+        {
+          "symbol": "DMA_PADDR_FIX",
+          "value": 0,
+          "description": "Peripheral address fixed",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "PeriphInc",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "MINC",
+      "bit_offset": 10,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DMA_MADDR_INC",
+          "value": 1,
+          "description": "Memory address increment",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "DMA_MADDR_DEC",
+          "value": 2,
+          "description": "Memory address decrement",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "DMA_MADDR_FIX",
+          "value": 0,
+          "description": "Memory address fixed",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "MemInc",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "PSIZE",
+      "bit_offset": 12,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DMA_PDATAALIGN_HALFWORD",
+          "value": 1,
+          "description": "Peripheral data alignment : HalfWord",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "DMA_PDATAALIGN_WORD",
+          "value": 2,
+          "description": "Peripheral data alignment : Word",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "DMA_PDATAALIGN_BYTE",
+          "value": 0,
+          "description": "Peripheral data alignment : Byte",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "PeriphDataAlignment",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "MSIZE",
+      "bit_offset": 14,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "DMA_MDATAALIGN_HALFWORD",
+          "value": 1,
+          "description": "Memory data alignment : HalfWord",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "DMA_MDATAALIGN_WORD",
+          "value": 2,
+          "description": "Memory data alignment : Word",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "DMA_MDATAALIGN_BYTE",
+          "value": 0,
+          "description": "Memory data alignment : Byte",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "MemDataAlignment",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "PL",
+      "bit_offset": 16,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "DMA_PRIORITY_1",
+          "value": 1,
+          "description": "Priority level : 1",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "DMA_PRIORITY_2",
+          "value": 2,
+          "description": "Priority level : 2",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "DMA_PRIORITY_3",
+          "value": 3,
+          "description": "Priority level : 3",
+          "abs_value": 196608
+        },
+        {
+          "symbol": "DMA_PRIORITY_4",
+          "value": 4,
+          "description": "Priority level : 4",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "DMA_PRIORITY_0",
+          "value": 0,
+          "description": "Priority level : 0",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "Priority",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "PNORLD",
+      "bit_offset": 20,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_PRELOAD_DISABLE",
+          "value": 1,
+          "description": "Peripheral address reload disable",
+          "abs_value": 1048576
+        },
+        {
+          "symbol": "DMA_PRELOAD_ENABLE",
+          "value": 0,
+          "description": "Peripheral address reload enable",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "PeriphReload",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "MNORLD",
+      "bit_offset": 21,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_MRELOAD_DISABLE",
+          "value": 1,
+          "description": "Memory address reload disable",
+          "abs_value": 2097152
+        },
+        {
+          "symbol": "DMA_MRELOAD_ENABLE",
+          "value": 0,
+          "description": "Peripheral address reload enable",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "MemReload",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "TRANST",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_TRANSFER_BULK",
+          "value": 1,
+          "description": "bulk transfer",
+          "abs_value": 128
+        },
+        {
+          "symbol": "DMA_TRANSFER_SINGLE",
+          "value": 0,
+          "description": "single transfer",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "TransMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "M2MARB",
+      "bit_offset": 23,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_ARB_POLL",
+          "value": 1,
+          "description": "Release bus after 1 data transfer",
+          "abs_value": 8388608
+        },
+        {
+          "symbol": "DMA_ARB_FAST",
+          "value": 0,
+          "description": "Do not release the bus after 1 data transfer",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "ArbMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "BTCSUSP",
+      "bit_offset": 22,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_BTC_SUSPEND_ENABLE",
+          "value": 1,
+          "description": "Enable suspend transfer after block transfer completion interrupt",
+          "abs_value": 4194304
+        },
+        {
+          "symbol": "DMA_BTC_SUSPEND_DISABLE",
+          "value": 0,
+          "description": "Disable suspend transfer after block transfer completion interrupt",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "BTCSuspend",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "DMA",
+      "register": "CCR",
+      "field": "CIRC",
+      "bit_offset": 6,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "DMA_NORMAL",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "DMA_FINITE_CIRCULAR",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "DMA_INFINITE_CIRCULAR",
+          "value": 1,
+          "description": "",
+          "abs_value": 64
+        }
+      ],
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [],
+  "numeric_fields": [
+    {
+      "init_struct": "DMA_InitTypeDef",
+      "init_struct_field": "BlockLen",
+      "is_macro": "IS_DMA_BLOCK_SIZE",
+      "min": 0,
+      "max": 65535,
+      "placement": null
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "Direction",
+      "ref": "DMA_Data_transfer_direction",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "PeriphInc",
+      "ref": "DMA_Peripheral_incremented_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "MemInc",
+      "ref": "DMA_Memory_incremented_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "PeriphDataAlignment",
+      "ref": "DMA_Peripheral_data_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "MemDataAlignment",
+      "ref": "DMA_Memory_data_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "Mode",
+      "ref": "DMA_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "Priority",
+      "ref": "DMA_Priority_level",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "PeriphReload",
+      "ref": "DMA_Peripheral_Reload",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "MemReload",
+      "ref": "DMA_Memory_Reload",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "BlockLen",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "TransMode",
+      "ref": "DMA_Transfer_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "ArbMode",
+      "ref": "DMA_Arbitration_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "DMA_InitTypeDef",
+      "field": "BTCSuspend",
+      "ref": "DMA_BTC_Suspend",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 13,
+    "multi_field_count": 0,
+    "total_encodings": 29,
+    "unresolved_count": 6,
+    "numeric_field_count": 1,
+    "llm_applied": true
+  }
+}

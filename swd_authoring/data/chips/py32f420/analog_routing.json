@@ -1,0 +1,17 @@
+{
+  "_about": "外接模拟输出符号 → 隐含的模拟引脚功能名(iomux analog 块里的名字)。composer 据此用一条通用规则给外接引脚补 analog 模式 + 端口时钟,自身不含任何外设特判。新增外设(OPA 等)只在此加条目,不动 composer 代码。",
+  "_how": "composer._r_field_symbol 解析符号后,查 EncodingDB.analog_routing_pin(symbol);若返回模拟功能名 F,则 analog_pin(F)→引脚,自动补该引脚 MODER=analog + 端口时钟。",
+  "symbol_implies_analog_pin": {
+    "DAC_OUTPUTSELECT_VOUT1_EXT": "DAC_OUT1",
+    "DAC_OUTPUTSELECT_VOUT2_EXT": "DAC_OUT2"
+  },
+  "_companion_about": "外接路由配套使能的完整性检查分两路,lint(intent._routing_completeness)取并集:① companion_conventions —— 家族级命名约定(跨芯片复用,换同族芯片整块照抄,新芯片零逐符号策展);② symbol_implies_companion_writes —— 仅当命名约定认错时的逐符号例外覆盖,默认空。字段名不进代码;只判字段有没有被碰,值对不对交给测量(外层 oracle)。",
+  "companion_conventions": [
+    {"route_field": "EXTCH|EXTSEL|OUTPUTSELECT", "enable_field": "EXTEN", "note": "符号落在'外接路由'字段 → 要求同寄存器'外接输出使能'字段被配(DAC 外接:配 EXTCH 路由必须配 EXTEN 使能)"}
+  ],
+  "symbol_implies_companion_writes": {},
+  "_readback_ignore_about": "家族级:这些寄存器写触发/键值/自清,写后回读无意义(EGR 写 UG 产生事件后硬件自清、KR 是键寄存器写不持久、SWTRIG 软触发自清)。回读 oracle 据此跳过,避免假阴。正则,匹配寄存器名;换同族芯片整块照抄。新坑从错题本毕业到这里。",
+  "readback_ignore_regs": ["EGR", "^KR$", "SWTRIG"],
+  "_enable_fields_about": "家族级:外设功能使能位的字段名正则(config-then-enable 惯例)。composer 据此把使能位从配置字里拆出来、单独后置一次写(先配置 EN=0、最后单独 EN=1)——DMA 等'必须配完再使能'的外设靠这个才工作。**不含 RCC**(时钟门/振荡器使能有自己的时序相位,由 _infer_phase 管,不在此列)。正则匹配字段名,换同族芯片照抄;漏配某外设只是退回旧的单字写(安全降级),从错题本毕业补。",
+  "enable_fields": ["^EN$", "^EN[0-9]+$", "^SPE$", "^CEN$", "^ADEN$", "^OPAEN$", "^PE$", "^UE$"]
+}

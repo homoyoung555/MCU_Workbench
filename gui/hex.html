@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HEX 转 Pattern</title>
+  <link rel="stylesheet" href="/workbench.css">
+  <style>
+    :root{--ink:#263d49;--muted:#718692;--line:#d8e3e7;--panel:#fff;--canvas:#f2f6f7;--brand:#08796a;--tint:#e5f4ee;--warn:#a66c1b;--danger:#a63131}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--canvas);color:var(--ink);font:13px/1.4 "Segoe UI","Microsoft YaHei",sans-serif}button,input,select{font:inherit;color:inherit}button{cursor:pointer}button:disabled,select:disabled{opacity:.48;cursor:not-allowed}[hidden]{display:none!important}
+    .hex-page{min-height:100vh;max-width:1600px;margin:auto;padding:18px 24px 42px}.hex-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.hex-heading h1{margin:0;font-size:23px;font-weight:600}.hex-heading p{margin:4px 0 0;color:var(--muted)}
+    .hex-toolbar,.hex-panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 5px 18px #173d4d0b}.hex-toolbar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:8px 10px;margin-bottom:9px}.hex-toolbar label{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:12px}.hex-toolbar select{min-width:105px;max-width:230px;padding:4px 6px;border:1px solid #c7d9d4;border-radius:4px;background:white}.hex-toolbar .hex-profile{min-width:240px}.hex-toolbar .hex-spacer{flex:1;min-width:10px}.hex-note{color:var(--muted);font-size:12px;margin:6px 0}.hex-status{min-height:19px;margin:5px 0 9px;color:var(--muted)}.hex-status[data-kind=error]{color:var(--danger)}.hex-drop{padding:8px 11px;border:1px dashed #9fc6bb;border-radius:6px;background:#f2faf7;color:#397568;margin-bottom:9px}.hex-page[data-dragging=true]{outline:3px dashed var(--brand);outline-offset:-7px}.hex-page[data-dragging=true] .hex-drop{background:#d8f2e8;color:#075f53}
+    .hex-options{flex-basis:100%;display:flex;align-items:center;flex-wrap:wrap;gap:12px}.hex-options label{display:flex;align-items:center;gap:5px}.hex-options select{padding:4px 6px;border:1px solid #b6cbc6;border-radius:4px;background:white}.hex-options input[type=text]{width:100px;padding:4px 6px;border:1px solid #b6cbc6;border-radius:4px}.hex-options input[type=checkbox]{accent-color:var(--brand)}
+    .hex-profile-info{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:7px 9px;border:1px solid #e0e9eb;border-radius:5px;background:#f8fafb;color:#536d77;font-size:12px;margin-bottom:9px}.hex-profile-info strong{color:var(--ink)}.hex-profile-reason{color:var(--danger)}
+    .hex-layout{display:grid;grid-template-columns:minmax(300px,1fr) minmax(420px,1.35fr);gap:11px;align-items:start}.hex-panel{min-width:0;padding:12px}.hex-panel-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}.hex-panel-head h2{font-size:15px;margin:0}.hex-list{display:grid;gap:6px;max-height:calc(100vh - 285px);overflow:auto}.hex-empty,.hex-placeholder{padding:36px 15px;text-align:center;color:var(--muted)}.hex-task{border:1px solid #e0e9eb;border-radius:6px;padding:8px 9px;background:#fff;cursor:pointer}.hex-task:hover{border-color:#9cc9bf}.hex-task[aria-current=true]{border-color:#82b8aa;background:#f2faf7}.hex-task-top{display:flex;align-items:flex-start;gap:7px}.hex-task-top input{accent-color:var(--brand);width:16px;height:16px;margin-top:1px}.hex-task-main{min-width:0;flex:1}.hex-task-name{font-weight:600;overflow-wrap:anywhere}.hex-task-meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:3px}.hex-badge{display:inline-block;padding:2px 6px;border-radius:10px;background:#edf2f3;color:#607782;font-size:11px}.hex-badge[data-kind=success]{background:var(--tint);color:var(--brand)}.hex-badge[data-kind=warn]{background:#fff5df;color:var(--warn)}.hex-badge[data-kind=danger]{background:#fff0f0;color:var(--danger)}.hex-task-error{margin:4px 0 0;color:var(--danger);font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}.hex-task-summary{margin:4px 0 0;color:var(--muted);font-size:11px}.hex-detail{min-height:390px}.hex-detail h3{font-size:13px;margin:12px 0 5px}.hex-detail h3:first-child{margin-top:0}.hex-actions{display:flex;gap:6px;flex-wrap:wrap}.hex-result-grid{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(230px,1.2fr);gap:8px}.hex-files{display:grid;gap:4px}.hex-file{display:flex;justify-content:space-between;gap:7px;padding:5px 7px;border:1px solid var(--line);border-radius:4px;background:#f8fafb}.hex-file button{border:0;background:transparent;color:var(--brand);padding:0;text-align:left;overflow-wrap:anywhere}.hex-preview,.hex-log{width:100%;min-height:130px;max-height:320px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:0;padding:9px;border:1px solid var(--line);border-radius:5px;background:#f5f8f9;font:12px/1.5 Consolas,"Microsoft YaHei",monospace}.hex-muted{color:var(--muted);font-size:12px}.hex-summary{color:var(--muted);font-size:12px}.wb-button{white-space:nowrap}@media(max-width:850px){.hex-page{padding:15px 12px 35px}.hex-layout{grid-template-columns:1fr}.hex-list{max-height:350px}.hex-result-grid{grid-template-columns:1fr}.hex-heading h1{font-size:20px}}
+  </style>
+</head>
+<body>
+  <main id="hex-app" class="hex-page">
+    <header class="hex-heading"><div><div class="wb-eyebrow">PATTERN GENERATOR</div><h1>HEX 转 Pattern</h1><p>按芯片版本将 Intel HEX 转换为 Pattern 文件；这里只生成文件，不在本机烧录。</p></div><span id="hex-connection" class="wb-badge wb-badge-muted">正在连接</span></header>
+    <div class="hex-toolbar" role="toolbar" aria-label="HEX 转换工具栏">
+      <label>芯片<select id="hex-chip" aria-label="选择芯片"></select></label>
+      <label>版本<select id="hex-profile" class="hex-profile" aria-label="选择芯片版本"></select></label>
+      <button id="hex-pick" class="wb-button wb-primary" type="button">选择 HEX</button>
+      <input id="hex-picker" type="file" accept=".hex,.HEX,application/octet-stream" multiple hidden>
+      <button id="hex-clear" class="wb-button" type="button" disabled>清空历史</button>
+      <button id="hex-select-all" class="wb-button" type="button">全选任务</button>
+      <button id="hex-start" class="wb-button wb-primary" type="button" disabled>转换选中</button>
+    </div>
+    <div id="hex-profile-info" class="hex-profile-info" aria-live="polite"></div>
+    <div id="hex-drop" class="hex-drop">将一个或多个 HEX 文件拖到此处，也可点击“选择 HEX”。每个文件独立建立任务，按队列串行转换。</div>
+    <div id="hex-status" class="hex-status" role="status" aria-live="polite"></div>
+    <div class="hex-layout">
+      <section class="hex-panel" aria-labelledby="hex-task-title"><div class="hex-panel-head"><h2 id="hex-task-title">转换任务</h2><span id="hex-task-count" class="wb-badge wb-badge-muted">0 个</span></div><div id="hex-task-list" class="hex-list"><div class="hex-empty">尚未添加 HEX 文件。</div></div></section>
+      <section class="hex-panel hex-detail" aria-labelledby="hex-detail-title"><div class="hex-panel-head"><h2 id="hex-detail-title">任务结果</h2><div id="hex-detail-actions" class="hex-actions" hidden><button id="hex-download" class="wb-button wb-primary" type="button" disabled>下载 ZIP</button></div></div><div id="hex-detail-body"><div class="hex-placeholder">选择任务查看结果、日志与文件预览。</div></div></section>
+    </div>
+  </main>
+  <script defer src="/hex.js"></script>
+</body>
+</html>

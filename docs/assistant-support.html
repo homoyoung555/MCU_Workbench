@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI助手V1 · 支持范围与离线门禁</title><style>
+body{max-width:1100px;margin:36px auto;padding:0 24px;font:16px/1.75 system-ui,"Microsoft YaHei";color:#18323c;background:#f5f8fa}h1,h2{color:#12685f}table{border-collapse:collapse;width:100%;background:white}th,td{border:1px solid #cbdadd;padding:12px;text-align:left;vertical-align:top}th{background:#eaf3f1}code,pre{background:#e8eff2;padding:3px 6px}pre{white-space:pre-wrap;padding:18px}.note{border-left:4px solid #b78424;padding:12px 20px;background:#fff8e9}a{color:#12685f}
+</style></head><body><h1>AI助手V1 · 支持范围与离线门禁</h1>
+<p>2026-09-22 · 隔离试用版支持说明。<a href="assistant-trial.html">试用入口、验收步骤与最新证据</a>。软件文件验证与硬件验证分别记录。</p>
+<h2>产品与初始条件</h2><table><tr><th>对象</th><th>明确范围</th><th>条件与限制</th></tr>
+<tr><td>芯片</td><td>知识包身份 py32f420</td><td>封装、硅版本、板级条件仍须按实际任务确认；不能由产品名推断。</td></tr>
+<tr><td>产品</td><td>PT104；PCD009 为已确认别名</td><td>传给既有生成器的产品参数为PT104/PCD009，不能用PY32F420替代。</td></tr>
+<tr><td>平台</td><td>Chroma、S100分别生成</td><td>文件生成兼容与厂商编译通过分别记录，均不等于硬件正确。</td></tr>
+<tr><td>初始状态</td><td>显式确认reset前提的完整整字配置</td><td>生成器的SWD初始化不证明外设复位已发生；不声称未知状态下保留其他位或运行时RMW。</td></tr></table>
+<h2>本阶段操作矩阵</h2><table><tr><th>操作</th><th>实现范围</th><th>门禁</th></tr>
+<tr><td>普通字段配置</td><td>迁入EncodingDB→Directive校验→Composer，地址和值来自真实包内数据</td><td>负数、越界、未知字段/实例、矛盾配置、访问属性不明或只读写入必须阻断；不凭缓存存在就宣布完整外设功能支持。</td></tr>
+<tr><td>W整字</td><td>直接data，step=/，不重复移位</td><td>32位值、4字节对齐、访问语义与SWD管脚保护。写掩码是配置来源信息，不是硬件写掩码。</td></tr>
+<tr><td>C_H/C_L单次比较</td><td>选中位掩码；C_L适配为32位反掩码</td><td>比较掩码非零；混合高低位不拆成两次读。check_ready仅一次检查，不是等待轮询。</td></tr>
+<tr><td>us/ms等待、轮询</td><td>本阶段阻断</td><td>旧us路径减156；延时时基、范围和精度未独立确认。不得钳制或改等待值冒充修复。</td></tr>
+<tr><td>R/CAP/SRAM、命令/钥匙/W1C等特殊语义</td><td>未建立明确意图及独立验收的操作不开放</td><td>旧生成器支持某格式不等于新助手完整支持该功能；保留旧生成器行为。</td></tr>
+<tr><td>Excel交付</td><td>独立文件，经现有export_excel/load_excel与generate_pattern</td><td>源码与平台文本在新输出目录；拒绝覆盖原文件；不自动导入工程、Link或保存。</td></tr>
+<tr><td>AI来源JSON</td><td>mcu/ai-provenance.json，版本1，步骤来源、资料摘要、初始条件与语义摘要</td><td>缺失/未知版本/内容改变降级；摘要一致不等于可信签名，不根据外部元数据授予操作权限。</td></tr></table>
+<h2>资料覆盖与已知缺口</h2><p class="note">PCD009的PA4完整MCO配置已通过软件生成验证：用户确认GPIOA.AFRL（0x40024020）复位值全0，补充按产品/芯片/地址持久保存并进入资料版本及Excel来源。缺失复位资料显示询问卡，回答后重新校验；与包内已知位或导入资料矛盾时拒绝保存。不确定时保留待确认。其他GPIO端口和产品不自动沿用本次确认。</p>
+<p>实际旧fieldmap包含28类外设的字段记录，访问属性缺失1542项。这个数量是结构性盘点，不能换算为支持率。原始fieldmap SHA256：<code>24ce2bdcdb23f6c9cbde50bfb9cb0045bd6906eddcef3cfef394294baeaf6052</code>。</p>
+<table><tr><th>范围</th><th>当前证据与处理</th></tr>
+<tr><td>RCC.CFGR1字段配置</td><td>本阶段端到端代表用例；MCO2SEL=2、MCO2PRE=14，独立数值基准0x40021014写0xE2000000。只配置明确字段，不声称已完成GPIO输出或测得频率。实际结果以测试和平台报告为准。</td></tr>
+<tr><td>COMP1/COMP2 IO1配置</td><td>旧核心能生成CSR配置0x108、使能0x109，但知识包缺部分字段复位值，会按0补齐并警告；新交付链路阻断。当前SVD缓存存在补充复位依据，须跨源审阅后显式纳入资料版本，不能吞警告放行。</td></tr>
+<tr><td>MCO/时钟、DAC/OPA、串口、定时器、DMA等历史样本</td><td>旧composer回归用于迁入兼容性；不能将旧17例或历史真机记录当成本版功能验收。时序、路由、资料warning与额外写入仍须按完整任务复核。</td></tr>
+<tr><td>ADC.SMPR3、RCC.CSR</td><td>跨来源地址差异未裁决，涉及请求明确阻断；不得自动选择旧缓存。其他寄存器任务不因无关冲突全部停止。</td></tr>
+<tr><td>I2C/BKP、EPWM、特定模拟路由</td><td>历史已知地址/语义缺口；缺资料时返回不足，不能从其他芯片类推。</td></tr>
+<tr><td>当前工作台资料选择</td><td>请求绑定主窗口与资料版本快照（含SWD弹窗未保存行）。按涉及寄存器核对导入来源和包内字段的地址、位宽、访问及复位语义；无关冲突不阻断，选择来源不能消除其与知识包的真实矛盾。实际缓存RCC.CFGR1.PPRE1为4位、旧知识为3位，使用该导入来源时相关整字配置被阻断。</td></tr></table>
+<h2>新产品最小资料清单</h2>
+<ol><li>先确认已有芯片的新产品，还是未支持的新芯片；确认本次目标，不强制提交完整工程。</li><li>SWD配置需目标功能、实例/模式、时钟、管脚、初始状态、前置流程和预期检查。HEX仅在下载任务需要。</li><li>新芯片需寄存器依据、访问属性、操作顺序与勘误；SVD/厂商头文件/官方示例可互补，上传不等于已支持。</li><li>现有入口可解析SVD、寄存器xlsx及有限C/H宏；PDF/OCR尚未接入，不承诺任意文件自动获得完整配置能力。</li><li>资料齐备后仍需规则和完整流程验收，软件静态验证与用户报告的硬件结果分别保存。</li></ol>
+<h2>离线复现入口</h2><pre>python -m pytest tests/assistant_core tests/test_assistant_swd.py -q -p no:cacheprovider --basetemp .scratch/assistant-tests
+python -m tools.assistant_offline --request request.json --product PT104 --platform chroma --initial-state reset --output .scratch/new-output</pre>
+<h2>已实现的助手交互</h2>
+<ul><li>固定官方DeepSeek/Kimi端点、完整工具及推理消息回放、分类错误、截断拒绝、取消后丢弃迟到结果。连接阶段网络/5xx最多重试一次；鉴权、429、协议错误和响应流开始后的错误不自动重试。连接测试必须真实完成工具往返。</li>
+<li>独立窗口读取提问时草稿，程序表格采用未保存的新值。连续追问最多20次；切换工程/文档要求新问题。同一模型完整消息只留内存；重启后接续明确标识的问答摘要，不持久化推理原文。</li>
+<li>已有SWD直接W常量可按字段准备差异，保留其他位、顺序和手工步骤；确认后应用并整批撤销。旧流程不冒称完整复验。独立候选可以另存或送入编辑器，保存与Link仍为独立操作。</li>
+<li>程序检查使用冻结草稿和独立检查会话，不覆盖主窗口检查凭据。HEX/SCAN转换、程序生成按页面当前参数准备操作卡，确认后调用既有真实工具，回原页面查看进度与文件；不自动更新SCAN Link。启动后的转换/生成不受聊天取消控制。</li>
+<li>PCD009身份在文件来源记录中保留。Excel重载后显示缺失、未知、已修改或一致状态；一致仅指摘要匹配，不是签名或硬件验证。</li>
+<li>密钥仅会话或Windows当前用户加密保存。用户可显式清空助手历史与候选，既有编辑器草稿、模型设置和用户确认的复位知识补充保留。</li></ul>
+<h2>最新试用版验证</h2><p>本次复位补充闭环173项相关回归通过，真实模型原PA4问题完成且7条配置W核对通过。完整文件及25项窗口检查见试用报告；本轮未重新运行全仓1607节点。</p><p>本次复位补充闭环173项相关回归通过，真实模型原PA4问题完成且7条配置W核对通过。完整文件及25项窗口检查见试用报告；本轮未重新运行全仓1607节点。</p>
+<p>锁定试用包位于.scratch/assistant-v1/package-pin-contract/dist/MCU_Workbench_App。请使用<a href="../.scratch/assistant-v1/Start_Assistant_Candidate.cmd">独立启动脚本</a>进入trial-workspace；原安装和用户工作区未替换。DeepSeek模型设置已仅在试用区通过Windows当前用户加密保存。</p>
+<p>本轮跨模块整合190项通过；随后新增轮询解释反例，锁包模型/任务/问答/HTTP/评测49项通过。此前EXE真实桌面22项通过；最新复位补充包25项通过，78个界面与领域资产摘要一致。集合互有重叠，不合并计数。字段查询显式区分寄存器地址与外设基址，返回用户指定值的位宽检查；能力/资料/时序边界由实际工具结果交付，其他普通解释仍由模型回答。</p>
+<p>完整分模块回归1607冻结节点、227模块遍历完成。修复及原生补验去重后1578通过、26失败、3跳过；收集错误和超时清零。母本字节保持一致。26项遗留为旧母本、编号/SHMOO领域迁移、Trim搜索/清理语义与Golden差异；不擅自更改业务规则或Golden来消除失败。<a href="../.scratch/regression-batches/effective.html">逐模块归因</a>。</p>
+<p>固定代表用例此前Chroma DEC/PAT/PLN通过、S100完整编译0错误22警告；新模型候选仍不冒称已做厂商编译或硬件验证。3项跳过包含2项本地BCB6运行夹具缺失及1项迁移产物审计缺少预生成文件，不能算通过。</p>
+<h2>真实模型评测边界</h2>
+<p>使用DeepSeek deepseek-v4-pro进行生成、修改和问答实测。前轮24任务自动断言均通过，人工复核进一步发现2处轮询解释问题（建议禁止的替代方案、将轮询称为读改写），已留存记录并补公开反例修复；最新结果见<a href="assistant-trial.html">验收报告</a>。有限样本不代表整体95%达标；Kimi已补最小连接测试，未做完整生成质量评测，不作跨模型排名。</p>
+<p>评测入口tools/assistant_eval.py默认只列12例冻结用例；显式--run并提供对应服务商密钥后才真实调用，拒绝复用输出目录。密钥不写源码或评测报告。</p>
+<pre>python tools/assistant_eval.py
+python tools/assistant_eval.py --run --provider deepseek --model deepseek-v4-pro --output .scratch/eval-new</pre>
+<p class="note">本版可用于限定范围试用；全仓正式发布门禁仍有上述遗留。没有连接硬件，也未承诺任意外设、新芯片或时序流程完整可用。</p><p>本次本地8行PA4候选已加入隔离的Chroma程序副本并通过DEC/PAT/PLN编译；有工具链警告，硬件未验证。<a href="../.scratch/assistant-v1/reset-knowledge/chroma.json">本次编译证据</a>。真实模型生成的另一份候选仅做数值及回放检查，不冒称逐件厂商编译。</p><section><h2>首次送入编辑器修复</h2><p>首页生成的独立候选可直接点“送入 SWD 编辑器”，系统会先加载编辑器；仅切换页面不会再误报草稿变化。真正修改已有步骤、资料或管脚仍受保护。本次45项相关测试、27项EXE窗口检查通过，用户原8行候选隔离回放送入成功，无需重新调用模型。</p><p><a href="../.scratch/assistant-v1/stage-fix/native2.json">窗口检查</a> · <a href="../.scratch/assistant-v1/stage-fix/replay-result.json">实际候选回放</a></p></section><p>首次EXE自测在打开助手窗口时超时，原记录保留；相同包在新隔离工作区重跑27项通过。</p><section><h2>Kimi 连接设置</h2><p>2026-09-22实测：本次密钥在国际接口返回401，在国内接口验证成功。请选择「模型设置 → 服务商 Kimi → 接口地区 国内（api.moonshot.cn）→ kimi-k2.6」，填写密钥后保存，再点「测试连接与工具」。地区和模型必须与账号权限相符；不会自动切换地区或向其他服务商转发密钥。</p><p>kimi-k2.6已通过真实流式工具往返。kimi-k2.7-code普通回复成功，工具往返第二轮遇429限流，未确认完整通过；kimi-k3返回404模型不存在或无权限。K2.6/K2.7使用开启思考模式，推理档位在界面禁用；K3保留档位选择。密钥本次仅通过隐藏输入留在测试进程内存，没有替换现有设置。</p><p>42项相关测试、27项EXE窗口检查通过。<a href="../.scratch/assistant-v1/kimi-debug/live.json">工具往返结果</a> · <a href="https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart">Kimi官方说明</a></p></section><section><h2>Kimi Code 月订阅（K3）</h2><p>月订阅请选择「模型设置 → Kimi Code（月订阅）→ 国内 → k3」，使用 Kimi Code 控制台创建的密钥，保存后点击「测试连接与工具」。Moderato 可使用 K3，最高256K上下文；也可选 k3-256k。开放平台的 kimi-k3 与订阅的 k3 属于不同接口，请勿混用。</p><p>本轮已实现订阅入口和协议测试，但提供的密钥在订阅接口模型列表及聊天均返回401（无效或可能已过期），尚未验证真实 K3 工具往返。请在订阅控制台核对密钥状态/账号，必要时新建密钥后在本机设置输入。切换服务商需重新填写密钥，不会将旧平台密钥自动带入。</p><p><a href="https://www.kimi.com/code/docs/kimi-code/models.html">官方模型与套餐说明</a> · <a href="https://www.kimi.com/code/console">Kimi Code 控制台</a></p></section><p>2026-09-22：MCO工具调用说明修复，原题两次真实生成与Chroma DEC/PAT编译通过；OPA顺序写/CAP仍未接入。<a href="assistant-pattern-diagnosis.html">根因与验证报告</a></p></body></html>

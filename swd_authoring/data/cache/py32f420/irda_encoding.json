@@ -1,0 +1,210 @@
+{
+  "peripheral": "IRDA",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "IRDA",
+      "register": "CR3",
+      "field": "IRLP",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "IRDA_POWERMODE_NORMAL",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "IrDAMode",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "IRDA",
+      "symbol": "IRDA_WORDLENGTH_8B",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "M0",
+          "value": 0,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "M1",
+          "value": 0,
+          "bit_offset": 14,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "IRDA",
+      "symbol": "IRDA_MODE_DISABLE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "RE",
+          "value": 0,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "TE",
+          "value": 0,
+          "bit_offset": 3,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "IRDA",
+      "symbol": "IRDA_PARITY_NONE",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "PCE",
+          "value": 0,
+          "bit_offset": 10,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "PS",
+          "value": 0,
+          "bit_offset": 9,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "Parity",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "Prescaler",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "GTPR",
+        "field": "PSC"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "BRR",
+        "field": "DIV_MAN"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "IRDA_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "BRR",
+        "field": "DIV_FRA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "BaudRate",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "WordLength",
+      "ref": "IRDA_Word_Length",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "Parity",
+      "ref": "IRDA_Parity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "Mode",
+      "ref": "IRDA_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "Prescaler",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "IRDA_InitTypeDef",
+      "field": "IrDAMode",
+      "ref": "IRDA_Low_Power",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 1,
+    "multi_field_count": 0,
+    "total_encodings": 0,
+    "unresolved_count": 39,
+    "numeric_field_count": 3,
+    "llm_applied": true
+  }
+}

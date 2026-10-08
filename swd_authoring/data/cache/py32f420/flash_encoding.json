@@ -1,0 +1,1586 @@
+{
+  "peripheral": "FLASH",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "MER",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEERASE_MASSERASE",
+          "value": 1,
+          "description": "Flash mass erase activation",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "FLASH_EraseInitTypeDef",
+      "init_struct_field": "TypeErase",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "PER",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEERASE_PAGEERASE",
+          "value": 1,
+          "description": "Flash page erase activation",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "FLASH_EraseInitTypeDef",
+      "init_struct_field": "TypeErase",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "SER",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEERASE_SECTORERASE",
+          "value": 1,
+          "description": "Flash sector erase activation",
+          "abs_value": 2048
+        }
+      ],
+      "init_struct": "FLASH_EraseInitTypeDef",
+      "init_struct_field": "TypeErase",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "UPER",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEERASE_USERDATAERASE",
+          "value": 1,
+          "description": "Flash UserData erase activation",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "FLASH_EraseInitTypeDef",
+      "init_struct_field": "TypeErase",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NRST_STDBY",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NRST_STDBY",
+          "value": 1,
+          "description": "",
+          "abs_value": 256
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NRST_STOP",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NRST_STOP",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NRST_MODE",
+      "bit_offset": 10,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NRST_MODE0",
+          "value": 1,
+          "description": "Reset pin configuration",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "OB_USER_NRST_MODE1",
+          "value": 2,
+          "description": "Reset pin configuration",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "OB_USER_NRST_MODE",
+          "value": 3,
+          "description": "Reset pin configuration",
+          "abs_value": 3072
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "IWDG_STDBY",
+      "bit_offset": 12,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_IWDG_STDBY",
+          "value": 1,
+          "description": "",
+          "abs_value": 4096
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "IWDG_STOP",
+      "bit_offset": 13,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_IWDG_STOP",
+          "value": 1,
+          "description": "",
+          "abs_value": 8192
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "IWDG_SW",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_IWDG_SW",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "WWDG_SW",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_WWDG_SW",
+          "value": 1,
+          "description": "",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NBOOT0",
+      "bit_offset": 16,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NBOOT0",
+          "value": 1,
+          "description": "nBOOT0 option bit",
+          "abs_value": 65536
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NBOOT1",
+      "bit_offset": 17,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NBOOT1",
+          "value": 1,
+          "description": "Boot configuration",
+          "abs_value": 131072
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "NSWBOOT0",
+      "bit_offset": 18,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_NSWBOOT0",
+          "value": 1,
+          "description": "Software BOOT0",
+          "abs_value": 262144
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "BOOT_LOCK",
+      "bit_offset": 20,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_USER_BOOT_LOCK",
+          "value": 1,
+          "description": "Force boot from user Flash area bit",
+          "abs_value": 1048576
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "SWD_MODE",
+      "bit_offset": 25,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "OB_USER_SWD_MODE",
+          "value": 3,
+          "description": "SWD Mode",
+          "abs_value": 100663296
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "WWDG_SW",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_WWDG_SW",
+          "value": 1,
+          "description": "Software window watchdog",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "OB_WWDG_HW",
+          "value": 0,
+          "description": "Hardware window watchdog",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERConfig",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "BOOT_LOCK",
+      "bit_offset": 20,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_BOOT_LOCK_ENABLE",
+          "value": 1,
+          "description": "Boot Lock Enable",
+          "abs_value": 1048576
+        },
+        {
+          "symbol": "OB_BOOT_LOCK_DISABLE",
+          "value": 0,
+          "description": "Boot Lock Disable",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "BootEntryPoint",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "PG",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEPROGRAM_PAGE",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FLASH_Program",
+      "init_struct_field": "TypeProgram",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "PG",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_TYPEPROGRAM_PAGE",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FLASH_Program_IT",
+      "init_struct_field": "TypeProgram",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTBFB",
+      "field": "BFB",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OB_BFB_START_BANK0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "OB_BFB_START_BANK1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FLASHEx_OBBFBProgram",
+      "init_struct_field": "BFBStart",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "WRPR0",
+      "field": "BANK0_WRPR",
+      "bit_offset": 0,
+      "bit_width": 16,
+      "encodings": [
+        {
+          "symbol": "FLASH_WRPR_WRP_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_1",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_2",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_3",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_4",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_5",
+          "value": 32,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_6",
+          "value": 64,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_7",
+          "value": 128,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_8",
+          "value": 256,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_9",
+          "value": 512,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_10",
+          "value": 1024,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_11",
+          "value": 2048,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_12",
+          "value": 4096,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_13",
+          "value": 8192,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_14",
+          "value": 16384,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "FLASH_WRPR_WRP_15",
+          "value": 32768,
+          "description": "",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_1",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_2",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_3",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_4",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_5",
+          "value": 32,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_6",
+          "value": 64,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_7",
+          "value": 128,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_8",
+          "value": 256,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_9",
+          "value": 512,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_10",
+          "value": 1024,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_11",
+          "value": 2048,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_12",
+          "value": 4096,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_13",
+          "value": 8192,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_14",
+          "value": 16384,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "OB_WRP_BANK0_SECTOR_15",
+          "value": 32768,
+          "description": "",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages0to31",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages32to63",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages64to95",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages96to127",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages128to159",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages160to191",
+          "value": 32,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages192to223",
+          "value": 64,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages224to255",
+          "value": 128,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages256to287",
+          "value": 256,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages288to319",
+          "value": 512,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages320to351",
+          "value": 1024,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages352to383",
+          "value": 2048,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages384to415",
+          "value": 4096,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages416to447",
+          "value": 8192,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages448to479",
+          "value": 16384,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "OB_WRP_BANK0_Pages480to511",
+          "value": 32768,
+          "description": "",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "WRPSector",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "WRPR1",
+      "field": "BANK1_WRPR",
+      "bit_offset": 0,
+      "bit_width": 16,
+      "encodings": [
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_1",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_2",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_3",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_4",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_5",
+          "value": 32,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_6",
+          "value": 64,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_7",
+          "value": 128,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_8",
+          "value": 256,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_9",
+          "value": 512,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_10",
+          "value": 1024,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_11",
+          "value": 2048,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_12",
+          "value": 4096,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_13",
+          "value": 8192,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_14",
+          "value": 16384,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "OB_WRP_BANK1_SECTOR_15",
+          "value": 32768,
+          "description": "",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages0to31",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages32to63",
+          "value": 2,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages64to95",
+          "value": 4,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages96to127",
+          "value": 8,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages128to159",
+          "value": 16,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages160to191",
+          "value": 32,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages192to223",
+          "value": 64,
+          "description": "",
+          "abs_value": 64
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages224to255",
+          "value": 128,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages256to287",
+          "value": 256,
+          "description": "",
+          "abs_value": 256
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages288to319",
+          "value": 512,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages320to351",
+          "value": 1024,
+          "description": "",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages352to383",
+          "value": 2048,
+          "description": "",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages384to415",
+          "value": 4096,
+          "description": "",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages416to447",
+          "value": 8192,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages448to479",
+          "value": 16384,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "OB_WRP_BANK1_Pages480to511",
+          "value": 32768,
+          "description": "",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "WRPSector",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "OPTR1",
+      "field": "RDP",
+      "bit_offset": 0,
+      "bit_width": 8,
+      "encodings": [
+        {
+          "symbol": "OB_RDP_LEVEL_0",
+          "value": 170,
+          "description": "",
+          "abs_value": 170
+        },
+        {
+          "symbol": "OB_RDP_LEVEL_1",
+          "value": 85,
+          "description": "",
+          "abs_value": 85
+        },
+        {
+          "symbol": "OB_RDP_LEVEL_2",
+          "value": 204,
+          "description": "",
+          "abs_value": 204
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "RDPLevel",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "MER",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_BANK_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FLASH_BANK_1",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "FLASH_EraseInitTypeDef",
+      "init_struct_field": "Banks",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "FLASH",
+      "register": "CR",
+      "field": "MER",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FLASH_BANK_0",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FLASH_BANK_1",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FLASH_BANK_MSK",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "fn:FLASH_MassErase",
+      "init_struct_field": "Banks",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_OPTR1_MSK",
+      "abs_value": 102235904,
+      "fields": [
+        {
+          "register": "OPTR1",
+          "field": "NRST_STDBY",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NRST_STOP",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NRST_MODE",
+          "value": 3,
+          "bit_offset": 10,
+          "bit_width": 2
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_STDBY",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_STOP",
+          "value": 1,
+          "bit_offset": 13,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_SW",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "WWDG_SW",
+          "value": 1,
+          "bit_offset": 15,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NBOOT0",
+          "value": 1,
+          "bit_offset": 16,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NBOOT1",
+          "value": 1,
+          "bit_offset": 17,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NSWBOOT0",
+          "value": 1,
+          "bit_offset": 18,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "BOOT_LOCK",
+          "value": 1,
+          "bit_offset": 20,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "SWD_MODE",
+          "value": 3,
+          "bit_offset": 25,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "FLASH",
+      "symbol": "OB_USER_OPTR_MSK",
+      "abs_value": 2115501824,
+      "fields": [
+        {
+          "register": "OPTR1",
+          "field": "NRST_STDBY",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NRST_STOP",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NRST_MODE",
+          "value": 3,
+          "bit_offset": 10,
+          "bit_width": 2
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_STDBY",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_STOP",
+          "value": 1,
+          "bit_offset": 13,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "IWDG_SW",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "WWDG_SW",
+          "value": 1,
+          "bit_offset": 15,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NBOOT0",
+          "value": 1,
+          "bit_offset": 16,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NBOOT1",
+          "value": 1,
+          "bit_offset": 17,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "NSWBOOT0",
+          "value": 1,
+          "bit_offset": 18,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "BOOT_LOCK",
+          "value": 1,
+          "bit_offset": 20,
+          "bit_width": 1
+        },
+        {
+          "register": "OPTR1",
+          "field": "SWD_MODE",
+          "value": 3,
+          "bit_offset": 25,
+          "bit_width": 2
+        }
+      ],
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "USERType",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPStartAddr",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR0",
+        "field": "PCROP0SR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPStartAddr",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR1",
+        "field": "PCROP1SR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPEndAddr",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR0",
+        "field": "PCROP0ER"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPEndAddr",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR1",
+        "field": "PCROP1ER"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "SECConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR",
+        "field": "SECPROT0"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "SECConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR",
+        "field": "SECPROT1"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "SecSize",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "SECR0",
+        "field": "SEC_SIZEER0"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "SecSize",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "SECR1",
+        "field": "SEC_SIZEER1"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR0",
+        "field": "PCROP0SR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR0",
+        "field": "PCROP0ER"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR1",
+        "field": "PCROP1SR"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FLASH_OBProgramInitTypeDef",
+      "init_struct_field": "PCROPConfig",
+      "is_macro": null,
+      "min": 0,
+      "max": 511,
+      "placement": {
+        "register": "PCROPR1",
+        "field": "PCROP1ER"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_FLASH_OB_RDPConfig",
+      "init_struct_field": "RDPLevel",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "OPTR1",
+        "field": "RDP"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "TypeErase",
+      "ref": "FLASH_Type_Erase",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "Banks",
+      "ref": "FLASH_Banks",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "PageAddress",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "NbPages",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "SectorAddress",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "NbSectors",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_EraseInitTypeDef",
+      "field": "UserDataAddress",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "OptionType",
+      "ref": "FLASH_Option_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "WRPSector",
+      "ref": "FLASH_Option_Bytes_Write_Protection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "RDPLevel",
+      "ref": "FLASH_OB_Read_Protection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "USERType",
+      "ref": "FLASH_OB_USER_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "USERConfig",
+      "ref": "FLASH_OB_USER_WWDG_SW",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "PCROPConfig",
+      "ref": "FLASH_Banks",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "PCROPStartAddr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "PCROPEndAddr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "SECConfig",
+      "ref": "FLASH_Banks",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "SecSize",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FLASH_OBProgramInitTypeDef",
+      "field": "BootEntryPoint",
+      "ref": "FLASH_OB_USER_BOOT_LOCK",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_FLASH_Program",
+      "field": "TypeProgram",
+      "ref": "IS:IS_FLASH_TYPEPROGRAM",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FLASH_Program_IT",
+      "field": "TypeProgram",
+      "ref": "IS:IS_FLASH_TYPEPROGRAM",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:FLASH_MassErase",
+      "field": "Banks",
+      "ref": "IS:IS_FLASH_BANK",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FLASH_OB_RDPConfig",
+      "field": "RDPLevel",
+      "ref": "IS:IS_OB_RDP_LEVEL",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FLASHEx_OBBFBProgram",
+      "field": "BFBStart",
+      "ref": "IS:IS_OB_USER_BFB",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:FLASH_OB_OptrConfig",
+      "field": "RDPLevel",
+      "ref": "IS:IS_OB_RDP_LEVEL",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 26,
+    "multi_field_count": 2,
+    "total_encodings": 26,
+    "unresolved_count": 109,
+    "numeric_field_count": 13,
+    "llm_applied": true
+  }
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MCU 工作台 V0.5</title>
+  <link rel="stylesheet" href="/workbench.css">
+  <script defer src="/workbench.js"></script>
+</head>
+<body>
+  <div id="wb-app" class="wb-shell">
+    <header class="wb-header">
+      <div class="wb-brand"><span class="wb-brand-mark">M</span><span>MCU 工作台 V0.5</span></div>
+      <div class="wb-header-state">
+        <span id="wb-program-name" class="wb-ellipsis">未打开程序</span>
+        <span id="wb-program-badge" class="wb-badge wb-badge-muted">可独立使用</span>
+      </div>
+    </header>
+
+    <div class="wb-layout">
+      <aside class="wb-sidebar" aria-label="工作空间导航">
+        <div class="wb-sidebar-label">工作空间</div>
+        <nav class="wb-nav">
+          <button class="wb-nav-item" data-page="home" aria-label="返回工作台首页" title="返回工作台首页"><span aria-hidden="true">⌂</span><span>首页</span></button>
+          <button class="wb-nav-item" data-page="program"><span aria-hidden="true">▤</span><span>程序生成</span></button>
+          <button class="wb-nav-item" data-page="scan"><span aria-hidden="true">⇄</span><span>SCAN 转换</span></button>
+          <button class="wb-nav-item" data-page="swd"><span aria-hidden="true">⇢</span><span>SWD 生成</span></button>
+          <button class="wb-nav-item" data-page="hex"><span aria-hidden="true">⌘</span><span>HEX 转 Pattern</span></button>
+          <button class="wb-nav-item" disabled data-page="compiler" title="V0.5 暂未开放"><span aria-hidden="true">✓</span><span>程序编译（暂未开放）</span></button>
+        </nav>
+        <button class="wb-nav-item" id="wb-assistant"><span aria-hidden="true">✧</span><span>AI 助手 ↗</span></button>
+        <div class="wb-sidebar-footer">内置工具<br>统一安装与更新</div>
+      </aside>
+
+      <main class="wb-main">
+        <section class="wb-view" data-page-view="home" aria-labelledby="wb-home-title">
+          <div class="wb-page-heading">
+            <div><div class="wb-eyebrow">MCU WORKBENCH</div><h1 id="wb-home-title">从这里开始工作</h1><p>程序生成与 Pattern 转换，共用一个工作台。</p></div>
+          </div>
+          <div class="wb-tool-grid">
+            <article class="wb-tool-card">
+              <div class="wb-tool-icon" aria-hidden="true">▤</div>
+              <div><h2>程序生成</h2><p>编辑测试流程、配置 Pattern 与存储映射，检查并生成测试程序。</p></div>
+              <footer><button class="wb-button wb-primary" data-page="program">进入程序生成 <span aria-hidden="true">→</span></button></footer>
+            </article>
+            <article class="wb-tool-card">
+              <div class="wb-tool-icon" aria-hidden="true">⇄</div>
+              <div><h2>SCAN 转换</h2><p>将 WGL 转换为 Pattern、程序代码片段和配套时序。</p></div>
+              <footer><button class="wb-button wb-primary" data-page="scan">进入 SCAN 转换 <span aria-hidden="true">→</span></button></footer>
+            </article>
+            <article class="wb-tool-card"><div class="wb-tool-icon">⇢</div><div><h2>SWD 生成</h2><p>导入芯片资料和步骤，选择管脚，生成双平台 Pattern。</p></div><footer><button class="wb-button wb-primary" data-page="swd">进入 SWD 生成 →</button></footer></article>
+            <article class="wb-tool-card"><div class="wb-tool-icon">⌘</div><div><h2>HEX 转 Pattern</h2><p>选择芯片型号，将 HEX 转换为 Flash 或 SRAM 下载 Pattern。</p></div><footer><button class="wb-button wb-primary" data-page="hex">进入 HEX 转换 →</button></footer></article>
+            <article class="wb-tool-card"><div class="wb-tool-icon">✓</div><div><h2>程序编译</h2><p>V0.5 暂未开放；本版本不附带编译工具链。</p></div><footer><button class="wb-button wb-primary" disabled data-page="compiler" title="V0.5 暂未开放">暂未开放</button></footer></article>
+          </div>
+          <div class="wb-home-lower">
+            <section class="wb-panel">
+              <div class="wb-panel-head"><h2>当前程序</h2><span id="wb-home-program-status" class="wb-badge wb-badge-muted">未打开</span></div>
+              <div class="wb-file-row"><div><div id="wb-home-program-file" class="wb-file-title">没有已打开的程序</div><small id="wb-home-program-sha">程序生成可以稍后打开</small></div><button class="wb-button" data-page="program">打开程序</button></div>
+              <p class="wb-hint">不打开程序，也可以直接使用 SCAN Full Pin 转换。</p>
+            </section>
+            <section class="wb-panel">
+              <div class="wb-panel-head"><h2>SCAN 任务</h2><span id="wb-home-scan-status" class="wb-badge wb-badge-muted">暂无任务</span></div>
+              <p id="wb-home-scan-detail">转换记录会出现在这里。</p>
+              <p id="wb-home-scan-association" class="wb-hint">结果由您主动关联到 SCAN / MBIST 测试项。</p>
+              <button id="wb-home-scan-open" class="wb-button" data-page="scan" hidden>查看任务</button>
+            </section>
+          </div>
+        </section>
+
+        <section class="wb-view" data-page-view="program" aria-labelledby="wb-program-title" hidden>
+          <section id="wb-program-panel" class="wb-panel wb-program-panel">
+            <iframe id="wb-program-frame" title="程序生成" data-src="/program" hidden></iframe>
+            <div id="wb-program-empty" class="wb-empty">
+              <div class="wb-tool-icon" aria-hidden="true">▤</div>
+              <h2>打开程序后继续配置</h2>
+              <p>程序生成编辑器在此保留完整功能；当前没有已载入的程序。</p>
+              <button class="wb-button wb-primary" id="wb-program-open">打开程序</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="wb-view" data-page-view="scan" aria-labelledby="wb-scan-title" hidden>
+          <div class="wb-page-heading wb-page-heading-tool">
+            <div><div class="wb-eyebrow">SCAN CONVERTER</div><h1 id="wb-scan-title">SCAN 转换</h1><p>WGL → Pattern + 程序代码片段 + 时序定义</p></div>
+            <span id="wb-scan-mode-badge" class="wb-badge wb-badge-muted">Full Pin</span>
+          </div>
+
+          <div class="wb-scan-grid">
+            <section class="wb-panel wb-input-panel">
+              <div class="wb-panel-head"><h2>输入 WGL</h2><span id="wb-input-count" class="wb-badge wb-badge-muted">0 个文件</span></div>
+              <div id="wb-dropzone" class="wb-dropzone" tabindex="0">
+                <strong>选择或拖入多个 WGL 文件</strong>
+                <p>浏览器会导入副本；源文件更新后请重新导入。</p>
+                <div class="wb-button-row"><button class="wb-button wb-primary" id="wb-pick-files">选择 WGL 文件</button><button class="wb-button" id="wb-pick-folder">选择目录</button></div>
+                <input id="wb-file-picker" type="file" accept=".wgl,.WGL" multiple hidden>
+                <input id="wb-folder-picker" type="file" accept=".wgl,.WGL" webkitdirectory multiple hidden>
+              </div>
+              <div id="wb-input-list" class="wb-list"></div>
+              <div id="wb-manual-pins-wrap" class="wb-manual-pins" hidden>
+                <div class="wb-pin-tools"><input id="wb-pin-search" type="search" placeholder="搜索管脚"><button class="wb-button" id="wb-select-all-pins">全选</button><button class="wb-button" id="wb-clear-pins">清空</button></div>
+                <p id="wb-pin-status" class="wb-hint">读取已导入 WGL 的管脚。</p>
+                <div id="wb-pin-list" class="wb-pin-list"></div>
+              </div>
+              <p class="wb-hint">输出每个平台的 Pattern、SCAN 程序片段和配套时序，不生成完整工程。</p>
+            </section>
+
+            <section class="wb-panel wb-config-panel">
+              <div class="wb-panel-head"><h2>转换配置</h2></div>
+              <div class="wb-platform-row"><fieldset class="wb-fieldset"><legend>目标平台</legend>
+                <label class="wb-check"><input id="wb-platform-chroma" data-platform type="checkbox" value="chroma" checked> Chroma</label>
+                <label class="wb-check"><input id="wb-platform-s100" data-platform type="checkbox" value="s100" checked> S100</label>
+              </fieldset>
+              <span class="wb-hint">结果按平台分开</span></div>
+              <div class="wb-config-columns"><div class="wb-label-settings">
+              <label class="wb-field"><span>识别标记文本</span><input id="wb-label-marker" type="text" placeholder="例如：Measure Iddq All"></label>
+              <label class="wb-field"><span>Label 名前缀</span><input id="wb-label-base" type="text" placeholder="例如：M_Iddq → M_Iddq_1"></label>
+              <p class="wb-hint">两项都留空则关闭标签；启用时必须同时填写，Label 名前缀仅允许字母或下划线开头，后续可含数字。</p>
+              </div><div class="wb-pin-settings">
+              <label class="wb-check wb-adapt-check"><input id="wb-adapt" type="checkbox"> <strong>适配程序配置</strong></label>
+              <label class="wb-check wb-adapt-check"><input id="wb-manual-pins" type="checkbox"> <strong>手动选择 WGL 管脚</strong></label>
+              <div id="wb-config-source-wrap" class="wb-config-source" hidden>
+                <label class="wb-field"><span>配置来源</span><select id="wb-source"><option value="current">当前工作台配置（含未保存修改）</option><option value="other">选择其他程序 Excel</option></select></label>
+                <div id="wb-current-config" class="wb-source-detail"></div>
+                <div id="wb-other-config" class="wb-source-detail" hidden><button class="wb-button" id="wb-pick-config">选择程序 Excel</button><input id="wb-config-picker" type="file" accept=".xlsx,.xls" hidden><span id="wb-config-file" class="wb-file-title"></span><p class="wb-hint">另选配置只用于本次转换，不替换当前程序。</p></div>
+                <label class="wb-field"><span>适配 CP</span><select id="wb-cp" aria-describedby="wb-cp-hint"></select></label>
+                <p id="wb-cp-hint" class="wb-hint">适配时只使用所选 CP 的 PIN DEC。</p>
+              </div>
+              </div></div>
+              <div class="wb-config-footer"><div id="wb-mode-summary" class="wb-mode-summary"><strong>Full Pin · 独立转换</strong><p>保留 WGL 完整管脚，无需程序 Excel。波形与周期均来自 WGL。</p></div>
+              <button id="wb-start-scan" class="wb-button wb-primary wb-start" disabled>开始转换</button>
+              </div><p id="wb-start-hint" class="wb-hint">请添加 WGL 并选择至少一个目标平台。</p>
+            </section>
+
+            <section class="wb-panel wb-results-panel">
+              <div class="wb-panel-head"><h2>转换结果</h2><span id="wb-result-status" class="wb-badge wb-badge-muted">等待转换</span></div>
+              <div id="wb-result-body"><div class="wb-empty wb-result-empty">转换完成后，在这里查看文件、代码、时序和关联状态。</div></div>
+            </section>
+          </div>
+        </section>
+        <section class="wb-view" data-page-view="swd" hidden><iframe id="wb-swd-frame" title="SWD 生成器" style="width:100%;height:calc(100vh - 110px);border:0" data-src="/swd"></iframe></section>
+        <section class="wb-view" data-page-view="hex" hidden><iframe id="wb-hex-frame" title="HEX 转 Pattern" style="width:100%;height:calc(100vh - 110px);border:0" data-src="/hex"></iframe></section>
+        <section class="wb-view" data-page-view="compiler" hidden><iframe id="wb-compiler-frame" title="程序编译" style="width:100%;height:calc(100vh - 110px);border:0" data-src="/compiler"></iframe></section>
+      </main>
+    </div>
+
+    <div id="wb-toast" class="wb-toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="wb-link-dialog" class="wb-dialog">
+      <form method="dialog"><h2>关联到测试项</h2><p class="wb-hint">请选择当前程序中的 SCAN 或 MBIST 行。转换完成不会自动修改 FLOW。</p>
+        <label class="wb-field"><span>测试项</span><select id="wb-target-select"></select></label>
+        <div class="wb-dialog-actions"><button class="wb-button" value="cancel">取消</button><button class="wb-button wb-primary" id="wb-confirm-link" value="default">建立关联</button></div>
+      </form>
+    </dialog>
+  </div>
+</body>
+</html>

@@ -1,0 +1,430 @@
+{
+  "peripheral": "OPA",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "MODE",
+      "bit_offset": 14,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "OPA_PGA_MODE",
+          "value": 1,
+          "description": "PGA mode",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "OPA_FOLLOWER_MODE",
+          "value": 2,
+          "description": "follower mode",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "OPA_STANDALONE_MODE",
+          "value": 0,
+          "description": "standalone mode",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "VNSEL",
+      "bit_offset": 5,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "OPA_INVERTINGINPUT_IO1",
+          "value": 1,
+          "description": "Inverting input connected to I/0 VINM1 or OPA1_VINN1 (PC1 for OPA1, PD4 for OPA2, PA4 for OPA3, OPA1_VINN1 for OPA4)",
+          "abs_value": 32
+        },
+        {
+          "symbol": "OPA_INVERTINGINPUT_IO2",
+          "value": 2,
+          "description": "Inverting input connected to OPA1_VINN1 (None for OPA1, OPA1_VINN1 for OPA2, OPA1_VINN1 for OPA3,None for OPA4)",
+          "abs_value": 64
+        },
+        {
+          "symbol": "OPA_INVERTINGINPUT_IO0",
+          "value": 0,
+          "description": "Inverting input connected to I/O VINM0 (PC3 for OPA1, PA2 for OPA2, PA6 for OPA3, PB1 for OPA4)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "InvertingInput",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "VPSEL",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OPA_NONINVERTINGINPUT_IO1",
+          "value": 1,
+          "description": "Non inverting input connected to I/O VINP1 (PC0 for OPA1, PA3 for OPA2, PD5 for OPA3, Fixed PB0 for OPA4)",
+          "abs_value": 4
+        },
+        {
+          "symbol": "OPA_NONINVERTINGINPUT_IO0",
+          "value": 0,
+          "description": "Non inverting input connected to I/O VINP0 (PC2 for OPA1, PA1 for OPA2, PA5 for OPA3, Fixed PB0 for OPA4)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "NonInvertingInput",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "PGA_GAIN",
+      "bit_offset": 16,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "OPA_PGA_CONNECT_INVERTINGINPUT_IO0_BIAS",
+          "value": 8,
+          "description": "In PGA mode, the inverting input is connected to VINM0 - Input signal on VINM0, bias on VINPx: negative gain - Bias on VINM0, input signal on VINPx: positive gain",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "OPA_PGA_CONNECT_INVERTINGINPUT_NO",
+          "value": 0,
+          "description": "In PGA mode, the inverting input is not connected",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "PgaConnect",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "PGA_GAIN",
+      "bit_offset": 16,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "OPA_PGA_GAIN_4_OR_MINUS_3",
+          "value": 1,
+          "description": "PGA gain could be 4 or -3",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_8_OR_MINUS_7",
+          "value": 2,
+          "description": "PGA gain could be 8 or -7",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_12_OR_MINUS_11",
+          "value": 3,
+          "description": "PGA gain could be 12 or -11",
+          "abs_value": 196608
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_16_OR_MINUS_15",
+          "value": 4,
+          "description": "PGA gain could be 16 or -15",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_24_OR_MINUS_23",
+          "value": 5,
+          "description": "PGA gain could be 24 or -23",
+          "abs_value": 327680
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_32_OR_MINUS_31",
+          "value": 6,
+          "description": "PGA gain could be 32 or -31",
+          "abs_value": 393216
+        },
+        {
+          "symbol": "OPA_PGA_GAIN_2_OR_MINUS_1",
+          "value": 0,
+          "description": "PGA gain could be 2 or -1",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "PgaGain",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "VBSEL",
+      "bit_offset": 29,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OPA_COMMONMODEVOLTAGE_BUILDIN",
+          "value": 1,
+          "description": "The common mode voltage is set to be the built-in voltage",
+          "abs_value": 536870912
+        },
+        {
+          "symbol": "OPA_COMMONMODEVOLTAGE_EXTERNAL",
+          "value": 0,
+          "description": "The common mode voltage is set to be the external voltage",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "CommonModeVoltage",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "VREF_SEL",
+      "bit_offset": 27,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "OPA_VOLTAGEREFER_VREFBUF",
+          "value": 1,
+          "description": "The reference voltage is set to be the VREFBUF",
+          "abs_value": 134217728
+        },
+        {
+          "symbol": "OPA_VOLTAGEREFER_VCC",
+          "value": 0,
+          "description": "The reference voltage is set to be the VCC",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "VoltageRefer",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "OPA",
+      "register": "CSR",
+      "field": "VBIAS",
+      "bit_offset": 23,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV2",
+          "value": 1,
+          "description": "The bias voltage is set to be the div2 of VCC/VREFBUF",
+          "abs_value": 8388608
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV3",
+          "value": 2,
+          "description": "The bias voltage is set to be the div3 of VCC/VREFBUF",
+          "abs_value": 16777216
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV4",
+          "value": 3,
+          "description": "The bias voltage is set to be the div4 of VCC/VREFBUF",
+          "abs_value": 25165824
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV5",
+          "value": 4,
+          "description": "The bias voltage is set to be the div5 of VCC/VREFBUF",
+          "abs_value": 33554432
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV6",
+          "value": 5,
+          "description": "The bias voltage is set to be the div6 of VCC/VREFBUF",
+          "abs_value": 41943040
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV7",
+          "value": 6,
+          "description": "The bias voltage is set to be the div7 of VCC/VREFBUF",
+          "abs_value": 50331648
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV8",
+          "value": 7,
+          "description": "The bias voltage is set to be the div8 of VCC/VREFBUF",
+          "abs_value": 58720256
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV9",
+          "value": 8,
+          "description": "The bias voltage is set to be the div9 of VCC/VREFBUF",
+          "abs_value": 67108864
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV10",
+          "value": 9,
+          "description": "The bias voltage is set to be the div10 of VCC/VREFBUF",
+          "abs_value": 75497472
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV11",
+          "value": 10,
+          "description": "The bias voltage is set to be the div11 of VCC/VREFBUF",
+          "abs_value": 83886080
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV12",
+          "value": 11,
+          "description": "The bias voltage is set to be the div12 of VCC/VREFBUF",
+          "abs_value": 92274688
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV13",
+          "value": 12,
+          "description": "The bias voltage is set to be the div13 of VCC/VREFBUF",
+          "abs_value": 100663296
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV14",
+          "value": 13,
+          "description": "The bias voltage is set to be the div14 of VCC/VREFBUF",
+          "abs_value": 109051904
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV15",
+          "value": 14,
+          "description": "The bias voltage is set to be the div15 of VCC/VREFBUF",
+          "abs_value": 117440512
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV16",
+          "value": 15,
+          "description": "The bias voltage is set to be the div16 of VCC/VREFBUF",
+          "abs_value": 125829120
+        },
+        {
+          "symbol": "OPA_VOLTAGEBIAS_DIV1",
+          "value": 0,
+          "description": "The bias voltage is set to be the div1 of VCC/VREFBUF",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "VoltageBias",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [],
+  "numeric_fields": [
+    {
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "InternalOutput",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    },
+    {
+      "init_struct": "OPA_InitTypeDef",
+      "init_struct_field": "ExternalOutput",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "Mode",
+      "ref": "OPA_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "InvertingInput",
+      "ref": "OPA_InvertingInput",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "NonInvertingInput",
+      "ref": "OPA_NonInvertingInput",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "InternalOutput",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "ExternalOutput",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "PgaConnect",
+      "ref": "OPA_PgaConnect",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "PgaGain",
+      "ref": "OPA_PgaGain",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "CommonModeVoltage",
+      "ref": "OPA_CommonModeVoltage",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "VoltageRefer",
+      "ref": "OPA_VoltageRefer",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "OPA_InitTypeDef",
+      "field": "VoltageBias",
+      "ref": "OPA_VoltageBias",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 8,
+    "multi_field_count": 0,
+    "total_encodings": 37,
+    "unresolved_count": 1,
+    "numeric_field_count": 2
+  }
+}

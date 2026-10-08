@@ -1,0 +1,1499 @@
+{
+  "peripheral": "FDCAN",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "FDCAN",
+      "register": "CCCR",
+      "field": "FDOE",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_FRAME_FD_NO_BRS",
+          "value": 1,
+          "description": "FD mode without BitRate Switching",
+          "abs_value": 256
+        },
+        {
+          "symbol": "FDCAN_FRAME_CLASSIC",
+          "value": 0,
+          "description": "Classic mode",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "FrameFormat",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TXBC",
+      "field": "TFQM",
+      "bit_offset": 30,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TX_QUEUE_OPERATION",
+          "value": 1,
+          "description": "Queue mode",
+          "abs_value": 1073741824
+        },
+        {
+          "symbol": "FDCAN_TX_FIFO_OPERATION",
+          "value": 0,
+          "description": "FIFO mode",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TxFifoQueueMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "RXESC",
+      "field": "F0DS",
+      "bit_offset": 0,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "FDCAN_DATA_BYTES_8",
+          "value": 4,
+          "description": "8 bytes data field",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_12",
+          "value": 5,
+          "description": "12 bytes data field",
+          "abs_value": 5
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_16",
+          "value": 6,
+          "description": "16 bytes data field",
+          "abs_value": 6
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_20",
+          "value": 7,
+          "description": "20 bytes data field",
+          "abs_value": 7
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxFifo0ElmtSize",
+      "source_chain": [],
+      "confidence": "c_placement"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "RXESC",
+      "field": "F1DS",
+      "bit_offset": 4,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "FDCAN_DATA_BYTES_8",
+          "value": 4,
+          "description": "8 bytes data field",
+          "abs_value": 64
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_12",
+          "value": 5,
+          "description": "12 bytes data field",
+          "abs_value": 80
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_16",
+          "value": 6,
+          "description": "16 bytes data field",
+          "abs_value": 96
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_20",
+          "value": 7,
+          "description": "20 bytes data field",
+          "abs_value": 112
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxFifo1ElmtSize",
+      "source_chain": [],
+      "confidence": "c_placement"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "RXESC",
+      "field": "RBDS",
+      "bit_offset": 8,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "FDCAN_DATA_BYTES_8",
+          "value": 4,
+          "description": "8 bytes data field",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_12",
+          "value": 5,
+          "description": "12 bytes data field",
+          "abs_value": 1280
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_16",
+          "value": 6,
+          "description": "16 bytes data field",
+          "abs_value": 1536
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_20",
+          "value": 7,
+          "description": "20 bytes data field",
+          "abs_value": 1792
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxBufferSize",
+      "source_chain": [],
+      "confidence": "c_placement"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TXESC",
+      "field": "TBDS",
+      "bit_offset": 0,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "FDCAN_DATA_BYTES_8",
+          "value": 4,
+          "description": "8 bytes data field",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_12",
+          "value": 5,
+          "description": "12 bytes data field",
+          "abs_value": 5
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_16",
+          "value": 6,
+          "description": "16 bytes data field",
+          "abs_value": 6
+        },
+        {
+          "symbol": "FDCAN_DATA_BYTES_20",
+          "value": 7,
+          "description": "20 bytes data field",
+          "abs_value": 7
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TxElmtSize",
+      "source_chain": [],
+      "confidence": "c_placement"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "GFC",
+      "field": "ANFS",
+      "bit_offset": 4,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "FDCAN_ACCEPT_IN_RX_FIFO1",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "FDCAN_REJECT",
+          "value": 2,
+          "description": "",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "init_struct_field": "NonMatchingStd",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "GFC",
+      "field": "RRFS",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_REJECT_REMOTE",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "init_struct_field": "RejectRemoteStd",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "IE",
+      "field": "RF0WE",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_CFG_RX_FIFO0",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigFifoWatermark",
+      "init_struct_field": "FIFO",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "IE",
+      "field": "RF1WE",
+      "bit_offset": 5,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_CFG_RX_FIFO1",
+          "value": 1,
+          "description": "",
+          "abs_value": 32
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigFifoWatermark",
+      "init_struct_field": "FIFO",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TSCC",
+      "field": "TCP",
+      "bit_offset": 16,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_2",
+          "value": 1,
+          "description": "",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_3",
+          "value": 2,
+          "description": "",
+          "abs_value": 131072
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_4",
+          "value": 3,
+          "description": "",
+          "abs_value": 196608
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_5",
+          "value": 4,
+          "description": "",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_6",
+          "value": 5,
+          "description": "",
+          "abs_value": 327680
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_7",
+          "value": 6,
+          "description": "",
+          "abs_value": 393216
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_8",
+          "value": 7,
+          "description": "",
+          "abs_value": 458752
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_9",
+          "value": 8,
+          "description": "",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_10",
+          "value": 9,
+          "description": "",
+          "abs_value": 589824
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_11",
+          "value": 10,
+          "description": "",
+          "abs_value": 655360
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_12",
+          "value": 11,
+          "description": "",
+          "abs_value": 720896
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_13",
+          "value": 12,
+          "description": "",
+          "abs_value": 786432
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_14",
+          "value": 13,
+          "description": "",
+          "abs_value": 851968
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_15",
+          "value": 14,
+          "description": "",
+          "abs_value": 917504
+        },
+        {
+          "symbol": "FDCAN_TIMESTAMP_PRESC_16",
+          "value": 15,
+          "description": "",
+          "abs_value": 983040
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigTimestampCounter",
+      "init_struct_field": "TimestampPrescaler",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TSCC",
+      "field": "TSS",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TIMESTAMP_INTERNAL",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_EnableTimestampCounter",
+      "init_struct_field": "TimestampOperation",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TOCC",
+      "field": "TOS",
+      "bit_offset": 1,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TIMEOUT_TX_EVENT_FIFO",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "FDCAN_TIMEOUT_RX_FIFO0",
+          "value": 2,
+          "description": "",
+          "abs_value": 4
+        },
+        {
+          "symbol": "FDCAN_TIMEOUT_RX_FIFO1",
+          "value": 3,
+          "description": "",
+          "abs_value": 6
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigTimeoutCounter",
+      "init_struct_field": "TimeoutOperation",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TXBRP",
+      "field": "TRP0",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TX_BUFFER0",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_AddMessageToTxBuffer",
+      "init_struct_field": "BufferIndex",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TXBRP",
+      "field": "TRP1",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TX_BUFFER1",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_AddMessageToTxBuffer",
+      "init_struct_field": "BufferIndex",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "TXBRP",
+      "field": "TRP2",
+      "bit_offset": 2,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_TX_BUFFER2",
+          "value": 1,
+          "description": "",
+          "abs_value": 4
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_AddMessageToTxBuffer",
+      "init_struct_field": "BufferIndex",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "register": "ILS",
+      "field": "RF0NL",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "FDCAN_INTERRUPT_LINE0",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "FDCAN_INTERRUPT_LINE1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigInterruptLines",
+      "init_struct_field": "InterruptLine",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "medium"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_FRAME_FD_BRS",
+      "abs_value": 768,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "FDOE",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "BRSE",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "FrameFormat",
+      "description": "FD mode with BitRate Switching",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_MODE_NORMAL",
+      "abs_value": 0,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "TEST",
+          "value": 0,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "MON",
+          "value": 0,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "ASM",
+          "value": 0,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "TEST",
+          "field": "LBCK",
+          "value": 0,
+          "bit_offset": 4,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_MODE_RESTRICTED_OPERATION",
+      "abs_value": 4,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "TEST",
+          "value": 0,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "MON",
+          "value": 0,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "ASM",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "TEST",
+          "field": "LBCK",
+          "value": 0,
+          "bit_offset": 4,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_MODE_BUS_MONITORING",
+      "abs_value": 32,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "TEST",
+          "value": 0,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "MON",
+          "value": 1,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "ASM",
+          "value": 0,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "TEST",
+          "field": "LBCK",
+          "value": 0,
+          "bit_offset": 4,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_MODE_INTERNAL_LOOPBACK",
+      "abs_value": 176,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "TEST",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "MON",
+          "value": 1,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "ASM",
+          "value": 0,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "TEST",
+          "field": "LBCK",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_MODE_EXTERNAL_LOOPBACK",
+      "abs_value": 144,
+      "fields": [
+        {
+          "register": "CCCR",
+          "field": "TEST",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "MON",
+          "value": 0,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "CCCR",
+          "field": "ASM",
+          "value": 0,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "TEST",
+          "field": "LBCK",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "FDCAN",
+      "symbol": "FDCAN_RX_FIFO_OVERWRITE",
+      "abs_value": 2147483648,
+      "fields": [
+        {
+          "register": "RXF0C",
+          "field": "F0OM",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        },
+        {
+          "register": "RXF1C",
+          "field": "F1OM",
+          "value": 1,
+          "bit_offset": 31,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+      "init_struct_field": "OperationMode",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "NominalPrescaler",
+      "is_macro": "IS_FDCAN_NOMINAL_PRESCALER",
+      "min": 1,
+      "max": 512,
+      "placement": {
+        "register": "NBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "NominalSyncJumpWidth",
+      "is_macro": "IS_FDCAN_NOMINAL_SJW",
+      "min": 1,
+      "max": 128,
+      "placement": {
+        "register": "NBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "NominalTimeSeg1",
+      "is_macro": "IS_FDCAN_NOMINAL_TSEG1",
+      "min": 1,
+      "max": 256,
+      "placement": {
+        "register": "NBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "NominalTimeSeg2",
+      "is_macro": "IS_FDCAN_NOMINAL_TSEG2",
+      "min": 1,
+      "max": 128,
+      "placement": {
+        "register": "NBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "DataPrescaler",
+      "is_macro": "IS_FDCAN_DATA_PRESCALER",
+      "min": 1,
+      "max": 32,
+      "placement": {
+        "register": "DBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "DataSyncJumpWidth",
+      "is_macro": "IS_FDCAN_DATA_SJW",
+      "min": 1,
+      "max": 16,
+      "placement": {
+        "register": "DBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "DataTimeSeg1",
+      "is_macro": "IS_FDCAN_DATA_TSEG1",
+      "min": 1,
+      "max": 32,
+      "placement": {
+        "register": "DBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "DataTimeSeg2",
+      "is_macro": "IS_FDCAN_DATA_TSEG2",
+      "min": 1,
+      "max": 16,
+      "placement": {
+        "register": "DBTP",
+        "field": null
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "AutoRetransmission",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TransmitPause",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "ProtocolException",
+      "is_macro": "FunctionalState",
+      "min": 0,
+      "max": 1,
+      "placement": null
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "StdFiltersNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "SIDFC",
+        "field": "LSS"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "ExtFiltersNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 127,
+      "placement": {
+        "register": "XIDFC",
+        "field": "LSE"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxFifo0ElmtsNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 127,
+      "placement": {
+        "register": "RXF0C",
+        "field": "F0S"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxFifo1ElmtsNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 127,
+      "placement": {
+        "register": "RXF1C",
+        "field": "F1S"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TxEventsNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 63,
+      "placement": {
+        "register": "TXEFC",
+        "field": "EFS"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TxBuffersNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 63,
+      "placement": {
+        "register": "TXBC",
+        "field": "NDTB"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "TxFifoQueueElmtsNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 63,
+      "placement": {
+        "register": "TXBC",
+        "field": "TFQS"
+      }
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "MessageRAMOffset",
+      "is_macro": null,
+      "min": 0,
+      "max": 16383,
+      "placement": {
+        "register": "SIDFC",
+        "field": "FLSSA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "MessageRAMOffset",
+      "is_macro": null,
+      "min": 0,
+      "max": 16383,
+      "placement": {
+        "register": "XIDFC",
+        "field": "FLESA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxBuffersNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 16383,
+      "placement": {
+        "register": "TXEFC",
+        "field": "EFSA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "FDCAN_InitTypeDef",
+      "init_struct_field": "RxBuffersNbr",
+      "is_macro": null,
+      "min": 0,
+      "max": 16383,
+      "placement": {
+        "register": "TXBC",
+        "field": "TBSA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "init_struct_field": "NonMatchingExt",
+      "is_macro": null,
+      "min": 0,
+      "max": 3,
+      "placement": {
+        "register": "GFC",
+        "field": "ANFE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "init_struct_field": "RejectRemoteExt",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "GFC",
+        "field": "RRFE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+      "init_struct_field": "RxFifo",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "RXF0C",
+        "field": "F0OM"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+      "init_struct_field": "RxFifo",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "RXF1C",
+        "field": "F1OM"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "FDCAN_FilterTypeDef",
+      "init_struct_field": "RxBufferIndex",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "NDAT1",
+        "field": "ND0"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_GetRxFifoFillLevel",
+      "init_struct_field": "RxFifo",
+      "is_macro": null,
+      "min": 0,
+      "max": 127,
+      "placement": {
+        "register": "RXF0S",
+        "field": "F0FL"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_FDCAN_GetRxFifoFillLevel",
+      "init_struct_field": "RxFifo",
+      "is_macro": null,
+      "min": 0,
+      "max": 127,
+      "placement": {
+        "register": "RXF1S",
+        "field": "F1FL"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "FrameFormat",
+      "ref": "FDCAN_frame_format",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "Mode",
+      "ref": "FDCAN_operating_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "AutoRetransmission",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TransmitPause",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "ProtocolException",
+      "ref": null,
+      "kind": "struct",
+      "type": "FunctionalState"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "NominalPrescaler",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "NominalSyncJumpWidth",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "NominalTimeSeg1",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "NominalTimeSeg2",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "DataPrescaler",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "DataSyncJumpWidth",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "DataTimeSeg1",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "DataTimeSeg2",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "MessageRAMOffset",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "StdFiltersNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "ExtFiltersNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxFifo0ElmtsNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxFifo0ElmtSize",
+      "ref": "FDCAN_data_field_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxFifo1ElmtsNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxFifo1ElmtSize",
+      "ref": "FDCAN_data_field_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxBuffersNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "RxBufferSize",
+      "ref": "FDCAN_data_field_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TxEventsNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TxBuffersNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TxFifoQueueElmtsNbr",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TxFifoQueueMode",
+      "ref": "FDCAN_txFifoQueue_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_InitTypeDef",
+      "field": "TxElmtSize",
+      "ref": "FDCAN_data_field_size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "IdType",
+      "ref": "FDCAN_id_type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "FilterIndex",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "FilterType",
+      "ref": "FDCAN_filter_type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "FilterConfig",
+      "ref": "FDCAN_filter_config",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "FilterID1",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "FilterID2",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "FDCAN_FilterTypeDef",
+      "field": "RxBufferIndex",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "field": "NonMatchingStd",
+      "ref": "IS:IS_FDCAN_NON_MATCHING",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "field": "NonMatchingExt",
+      "ref": "IS:IS_FDCAN_NON_MATCHING",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "field": "RejectRemoteStd",
+      "ref": "IS:IS_FDCAN_REJECT_REMOTE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+      "field": "RejectRemoteExt",
+      "ref": "IS:IS_FDCAN_REJECT_REMOTE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+      "field": "RxFifo",
+      "ref": "IS:IS_FDCAN_RX_FIFO",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+      "field": "OperationMode",
+      "ref": "IS:IS_FDCAN_RX_FIFO_MODE",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigFifoWatermark",
+      "field": "FIFO",
+      "ref": "IS:IS_FDCAN_FIFO_WATERMARK",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigTimestampCounter",
+      "field": "TimestampPrescaler",
+      "ref": "IS:IS_FDCAN_TIMESTAMP_PRESCALER",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_EnableTimestampCounter",
+      "field": "TimestampOperation",
+      "ref": "IS:IS_FDCAN_TIMESTAMP",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigTimeoutCounter",
+      "field": "TimeoutOperation",
+      "ref": "IS:IS_FDCAN_TIMEOUT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_AddMessageToTxBuffer",
+      "field": "BufferIndex",
+      "ref": "IS:IS_FDCAN_TX_LOCATION",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_GetRxFifoFillLevel",
+      "field": "RxFifo",
+      "ref": "IS:IS_FDCAN_RX_FIFO",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_FDCAN_ConfigInterruptLines",
+      "field": "InterruptLine",
+      "ref": "IS:IS_FDCAN_IT_LINE",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 17,
+    "multi_field_count": 1,
+    "total_encodings": 20,
+    "unresolved_count": 56,
+    "numeric_field_count": 29,
+    "llm_applied": true
+  }
+}

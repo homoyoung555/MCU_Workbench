@@ -1,0 +1,484 @@
+{
+  "peripheral": "SPI",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "RXONLY",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_DIRECTION_2LINES_RXONLY",
+          "value": 1,
+          "description": "Simpex communication Receive-only mode",
+          "abs_value": 1024
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "Direction",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "BIDIMODE",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_DIRECTION_1LINE",
+          "value": 1,
+          "description": "Half-duplex communication mode",
+          "abs_value": 32768
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "Direction",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "CPOL",
+      "bit_offset": 1,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_POLARITY_HIGH",
+          "value": 1,
+          "description": "",
+          "abs_value": 2
+        },
+        {
+          "symbol": "SPI_POLARITY_LOW",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "CLKPolarity",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "CPHA",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_PHASE_2EDGE",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        },
+        {
+          "symbol": "SPI_PHASE_1EDGE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "CLKPhase",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "SSM",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_NSS_SOFT",
+          "value": 1,
+          "description": "",
+          "abs_value": 512
+        },
+        {
+          "symbol": "SPI_NSS_HARD_INPUT",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "NSS",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR2",
+      "field": "SAMPLE_SELECT",
+      "bit_offset": 14,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_SAMPLESELECT_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "SPI_SAMPLESELECT_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "SampleSelect",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "BR",
+      "bit_offset": 3,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_4",
+          "value": 1,
+          "description": "",
+          "abs_value": 8
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_8",
+          "value": 2,
+          "description": "",
+          "abs_value": 16
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_16",
+          "value": 3,
+          "description": "",
+          "abs_value": 24
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_32",
+          "value": 4,
+          "description": "",
+          "abs_value": 32
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_64",
+          "value": 5,
+          "description": "",
+          "abs_value": 40
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_128",
+          "value": 6,
+          "description": "",
+          "abs_value": 48
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_256",
+          "value": 7,
+          "description": "",
+          "abs_value": 56
+        },
+        {
+          "symbol": "SPI_BAUDRATEPRESCALER_2",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "BaudRatePrescaler",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "LSBFIRST",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_FIRSTBIT_LSB",
+          "value": 1,
+          "description": "",
+          "abs_value": 128
+        },
+        {
+          "symbol": "SPI_FIRSTBIT_MSB",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "FirstBit",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR2",
+      "field": "FRF",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_TIMODE_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "SPI_TIMODE_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "TIMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "CRCEN",
+      "bit_offset": 13,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_CRCCALCULATION_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "SPI_CRCCALCULATION_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "CRCCalculation",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "DFF",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_DATASIZE_8BIT",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "SPI_DATASIZE_16BIT",
+          "value": 1,
+          "description": "",
+          "abs_value": 2048
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "DataSize",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SPI",
+      "register": "CR1",
+      "field": "DFF",
+      "bit_offset": 11,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SPI_CRC_LENGTH_DATASIZE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "SPI_CRC_LENGTH_8BIT",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "SPI_CRC_LENGTH_16BIT",
+          "value": 1,
+          "description": "",
+          "abs_value": 2048
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "CRCLength",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "SPI",
+      "symbol": "SPI_MODE_MASTER",
+      "abs_value": 260,
+      "fields": [
+        {
+          "register": "CR1",
+          "field": "MSTR",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "CR1",
+          "field": "SSI",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "Mode",
+      "description": "",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "SPI_InitTypeDef",
+      "init_struct_field": "CRCPolynomial",
+      "is_macro": "IS_SPI_CRC_POLYNOMIAL",
+      "min": 1,
+      "max": 65535,
+      "placement": {
+        "register": "CRCPR",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "Mode",
+      "ref": "SPI_Mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "Direction",
+      "ref": "SPI_Direction",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "DataSize",
+      "ref": "SPI_Data_Size",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "CLKPolarity",
+      "ref": "SPI_Clock_Polarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "CLKPhase",
+      "ref": "SPI_Clock_Phase",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "NSS",
+      "ref": "SPI_Slave_Select_management",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "SampleSelect",
+      "ref": "SPI_Sample_Select_management",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "BaudRatePrescaler",
+      "ref": "SPI_BaudRate_Prescaler",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "FirstBit",
+      "ref": "SPI_MSB_LSB_transmission",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "TIMode",
+      "ref": "SPI_TI_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "CRCCalculation",
+      "ref": "SPI_CRC_Calculation",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "CRCPolynomial",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SPI_InitTypeDef",
+      "field": "CRCLength",
+      "ref": "SPI_CRC_length",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 12,
+    "multi_field_count": 1,
+    "total_encodings": 24,
+    "unresolved_count": 8,
+    "numeric_field_count": 1,
+    "llm_applied": true
+  }
+}

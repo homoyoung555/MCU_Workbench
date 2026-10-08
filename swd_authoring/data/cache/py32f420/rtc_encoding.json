@@ -1,0 +1,222 @@
+{
+  "peripheral": "RTC",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "RTC",
+      "register": "CALIBR",
+      "field": "CCO",
+      "bit_offset": 7,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RTC_OUTPUTSOURCE_CALIBCLOCK",
+          "value": 1,
+          "description": "RTC clock with a frequency divided by 64 on the TAMPER pin",
+          "abs_value": 128
+        }
+      ],
+      "init_struct": "RTC_InitTypeDef",
+      "init_struct_field": "OutPut",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "RTC",
+      "register": "CALIBR",
+      "field": "ASOE",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RTC_OUTPUTSOURCE_ALARM",
+          "value": 1,
+          "description": "Alarm pulse signal on the TAMPER pin",
+          "abs_value": 256
+        }
+      ],
+      "init_struct": "RTC_InitTypeDef",
+      "init_struct_field": "OutPut",
+      "source_chain": [],
+      "confidence": "direct"
+    },
+    {
+      "peripheral": "RTC",
+      "register": "TMPCFGR",
+      "field": "TPE",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "RTC_TAMPER_1",
+          "value": 1,
+          "description": "",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "fn:HAL_RTCEx_DeactivateTamper",
+      "init_struct_field": "Tamper",
+      "source_chain": [],
+      "confidence": "direct"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "RTC",
+      "symbol": "RTC_OUTPUTSOURCE_SECOND",
+      "abs_value": 768,
+      "fields": [
+        {
+          "register": "CALIBR",
+          "field": "ASOE",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "CALIBR",
+          "field": "ASOS",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "RTC_InitTypeDef",
+      "init_struct_field": "OutPut",
+      "description": "Second pulse signal on the TAMPER pin",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "fn:HAL_RTCEx_SetSmoothCalib",
+      "init_struct_field": "SmouthCalibMinusPulsesValue",
+      "is_macro": "IS_RTC_SMOOTH_CALIB_MINUS",
+      "min": 0,
+      "max": 127,
+      "placement": null
+    },
+    {
+      "init_struct": "fn:HAL_RTCEx_SetSmoothCalib",
+      "init_struct_field": "SmouthCalibMinusPulsesValue",
+      "is_macro": "IS_RTC_SMOOTH_CALIB_MINUS",
+      "min": 0,
+      "max": 127,
+      "placement": null
+    },
+    {
+      "init_struct": "RTC_InitTypeDef",
+      "init_struct_field": "AsynchPrediv",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "PRLH",
+        "field": "PRL"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "RTC_InitTypeDef",
+      "init_struct_field": "AsynchPrediv",
+      "is_macro": null,
+      "min": 0,
+      "max": 65535,
+      "placement": {
+        "register": "PRLL",
+        "field": "PRL"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "RTC_InitTypeDef",
+      "field": "AsynchPrediv",
+      "ref": "IS:IS_RTC_ASYNCH_PREDIV",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "RTC_InitTypeDef",
+      "field": "OutPut",
+      "ref": "RTC_output_source_to_output_on_the_Tamper_pin",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_RTC_SetTime",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_GetTime",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_SetDate",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_GetDate",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_SetAlarm",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_SetAlarm_IT",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTC_GetAlarm",
+      "field": "Format",
+      "ref": "IS:IS_RTC_FORMAT",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTCEx_DeactivateTamper",
+      "field": "Tamper",
+      "ref": "IS:IS_RTC_TAMPER",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_RTCEx_SetSmoothCalib",
+      "field": "SmouthCalibMinusPulsesValue",
+      "ref": null,
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 3,
+    "multi_field_count": 1,
+    "total_encodings": 3,
+    "unresolved_count": 6,
+    "numeric_field_count": 4,
+    "llm_applied": true
+  }
+}

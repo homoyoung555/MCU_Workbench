@@ -1,0 +1,513 @@
+{
+  "peripheral": "COMP",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "WINMODE",
+      "bit_offset": 19,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "COMP_WINDOWMODE_COMP2_INPUT_PLUS_COMMON",
+          "value": 1,
+          "description": "Window mode enable: Comparators instances pair COMP1 and COMP2 have their input plus connected together. The common input is COMP2 input plus (COMP1 input plus is no more accessible).",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "COMP_WINDOWMODE_COMP4_INPUT_PLUS_COMMON",
+          "value": 1,
+          "description": "Window mode enable: Comparators instances pair COMP3 and COMP4 have their input plus connected together. The common input is COMP4 input plus (COMP3 input plus is no more accessible).",
+          "abs_value": 524288
+        },
+        {
+          "symbol": "COMP_WINDOWMODE_DISABLE",
+          "value": 0,
+          "description": "Window mode disable: Comparators instances pair COMP1 and COMP2 are independent",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "WindowMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "PWRMODE",
+      "bit_offset": 18,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "COMP_POWERMODE_MEDIUMSPEED",
+          "value": 1,
+          "description": "Medium Speed",
+          "abs_value": 262144
+        },
+        {
+          "symbol": "COMP_POWERMODE_HIGHSPEED",
+          "value": 0,
+          "description": "High Speed",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "INPSEL",
+      "bit_offset": 8,
+      "bit_width": 3,
+      "encodings": [
+        {
+          "symbol": "COMP_INPUT_PLUS_IO1",
+          "value": 1,
+          "description": "Comparator input plus connected to IO1(pin PC1 for COMP1, pin OPA1 for COMP2, pin PA4 for COMP3, pin OPA3 for COMP4)",
+          "abs_value": 256
+        },
+        {
+          "symbol": "COMP_INPUT_PLUS_IO2",
+          "value": 2,
+          "description": "Comparator input plus connected to IO2(pin PC0 for COMP1, pin OPA2 for COMP2, pin PD5 for COMP3, pin OPA4 for COMP4)",
+          "abs_value": 512
+        },
+        {
+          "symbol": "COMP_INPUT_PLUS_IO3",
+          "value": 3,
+          "description": "Comparator input plus connected to IO3(pin OPA1 for COMP1, pin COMP1_INP2 for COMP2, pin OPA3 for COMP3, pin COMP3_INP2 for COMP4)",
+          "abs_value": 768
+        },
+        {
+          "symbol": "COMP_INPUT_PLUS_IO4",
+          "value": 4,
+          "description": "Comparator input plus connected to IO4(pin TS for all)",
+          "abs_value": 1024
+        },
+        {
+          "symbol": "COMP_INPUT_PLUS_IO0",
+          "value": 0,
+          "description": "Comparator input plus connected to IO0(pin PC2 for COMP1, pin PA1 for COMP2, pin PA5 for COMP3, pin PC4 for COMP4)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "InputPlus",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "INNSEL",
+      "bit_offset": 3,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "COMP_INPUT_MINUS_IO1",
+          "value": 1,
+          "description": "Comparator input minus connected to IO1(pin DAC_CH1 for ALL)",
+          "abs_value": 8
+        },
+        {
+          "symbol": "COMP_INPUT_MINUS_IO2",
+          "value": 2,
+          "description": "Comparator input minus connected to IO2(pin DAC_CH2 for ALL)",
+          "abs_value": 16
+        },
+        {
+          "symbol": "COMP_INPUT_MINUS_IO3",
+          "value": 3,
+          "description": "Comparator input minus connected to IO3(pin PA0 for ALL)",
+          "abs_value": 24
+        },
+        {
+          "symbol": "COMP_INPUT_MINUS_IO0",
+          "value": 0,
+          "description": "Comparator input minus connected to IO0(pin PC3 for COMP1, pin PA2 for COMP2, pin PA6 for COMP3, pin PC5 for COMP4)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "InputMinus",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "HYST",
+      "bit_offset": 16,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "COMP_HYSTERESIS_ENABLE",
+          "value": 1,
+          "description": "Hysteresis enable",
+          "abs_value": 65536
+        },
+        {
+          "symbol": "COMP_HYSTERESIS_DISABLE",
+          "value": 0,
+          "description": "No hysteresis",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "Hysteresis",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "POLARITY",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "COMP_OUTPUTPOL_INVERTED",
+          "value": 1,
+          "description": "COMP output level is inverted (comparator output is low when the input plus is at a higher voltage than the input minus)",
+          "abs_value": 32768
+        },
+        {
+          "symbol": "COMP_OUTPUTPOL_NONINVERTED",
+          "value": 0,
+          "description": "COMP output level is not inverted (comparator output is high when the input plus is at a higher voltage than the input minus)",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "OutputPol",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "BLANKSEL",
+      "bit_offset": 11,
+      "bit_width": 4,
+      "encodings": [
+        {
+          "symbol": "COMP_BLANKINGSRC_TIM1_OC5",
+          "value": 1,
+          "description": "Comparator output blanking source TIM1 OC5 (specific to COMP instance: ALL). Note: For COMPx & TIMx instances availability, please refer to datasheet",
+          "abs_value": 2048
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_TIM2_OC3",
+          "value": 2,
+          "description": "Comparator output blanking source TIM2 OC3 (specific to COMP instance: ALL). Note: For COMPx & TIMx instances availability, please refer to datasheet",
+          "abs_value": 4096
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_TIM3_OC3",
+          "value": 3,
+          "description": "Comparator output blanking source TIM3 OC3 (specific to COMP instance: ALL). Note: For COMPx & TIMx instances availability, please refer to datasheet",
+          "abs_value": 6144
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_TIM8_OC5",
+          "value": 4,
+          "description": "Comparator output blanking source TIM8 OC5 (specific to COMP instance: ALL). Note: For COMPx & TIMx instances availability, please refer to datasheet",
+          "abs_value": 8192
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM1",
+          "value": 5,
+          "description": "Comparator output blanking source EPWM1 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 10240
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM2",
+          "value": 6,
+          "description": "Comparator output blanking source EPWM2 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 12288
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM3",
+          "value": 7,
+          "description": "Comparator output blanking source EPWM3 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 14336
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM4",
+          "value": 8,
+          "description": "Comparator output blanking source EPWM4 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 16384
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM5",
+          "value": 9,
+          "description": "Comparator output blanking source EPWM5 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 18432
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_EPWM6",
+          "value": 10,
+          "description": "Comparator output blanking source EPWM6 (specific to COMP instance: ALL). Note: For COMPx & EPWMx instances availability, please refer to datasheet",
+          "abs_value": 20480
+        },
+        {
+          "symbol": "COMP_BLANKINGSRC_NONE",
+          "value": 0,
+          "description": "Comparator output without blanking",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "BlankingSrce",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "TIM_EXTI_OUT_SEL",
+      "bit_offset": 29,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "COMP_TIM_EXTI_OUT_FILTER",
+          "value": 1,
+          "description": "The comparator output to TIM or EXTI is filtered",
+          "abs_value": 536870912
+        },
+        {
+          "symbol": "COMP_TIM_EXTI_OUT_NOFILTER",
+          "value": 0,
+          "description": "The comparator output to TIM or EXTI is no filtered",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "TimAndExtiOutSel",
+      "source_chain": [],
+      "confidence": "inherited"
+    },
+    {
+      "peripheral": "COMP",
+      "register": "CSR",
+      "field": "INNSEL",
+      "bit_offset": 3,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "COMP_TRIGGERMODE_EVENT_RISING",
+          "value": 2,
+          "description": "Comparator output triggering External Interrupt Line event only (without interruption), on rising edge",
+          "abs_value": 16
+        },
+        {
+          "symbol": "COMP_TRIGGERMODE_EVENT_RISING_FALLING",
+          "value": 2,
+          "description": "Comparator output triggering External Interrupt Line event only (without interruption), on both rising and falling edges",
+          "abs_value": 16
+        },
+        {
+          "symbol": "COMP_TRIGGERMODE_NONE",
+          "value": 0,
+          "description": "Comparator output triggering no External Interrupt Line",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "TriggerMode",
+      "source_chain": [],
+      "confidence": "inherited"
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "COMP",
+      "symbol": "COMP_TRIGGERMODE_IT_RISING",
+      "abs_value": 17,
+      "fields": [
+        {
+          "register": "CSR",
+          "field": "EN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CSR",
+          "field": "INNSEL",
+          "value": 2,
+          "bit_offset": 3,
+          "bit_width": 2
+        },
+        {
+          "register": "FR",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "TriggerMode",
+      "description": "Comparator output triggering External Interrupt Line event with interruption, on rising edge",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "COMP",
+      "symbol": "COMP_TRIGGERMODE_IT_FALLING",
+      "abs_value": 33,
+      "fields": [
+        {
+          "register": "CSR",
+          "field": "EN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "FR",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "TriggerMode",
+      "description": "Comparator output triggering External Interrupt Line event with interruption, on falling edge",
+      "source_chain": [],
+      "confidence": "multi_field"
+    },
+    {
+      "peripheral": "COMP",
+      "symbol": "COMP_TRIGGERMODE_IT_RISING_FALLING",
+      "abs_value": 49,
+      "fields": [
+        {
+          "register": "CSR",
+          "field": "EN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "CSR",
+          "field": "INNSEL",
+          "value": 2,
+          "bit_offset": 3,
+          "bit_width": 2
+        },
+        {
+          "register": "FR",
+          "field": "FLTEN",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "TriggerMode",
+      "description": "Comparator output triggering External Interrupt Line event with interruption, on both rising and falling edges",
+      "source_chain": [],
+      "confidence": "multi_field"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "COMP_InitTypeDef",
+      "init_struct_field": "DigitalFilter",
+      "is_macro": null,
+      "min": 0,
+      "max": null,
+      "placement": {
+        "register": "FR",
+        "field": null
+      }
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "WindowMode",
+      "ref": "COMP_WindowMode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "Mode",
+      "ref": "COMP_PowerMode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "InputPlus",
+      "ref": "COMP_InputPlus",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "InputMinus",
+      "ref": "COMP_InputMinus",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "Hysteresis",
+      "ref": "COMP_Hysteresis",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "OutputPol",
+      "ref": "COMP_OutputPolarity",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "BlankingSrce",
+      "ref": "COMP_BlankingSrce",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "TimAndExtiOutSel",
+      "ref": "COMP_TIM_EXTI_Out_Sel",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "DigitalFilter",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "COMP_InitTypeDef",
+      "field": "TriggerMode",
+      "ref": "COMP_EXTI_TriggerMode",
+      "kind": "struct",
+      "type": "uint32_t"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 9,
+    "multi_field_count": 3,
+    "total_encodings": 34,
+    "unresolved_count": 5,
+    "numeric_field_count": 1
+  }
+}

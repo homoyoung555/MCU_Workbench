@@ -1,0 +1,4588 @@
+{
+  "chip": "py32f420",
+  "total_fields": 532,
+  "covered": 465,
+  "coverage_pct": 87.4,
+  "by_status": {
+    "covered": 303,
+    "numeric_range": 162,
+    "fields": 532,
+    "cov_combined": 465,
+    "sentinel_only": 50,
+    "ref_empty": 7,
+    "no_ref": 10
+  },
+  "peripherals": [
+    {
+      "peripheral": "ADC",
+      "total_fields": 60,
+      "covered": 60,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 36,
+        "numeric_range": 24
+      },
+      "fields": [
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "ClockPrescaler",
+          "ref": "ADC_HAL_EC_COMMON_CLOCK_SOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "Resolution",
+          "ref": "ADC_HAL_EC_RESOLUTION",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "DataAlign",
+          "ref": "ADC_HAL_EC_DATA_ALIGN",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "GainCompensation",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "ScanConvMode",
+          "ref": "ADC_Scan_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "EOCSelection",
+          "ref": "ADC_EOCSelection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "LowPowerAutoWait",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "ContinuousConvMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "NbrOfConversion",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "DiscontinuousConvMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "NbrOfDiscConversion",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "ExternalTrigConv",
+          "ref": "ADC_regular_external_trigger_source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "ExternalTrigConvEdge",
+          "ref": "ADC_regular_external_trigger_edge",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "DMAContinuousRequests",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "Overrun",
+          "ref": "ADC_HAL_EC_REG_OVR_DATA_BEHAVIOR",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InitTypeDef",
+          "field": "OversamplingMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_OversamplingTypeDef",
+          "field": "Ratio",
+          "ref": "ADC_HAL_EC_OVS_RATIO",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_OversamplingTypeDef",
+          "field": "RightBitShift",
+          "ref": "ADC_HAL_EC_OVS_SHIFT",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_OversamplingTypeDef",
+          "field": "TriggeredMode",
+          "ref": "ADC_HAL_EC_OVS_DISCONT_MODE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_OversamplingTypeDef",
+          "field": "OversamplingStopReset",
+          "ref": "ADC_HAL_EC_OVS_SCOPE_REG",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "Channel",
+          "ref": "ADC_HAL_EC_CHANNEL",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "Rank",
+          "ref": "ADC_HAL_EC_REG_SEQ_RANKS",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "SamplingTime",
+          "ref": "ADC_HAL_EC_CHANNEL_SAMPLINGTIME",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "SingleDiff",
+          "ref": "ADC_HAL_EC_CHANNEL_SINGLE_DIFF_ENDING",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "OffsetNumber",
+          "ref": "ADC_HAL_EC_OFFSET_NB",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "Offset",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "OffsetSign",
+          "ref": "IS:IS_ADC_OFFSET_SIGN",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_ChannelConfTypeDef",
+          "field": "OffsetSaturation",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "WatchdogNumber",
+          "ref": "ADC_HAL_EC_AWD_NUMBER",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "WatchdogMode",
+          "ref": "ADC_analog_watchdog_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "Channel",
+          "ref": "ADC_HAL_EC_CHANNEL",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "ITMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "HighThreshold",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "LowThreshold",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_AnalogWDGConfTypeDef",
+          "field": "FilteringConfig",
+          "ref": "ADC_analog_watchdog_filtering_config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfigTypeDef",
+          "field": "ContextQueue",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfigTypeDef",
+          "field": "ChannelCount",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjOversamplingTypeDef",
+          "field": "Ratio",
+          "ref": "ADC_HAL_EC_OVS_RATIO",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjOversamplingTypeDef",
+          "field": "RightBitShift",
+          "ref": "ADC_HAL_EC_OVS_SHIFT",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedChannel",
+          "ref": "ADC_HAL_EC_CHANNEL",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedRank",
+          "ref": "ADC_INJ_SEQ_RANKS",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedSamplingTime",
+          "ref": "ADC_HAL_EC_CHANNEL_SAMPLINGTIME",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedSingleDiff",
+          "ref": "ADC_HAL_EC_CHANNEL_SINGLE_DIFF_ENDING",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedOffsetNumber",
+          "ref": "ADC_HAL_EC_OFFSET_NB",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedOffset",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedOffsetSign",
+          "ref": "IS:IS_ADC_OFFSET_SIGN",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedOffsetSaturation",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedNbrOfConversion",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjectedDiscontinuousConvMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "AutoInjectedConv",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "ExternalTrigInjecConv",
+          "ref": "ADC_injected_external_trigger_source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "ExternalTrigInjecConvEdge",
+          "ref": "ADC_injected_external_trigger_edge",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_InjectionConfTypeDef",
+          "field": "InjecOversamplingMode",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "ADC_MultiModeTypeDef",
+          "field": "Mode",
+          "ref": "ADC_HAL_EC_MULTI_MODE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_MultiModeTypeDef",
+          "field": "DMAAccessMode",
+          "ref": "ADC_HAL_EC_MULTI_DMA_TRANSFER_RESOLUTION",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "ADC_MultiModeTypeDef",
+          "field": "TwoSamplingDelay",
+          "ref": "ADC_HAL_EC_MULTI_TWOSMP_DELAY",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_ADC_PollForEvent",
+          "field": "EventType",
+          "ref": "IS:IS_ADC_EVENT_TYPE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_ADC_ConfigVrefBuf",
+          "field": "VrefBuf",
+          "ref": "IS:IS_ADC_VREFBUF",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:ADC_ConversionStop",
+          "field": "ConversionGroup",
+          "ref": "IS:IS_ADC_CONVERSION_GROUP",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_ADCEx_InjectedGetValue",
+          "field": "InjectedRank",
+          "ref": "IS:IS_ADC_INJECTED_RANK",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "COMP",
+      "total_fields": 10,
+      "covered": 10,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 9,
+        "numeric_range": 1
+      },
+      "fields": [
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "WindowMode",
+          "ref": "COMP_WindowMode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "Mode",
+          "ref": "COMP_PowerMode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "InputPlus",
+          "ref": "COMP_InputPlus",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "InputMinus",
+          "ref": "COMP_InputMinus",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "Hysteresis",
+          "ref": "COMP_Hysteresis",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "OutputPol",
+          "ref": "COMP_OutputPolarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "BlankingSrce",
+          "ref": "COMP_BlankingSrce",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "TimAndExtiOutSel",
+          "ref": "COMP_TIM_EXTI_Out_Sel",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "DigitalFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "COMP_InitTypeDef",
+          "field": "TriggerMode",
+          "ref": "COMP_EXTI_TriggerMode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "CRC",
+      "total_fields": 0,
+      "covered": 0,
+      "coverage_pct": null,
+      "by_status": {},
+      "fields": []
+    },
+    {
+      "peripheral": "DAC",
+      "total_fields": 36,
+      "covered": 19,
+      "coverage_pct": 52.8,
+      "by_status": {
+        "covered": 9,
+        "sentinel_only": 16,
+        "numeric_range": 10,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "DAC_ChannelConfTypeDef",
+          "field": "DAC_Trigger",
+          "ref": "DAC_trigger_selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DAC_ChannelConfTypeDef",
+          "field": "DAC_Trigger2",
+          "ref": "DAC_trigger_selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DAC_ChannelConfTypeDef",
+          "field": "DAC_ConnectOnChipPeripheral",
+          "ref": "DAC_connect_onchip_peripheral",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DAC_ChannelConfTypeDef",
+          "field": "DAC_VrefSelect",
+          "ref": "DAC_vref_select",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DAC_ExtOutputConfTypeDef",
+          "field": "DAC_OutputMode",
+          "ref": "DAC_output_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DAC_ExtOutputConfTypeDef",
+          "field": "DAC_OutputSelect",
+          "ref": "DAC_output_select",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_DAC_Start",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_Stop",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_Start_DMA",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_Start_DMA",
+          "field": "Alignment",
+          "ref": "IS:IS_DAC_ALIGN",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DAC_Stop_DMA",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_SetValue",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_SetValue",
+          "field": "Alignment",
+          "ref": "IS:IS_DAC_ALIGN",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_DAC_SetValue",
+          "field": "Data",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DAC_GetValue",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_ConfigChannel",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DAC_ConfigExtOutput",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_TriangleWaveGenerate",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_TriangleWaveGenerate",
+          "field": "Amplitude",
+          "ref": "IS:IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_DACEx_NoiseWaveGenerate",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_NoiseWaveGenerate",
+          "field": "Amplitude",
+          "ref": "IS:IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampWaveGenerate",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampWaveGenerate",
+          "field": "ResetData",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampWaveGenerate",
+          "field": "StepData",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampWaveDataStop",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampWaveDataUpdate",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampDelayConfig",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampDelayConfig",
+          "field": "value",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampDelayEnable",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_RampDelayDisable",
+          "field": "Channel",
+          "ref": "IS:IS_DAC_CHANNEL",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_DACEx_ClockConfig",
+          "field": "HoldTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_ClockConfig",
+          "field": "HighTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_ClockConfig",
+          "field": "SetupTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_DualSetValue",
+          "field": "Alignment",
+          "ref": "IS:IS_DAC_ALIGN",
+          "type": "param",
+          "status": "ref_empty",
+          "detail": "@ref IS:IS_DAC_ALIGN"
+        },
+        {
+          "struct": "fn:HAL_DACEx_DualSetValue",
+          "field": "Data1",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_DACEx_DualSetValue",
+          "field": "Data2",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "DMA",
+      "total_fields": 13,
+      "covered": 13,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 12,
+        "numeric_range": 1
+      },
+      "fields": [
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "Direction",
+          "ref": "DMA_Data_transfer_direction",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "PeriphInc",
+          "ref": "DMA_Peripheral_incremented_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "MemInc",
+          "ref": "DMA_Memory_incremented_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "PeriphDataAlignment",
+          "ref": "DMA_Peripheral_data_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "MemDataAlignment",
+          "ref": "DMA_Memory_data_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "Mode",
+          "ref": "DMA_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "Priority",
+          "ref": "DMA_Priority_level",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "PeriphReload",
+          "ref": "DMA_Peripheral_Reload",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "MemReload",
+          "ref": "DMA_Memory_Reload",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "BlockLen",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "TransMode",
+          "ref": "DMA_Transfer_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "ArbMode",
+          "ref": "DMA_Arbitration_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "DMA_InitTypeDef",
+          "field": "BTCSuspend",
+          "ref": "DMA_BTC_Suspend",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "EXTI",
+      "total_fields": 5,
+      "covered": 5,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 5
+      },
+      "fields": [
+        {
+          "struct": "EXTI_ConfigTypeDef",
+          "field": "Line",
+          "ref": "EXTI_Line",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "EXTI_ConfigTypeDef",
+          "field": "Mode",
+          "ref": "EXTI_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "EXTI_ConfigTypeDef",
+          "field": "Trigger",
+          "ref": "EXTI_Trigger",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "EXTI_ConfigTypeDef",
+          "field": "GPIOSel",
+          "ref": "EXTI_GPIOSel",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_EXTI_GetHandle",
+          "field": "ExtiLine",
+          "ref": "IS:IS_EXTI_LINE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "FDCAN",
+      "total_fields": 47,
+      "covered": 41,
+      "coverage_pct": 87.2,
+      "by_status": {
+        "covered": 16,
+        "numeric_range": 25,
+        "sentinel_only": 3,
+        "no_ref": 3
+      },
+      "fields": [
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "FrameFormat",
+          "ref": "FDCAN_frame_format",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "Mode",
+          "ref": "FDCAN_operating_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "AutoRetransmission",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TransmitPause",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "ProtocolException",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "NominalPrescaler",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "NominalSyncJumpWidth",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "NominalTimeSeg1",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "NominalTimeSeg2",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "DataPrescaler",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "DataSyncJumpWidth",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "DataTimeSeg1",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "DataTimeSeg2",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "MessageRAMOffset",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "StdFiltersNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "ExtFiltersNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxFifo0ElmtsNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxFifo0ElmtSize",
+          "ref": "FDCAN_data_field_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxFifo1ElmtsNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxFifo1ElmtSize",
+          "ref": "FDCAN_data_field_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxBuffersNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "RxBufferSize",
+          "ref": "FDCAN_data_field_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TxEventsNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TxBuffersNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TxFifoQueueElmtsNbr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TxFifoQueueMode",
+          "ref": "FDCAN_txFifoQueue_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_InitTypeDef",
+          "field": "TxElmtSize",
+          "ref": "FDCAN_data_field_size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "IdType",
+          "ref": "FDCAN_id_type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "FilterIndex",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "FilterType",
+          "ref": "FDCAN_filter_type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "4 sentinels"
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "FilterConfig",
+          "ref": "FDCAN_filter_config",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "8 sentinels"
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "FilterID1",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "FilterID2",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FDCAN_FilterTypeDef",
+          "field": "RxBufferIndex",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+          "field": "NonMatchingStd",
+          "ref": "IS:IS_FDCAN_NON_MATCHING",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+          "field": "NonMatchingExt",
+          "ref": "IS:IS_FDCAN_NON_MATCHING",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+          "field": "RejectRemoteStd",
+          "ref": "IS:IS_FDCAN_REJECT_REMOTE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigGlobalFilter",
+          "field": "RejectRemoteExt",
+          "ref": "IS:IS_FDCAN_REJECT_REMOTE",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+          "field": "RxFifo",
+          "ref": "IS:IS_FDCAN_RX_FIFO",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigRxFifoOverwrite",
+          "field": "OperationMode",
+          "ref": "IS:IS_FDCAN_RX_FIFO_MODE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigFifoWatermark",
+          "field": "FIFO",
+          "ref": "IS:IS_FDCAN_FIFO_WATERMARK",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigTimestampCounter",
+          "field": "TimestampPrescaler",
+          "ref": "IS:IS_FDCAN_TIMESTAMP_PRESCALER",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_EnableTimestampCounter",
+          "field": "TimestampOperation",
+          "ref": "IS:IS_FDCAN_TIMESTAMP",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigTimeoutCounter",
+          "field": "TimeoutOperation",
+          "ref": "IS:IS_FDCAN_TIMEOUT",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_AddMessageToTxBuffer",
+          "field": "BufferIndex",
+          "ref": "IS:IS_FDCAN_TX_LOCATION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FDCAN_GetRxFifoFillLevel",
+          "field": "RxFifo",
+          "ref": "IS:IS_FDCAN_RX_FIFO",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FDCAN_ConfigInterruptLines",
+          "field": "InterruptLine",
+          "ref": "IS:IS_FDCAN_IT_LINE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "FLASH",
+      "total_fields": 24,
+      "covered": 17,
+      "coverage_pct": 70.8,
+      "by_status": {
+        "covered": 11,
+        "no_ref": 5,
+        "sentinel_only": 1,
+        "numeric_range": 6,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "TypeErase",
+          "ref": "FLASH_Type_Erase",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "Banks",
+          "ref": "FLASH_Banks",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "PageAddress",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "NbPages",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "SectorAddress",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "NbSectors",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_EraseInitTypeDef",
+          "field": "UserDataAddress",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "OptionType",
+          "ref": "FLASH_Option_Type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "7 sentinels"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "WRPSector",
+          "ref": "FLASH_Option_Bytes_Write_Protection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "RDPLevel",
+          "ref": "FLASH_OB_Read_Protection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "USERType",
+          "ref": "FLASH_OB_USER_Type",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "USERConfig",
+          "ref": "FLASH_OB_USER_WWDG_SW",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "PCROPConfig",
+          "ref": "FLASH_Banks",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "PCROPStartAddr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "PCROPEndAddr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "SECConfig",
+          "ref": "FLASH_Banks",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "SecSize",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "FLASH_OBProgramInitTypeDef",
+          "field": "BootEntryPoint",
+          "ref": "FLASH_OB_USER_BOOT_LOCK",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FLASH_Program",
+          "field": "TypeProgram",
+          "ref": "IS:IS_FLASH_TYPEPROGRAM",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FLASH_Program_IT",
+          "field": "TypeProgram",
+          "ref": "IS:IS_FLASH_TYPEPROGRAM",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:FLASH_MassErase",
+          "field": "Banks",
+          "ref": "IS:IS_FLASH_BANK",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_FLASH_OB_RDPConfig",
+          "field": "RDPLevel",
+          "ref": "IS:IS_OB_RDP_LEVEL",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_FLASHEx_OBBFBProgram",
+          "field": "BFBStart",
+          "ref": "IS:IS_OB_USER_BFB",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:FLASH_OB_OptrConfig",
+          "field": "RDPLevel",
+          "ref": "IS:IS_OB_RDP_LEVEL",
+          "type": "param",
+          "status": "ref_empty",
+          "detail": "@ref IS:IS_OB_RDP_LEVEL"
+        }
+      ]
+    },
+    {
+      "peripheral": "GPIO",
+      "total_fields": 6,
+      "covered": 5,
+      "coverage_pct": 83.3,
+      "by_status": {
+        "sentinel_only": 1,
+        "covered": 4,
+        "numeric_range": 1
+      },
+      "fields": [
+        {
+          "struct": "GPIO_InitTypeDef",
+          "field": "Pin",
+          "ref": "GPIO_pins",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "18 sentinels"
+        },
+        {
+          "struct": "GPIO_InitTypeDef",
+          "field": "Mode",
+          "ref": "GPIO_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "GPIO_InitTypeDef",
+          "field": "Pull",
+          "ref": "GPIO_pull",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "GPIO_InitTypeDef",
+          "field": "Speed",
+          "ref": "GPIO_speed",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "GPIO_InitTypeDef",
+          "field": "Alternate",
+          "ref": "GPIOEx_Alternate_function_selection",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_GPIO_WritePin",
+          "field": "PinState",
+          "ref": "IS:IS_GPIO_PIN_ACTION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "I2C",
+      "total_fields": 28,
+      "covered": 22,
+      "coverage_pct": 78.6,
+      "by_status": {
+        "numeric_range": 4,
+        "covered": 18,
+        "sentinel_only": 6
+      },
+      "fields": [
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "ClockSpeed",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "DutyCycle",
+          "ref": "I2C_duty_cycle_in_fast_fast_plus_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "DataHoldTimeSel",
+          "ref": "I2C_data_hold_time_sel",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "OwnAddress1",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "AddressingMode",
+          "ref": "I2C_addressing_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "DualAddressMode",
+          "ref": "I2C_dual_addressing_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "OwnAddress2",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "OwnAddress2Masks",
+          "ref": "I2C_OWN_ADDRESS2_MASKS",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "TripleAddressMode",
+          "ref": "I2C_Triple_addressing_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "OwnAddress3",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "GeneralCallMode",
+          "ref": "I2C_general_call_addressing_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "I2C_InitTypeDef",
+          "field": "NoStretchMode",
+          "ref": "I2C_nostretch_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Write",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Read",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Write_IT",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Read_IT",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Write_DMA",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Mem_Read_DMA",
+          "field": "MemAddSize",
+          "ref": "IS:IS_I2C_MEMADD_SIZE",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_I2C_Master_Seq_Transmit_IT",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Master_Seq_Transmit_DMA",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Master_Seq_Receive_IT",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Master_Seq_Receive_DMA",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Slave_Seq_Transmit_IT",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Slave_Seq_Transmit_DMA",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Slave_Seq_Receive_IT",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2C_Slave_Seq_Receive_DMA",
+          "field": "XferOptions",
+          "ref": "IS:IS_I2C_TRANSFER_OPTIONS_REQUEST",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2CEx_EnableWakeUp",
+          "field": "ToutDiv",
+          "ref": "IS:IS_I2C_WAKEUP_TIMEOUT_CLK_DIV",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_I2CEx_EnableWakeUp",
+          "field": "ToutCnt",
+          "ref": "IS:IS_I2C_WAKEUP_TIMEOUT_CNT",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "IRDA",
+      "total_fields": 6,
+      "covered": 6,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "numeric_range": 2,
+        "covered": 4
+      },
+      "fields": [
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "WordLength",
+          "ref": "IRDA_Word_Length",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "Parity",
+          "ref": "IRDA_Parity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "Mode",
+          "ref": "IRDA_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "Prescaler",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "IRDA_InitTypeDef",
+          "field": "IrDAMode",
+          "ref": "IRDA_Low_Power",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "IWDG",
+      "total_fields": 2,
+      "covered": 2,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 1,
+        "numeric_range": 1
+      },
+      "fields": [
+        {
+          "struct": "IWDG_InitTypeDef",
+          "field": "Prescaler",
+          "ref": "IWDG_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "IWDG_InitTypeDef",
+          "field": "Reload",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "LPTIM",
+      "total_fields": 31,
+      "covered": 31,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 11,
+        "numeric_range": 20
+      },
+      "fields": [
+        {
+          "struct": "LPTIM_ClockConfigTypeDef",
+          "field": "Source",
+          "ref": "LPTIM_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_ClockConfigTypeDef",
+          "field": "Prescaler",
+          "ref": "LPTIM_Clock_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_ULPClockConfigTypeDef",
+          "field": "Polarity",
+          "ref": "LPTIM_Clock_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_ULPClockConfigTypeDef",
+          "field": "SampleTime",
+          "ref": "LPTIM_Clock_Sample_Time",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_TriggerConfigTypeDef",
+          "field": "Source",
+          "ref": "LPTIM_Trigger_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_TriggerConfigTypeDef",
+          "field": "ActiveEdge",
+          "ref": "LPTIM_External_Trigger_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_TriggerConfigTypeDef",
+          "field": "SampleTime",
+          "ref": "LPTIM_Trigger_Sample_Time",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_InitTypeDef",
+          "field": "OutputPolarity",
+          "ref": "LPTIM_Output_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_InitTypeDef",
+          "field": "UpdateMode",
+          "ref": "LPTIM_Updating_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_InitTypeDef",
+          "field": "Input1Source",
+          "ref": "LPTIM_Input1_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPTIM_InitTypeDef",
+          "field": "Input2Source",
+          "ref": "LPTIM_Input2_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_LPTIM_PWM_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_PWM_Start",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_PWM_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_PWM_Start_IT",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_OnePulse_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_OnePulse_Start",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_OnePulse_Start_IT",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_SetOnce_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_SetOnce_Start",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_SetOnce_Start_IT",
+          "field": "Pulse",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_Encoder_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_Encoder_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_TimeOut_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_TimeOut_Start",
+          "field": "Timeout",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_TimeOut_Start_IT",
+          "field": "Timeout",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_Counter_Start",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPTIM_Counter_Start_IT",
+          "field": "Period",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "LPUART",
+      "total_fields": 24,
+      "covered": 23,
+      "coverage_pct": 95.8,
+      "by_status": {
+        "numeric_range": 5,
+        "covered": 18,
+        "sentinel_only": 1
+      },
+      "fields": [
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "WordLength",
+          "ref": "IS:IS_LPUART_WORD_LENGTH",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "StopBits",
+          "ref": "LPUART_Stop_Bits",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "Parity",
+          "ref": "LPUART_Parity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "Mode",
+          "ref": "LPUART_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "HwFlowCtl",
+          "ref": "LPUART_Hardware_Flow_Control",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_InitTypeDef",
+          "field": "ClockPrescaler",
+          "ref": "LPUART_ClockPrescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "AdvFeatureInit",
+          "ref": "LPUART_Advanced_Features_Initialization_Type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "8 sentinels"
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "TxPinLevelInvert",
+          "ref": "LPUART_Tx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "RxPinLevelInvert",
+          "ref": "LPUART_Rx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "DataInvert",
+          "ref": "LPUART_Data_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "Swap",
+          "ref": "LPUART_Rx_Tx_Swap",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "OverrunDisable",
+          "ref": "LPUART_Overrun_Disable",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "DMADisableonRxError",
+          "ref": "LPUART_DMA_Disable_on_Rx_Error",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "MSBFirst",
+          "ref": "LPUART_MSB_First",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_AdvFeatureInitTypeDef",
+          "field": "TxoeAlway",
+          "ref": "LPUART_TXOE_ALWAYS_ON",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_WakeUpTypeDef",
+          "field": "WakeUpEvent",
+          "ref": "LPUART_WakeUp_from_Stop_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "LPUART_WakeUpTypeDef",
+          "field": "AddressLength",
+          "ref": "LPUARTEx_WakeUp_Address_Length",
+          "type": "uint16_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "LPUART_WakeUpTypeDef",
+          "field": "Address",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LPUART_MultiProcessor_Init",
+          "field": "WakeUpMethod",
+          "ref": "IS:IS_LPUART_WAKEUPMETHOD",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RS485Ex_Init",
+          "field": "Polarity",
+          "ref": "IS:IS_LPUART_DE_POLARITY",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RS485Ex_Init",
+          "field": "AssertionTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_RS485Ex_Init",
+          "field": "DeassertionTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_MultiProcessorEx_AddressLength_Set",
+          "field": "AddressLength",
+          "ref": "IS:IS_LPUART_ADDRESSLENGTH_DETECT",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "OPA",
+      "total_fields": 10,
+      "covered": 10,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 8,
+        "numeric_range": 2
+      },
+      "fields": [
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "Mode",
+          "ref": "OPA_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "InvertingInput",
+          "ref": "OPA_InvertingInput",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "NonInvertingInput",
+          "ref": "OPA_NonInvertingInput",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "InternalOutput",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "ExternalOutput",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "PgaConnect",
+          "ref": "OPA_PgaConnect",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "PgaGain",
+          "ref": "OPA_PgaGain",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "CommonModeVoltage",
+          "ref": "OPA_CommonModeVoltage",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "VoltageRefer",
+          "ref": "OPA_VoltageRefer",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "OPA_InitTypeDef",
+          "field": "VoltageBias",
+          "ref": "OPA_VoltageBias",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "PWR",
+      "total_fields": 10,
+      "covered": 7,
+      "coverage_pct": 70.0,
+      "by_status": {
+        "covered": 7,
+        "sentinel_only": 2,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "PWR_PVDTypeDef",
+          "field": "PVDLevel",
+          "ref": "PWR_PVD_detection_level",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "PWR_PVDTypeDef",
+          "field": "PVDFilter",
+          "ref": "PWR_PVD_Filter",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "PWR_PVDTypeDef",
+          "field": "Mode",
+          "ref": "PWR_PVD_Mode",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "7 sentinels"
+        },
+        {
+          "struct": "fn:HAL_PWR_EnableWakeUpPin",
+          "field": "WakeUpPinPolarity",
+          "ref": "IS:IS_PWR_WAKEUP_PIN",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_PWR_DisableWakeUpPin",
+          "field": "WakeUpPinx",
+          "ref": "IS:IS_PWR_WAKEUP_PIN",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_PWR_EnterSLEEPMode",
+          "field": "Regulator",
+          "ref": "IS:IS_PWR_REGULATOR",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_PWR_EnterSLEEPMode",
+          "field": "SLEEPEntry",
+          "ref": "IS:IS_PWR_SLEEP_ENTRY",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_PWR_EnterSTOPMode",
+          "field": "Regulator",
+          "ref": "IS:IS_PWR_REGULATOR",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_PWREx_EnterSTOP0Mode",
+          "field": "STOPEntry",
+          "ref": "IS:IS_PWR_STOP_ENTRY",
+          "type": "param",
+          "status": "ref_empty",
+          "detail": "@ref IS:IS_PWR_STOP_ENTRY"
+        },
+        {
+          "struct": "fn:HAL_PWREx_EnterSTOP1Mode",
+          "field": "STOPEntry",
+          "ref": "IS:IS_PWR_STOP_ENTRY",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "RCC",
+      "total_fields": 34,
+      "covered": 30,
+      "coverage_pct": 88.2,
+      "by_status": {
+        "covered": 27,
+        "sentinel_only": 3,
+        "numeric_range": 3,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "RCC_PLLInitTypeDef",
+          "field": "PLLState",
+          "ref": "RCC_PLL_Config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PLLInitTypeDef",
+          "field": "PLLSource",
+          "ref": "RCC_PLL_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PLLInitTypeDef",
+          "field": "PLLMUL",
+          "ref": "RCC_PLL_Multiplication_Factor",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "OscillatorType",
+          "ref": "RCC_Oscillator_Type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "5 sentinels"
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "HSEState",
+          "ref": "RCC_HSE_Config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "HSEFreq",
+          "ref": "RCC_HSE_Freq",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "LSEState",
+          "ref": "RCC_LSE_Config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "LSEDriver",
+          "ref": "RCC_LSE_Driver",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "HSIState",
+          "ref": "RCC_HSI_Config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "HSICalibrationValue",
+          "ref": "RCC_HSI_Calibration",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "HSIDiv",
+          "ref": "RCC_HSI_Div",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_OscInitTypeDef",
+          "field": "LSIState",
+          "ref": "RCC_LSI_Config",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_ClkInitTypeDef",
+          "field": "ClockType",
+          "ref": "RCC_System_Clock_Type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "4 sentinels"
+        },
+        {
+          "struct": "RCC_ClkInitTypeDef",
+          "field": "SYSCLKSource",
+          "ref": "RCC_System_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_ClkInitTypeDef",
+          "field": "AHBCLKDivider",
+          "ref": "RCC_AHB_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_ClkInitTypeDef",
+          "field": "APB1CLKDivider",
+          "ref": "RCC_APB1_APB2_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_ClkInitTypeDef",
+          "field": "APB2CLKDivider",
+          "ref": "RCC_APB1_APB2_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "PeriphClockSelection",
+          "ref": "RCCEx_Periph_Clock_Selection",
+          "type": "uint32_t",
+          "status": "ref_empty",
+          "detail": "@ref RCCEx_Periph_Clock_Selection"
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "RtcClockSelection",
+          "ref": "RCC_RTC_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "UsartClockSelection",
+          "ref": "IS:IS_RCC_USARTCLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "LpuartClockSelection",
+          "ref": "IS:IS_RCC_LPUARTCLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "Comp1ClockSelection",
+          "ref": "IS:IS_RCC_COMP1CLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "Comp2ClockSelection",
+          "ref": "IS:IS_RCC_COMP2CLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "Comp3ClockSelection",
+          "ref": "IS:IS_RCC_COMP3CLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "Comp4ClockSelection",
+          "ref": "IS:IS_RCC_COMP4CLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "PvdFilterClockSelection",
+          "ref": "IS:IS_RCC_PVDFILTERCLK",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "FdcanClockSelection",
+          "ref": "IS:IS_RCC_FDCANCLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "FdcanPLLDiv",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "AdcClockSelection",
+          "ref": "IS:IS_RCC_ADCCLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "AdcPLLDiv",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "RCC_PeriphCLKInitTypeDef",
+          "field": "LptimClockSelection",
+          "ref": "IS:IS_RCC_LPTIMCLKSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RCC_MCOConfig",
+          "field": "RCC_MCOx",
+          "ref": "IS:IS_RCC_MCO",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "8 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RCC_MCOConfig",
+          "field": "RCC_MCODiv",
+          "ref": "IS:IS_RCC_MCODIV",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RCC_MCOConfig",
+          "field": "RCC_MCOSource",
+          "ref": "IS:IS_RCC_MCOSOURCE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "RTC",
+      "total_fields": 11,
+      "covered": 4,
+      "coverage_pct": 36.4,
+      "by_status": {
+        "numeric_range": 2,
+        "covered": 2,
+        "sentinel_only": 7
+      },
+      "fields": [
+        {
+          "struct": "RTC_InitTypeDef",
+          "field": "AsynchPrediv",
+          "ref": "IS:IS_RTC_ASYNCH_PREDIV",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "RTC_InitTypeDef",
+          "field": "OutPut",
+          "ref": "RTC_output_source_to_output_on_the_Tamper_pin",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RTC_SetTime",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_GetTime",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_SetDate",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_GetDate",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_SetAlarm",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_SetAlarm_IT",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTC_GetAlarm",
+          "field": "Format",
+          "ref": "IS:IS_RTC_FORMAT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "1 sentinels"
+        },
+        {
+          "struct": "fn:HAL_RTCEx_DeactivateTamper",
+          "field": "Tamper",
+          "ref": "IS:IS_RTC_TAMPER",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_RTCEx_SetSmoothCalib",
+          "field": "SmouthCalibMinusPulsesValue",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "SCI",
+      "total_fields": 27,
+      "covered": 25,
+      "coverage_pct": 92.6,
+      "by_status": {
+        "numeric_range": 13,
+        "covered": 12,
+        "sentinel_only": 1,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "WordLength",
+          "ref": "IS:IS_SCI_WORD_LENGTH",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "StopBits",
+          "ref": "SCI_Stop_Bits",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "Parity",
+          "ref": "SCI_Parity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "Mode",
+          "ref": "SCI_Mode",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "HwFlowCtl",
+          "ref": "SCI_Hardware_Flow_Control",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_InitTypeDef",
+          "field": "OverSampling",
+          "ref": "SCI_Over_Sampling",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "AdvFeatureInit",
+          "ref": "SCI_Advanced_Features_Initialization_Type",
+          "type": "uint32_t",
+          "status": "sentinel_only",
+          "detail": "7 sentinels"
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "TxPinLevelInvert",
+          "ref": "SCI_Tx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "RxPinLevelInvert",
+          "ref": "SCI_Rx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "DataInvert",
+          "ref": "SCI_Data_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "Swap",
+          "ref": "SCI_Rx_Tx_Swap",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "AutoBaudRateEnable",
+          "ref": "SCI_AutoBaudRate_Enable",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "AutoBaudRateMode",
+          "ref": "SCI_AutoBaud_Rate_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_AdvFeatureInitTypeDef",
+          "field": "MSBFirst",
+          "ref": "SCI_MSB_First",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SCI_WakeUpTypeDef",
+          "field": "AddressLength",
+          "ref": "SCIEx_WakeUp_Address_Length",
+          "type": "uint16_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SCI_WakeUpTypeDef",
+          "field": "Address",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_LIN_Init",
+          "field": "BreakDetectLength",
+          "ref": "IS:IS_SCI_LIN_BREAK_DETECT_LENGTH",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_MultiProcessor_Init",
+          "field": "WakeUpMethod",
+          "ref": "IS:IS_SCI_WAKEUPMETHOD",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_MultiProcessor_Init",
+          "field": "Address",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCI_ReceiverTimeout_Config",
+          "field": "TimeoutValue",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCI_RS485Ex_Init",
+          "field": "Polarity",
+          "ref": "IS:IS_SCI_DE_POLARITY",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCI_RS485Ex_Init",
+          "field": "AssertionTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCI_RS485Ex_Init",
+          "field": "DeassertionTime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCI_MultiProcessorEx_AddressLength_Set",
+          "field": "AddressLength",
+          "ref": "IS:IS_SCI_ADDRESSLENGTH_DETECT",
+          "type": "param",
+          "status": "ref_empty",
+          "detail": "@ref IS:IS_SCI_ADDRESSLENGTH_DETECT"
+        },
+        {
+          "struct": "fn:HAL_SCIEx_SetTxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_SCI_TXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SCIEx_SetRxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_SCI_RXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "total_fields": 24,
+      "covered": 23,
+      "coverage_pct": 95.8,
+      "by_status": {
+        "numeric_range": 13,
+        "covered": 10,
+        "ref_empty": 1
+      },
+      "fields": [
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "WordLength",
+          "ref": "SMARTCARD_Word_Length",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "StopBits",
+          "ref": "SMARTCARD_Stop_Bits",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "Parity",
+          "ref": "SMARTCARD_Parity",
+          "type": "uint16_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "Mode",
+          "ref": "SMARTCARD_Mode",
+          "type": "uint16_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "CLKPolarity",
+          "ref": "SMARTCARD_Clock_Polarity",
+          "type": "uint16_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "CLKPhase",
+          "ref": "SMARTCARD_Clock_Phase",
+          "type": "uint16_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "CLKLastBit",
+          "ref": "SMARTCARD_Last_Bit",
+          "type": "uint16_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "Prescaler",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "GuardTime",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "NACKEnable",
+          "ref": "SMARTCARD_NACK_Enable",
+          "type": "uint16_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "TimeOutEnable",
+          "ref": "SMARTCARD_Timeout_Enable",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "TimeOutValue",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "BlockLength",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_InitTypeDef",
+          "field": "AutoRetryCount",
+          "ref": null,
+          "type": "uint8_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "AdvFeatureInit",
+          "ref": "SMARTCARDEx_Advanced_Features_Initialization_Type",
+          "type": "uint32_t",
+          "status": "ref_empty",
+          "detail": "@ref SMARTCARDEx_Advanced_Features_Initialization_Type"
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "TxPinLevelInvert",
+          "ref": "SMARTCARD_Tx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "RxPinLevelInvert",
+          "ref": "SMARTCARD_Rx_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "DataInvert",
+          "ref": "SMARTCARD_Data_Inv",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "Swap",
+          "ref": "SMARTCARD_Rx_Tx_Swap",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "MSBFirst",
+          "ref": "SMARTCARD_MSB_First",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+          "field": "TxCompletionIndication",
+          "ref": "SMARTCARDEx_Transmission_Completion_Indication",
+          "type": "uint16_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SMARTCARDEx_SetTxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_SMARTCARD_TXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_SMARTCARDEx_SetRxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_SMARTCARD_RXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "SPI",
+      "total_fields": 13,
+      "covered": 13,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 12,
+        "numeric_range": 1
+      },
+      "fields": [
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "Mode",
+          "ref": "SPI_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "Direction",
+          "ref": "SPI_Direction",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "DataSize",
+          "ref": "SPI_Data_Size",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "CLKPolarity",
+          "ref": "SPI_Clock_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "CLKPhase",
+          "ref": "SPI_Clock_Phase",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "NSS",
+          "ref": "SPI_Slave_Select_management",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "SampleSelect",
+          "ref": "SPI_Sample_Select_management",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "BaudRatePrescaler",
+          "ref": "SPI_BaudRate_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "FirstBit",
+          "ref": "SPI_MSB_LSB_transmission",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "TIMode",
+          "ref": "SPI_TI_mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "CRCCalculation",
+          "ref": "SPI_CRC_Calculation",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "CRCPolynomial",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "SPI_InitTypeDef",
+          "field": "CRCLength",
+          "ref": "SPI_CRC_length",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "TIM",
+      "total_fields": 89,
+      "covered": 77,
+      "coverage_pct": 86.5,
+      "by_status": {
+        "numeric_range": 23,
+        "covered": 54,
+        "no_ref": 2,
+        "ref_empty": 1,
+        "sentinel_only": 9
+      },
+      "fields": [
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "Prescaler",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "CounterMode",
+          "ref": "TIM_Counter_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "Period",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "ClockDivision",
+          "ref": "TIM_ClockDivision",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "RepetitionCounter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_Base_InitTypeDef",
+          "field": "AutoReloadPreload",
+          "ref": "TIM_AutoReloadPreload",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCMode",
+          "ref": "TIM_Output_Compare_and_PWM_modes",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "Pulse",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCPolarity",
+          "ref": "TIM_Output_Compare_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCNPolarity",
+          "ref": "TIM_Output_Compare_N_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCFastMode",
+          "ref": "TIM_Output_Fast_State",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCIdleState",
+          "ref": "TIM_Output_Compare_Idle_State",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OC_InitTypeDef",
+          "field": "OCNIdleState",
+          "ref": "TIM_Output_Compare_N_Idle_State",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "OCMode",
+          "ref": "TIM_Output_Compare_and_PWM_modes",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "Pulse",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "OCPolarity",
+          "ref": "TIM_Output_Compare_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "OCNPolarity",
+          "ref": "TIM_Output_Compare_N_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "OCIdleState",
+          "ref": "TIM_Output_Compare_Idle_State",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "OCNIdleState",
+          "ref": "TIM_Output_Compare_N_Idle_State",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "ICPolarity",
+          "ref": "TIM_Input_Capture_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "ICSelection",
+          "ref": "TIM_Input_Capture_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_OnePulse_InitTypeDef",
+          "field": "ICFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_IC_InitTypeDef",
+          "field": "ICPolarity",
+          "ref": "TIM_Input_Capture_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_IC_InitTypeDef",
+          "field": "ICSelection",
+          "ref": "TIM_Input_Capture_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_IC_InitTypeDef",
+          "field": "ICPrescaler",
+          "ref": "TIM_Input_Capture_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_IC_InitTypeDef",
+          "field": "ICFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "EncoderMode",
+          "ref": "TIM_Encoder_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC1Polarity",
+          "ref": "TIM_Encoder_Input_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC1Selection",
+          "ref": "TIM_Input_Capture_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC1Prescaler",
+          "ref": "TIM_Input_Capture_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC1Filter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC2Polarity",
+          "ref": "TIM_Encoder_Input_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC2Selection",
+          "ref": "TIM_Input_Capture_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC2Prescaler",
+          "ref": "TIM_Input_Capture_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_Encoder_InitTypeDef",
+          "field": "IC2Filter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_ClockConfigTypeDef",
+          "field": "ClockSource",
+          "ref": "TIM_Clock_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClockConfigTypeDef",
+          "field": "ClockPolarity",
+          "ref": "TIM_Clock_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClockConfigTypeDef",
+          "field": "ClockPrescaler",
+          "ref": "TIM_Clock_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClockConfigTypeDef",
+          "field": "ClockFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_ClearInputConfigTypeDef",
+          "field": "ClearInputState",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_ClearInputConfigTypeDef",
+          "field": "ClearInputSource",
+          "ref": "TIM_ClearInput_Source",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClearInputConfigTypeDef",
+          "field": "ClearInputPolarity",
+          "ref": "TIM_ClearInput_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClearInputConfigTypeDef",
+          "field": "ClearInputPrescaler",
+          "ref": "IS:IS_TIM_CLEARINPUT_PRESCALER",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_ClearInputConfigTypeDef",
+          "field": "ClearInputFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_MasterConfigTypeDef",
+          "field": "MasterOutputTrigger",
+          "ref": "TIM_Master_Mode_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_MasterConfigTypeDef",
+          "field": "MasterOutputTrigger2",
+          "ref": "TIM_Master_Mode_Selection_2",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_MasterConfigTypeDef",
+          "field": "MasterSlaveMode",
+          "ref": "TIM_Master_Slave_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_SlaveConfigTypeDef",
+          "field": "SlaveMode",
+          "ref": "TIM_Slave_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_SlaveConfigTypeDef",
+          "field": "InputTrigger",
+          "ref": "TIM_Trigger_Selection",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_SlaveConfigTypeDef",
+          "field": "TriggerPolarity",
+          "ref": "TIM_Trigger_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_SlaveConfigTypeDef",
+          "field": "TriggerPrescaler",
+          "ref": "TIM_Trigger_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_SlaveConfigTypeDef",
+          "field": "TriggerFilter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIM_HallSensor_InitTypeDef",
+          "field": "IC1Polarity",
+          "ref": "TIM_Input_Capture_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_HallSensor_InitTypeDef",
+          "field": "IC1Prescaler",
+          "ref": "TIM_Input_Capture_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_HallSensor_InitTypeDef",
+          "field": "IC1Filter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "no_ref",
+          "detail": ""
+        },
+        {
+          "struct": "TIM_HallSensor_InitTypeDef",
+          "field": "Commutation_Delay",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIMEx_BreakInputConfigTypeDef",
+          "field": "Source",
+          "ref": "IS:IS_TIM_BREAKINPUTSOURCE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIMEx_BreakInputConfigTypeDef",
+          "field": "Enable",
+          "ref": "IS:IS_TIM_BREAKINPUTSOURCE_STATE",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIMEx_BreakInputConfigTypeDef",
+          "field": "Polarity",
+          "ref": "TIMEx_Break_Input_Source_Polarity",
+          "type": "uint32_t",
+          "status": "ref_empty",
+          "detail": "@ref TIMEx_Break_Input_Source_Polarity"
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "Polarity",
+          "ref": "TIMEx_Encoder_Index_Polarity",
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "Prescaler",
+          "ref": "IS:IS_TIM_ENCODERINDEX_PRESCALER",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "Filter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "FirstIndexEnable",
+          "ref": null,
+          "type": "FunctionalState",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "Position",
+          "ref": "IS:IS_TIM_ENCODERINDEX_POSITION",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "TIMEx_EncoderIndexConfigTypeDef",
+          "field": "Direction",
+          "ref": "IS:IS_TIM_ENCODERINDEX_DIRECTION",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIM_OnePulse_Init",
+          "field": "OnePulseMode",
+          "ref": "IS:IS_TIM_OPM_MODE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIM_OC_ConfigChannel",
+          "field": "Channel",
+          "ref": "IS:IS_TIM_CHANNELS",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "6 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIM_PWM_SetCCRH",
+          "field": "Channel",
+          "ref": "IS:IS_TIM_CHANNELS",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "6 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIM_PWM_ConfigChannel",
+          "field": "Channel",
+          "ref": "IS:IS_TIM_CHANNELS",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "6 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+          "field": "OutputChannel",
+          "ref": "IS:IS_TIM_OPM_CHANNELS",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIM_OnePulse_ConfigChannel",
+          "field": "InputChannel",
+          "ref": "IS:IS_TIM_OPM_CHANNELS",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIM_DMABurst_MultiWriteStart",
+          "field": "BurstBaseAddress",
+          "ref": "IS:IS_TIM_DMA_BASE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIM_DMABurst_MultiWriteStart",
+          "field": "BurstLength",
+          "ref": "IS:IS_TIM_DMA_LENGTH",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "23 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIM_DMABurst_MultiReadStart",
+          "field": "BurstBaseAddress",
+          "ref": "IS:IS_TIM_DMA_BASE",
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIM_DMABurst_MultiReadStart",
+          "field": "BurstLength",
+          "ref": "IS:IS_TIM_DMA_LENGTH",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "23 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIM_ConfigTI1Input",
+          "field": "TI1_Selection",
+          "ref": "IS:IS_TIM_TI1SELECTION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:TIM_CCxChannelCmd",
+          "field": "Channel",
+          "ref": "IS:IS_TIM_CHANNELS",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "6 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigCommutEvent",
+          "field": "InputTrigger",
+          "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigCommutEvent_IT",
+          "field": "InputTrigger",
+          "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigCommutEvent_DMA",
+          "field": "InputTrigger",
+          "ref": "IS:IS_TIM_INTERNAL_TRIGGEREVENT_SELECTION",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigBreakInput",
+          "field": "BreakInput",
+          "ref": "IS:IS_TIM_BREAKINPUT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_DisarmBreakInput",
+          "field": "BreakInput",
+          "ref": "IS:IS_TIM_BREAKINPUT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ReArmBreakInput",
+          "field": "BreakInput",
+          "ref": "IS:IS_TIM_BREAKINPUT",
+          "type": "param",
+          "status": "sentinel_only",
+          "detail": "2 sentinels"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+          "field": "PulseWidth",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_OC_ConfigPulseOnCompare",
+          "field": "PulseWidthPrescaler",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigDeadTime",
+          "field": "Deadtime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_ConfigAsymmetricalDeadTime",
+          "field": "FallingDeadtime",
+          "ref": null,
+          "type": "param",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "fn:HAL_TIMEx_EnableMultipleTriggerADC",
+          "field": "TriggerSource",
+          "ref": "IS:IS_TIM_MULTIPLE_TRIGGER_ADC_SOURCE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_TIMEx_DisableMultipleTriggerADC",
+          "field": "TriggerSource",
+          "ref": "IS:IS_TIM_MULTIPLE_TRIGGER_ADC_SOURCE",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "UART",
+      "total_fields": 8,
+      "covered": 8,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "numeric_range": 2,
+        "covered": 6
+      },
+      "fields": [
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "WordLength",
+          "ref": "UART_Word_Length",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "StopBits",
+          "ref": "UART_Stop_Bits",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "Parity",
+          "ref": "UART_Parity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "MsbFirst",
+          "ref": "UART_Msb_First",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "TxMode",
+          "ref": "UART_Tx_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "RxMode",
+          "ref": "UART_Rx_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "UART_InitTypeDef",
+          "field": "RxMatchAddr",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        }
+      ]
+    },
+    {
+      "peripheral": "USART",
+      "total_fields": 10,
+      "covered": 10,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "numeric_range": 1,
+        "covered": 9
+      },
+      "fields": [
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "BaudRate",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "WordLength",
+          "ref": "IS:IS_USART_WORD_LENGTH",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "StopBits",
+          "ref": "USART_Stop_Bits",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "Parity",
+          "ref": "USART_Parity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "Mode",
+          "ref": "USART_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "CLKPolarity",
+          "ref": "USART_Clock_Polarity",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "CLKPhase",
+          "ref": "USART_Clock_Phase",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "USART_InitTypeDef",
+          "field": "CLKLastBit",
+          "ref": "USART_Last_Bit",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_USARTEx_SetTxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_USART_TXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "fn:HAL_USARTEx_SetRxFifoThreshold",
+          "field": "Threshold",
+          "ref": "IS:IS_USART_RXFIFO_THRESHOLD",
+          "type": "param",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "peripheral": "WWDG",
+      "total_fields": 4,
+      "covered": 4,
+      "coverage_pct": 100.0,
+      "by_status": {
+        "covered": 2,
+        "numeric_range": 2
+      },
+      "fields": [
+        {
+          "struct": "WWDG_InitTypeDef",
+          "field": "Prescaler",
+          "ref": "WWDG_Prescaler",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        },
+        {
+          "struct": "WWDG_InitTypeDef",
+          "field": "Window",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "WWDG_InitTypeDef",
+          "field": "Counter",
+          "ref": null,
+          "type": "uint32_t",
+          "status": "numeric_range",
+          "detail": "range via IS_XXX, placement TBD"
+        },
+        {
+          "struct": "WWDG_InitTypeDef",
+          "field": "EWIMode",
+          "ref": "WWDG_EWI_Mode",
+          "type": "uint32_t",
+          "status": "covered",
+          "detail": ""
+        }
+      ]
+    }
+  ]
+}

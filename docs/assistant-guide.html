@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 助手使用说明</title><style>
+body{max-width:900px;margin:32px auto;padding:0 24px;background:#f5f7fa;color:#243648;font:16px/1.8 system-ui,"Microsoft YaHei",sans-serif}h1,h2{color:#12695c}section{background:white;border:1px solid #dce4eb;border-radius:12px;padding:20px 26px;margin:18px 0}h2{margin-top:0;font-size:21px}a{color:#155bb0}pre{white-space:pre-wrap;background:#edf3f8;padding:14px;border-radius:6px;font:inherit}table{width:100%;border-collapse:collapse}td,th{padding:10px;text-align:left;border-bottom:1px solid #dae3eb;vertical-align:top}.note{color:#77501d}nav a{display:inline-block;margin-right:18px}@media print{body{background:white}section{break-inside:avoid}}
+</style></head><body>
+<h1>AI 助手使用说明</h1><p>适用于 2026-09-22 的新版试用包。先从一次完整生成开始，其他功能用到时再看。</p>
+<nav><a href="#start">第一次生成</a><a href="#results">结果按钮</a><a href="#missing">补资料</a><a href="#other">其他用法</a><a href="#trouble">遇到问题</a></nav>
+<section id="start"><h2>1．以 PA4 输出 MCO 为例</h2><ol>
+<li>保存旧窗口里要保留的草稿，再使用<a href="../.scratch/assistant-v1/Start_Assistant_Candidate.cmd">新版启动脚本</a>打开工作台，进入「AI 助手」。脚本路径：<pre>D:\Code\MCU_Workbench\.scratch\assistant-v1\Start_Assistant_Candidate.cmd</pre></li>
+<li>右上角「模型设置」中应显示 DeepSeek / deepseek-v4-pro；该试用区已保存加密密钥，一般不用重新输入。首次使用可点「测试连接与工具」，完成后点「新问题」。</li>
+<li>展开「生成配置的条件」，产品选 <b>PCD009</b>，平台选 <b>Chroma</b>。只有计划从寄存器复位状态开始时，才勾选「本次配置从已复位的寄存器状态开始」。勾选本身不会执行复位。</li>
+<li>在「需要协助什么？」中输入下面的要求，点「发送」。<pre>帮我生成 PA4 作为 MCO 输出、HSI 8MHz、128 分频的完整 SWD 配置，命名为 PA4_MCO_HSI8M_DIV128。包含 GPIOA 时钟和 PA4 复用配置。生成独立 Excel 和 Chroma Pattern。</pre></li>
+<li>等待结果卡出现，展开「查看…条步骤」核对内容。工具旁的 completed 只表示一次查询或处理完成；看到独立候选及下载按钮，才代表文件已经生成。</li>
+</ol><p>这次 GPIOA.AFRL 的全零复位确认已经保存，在 PCD009 下不用重复填写。此确认不会自动用于其他产品或 GPIO 端口。</p></section>
+<section id="results"><h2>2．结果出来后，点哪个按钮？</h2><table><tr><th>想做什么</th><th>按钮与效果</th></tr>
+<tr><td>拿到配置表</td><td>「另存配置 Excel」：保存独立配置文件。</td></tr>
+<tr><td>拿到平台向量</td><td>「下载 Pattern」：保存本次所选平台的文件。</td></tr>
+<tr><td>继续编辑生成步骤</td><td>「送入 SWD 编辑器」：自动打开编辑器并送入独立草稿，尚未保存，也没有关联程序。</td></tr>
+<tr><td>撤回助手送入的改动</td><td>右上角「撤销送入编辑器」：整批撤销助手送入操作。</td></tr>
+<tr><td>正式保存或关联测试程序</td><td>在工作台原有 SWD 流程中执行保存和 Link；聊天不会自动完成这些动作。</td></tr></table>
+<p>「候选」表示供您核对的生成结果。文件生成成功不代表已经上机验证；每份结果的编译与验证状态以实际记录为准。</p></section>
+<section id="missing"><h2>3．提示缺资料时怎么回答？</h2><p>缺少寄存器复位值时，助手会显示「补充复位资料」卡，并列出具体寄存器和地址。</p><ol><li>填写完整 32 位复位值，例如 <b>0x00000000</b> 或 <b>全0</b>。</li><li>填写依据，例如手册页码、项目规范，或者「用户工程确认」。</li><li>点「保存补充并重新生成」。系统保存后会重新校验原配置；之后同产品、同地址的任务可以复用。</li></ol>
+<p class="note">不确定就暂不填写。与已有资料冲突时系统会明确阻断，不会静默覆盖。当前这套保存卡针对缺失复位值；其他类型的资料缺口仍需分别处理，不能只靠聊天答复自动启用所有功能。</p></section>
+<section id="other"><h2>4．查资料、解释和修改已有步骤</h2>
+<p><b>只查资料：</b>不需要勾选复位条件，可直接问：</p><pre>PA4 可以复用成哪些功能？MCO 对应哪个 AF？
+解释 RCC.CFGR1 的 MCO2SEL 和 MCO2PRE 字段。</pre>
+<p><b>解释已有步骤：</b>先在主窗口打开目标 SWD 文档或编辑弹窗，再问：</p><pre>解释当前 SWD 步骤每一行的作用，指出资料不确定的地方，先不要修改。</pre>
+<p><b>修改已有步骤：</b>先选中目标文档，说明具体哪行、哪个字段和值：</p><pre>把当前第1条 W 步骤的 RCC.CFGR1.MCO2SEL 改成3，其余位和其他步骤保留，先给我差异。</pre>
+<p>仅在第1条确实写 RCC.CFGR1 时使用该例。系统显示真实前后值，核对后点「确认差异并应用到草稿」。当前只支持已有直接 W 常量的字段修改，不支持任意脚本重写。</p>
+<p>发送时读取主窗口当前草稿，包括未保存的 SWD 弹窗内容。问题和该快照会交给所选模型服务，因此发送前先确认主窗口打开的是本次需要分析的内容。</p>
+<p><b>HEX / SCAN / 程序生成：</b>先在主窗口对应页面选好输入和参数，再让助手准备操作；核对结果卡后点「确认参数并启动」，到主窗口查看实际进度。</p></section>
+<section id="trouble"><h2>5．常见问题</h2><table><tr><th>看到什么</th><th>怎么处理</th></tr>
+<tr><td>找不到产品和平台选择</td><td>点击「本次对象」里的「生成配置的条件」，它默认是折叠的。</td></tr>
+<tr><td>提示先确认复位条件</td><td>展开条件并按真实流程选择。仅在聊天里说“已复位”不会自动勾选；未知运行状态目前不能用来新建整字配置。</td></tr>
+<tr><td>提示草稿或资料已改变</td><td>若确实编辑过步骤或资料，点「新问题」重新生成。新版仅切换页面、首次加载编辑器不会触发此错误；旧窗口请保存草稿后从新版入口重开。</td></tr>
+<tr><td>此前失败任务仍显示 failed</td><td>历史不会被改写。新版本中重新提问，或打开后来新增的成功任务。</td></tr>
+<tr><td>工具达到8轮上限</td><td>本次没有确认完整交付。保留问题与报错供排查；反复重发不保证解决。看到缺复位资料卡时，直接在卡内回答。</td></tr>
+<tr><td>没反应、连接失败</td><td>在「模型设置」点「测试连接与工具」，查看实际错误；密钥输入框留空会保留当前服务商的已有密钥。</td></tr>
+<tr><td>继续问还是新问题？</td><td>同一对象的后续解释用「继续追问」；切换工程、文档或独立目标时用「新问题」。新问题会清除复位勾选，需要重新按实际条件确认。</td></tr>
+<tr><td>清空历史会删知识吗？</td><td>会删除本机问答和候选下载文件；已送入的编辑器草稿、模型设置、已确认复位知识保留。</td></tr></table></section>
+<section><h2>6．当前能做的范围</h2><p>当前支持 py32f420、PT104 / PCD009、Chroma / S100。暂不支持 WAIT 延时、轮询、运行时读改写和任意新芯片。check_ready 是一次比较，不是等待就绪循环。</p><p><a href="assistant-support.html">详细支持范围</a> · <a href="assistant-trial.html">试用版与验证记录</a></p></section>
+<section><h2>Kimi 连接设置</h2><p>2026-09-22实测：本次密钥在国际接口返回401，在国内接口验证成功。请选择「模型设置 → 服务商 Kimi → 接口地区 国内（api.moonshot.cn）→ kimi-k2.6」，填写密钥后保存，再点「测试连接与工具」。地区和模型必须与账号权限相符；不会自动切换地区或向其他服务商转发密钥。</p><p>kimi-k2.6已通过真实流式工具往返。kimi-k2.7-code普通回复成功，工具往返第二轮遇429限流，未确认完整通过；kimi-k3返回404模型不存在或无权限。K2.6/K2.7使用开启思考模式，推理档位在界面禁用；K3保留档位选择。密钥本次仅通过隐藏输入留在测试进程内存，没有替换现有设置。</p><p>42项相关测试、27项EXE窗口检查通过。<a href="../.scratch/assistant-v1/kimi-debug/live.json">工具往返结果</a> · <a href="https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart">Kimi官方说明</a></p></section><section><h2>Kimi Code 月订阅（K3）</h2><p>月订阅请选择「模型设置 → Kimi Code（月订阅）→ 国内 → k3」，使用 Kimi Code 控制台创建的密钥，保存后点击「测试连接与工具」。Moderato 可使用 K3，最高256K上下文；也可选 k3-256k。开放平台的 kimi-k3 与订阅的 k3 属于不同接口，请勿混用。</p><p>本轮已实现订阅入口和协议测试，但提供的密钥在订阅接口模型列表及聊天均返回401（无效或可能已过期），尚未验证真实 K3 工具往返。请在订阅控制台核对密钥状态/账号，必要时新建密钥后在本机设置输入。切换服务商需重新填写密钥，不会将旧平台密钥自动带入。</p><p><a href="https://www.kimi.com/code/docs/kimi-code/models.html">官方模型与套餐说明</a> · <a href="https://www.kimi.com/code/console">Kimi Code 控制台</a></p></section><p>2026-09-22：MCO工具调用说明修复，原题两次真实生成与Chroma DEC/PAT编译通过；OPA顺序写/CAP仍未接入。<a href="assistant-pattern-diagnosis.html">根因与验证报告</a></p></body></html>

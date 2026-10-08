@@ -1,0 +1,176 @@
+{
+  "_about": "请求期 LLM 的 few-shot 示例:教 LLM 如何把测试目标拆成 Directive 列表。值字段用语义对应的编码(LLM 应从知识库 sem 表得到),会被 intent.validate_request 二次校验。前 4 例为时钟/DAC/OPA/PLL(逐值对账 pattern.xlsx 语料);后 4 例覆盖更多外设并教 write_reg 与多实例(逐值对账 tests/composer)。",
+  "_write_reg_提示": "write_reg = 写整字面值、不聚合、保序。两种场景必须用它,不能用 field_value:(1)命令/键寄存器对同一地址按顺序写多个不同值(IWDG.KR 解锁/启动/喂狗、LPTIM.CR、RTC.CRL、FDCAN.CCCR);(2)整 32 位操作数地址(DMA.CPAR/CMAR)。普通位字段仍用 enable_bit/field_value/field_symbol。",
+  "examples": [
+    {
+      "intent": "PA4 输出 8MHz 的 HSI(MCO2,÷128)",
+      "tags": ["MCO", "HSI", "时钟", "RCC"],
+      "request": {
+        "name": "MCO_PA4_HSI_8M",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "check_ready", "peri": "RCC", "reg": "CR", "field": "HSIRDY", "note": "HSI 就绪(复位即开)"},
+          {"kind": "field_value", "peri": "RCC", "reg": "CFGR1", "field": "MCO2SEL", "value": "0b0010", "note": "MCO2 源=HSI"},
+          {"kind": "field_value", "peri": "RCC", "reg": "CFGR1", "field": "MCO2PRE", "value": "0b1110", "note": "MCO2 ÷128"},
+          {"kind": "clk_enable", "periph": "GPIOA"},
+          {"kind": "pin_config", "pin": "PA4", "func": "MCO2"}
+        ]
+      }
+    },
+    {
+      "intent": "DAC 通道1 经 PA4 外部输出、不经 buffer、输出中间码",
+      "_teach": "DAC 外部输出**必须明确 buffer**:经 buffer→DAC_OUTPUT_ENABLE_BUFFER_ENABLE、不经→DAC_OUTPUT_ENABLE_BUFFER_DISABLE,二选一**不可漏**(漏了真硅输出不稳)。外接路由用 DAC_OUTPUTSELECT_VOUTx_EXT。引脚模拟模式由 composer 自动补,**不要**自己写 analog_pin/pin_config。",
+      "tags": ["DAC", "数模", "buffer", "电压输出"],
+      "request": {
+        "name": "DAC_BUFFOFF_PA4",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "DAC"},
+          {"kind": "field_symbol", "peri": "DAC", "reg": "OC", "symbol": "DAC_OUTPUT_ENABLE_BUFFER_DISABLE", "note": "外部输出不经 buffer"},
+          {"kind": "field_symbol", "peri": "DAC", "reg": "OC", "symbol": "DAC_OUTPUTSELECT_VOUT1_EXT", "note": "路由 VOUT1=PA4"},
+          {"kind": "enable_bit", "peri": "DAC", "reg": "CR", "field": "EN1", "note": "DAC 通道1 使能"},
+          {"kind": "field_value", "peri": "DAC", "reg": "DHR12R1", "field": "DACC1DHR", "value": "0x800", "note": "输出中间码"}
+        ]
+      }
+    },
+    {
+      "intent": "OPA1 配成电压跟随器、外部输出使能",
+      "tags": ["OPA", "运放", "跟随器", "PGA"],
+      "request": {
+        "name": "OPA_FOLLOWER_OPA1",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "OPA"},
+          {"kind": "field_symbol", "peri": "OPA", "reg": "CSR", "symbol": "OPA_FOLLOWER_MODE", "note": "跟随器模式"},
+          {"kind": "enable_bit", "peri": "OPA", "reg": "CSR", "field": "EXTOEN", "note": "外部输出使能"},
+          {"kind": "enable_bit", "peri": "OPA", "reg": "CSR", "field": "OPAEN", "note": "OPA 使能"}
+        ]
+      }
+    },
+    {
+      "intent": "HSI 8M 经 PLL ×6 = 48M,从 PA4 经 MCO2(÷128)输出",
+      "tags": ["PLL", "倍频", "时钟", "MCO"],
+      "request": {
+        "name": "PLL_HSI8_X6_PA4_MCO",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "check_ready", "peri": "RCC", "reg": "CR", "field": "HSIRDY", "note": "HSI 就绪(PLL 源)"},
+          {"kind": "field_symbol", "peri": "RCC", "reg": "PLLCFGR1", "symbol": "RCC_PLLSOURCE_HSI", "note": "PLL 源=HSI"},
+          {"kind": "field_symbol", "peri": "RCC", "reg": "PLLCFGR1", "symbol": "RCC_PLL_MUL6", "note": "PLL x6"},
+          {"kind": "enable_bit", "peri": "RCC", "reg": "CR", "field": "PLLON", "note": "PLL 开启"},
+          {"kind": "check_ready", "peri": "RCC", "reg": "CR", "field": "PLLRDY", "note": "PLL 就绪"},
+          {"kind": "field_value", "peri": "RCC", "reg": "CFGR1", "field": "MCO2SEL", "value": "0b0100", "note": "MCO2 源=PLL"},
+          {"kind": "field_value", "peri": "RCC", "reg": "CFGR1", "field": "MCO2PRE", "value": "0b1110", "note": "MCO2 ÷128"},
+          {"kind": "clk_enable", "periph": "GPIOA"},
+          {"kind": "pin_config", "pin": "PA4", "func": "MCO2"}
+        ]
+      }
+    },
+    {
+      "intent": "配置独立看门狗 IWDG:256 分频、重载最大值,启动并喂一次狗",
+      "tags": ["IWDG", "独立看门狗", "看门狗", "喂狗", "write_reg", "键寄存器"],
+      "_teach": "命令/键寄存器(IWDG.KR)对同一地址按顺序写多个不同值 → write_reg(保序不聚合);PR/RLR 是位字段 → field_value",
+      "request": {
+        "name": "IWDG_BRINGUP",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "write_reg", "peri": "IWDG", "reg": "KR", "value": "0x5555", "note": "解锁 PR/RLR 写权限"},
+          {"kind": "field_value", "peri": "IWDG", "reg": "PR", "field": "PR", "value": 6, "note": "256 分频"},
+          {"kind": "field_value", "peri": "IWDG", "reg": "RLR", "field": "RL", "value": "0xFFF", "note": "重载最大值"},
+          {"kind": "write_reg", "peri": "IWDG", "reg": "KR", "value": "0xCCCC", "note": "启动看门狗"},
+          {"kind": "write_reg", "peri": "IWDG", "reg": "KR", "value": "0xAAAA", "note": "喂狗刷新"}
+        ]
+      }
+    },
+    {
+      "intent": "配置 DMA 通道1:外设地址 0x4001380C、内存地址 0x20000000、传输 16 次、内存自增、高优先级、内存→外设,使能",
+      "tags": ["DMA", "搬运", "内存地址", "外设地址", "write_reg", "操作数"],
+      "_teach": "整 32 位地址操作数(CPAR/CMAR)不是位字段 → write_reg 直接写整字;CCR 各位用 enable_bit/field_value;使能位 EN 放最后",
+      "request": {
+        "name": "DMA_CH1_M2P",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "DMA"},
+          {"kind": "write_reg", "peri": "DMA", "reg": "CPAR1", "value": "0x4001380C", "note": "外设地址"},
+          {"kind": "write_reg", "peri": "DMA", "reg": "CMAR1", "value": "0x20000000", "note": "内存地址"},
+          {"kind": "field_value", "peri": "DMA", "reg": "CNDTR1", "field": "NDT", "value": 16, "note": "传输次数"},
+          {"kind": "enable_bit", "peri": "DMA", "reg": "CCR1", "field": "DIR", "note": "内存→外设"},
+          {"kind": "field_value", "peri": "DMA", "reg": "CCR1", "field": "MINC", "value": 1, "note": "内存自增"},
+          {"kind": "field_value", "peri": "DMA", "reg": "CCR1", "field": "PL", "value": 2, "note": "高优先级"},
+          {"kind": "enable_bit", "peri": "DMA", "reg": "CCR1", "field": "EN", "note": "使能(放最后)"}
+        ]
+      }
+    },
+    {
+      "intent": "把 SPI1 配成主机、波特率 fpclk/8、软件 NSS,使能",
+      "tags": ["SPI", "主机", "从机", "多实例", "instance"],
+      "_teach": "多实例外设:该实例的每条 directive 都带同一个 instance(SPI1);clk_enable 用实例名 SPI1",
+      "request": {
+        "name": "SPI1_MASTER",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "SPI1"},
+          {"kind": "enable_bit", "peri": "SPI", "instance": "SPI1", "reg": "CR1", "field": "MSTR", "note": "主机"},
+          {"kind": "field_value", "peri": "SPI", "instance": "SPI1", "reg": "CR1", "field": "BR", "value": 2, "note": "fpclk/8"},
+          {"kind": "enable_bit", "peri": "SPI", "instance": "SPI1", "reg": "CR1", "field": "SSM", "note": "软件 NSS"},
+          {"kind": "enable_bit", "peri": "SPI", "instance": "SPI1", "reg": "CR1", "field": "SSI"},
+          {"kind": "enable_bit", "peri": "SPI", "instance": "SPI1", "reg": "CR1", "field": "SPE", "note": "使能"}
+        ]
+      }
+    },
+    {
+      "intent": "配置 TIM3 时基:预分频 7999、自动重载 999,产生更新事件后启动计数",
+      "tags": ["TIM", "定时器", "时基", "预分频", "PWM", "多实例"],
+      "_teach": "时基外设:PSC/ARR 是位字段;EGR.UG 产生更新事件锁存影子寄存器,放在 CEN 启动之前",
+      "request": {
+        "name": "TIM3_TIMEBASE",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "TIM3"},
+          {"kind": "field_value", "peri": "TIM", "instance": "TIM3", "reg": "PSC", "field": "PSC", "value": 7999, "note": "预分频"},
+          {"kind": "field_value", "peri": "TIM", "instance": "TIM3", "reg": "ARR", "field": "ARR", "value": 999, "note": "自动重载"},
+          {"kind": "enable_bit", "peri": "TIM", "instance": "TIM3", "reg": "EGR", "field": "UG", "note": "锁存影子寄存器"},
+          {"kind": "enable_bit", "peri": "TIM", "instance": "TIM3", "reg": "CR1", "field": "CEN", "note": "启动计数"}
+        ]
+      }
+    },
+    {
+      "intent": "配置 ADC1：10 位分辨率、连续转换、首个转换选通道5，使能",
+      "_teach": "ADC 各芯片寄存器布局不同,先 register_fields(ADC) 看本芯片有哪些寄存器再配。本例(py32f420)查到:通道选择走 SQR1.SQ1、分辨率/连续在 CFGR、使能 CR.ADEN。",
+      "tags": ["ADC", "采样", "转换", "通道", "分辨率", "ADC1"],
+      "request": {
+        "name": "ADC1_SINGLE_CH",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "ADC1"},
+          {"kind": "field_value", "peri": "ADC", "instance": "ADC1", "reg": "CFGR", "field": "RES", "value": 1, "note": "10 位分辨率"},
+          {"kind": "enable_bit", "peri": "ADC", "instance": "ADC1", "reg": "CFGR", "field": "CONT", "note": "连续转换"},
+          {"kind": "field_value", "peri": "ADC", "instance": "ADC1", "reg": "SQR1", "field": "SQ1", "value": 5, "note": "首个转换=通道5"},
+          {"kind": "enable_bit", "peri": "ADC", "instance": "ADC1", "reg": "CR", "field": "ADEN", "note": "使能 ADC"}
+        ]
+      }
+    },
+    {
+      "intent": "把 RTC 配成 LSE 时钟、1Hz 计时,启动计数",
+      "_teach": "RTC(计数器型)两步:① 上电序列——开 PWR 时钟、PWR.CR1.DBP 解锁备份域、LSE 起振等 LSERDY、RTCSEL=LSE、RTCEN;② 进配置模式写预分频:write_reg CRL=0x10(CNF=1)→ 写 PRLL/PRLH → write_reg CRL=0(CNF=0)→ 等 RTOFF。**预分频 = LSE频率/目标频率 − 1**;1Hz from 32768 → PRL=32767=0x7FFF → PRLL=0x7FFF、PRLH=0(**别写成 0x7FFFF/65535,那是 16 倍过大→0.06Hz**)。CRL/PRL 用 write_reg 保序不聚合。",
+      "tags": ["RTC", "实时时钟", "计时", "时钟", "预分频", "prescaler", "LSE", "1Hz"],
+      "request": {
+        "name": "RTC_1HZ_LSE",
+        "chip": "py32f420",
+        "directives": [
+          {"kind": "clk_enable", "periph": "PWR"},
+          {"kind": "enable_bit", "peri": "PWR", "reg": "CR1", "field": "DBP", "note": "解锁备份域写"},
+          {"kind": "enable_bit", "peri": "RCC", "reg": "BDCR", "field": "LSEON", "note": "开 LSE"},
+          {"kind": "check_ready", "peri": "RCC", "reg": "BDCR", "field": "LSERDY", "note": "等 LSE 起振"},
+          {"kind": "field_symbol", "peri": "RCC", "reg": "BDCR", "symbol": "RCC_RTCCLKSOURCE_LSE", "note": "RTC 时钟选 LSE"},
+          {"kind": "enable_bit", "peri": "RCC", "reg": "BDCR", "field": "RTCEN", "note": "使能 RTC"},
+          {"kind": "write_reg", "peri": "RTC", "reg": "CRL", "value": "0x10", "note": "CNF=1 进配置模式"},
+          {"kind": "write_reg", "peri": "RTC", "reg": "PRLL", "value": "0x7FFF", "note": "1Hz:32768/1−1=32767"},
+          {"kind": "write_reg", "peri": "RTC", "reg": "PRLH", "value": "0x0", "note": "高 4 位 0(别凑成 0x7FFFF)"},
+          {"kind": "write_reg", "peri": "RTC", "reg": "CRL", "value": "0x0", "note": "CNF=0 退出,生效"},
+          {"kind": "check_ready", "peri": "RTC", "reg": "CRL", "field": "RTOFF", "note": "等写完成"}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>当前测试项代码</title><style>
+*{box-sizing:border-box}body{margin:0;padding:18px;height:100vh;display:flex;flex-direction:column;gap:10px;background:#f2f6f7;color:#263d49;font:13px/1.6 "Segoe UI","Microsoft YaHei",sans-serif}h1{font-size:18px;margin:0}p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}#status{max-height:20vh;overflow:auto}#errors{color:#b83434;max-height:25vh;overflow:auto}#code{flex:1;min-height:100px;width:100%;resize:none;white-space:pre;overflow:auto;border:1px solid #c9d8dd;padding:12px;background:#fff;color:#263d49;font:13px/20px Consolas,monospace}small{color:#718692}
+</style></head><body><h1>当前测试项代码</h1><p id="status" role="status">正在连接主窗口…</p><p id="errors" role="alert"></p><textarea id="code" readonly wrap="off" spellcheck="false" aria-label="当前测试项代码"></textarea><small>跟随主窗口中的 FLOW 测试项、参数与 Recipe 自动更新。可移动到其他屏幕；关闭本窗口会恢复主界面的代码预览。</small>
+<script>
+let sequence=-1;
+async function refresh(){
+  try{
+    const view=await window.pywebview.api.get_preview();
+    if(view.sequence>sequence){
+      sequence=view.sequence;document.getElementById('status').textContent=view.status;
+      document.getElementById('errors').textContent=view.errors;
+      const code=document.getElementById('code');if(code.value!==view.code){code.value=view.code;code.scrollTop=0;}
+    }
+  }catch(e){document.getElementById('status').textContent='连接中断，请关闭后从主窗口重新打开。';}
+  setTimeout(refresh,250);
+}
+window.addEventListener('pywebviewready',refresh);
+</script></body></html>

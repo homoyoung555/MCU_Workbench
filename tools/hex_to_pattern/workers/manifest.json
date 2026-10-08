@@ -1,0 +1,192 @@
+[
+  {
+    "id": "fbist-pt103-sector-root",
+    "worker": "c4fb0d997c6621475849.exe",
+    "sha256": "f05ea08b460370384ce0cb2b89692808e6f8e7abfac489cdd14a574a8ce7d4be"
+  },
+  {
+    "id": "fbist-pcd101-flash",
+    "worker": "37cea7877b293e5d01f8.exe",
+    "sha256": "8409450bc3aa4f26d33cab8ac517e7dd270a5ee44d5de4302eacfaec4180dd51"
+  },
+  {
+    "id": "fbist-pt061-boot",
+    "worker": "eda614c84f86518e9182.exe",
+    "sha256": "c30f33024576e47ce88344c147ee9da4e18aefbcdb84f9fb097824fcf3fddcd8"
+  },
+  {
+    "id": "fbist-pt061-flash",
+    "worker": "0ba8c0df4079c0401dc2.exe",
+    "sha256": "279d1ea4375009c68fde63a4f1c2b62fa58ca1cd8421f7cb7ca12d911db8729c"
+  },
+  {
+    "id": "fbist-pt063-flash",
+    "worker": "126a3be3ab66e65e27e7.exe",
+    "sha256": "d7645aa82ffe0d685ac7b940df9e6ee7151886db0954d7bf73b5d7244592eafc"
+  },
+  {
+    "id": "fbist-pt064-flash",
+    "worker": "4a7411106969a49dacf6.exe",
+    "sha256": "571e00f446945d6007863f74fbfe38eaf859bf61a255e91e9eb0019981056ddc"
+  },
+  {
+    "id": "fbist-pt067-flash",
+    "worker": "2b59d59d2257f4f49243.exe",
+    "sha256": "3ec2078e432fb25887eb9ca3df2f48a06b65a1824f0d887d3d14ac7ad4b0b7d8"
+  },
+  {
+    "id": "fbist-pt068-flash",
+    "worker": "4bbe288395f8628cc9aa.exe",
+    "sha256": "e0f5564f58b4c99819180d7d1441341f4a3962577d2bb35dc6c70048a28ff444"
+  },
+  {
+    "id": "fbist-pt088-boot",
+    "worker": "96d0a4873abcaa3222e8.exe",
+    "sha256": "659966c37cdedee5d5b5976e6e0d6cbd324ccbec5fe201ba72d3b7729f02a714"
+  },
+  {
+    "id": "fbist-pt088-flash",
+    "worker": "6c9adeedb7e91c3cedb4.exe",
+    "sha256": "d1d809cfcd5164ec8c25cc54b5cf4bd1680e77f55dbc1db5d74ff692c041fd52"
+  },
+  {
+    "id": "fbist-pt088-page-erase",
+    "worker": "c629350b130d63bf7548.exe",
+    "sha256": "b04cf12afc095b641e5feaa9065f5c727b1930773106319042ea62bb62038b80"
+  },
+  {
+    "id": "fbist-pt088-sector-erase",
+    "worker": "df7961849ca70ab6a770.exe",
+    "sha256": "718dd12dfa7094445653d49f49e0ed91f90f94baeadecc9de9c2c0521254e637"
+  },
+  {
+    "id": "fbist-pt100-flash",
+    "worker": "c1b44a8c4e57f044c824.exe",
+    "sha256": "7c14bc7b04f61b70db772254219428cd5a617417e4ec6fedf745b4196cae7be1"
+  },
+  {
+    "id": "fbist-pt102-boot",
+    "worker": "19cf81742fd806a182f8.exe",
+    "sha256": "8dd232f8751b007f4fdfea18af3a4e29e26830a916a4ad6873fc86f447c1a238"
+  },
+  {
+    "id": "fbist-pt102-flash",
+    "worker": "76f786d7072b2a469c98.exe",
+    "sha256": "304ed3101ccc8a1a92e34a50fa485fb3f89d1f0c9c46650cabcabd7e01e48c7e"
+  },
+  {
+    "id": "fbist-pt103-boot",
+    "worker": "de7640da3b20166e257c.exe",
+    "sha256": "a3d1f986b7d60bbaab6453c7e571f3d76c2d64743c0cbd55f93333459ac14ebc"
+  },
+  {
+    "id": "fbist-pt103-flash",
+    "worker": "893c89dbe1f460a2ad37.exe",
+    "sha256": "43552dd5b0684e7428b9aa47b58582522847fafaa7e1333f5991c04322a4ea50"
+  },
+  {
+    "id": "fbist-pt104-boot",
+    "worker": "a93875fe88d88086df2d.exe",
+    "sha256": "4e2bf5f015da65809e7aa68a38a1784749d55631052c1510ba47434e2dd5b441"
+  },
+  {
+    "id": "fbist-pt104-flash",
+    "worker": "22b54ac4e9049af4b3b2.exe",
+    "sha256": "1db8441fcf1643afab6d7abc7180e20df1d3a4107031a2926d23aca59bd8a1af"
+  },
+  {
+    "id": "fbist-pt106-boot",
+    "worker": "80ba9a91d39163d33772.exe",
+    "sha256": "562e24394fa6e244692c9b799668a26d7cfbce752784f395ffaeecffea8532b8"
+  },
+  {
+    "id": "fbist-pt106-flash",
+    "worker": "6cfd2e6d7744bcbf80ea.exe",
+    "sha256": "cdce0140c24dd5e45c1497ddf4475146ab520d98283969ec7f6e5c057be6f7ce"
+  },
+  {
+    "id": "fbist-pt107-flash",
+    "worker": "8dc131ffd865d71b59af.exe",
+    "sha256": "afc9141cbc47284b6173b77d300202e51aab031f853d6cee3c969a2bde79efac"
+  },
+  {
+    "id": "fbist-pt108-flash",
+    "worker": "8c893d30ebcc6f9cc8fd.exe",
+    "sha256": "5188cfbd1cdd9db2dad738596f677be42f61f7a4ff8c070d47364b850bb928db"
+  },
+  {
+    "id": "swd-sram-pt067",
+    "worker": "5873a67f7ac21f4f2443.exe",
+    "sha256": "01d666f9c853b4e0e933499194e823342cbe0d87becef5a955afc3d320880f94"
+  },
+  {
+    "id": "swd-sram-pt100",
+    "worker": "f56927d38b875a6d0b8f.exe",
+    "sha256": "e8d04b0b4720e98995a0bc895bd7f9f5ca78e202e7aaaa27d0573b7e61b249b0"
+  },
+  {
+    "id": "swd-pcd101-flash",
+    "worker": "d58c098a4603c020219a.exe",
+    "sha256": "c0499df638b83698d45c22adfa244ccff3570567e569e07af5bea2a35bb33506"
+  },
+  {
+    "id": "swd-pt061-flash",
+    "worker": "dfd94508f2d290874d0c.exe",
+    "sha256": "60c28af602613ec15424ae42b6ada878c211e89424d74a22295d2ac5c5cf2688"
+  },
+  {
+    "id": "swd-pt061-s100",
+    "worker": "596f36a7856f6b1b4f91.exe",
+    "sha256": "cde26da6dc2d75ace056a4f7b1f67e00d2538ce1a65afd51904f3c13e65072dd"
+  },
+  {
+    "id": "swd-pt064-s100",
+    "worker": "52f561a1778744b45342.exe",
+    "sha256": "553e72b06f24a69c14cbbd7a5efca407f4cbffb1a63ecc09216cc411f4937ccd"
+  },
+  {
+    "id": "swd-pt067-s100",
+    "worker": "0fd7855acf21789e367b.exe",
+    "sha256": "57ed10a6d4dd9648eedc51671bd398ad5a83bd8dc98440c3b1fa962c07000069"
+  },
+  {
+    "id": "swd-pt068-flash",
+    "worker": "faee9d554405c00e3b77.exe",
+    "sha256": "3b1cac209f143418a254e3c710d0817a139a904b510db21d78a22a8a98728750"
+  },
+  {
+    "id": "swd-pt088-boot",
+    "worker": "d8f3da67556aa3bc4e33.exe",
+    "sha256": "e3252eb6725bcb586ebe5d15d243c4cf3e9abe1a1b0997d54d66fa370c942266"
+  },
+  {
+    "id": "swd-pt088-flash",
+    "worker": "465ee79b8851459f41a5.exe",
+    "sha256": "dad850722a323fe38ad653c191e3605ee3a75466e4577fabb47162bb4e8ab7b5"
+  },
+  {
+    "id": "swd-pt103-flash",
+    "worker": "61c8576f94e70d67b82d.exe",
+    "sha256": "1ad0a3df193a7b2a9140a26d4a3cf24f134e89148b3f0bcc80311d7a8f64bcbf"
+  },
+  {
+    "id": "swd-pt104-flash",
+    "worker": "52e32362f3c14a11ba90.exe",
+    "sha256": "8fc662e09ef0857ad0202f65e4240cebfafe24de618ef25a89400e4ce1739ef5"
+  },
+  {
+    "id": "swd-pt105-boot",
+    "worker": "57087c9a2c0674df1543.exe",
+    "sha256": "cd11f97aa63ac5e935be8342bdcaba991151eb9a2fd476676732a47e77cdb6c8"
+  },
+  {
+    "id": "swd-pt105-flash",
+    "worker": "2a482cf2e44a27cb0b4a.exe",
+    "sha256": "007bb07b3e737d29c7bee51cd15b7b4e6fcfee72e7345163d180fde27e9cd981"
+  },
+  {
+    "id": "swd-pt106-flash",
+    "worker": "61fa828a0bda8e2bea52.exe",
+    "sha256": "0e74a128d1bd4dacecafab757c1e8a13d7d63c1db7fcf6621aee9f2a24b354d1"
+  }
+]

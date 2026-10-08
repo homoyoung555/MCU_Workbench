@@ -1,0 +1,268 @@
+{
+ "chip": "py32f420",
+ "clk_enable": {
+  "ADC1": {
+   "register": "APBENR4",
+   "field": "ADC1EN",
+   "pos": 11,
+   "mask": 2048,
+   "address": "0x4002108C"
+  },
+  "ADC2": {
+   "register": "APBENR4",
+   "field": "ADC2EN",
+   "pos": 12,
+   "mask": 4096,
+   "address": "0x4002108C"
+  },
+  "COMP": {
+   "register": "APBENR4",
+   "field": "COMPEN",
+   "pos": 24,
+   "mask": 16777216,
+   "address": "0x4002108C"
+  },
+  "CRC": {
+   "register": "AHBENR1",
+   "field": "CRCEN",
+   "pos": 16,
+   "mask": 65536,
+   "address": "0x40021070"
+  },
+  "DAC": {
+   "register": "APBENR4",
+   "field": "DACEN",
+   "pos": 16,
+   "mask": 65536,
+   "address": "0x4002108C"
+  },
+  "DMA": {
+   "register": "AHBENR1",
+   "field": "DMAEN",
+   "pos": 0,
+   "mask": 1,
+   "address": "0x40021070"
+  },
+  "EPWM": {
+   "register": "APBENR2",
+   "field": "EPWMEN",
+   "pos": 8,
+   "mask": 256,
+   "address": "0x40021084"
+  },
+  "FDCAN": {
+   "register": "APBENR3",
+   "field": "FDCANEN",
+   "pos": 28,
+   "mask": 268435456,
+   "address": "0x40021088"
+  },
+  "GPIOA": {
+   "register": "AHBENR2",
+   "field": "GPIOAEN",
+   "pos": 0,
+   "mask": 1,
+   "address": "0x40021074"
+  },
+  "GPIOB": {
+   "register": "AHBENR2",
+   "field": "GPIOBEN",
+   "pos": 1,
+   "mask": 2,
+   "address": "0x40021074"
+  },
+  "GPIOC": {
+   "register": "AHBENR2",
+   "field": "GPIOCEN",
+   "pos": 2,
+   "mask": 4,
+   "address": "0x40021074"
+  },
+  "GPIOD": {
+   "register": "AHBENR2",
+   "field": "GPIODEN",
+   "pos": 3,
+   "mask": 8,
+   "address": "0x40021074"
+  },
+  "I2C1": {
+   "register": "APBENR3",
+   "field": "I2C1EN",
+   "pos": 16,
+   "mask": 65536,
+   "address": "0x40021088"
+  },
+  "I2C2": {
+   "register": "APBENR3",
+   "field": "I2C2EN",
+   "pos": 17,
+   "mask": 131072,
+   "address": "0x40021088"
+  },
+  "LPTIM": {
+   "register": "APBENR2",
+   "field": "LPTIMEN",
+   "pos": 16,
+   "mask": 65536,
+   "address": "0x40021084"
+  },
+  "LPUART": {
+   "register": "APBENR3",
+   "field": "LPUARTEN",
+   "pos": 12,
+   "mask": 4096,
+   "address": "0x40021088"
+  },
+  "OPA": {
+   "register": "APBENR4",
+   "field": "OPAEN",
+   "pos": 20,
+   "mask": 1048576,
+   "address": "0x4002108C"
+  },
+  "PWR": {
+   "register": "APBENR4",
+   "field": "PWREN",
+   "pos": 9,
+   "mask": 512,
+   "address": "0x4002108C"
+  },
+  "SPI1": {
+   "register": "APBENR3",
+   "field": "SPI1EN",
+   "pos": 22,
+   "mask": 4194304,
+   "address": "0x40021088"
+  },
+  "SPI2": {
+   "register": "APBENR3",
+   "field": "SPI2EN",
+   "pos": 23,
+   "mask": 8388608,
+   "address": "0x40021088"
+  },
+  "SRAM": {
+   "register": "AHBENR1",
+   "field": "SRAMSMEN",
+   "pos": 5,
+   "mask": 32,
+   "address": "0x40021070"
+  },
+  "SYSCFG": {
+   "register": "APBENR4",
+   "field": "SYSCFGEN",
+   "pos": 0,
+   "mask": 1,
+   "address": "0x4002108C"
+  },
+  "TIM1": {
+   "register": "APBENR1",
+   "field": "TIM1EN",
+   "pos": 1,
+   "mask": 2,
+   "address": "0x40021080"
+  },
+  "TIM2": {
+   "register": "APBENR1",
+   "field": "TIM2EN",
+   "pos": 2,
+   "mask": 4,
+   "address": "0x40021080"
+  },
+  "TIM3": {
+   "register": "APBENR1",
+   "field": "TIM3EN",
+   "pos": 3,
+   "mask": 8,
+   "address": "0x40021080"
+  },
+  "TIM6": {
+   "register": "APBENR1",
+   "field": "TIM6EN",
+   "pos": 6,
+   "mask": 64,
+   "address": "0x40021080"
+  },
+  "TIM7": {
+   "register": "APBENR1",
+   "field": "TIM7EN",
+   "pos": 7,
+   "mask": 128,
+   "address": "0x40021080"
+  },
+  "TIM8": {
+   "register": "APBENR1",
+   "field": "TIM8EN",
+   "pos": 8,
+   "mask": 256,
+   "address": "0x40021080"
+  },
+  "UART1": {
+   "register": "APBENR3",
+   "field": "UART1EN",
+   "pos": 0,
+   "mask": 1,
+   "address": "0x40021088"
+  },
+  "UART2": {
+   "register": "APBENR3",
+   "field": "UART2EN",
+   "pos": 1,
+   "mask": 2,
+   "address": "0x40021088"
+  },
+  "USART": {
+   "register": "APBENR3",
+   "field": "USARTEN",
+   "pos": 6,
+   "mask": 64,
+   "address": "0x40021088"
+  },
+  "VREFBUF": {
+   "register": "APBENR4",
+   "field": "VREFBUFEN",
+   "pos": 8,
+   "mask": 256,
+   "address": "0x4002108C"
+  },
+  "WWDG": {
+   "register": "APBENR2",
+   "field": "WWDGEN",
+   "pos": 31,
+   "mask": 2147483648,
+   "address": "0x40021084"
+  }
+ },
+ "clk_disable": {
+  "GPIOA": {
+   "register": "AHBENR2",
+   "field": "GPIOAEN",
+   "pos": 0,
+   "mask": 1,
+   "address": "0x40021074"
+  },
+  "GPIOB": {
+   "register": "AHBENR2",
+   "field": "GPIOBEN",
+   "pos": 1,
+   "mask": 2,
+   "address": "0x40021074"
+  },
+  "GPIOC": {
+   "register": "AHBENR2",
+   "field": "GPIOCEN",
+   "pos": 2,
+   "mask": 4,
+   "address": "0x40021074"
+  },
+  "GPIOD": {
+   "register": "AHBENR2",
+   "field": "GPIODEN",
+   "pos": 3,
+   "mask": 8,
+   "address": "0x40021074"
+  }
+ },
+ "force_reset": {},
+ "release_reset": {}
+}

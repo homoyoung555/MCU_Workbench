@@ -1,0 +1,5696 @@
+{
+ "chip": "py32f420",
+ "address_source": "svd_data.json",
+ "targets": [
+  {
+   "peri": "TIM2",
+   "reg": "CR1",
+   "addr": "0x40000000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CR2",
+   "addr": "0x40000004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "SMCR",
+   "addr": "0x40000008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "DIER",
+   "addr": "0x4000000C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "SR",
+   "addr": "0x40000010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "EGR",
+   "addr": "0x40000014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCMR1_OUTPUT",
+   "addr": "0x40000018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCMR1_INPUT",
+   "addr": "0x40000018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "OUTPUT",
+   "addr": "0x4000001C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "INPUT",
+   "addr": "0x4000001C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCER",
+   "addr": "0x40000020",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CNT",
+   "addr": "0x40000024",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "PSC",
+   "addr": "0x40000028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "ARR",
+   "addr": "0x4000002C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCR1",
+   "addr": "0x40000034",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCR2",
+   "addr": "0x40000038",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCR3",
+   "addr": "0x4000003C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "CCR4",
+   "addr": "0x40000040",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "BDTR",
+   "addr": "0x40000044",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "DTR2",
+   "addr": "0x40000054",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "TISEL",
+   "addr": "0x4000005C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "AF1",
+   "addr": "0x40000060",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "AF2",
+   "addr": "0x40000064",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "MTADCCR",
+   "addr": "0x4000006C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "TIMXDCR",
+   "addr": "0x400003DC",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM2",
+   "reg": "DMAR",
+   "addr": "0x400003E0",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM2",
+    "enr_addr": "0x40021080",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "CR1",
+   "addr": "0x40001000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "CR2",
+   "addr": "0x40001004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "DIER",
+   "addr": "0x4000100C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "SR",
+   "addr": "0x40001010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "EGR",
+   "addr": "0x40001014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "CNT",
+   "addr": "0x40001024",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "PSC",
+   "addr": "0x40001028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "TIM6",
+   "reg": "ARR",
+   "addr": "0x4000102C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM6",
+    "enr_addr": "0x40021080",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "RTC",
+   "reg": "CRH",
+   "addr": "0x40002800",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "CRL",
+   "addr": "0x40002804",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "PRLH",
+   "addr": "0x40002808",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "PRLL",
+   "addr": "0x4000280C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "DIVH",
+   "addr": "0x40002810",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "DIVL",
+   "addr": "0x40002814",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "CNTH",
+   "addr": "0x40002818",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "CNTL",
+   "addr": "0x4000281C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "ALRH",
+   "addr": "0x40002820",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "ALRL",
+   "addr": "0x40002824",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "TMPCFGR",
+   "addr": "0x40002830",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "TMPCSR",
+   "addr": "0x40002834",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "CALIBR",
+   "addr": "0x40002838",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "BKPDR0",
+   "addr": "0x40002840",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "BKPDR1",
+   "addr": "0x40002844",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "BKPDR2",
+   "addr": "0x40002848",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "BKPDR3",
+   "addr": "0x4000284C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RTC",
+   "reg": "BKPDR4",
+   "addr": "0x40002850",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "WWDG",
+   "reg": "WWDR_CR",
+   "addr": "0x40002C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "WWDG",
+    "enr_addr": "0x40021084",
+    "mask": 2147483648
+   }
+  },
+  {
+   "peri": "WWDG",
+   "reg": "CFR",
+   "addr": "0x40002C04",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "WWDG",
+    "enr_addr": "0x40021084",
+    "mask": 2147483648
+   }
+  },
+  {
+   "peri": "WWDG",
+   "reg": "SR",
+   "addr": "0x40002C08",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "WWDG",
+    "enr_addr": "0x40021084",
+    "mask": 2147483648
+   }
+  },
+  {
+   "peri": "IWDG",
+   "reg": "KR",
+   "addr": "0x40003000",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "IWDG",
+   "reg": "PR",
+   "addr": "0x40003004",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "IWDG",
+   "reg": "RLR",
+   "addr": "0x40003008",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "IWDG",
+   "reg": "SR",
+   "addr": "0x4000300C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "UART1",
+   "reg": "DR",
+   "addr": "0x40004C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "BRR",
+   "addr": "0x40004C04",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "SR",
+   "addr": "0x40004C10",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "CR1",
+   "addr": "0x40004C14",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "CR2",
+   "addr": "0x40004C18",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "CR3",
+   "addr": "0x40004C1C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "RAR",
+   "addr": "0x40004C20",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "TAR",
+   "addr": "0x40004C24",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "UART1",
+   "reg": "BRRF",
+   "addr": "0x40004C28",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "UART1",
+    "enr_addr": "0x40021088",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "CR1",
+   "addr": "0x40005400",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "CR2",
+   "addr": "0x40005404",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "OAR1",
+   "addr": "0x40005408",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "OAR2",
+   "addr": "0x4000540C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "DR",
+   "addr": "0x40005410",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "SR1",
+   "addr": "0x40005414",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "SR2",
+   "addr": "0x40005418",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "CCR",
+   "addr": "0x4000541C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "TRISE",
+   "addr": "0x40005420",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "TIMEOUTR",
+   "addr": "0x40005424",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "I2C1",
+   "reg": "OAR3",
+   "addr": "0x40005428",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "I2C1",
+    "enr_addr": "0x40021088",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "CR1",
+   "addr": "0x40007000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "CR2",
+   "addr": "0x40007004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "CR3",
+   "addr": "0x40007008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "CR4",
+   "addr": "0x4000700C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "SR",
+   "addr": "0x40007010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "PWR",
+   "reg": "SCR",
+   "addr": "0x40007014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "PWR",
+    "enr_addr": "0x4002108C",
+    "mask": 512
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "CR",
+   "addr": "0x40007400",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "SWTRIGR",
+   "addr": "0x40007404",
+   "category": "skip_write_cmd",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12R1",
+   "addr": "0x40007408",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12L1",
+   "addr": "0x4000740C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR8R1",
+   "addr": "0x40007410",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12R2",
+   "addr": "0x40007414",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12L2",
+   "addr": "0x40007418",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR8R2",
+   "addr": "0x4000741C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12RD",
+   "addr": "0x40007420",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR12LD",
+   "addr": "0x40007424",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DHR8RD",
+   "addr": "0x40007428",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DOR1",
+   "addr": "0x4000742C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "DOR2",
+   "addr": "0x40007430",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "SR",
+   "addr": "0x40007434",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "OC",
+   "addr": "0x40007438",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "RAMPCFGR1",
+   "addr": "0x40007458",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "RAMPCFGR2",
+   "addr": "0x4000745C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "RAMPDLYS",
+   "addr": "0x40007464",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "DAC",
+   "reg": "RAMPCR",
+   "addr": "0x40007468",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DAC",
+    "enr_addr": "0x4002108C",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "ISR",
+   "addr": "0x40007C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "ICR",
+   "addr": "0x40007C04",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "IER",
+   "addr": "0x40007C08",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "CFGR",
+   "addr": "0x40007C0C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "CR",
+   "addr": "0x40007C10",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "CMP",
+   "addr": "0x40007C14",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "ARR",
+   "addr": "0x40007C18",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "CNT",
+   "addr": "0x40007C1C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPTIM",
+   "reg": "OR",
+   "addr": "0x40007C20",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPTIM",
+    "enr_addr": "0x40021084",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "CR1",
+   "addr": "0x40008000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "CR2",
+   "addr": "0x40008004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "CR3",
+   "addr": "0x40008008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "BRR",
+   "addr": "0x4000800C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "RQR",
+   "addr": "0x40008018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "ISR",
+   "addr": "0x4000801C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "ICR",
+   "addr": "0x40008020",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "RDR",
+   "addr": "0x40008024",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "TDR",
+   "addr": "0x40008028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "LPUART",
+   "reg": "PRESC",
+   "addr": "0x4000802C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "LPUART",
+    "enr_addr": "0x40021088",
+    "mask": 4096
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "CREL",
+   "addr": "0x4000CC00",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "ENDN",
+   "addr": "0x4000CC04",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "DBTP",
+   "addr": "0x4000CC0C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TEST",
+   "addr": "0x4000CC10",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RWD",
+   "addr": "0x4000CC14",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "CCCR",
+   "addr": "0x4000CC18",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "NBTP",
+   "addr": "0x4000CC1C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TSCC",
+   "addr": "0x4000CC20",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TSCV",
+   "addr": "0x4000CC24",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TOCC",
+   "addr": "0x4000CC28",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TOCV",
+   "addr": "0x4000CC2C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "ECR",
+   "addr": "0x4000CC40",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "PSR",
+   "addr": "0x4000CC44",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TDCR",
+   "addr": "0x4000CC48",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "IR",
+   "addr": "0x4000CC50",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "IE",
+   "addr": "0x4000CC54",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "ILS",
+   "addr": "0x4000CC58",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "ILE",
+   "addr": "0x4000CC5C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "GFC",
+   "addr": "0x4000CC80",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "SIDFC",
+   "addr": "0x4000CC84",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "XIDFC",
+   "addr": "0x4000CC88",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "XIDAM",
+   "addr": "0x4000CC90",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "HPMS",
+   "addr": "0x4000CC94",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "NDAT1",
+   "addr": "0x4000CC98",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "NDAT2",
+   "addr": "0x4000CC9C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF0C",
+   "addr": "0x4000CCA0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF0S",
+   "addr": "0x4000CCA4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF0A",
+   "addr": "0x4000CCA8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXBC",
+   "addr": "0x4000CCAC",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF1C",
+   "addr": "0x4000CCB0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF1S",
+   "addr": "0x4000CCB4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXF1A",
+   "addr": "0x4000CCB8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "RXESC",
+   "addr": "0x4000CCBC",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBC",
+   "addr": "0x4000CCC0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXFQS",
+   "addr": "0x4000CCC4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXESC",
+   "addr": "0x4000CCC8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBRP",
+   "addr": "0x4000CCCC",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBAR",
+   "addr": "0x4000CCD0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBCR",
+   "addr": "0x4000CCD4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBTO",
+   "addr": "0x4000CCD8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBCF",
+   "addr": "0x4000CCDC",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBTIE",
+   "addr": "0x4000CCE0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXBCIE",
+   "addr": "0x4000CCE4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXEFC",
+   "addr": "0x4000CCF0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXEFS",
+   "addr": "0x4000CCF4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "FDCAN",
+   "reg": "TXEFA",
+   "addr": "0x4000CCF8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "FDCAN",
+    "enr_addr": "0x40021088",
+    "mask": 268435456
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "CFGR1",
+   "addr": "0x40010000",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "CFGR2",
+   "addr": "0x40010004",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "CFGR3",
+   "addr": "0x40010008",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "CFGR4",
+   "addr": "0x4001000C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "EXTICR1",
+   "addr": "0x40010014",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "EXTICR2",
+   "addr": "0x40010018",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "EXTICR3",
+   "addr": "0x4001001C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "EXTICR4",
+   "addr": "0x40010020",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "PAENS",
+   "addr": "0x40010024",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "PBENS",
+   "addr": "0x40010028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "PCENS",
+   "addr": "0x4001002C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "SYSCFG",
+   "reg": "PDENS",
+   "addr": "0x40010030",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SYSCFG",
+    "enr_addr": "0x4002108C",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "EXTI",
+   "reg": "IMR",
+   "addr": "0x40010400",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EXTI",
+   "reg": "EMR",
+   "addr": "0x40010404",
+   "category": "direct",
+   "kb_missing_reset": true
+  },
+  {
+   "peri": "EXTI",
+   "reg": "RTSR",
+   "addr": "0x40010408",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EXTI",
+   "reg": "FTSR",
+   "addr": "0x4001040C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EXTI",
+   "reg": "SWIER",
+   "addr": "0x40010410",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EXTI",
+   "reg": "PR",
+   "addr": "0x40010414",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "VREFBUF",
+   "reg": "CR",
+   "addr": "0x40012000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "VREFBUF",
+    "enr_addr": "0x4002108C",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "ISR",
+   "addr": "0x40012400",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "IER",
+   "addr": "0x40012404",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CR",
+   "addr": "0x40012408",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CFGR",
+   "addr": "0x4001240C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CFGR2",
+   "addr": "0x40012410",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SMPR1",
+   "addr": "0x40012414",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SMPR2",
+   "addr": "0x40012418",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SMPR3",
+   "addr": "0x40012420",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "TR1",
+   "addr": "0x40012424",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "TR2",
+   "addr": "0x40012428",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "TR3",
+   "addr": "0x4001242C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SQR1",
+   "addr": "0x40012430",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SQR2",
+   "addr": "0x40012434",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SQR3",
+   "addr": "0x40012438",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "SQR4",
+   "addr": "0x4001243C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "DR",
+   "addr": "0x40012440",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "JSQR",
+   "addr": "0x4001244C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "OFR1",
+   "addr": "0x40012460",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "OFR2",
+   "addr": "0x40012464",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "OFR3",
+   "addr": "0x40012468",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "OFR4",
+   "addr": "0x4001246C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "JDR1",
+   "addr": "0x40012480",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "JDR2",
+   "addr": "0x40012484",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "JDR3",
+   "addr": "0x40012488",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "JDR4",
+   "addr": "0x4001248C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "AWD2CR",
+   "addr": "0x400124A0",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "AWD3CR",
+   "addr": "0x400124A4",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "DIFSEL",
+   "addr": "0x400124B0",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CALFACT",
+   "addr": "0x400124B4",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "GCOMP",
+   "addr": "0x400124C0",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "ANACR",
+   "addr": "0x400124C4",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CSR",
+   "addr": "0x40012704",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CCR",
+   "addr": "0x40012708",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "ADC1",
+   "reg": "CDR",
+   "addr": "0x4001270C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "ADC1",
+    "enr_addr": "0x4002108C",
+    "mask": 2048
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CR1",
+   "addr": "0x40012C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CR2",
+   "addr": "0x40012C04",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "SMCR",
+   "addr": "0x40012C08",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "DIER",
+   "addr": "0x40012C0C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "SR",
+   "addr": "0x40012C10",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "EGR",
+   "addr": "0x40012C14",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCMR1_OUTPUT",
+   "addr": "0x40012C18",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCMR1_INPUT",
+   "addr": "0x40012C18",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCMR2_OUTPUT",
+   "addr": "0x40012C1C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCMR2_INPUT",
+   "addr": "0x40012C1C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "TIMXCCER",
+   "addr": "0x40012C20",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CNT",
+   "addr": "0x40012C24",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "PSC",
+   "addr": "0x40012C28",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "ARR",
+   "addr": "0x40012C2C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "RCR",
+   "addr": "0x40012C30",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR1",
+   "addr": "0x40012C34",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR2",
+   "addr": "0x40012C38",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR3",
+   "addr": "0x40012C3C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR4",
+   "addr": "0x40012C40",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "BDTR",
+   "addr": "0x40012C44",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR5",
+   "addr": "0x40012C48",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCR6",
+   "addr": "0x40012C4C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "CCMR3",
+   "addr": "0x40012C50",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "DTR2",
+   "addr": "0x40012C54",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "ECR",
+   "addr": "0x40012C58",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "TISEL",
+   "addr": "0x40012C5C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "AF1",
+   "addr": "0x40012C60",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "AF2",
+   "addr": "0x40012C64",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "OR1",
+   "addr": "0x40012C68",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "MTADCCR",
+   "addr": "0x40012C6C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "DCR",
+   "addr": "0x40012FDC",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "TIM1",
+   "reg": "DMAR",
+   "addr": "0x40012FE0",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "TIM1",
+    "enr_addr": "0x40021080",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "CR1",
+   "addr": "0x40013000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "CR2",
+   "addr": "0x40013004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "SR",
+   "addr": "0x40013008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "DR",
+   "addr": "0x4001300C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "CRCPR",
+   "addr": "0x40013010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "RXCRCR",
+   "addr": "0x40013014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "TXCRCR",
+   "addr": "0x40013018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "I2S_CFGR",
+   "addr": "0x4001301C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "SPI1",
+   "reg": "I2SPR",
+   "addr": "0x40013020",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "SPI1",
+    "enr_addr": "0x40021088",
+    "mask": 4194304
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "SR",
+   "addr": "0x40013800",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "DR",
+   "addr": "0x40013804",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "BRR",
+   "addr": "0x40013808",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "CR1",
+   "addr": "0x4001380C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "CR2",
+   "addr": "0x40013810",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "CR3",
+   "addr": "0x40013814",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "GTPR",
+   "addr": "0x40013818",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "USART",
+   "reg": "RTOR",
+   "addr": "0x4001381C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "USART",
+    "enr_addr": "0x40021088",
+    "mask": 64
+   }
+  },
+  {
+   "peri": "COMP1",
+   "reg": "CSR",
+   "addr": "0x40016C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "COMP",
+    "enr_addr": "0x4002108C",
+    "mask": 16777216
+   }
+  },
+  {
+   "peri": "COMP1",
+   "reg": "FR",
+   "addr": "0x40016C04",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "COMP",
+    "enr_addr": "0x4002108C",
+    "mask": 16777216
+   }
+  },
+  {
+   "peri": "OPA",
+   "reg": "OPA1_CSR",
+   "addr": "0x40017000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "OPA",
+    "enr_addr": "0x4002108C",
+    "mask": 1048576
+   }
+  },
+  {
+   "peri": "OPA",
+   "reg": "OPA2_CSR",
+   "addr": "0x40017004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "OPA",
+    "enr_addr": "0x4002108C",
+    "mask": 1048576
+   }
+  },
+  {
+   "peri": "OPA",
+   "reg": "OPA3_CSR",
+   "addr": "0x40017008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "OPA",
+    "enr_addr": "0x4002108C",
+    "mask": 1048576
+   }
+  },
+  {
+   "peri": "OPA",
+   "reg": "OPA4_CSR",
+   "addr": "0x4001700C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "OPA",
+    "enr_addr": "0x4002108C",
+    "mask": 1048576
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBCTL",
+   "addr": "0x40018000",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBCTL2",
+   "addr": "0x40018002",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBCTR",
+   "addr": "0x40018008",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBSTS",
+   "addr": "0x4001800A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPCTL",
+   "addr": "0x40018010",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPCTL2",
+   "addr": "0x40018012",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBCTL",
+   "addr": "0x40018018",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBCTL2",
+   "addr": "0x4001801A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCTL",
+   "addr": "0x40018020",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQTSRCSEL",
+   "addr": "0x40018022",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "PCCTL",
+   "addr": "0x40018028",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "VCAPCTL",
+   "addr": "0x40018030",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "VCNTCFG",
+   "addr": "0x40018032",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HRCNFG",
+   "addr": "0x40018040",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HRPWR",
+   "addr": "0x40018042",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HRMSTEP",
+   "addr": "0x4001804C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HRCNFG2",
+   "addr": "0x4001804E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HRPCTL",
+   "addr": "0x4001805A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TRREM",
+   "addr": "0x4001805C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "GLDCTL",
+   "addr": "0x40018068",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "GLDCFG",
+   "addr": "0x4001806A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "PWMXLINK",
+   "addr": "0x40018070",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCTLA",
+   "addr": "0x40018080",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCTLA2",
+   "addr": "0x40018082",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCTLB",
+   "addr": "0x40018084",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCTLB2",
+   "addr": "0x40018086",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQSFRC",
+   "addr": "0x4001808E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "AQCSPFRC",
+   "addr": "0x40018092",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBREDHR",
+   "addr": "0x400180A0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBRED",
+   "addr": "0x400180A2",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBFEDHR",
+   "addr": "0x400180A4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DBFED",
+   "addr": "0x400180A6",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBPHS",
+   "addr": "0x400180C0",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBPRDHR",
+   "addr": "0x400180C4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TBPRD",
+   "addr": "0x400180C6",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPA",
+   "addr": "0x400180D4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPB",
+   "addr": "0x400180D8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPC",
+   "addr": "0x400180DE",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "CMPD",
+   "addr": "0x400180E2",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "GLDCTL2",
+   "addr": "0x400180E8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "SWVDELVAL",
+   "addr": "0x400180EE",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZSEL",
+   "addr": "0x40018100",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZDCSEL",
+   "addr": "0x40018104",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCTL",
+   "addr": "0x40018108",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCTL2",
+   "addr": "0x4001810A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCTLDCA",
+   "addr": "0x4001810C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCTLDCB",
+   "addr": "0x4001810E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZEINT",
+   "addr": "0x4001811A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZFLG",
+   "addr": "0x40018126",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCBCFLG",
+   "addr": "0x40018128",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZOSTFLG",
+   "addr": "0x4001812A",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCLR",
+   "addr": "0x4001812E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZCBCCLR",
+   "addr": "0x40018130",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZOSTCLR",
+   "addr": "0x40018132",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "TZFRC",
+   "addr": "0x40018136",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETSEL",
+   "addr": "0x40018148",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETPS",
+   "addr": "0x4001814C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETFLG",
+   "addr": "0x40018150",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETCLR",
+   "addr": "0x40018154",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETFRC",
+   "addr": "0x40018158",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETINTPS",
+   "addr": "0x4001815C",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETSOCPS",
+   "addr": "0x40018160",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETCNTINITCTL",
+   "addr": "0x40018164",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "ETCNTINIT",
+   "addr": "0x40018168",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCTRIPSEL",
+   "addr": "0x40018180",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCACTL",
+   "addr": "0x40018186",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCBCTL",
+   "addr": "0x40018188",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCFCTL",
+   "addr": "0x4001818E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCCAPCTL",
+   "addr": "0x40018190",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCFOFFSET",
+   "addr": "0x40018192",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCFOFFSETCNT",
+   "addr": "0x40018194",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCFWINDOW",
+   "addr": "0x40018196",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCFWINDOWCNT",
+   "addr": "0x40018198",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCCAP",
+   "addr": "0x4001819E",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCAHTRIPSEL",
+   "addr": "0x400181A4",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCALTRIPSEL",
+   "addr": "0x400181A6",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCBHTRIPSEL",
+   "addr": "0x400181A8",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "DCBLTRIPSEL",
+   "addr": "0x400181AA",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "PWMLOCK",
+   "addr": "0x400181F4",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "HWVDELVAL",
+   "addr": "0x400181FA",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWM1",
+   "reg": "VCNTVAL",
+   "addr": "0x400181FC",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "EPWM",
+    "enr_addr": "0x40021084",
+    "mask": 256
+   }
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL1_2",
+   "addr": "0x40019800",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL3_4",
+   "addr": "0x40019804",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL5_6",
+   "addr": "0x40019808",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL7_8",
+   "addr": "0x4001980C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL9_10",
+   "addr": "0x40019810",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL11_12",
+   "addr": "0x40019814",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL13_14",
+   "addr": "0x40019818",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBAQSEL",
+   "addr": "0x4001981C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBSEL_LOCK",
+   "addr": "0x40019820",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "IXBCTRL",
+   "addr": "0x40019824",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB4_0",
+   "addr": "0x40019840",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB4_1",
+   "addr": "0x40019844",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB5_0",
+   "addr": "0x40019848",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB5_1",
+   "addr": "0x4001984C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB7_0",
+   "addr": "0x40019850",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB7_1",
+   "addr": "0x40019854",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB8_0",
+   "addr": "0x40019858",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB8_1",
+   "addr": "0x4001985C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB9_0",
+   "addr": "0x40019860",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB9_1",
+   "addr": "0x40019864",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB10_0",
+   "addr": "0x40019868",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB10_1",
+   "addr": "0x4001986C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB11_0",
+   "addr": "0x40019870",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB11_1",
+   "addr": "0x40019874",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB12_0",
+   "addr": "0x40019878",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB12_1",
+   "addr": "0x4001987C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB4_MUX",
+   "addr": "0x40019880",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB5_MUX",
+   "addr": "0x40019884",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB7_MUX",
+   "addr": "0x40019888",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB8_MUX",
+   "addr": "0x4001988C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB9_MUX",
+   "addr": "0x40019890",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB10_MUX",
+   "addr": "0x40019894",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB11_MUX",
+   "addr": "0x40019898",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB12_MUX",
+   "addr": "0x4001989C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB_POL",
+   "addr": "0x400198A0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "HXB_LOCK",
+   "addr": "0x400198A4",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SYNCI_SEL1_4",
+   "addr": "0x400198C0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SYNCI_SEL5_6",
+   "addr": "0x400198C4",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SYNCO_SEL1_4",
+   "addr": "0x400198C8",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SYNCO_SEL5_6",
+   "addr": "0x400198CC",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "ADCOUT",
+   "addr": "0x400198D0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SCOUT_CFG",
+   "addr": "0x400198D4",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "SYNCSOCLOCK",
+   "addr": "0x400198D8",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "EALLOW",
+   "addr": "0x400198DC",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "CLKEN",
+   "addr": "0x400198E0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "XBARFLG1",
+   "addr": "0x400198F0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "XBARFLG2",
+   "addr": "0x400198F4",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "XBARCLR1",
+   "addr": "0x400198F8",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "XBARCLR2",
+   "addr": "0x400198FC",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "EPWMC",
+   "reg": "FPGA_SFO_DBG",
+   "addr": "0x40019BF0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "DMA",
+   "reg": "ISR",
+   "addr": "0x40020000",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "IFCR",
+   "addr": "0x40020004",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCR1",
+   "addr": "0x40020008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CNDTR1",
+   "addr": "0x4002000C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CPAR1",
+   "addr": "0x40020010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CMAR1",
+   "addr": "0x40020014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCCFGR1",
+   "addr": "0x40020018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCR2",
+   "addr": "0x4002001C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CNDTR2",
+   "addr": "0x40020020",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CPAR2",
+   "addr": "0x40020024",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CMAR2",
+   "addr": "0x40020028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCCFGR2",
+   "addr": "0x4002002C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCR3",
+   "addr": "0x40020030",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CNDTR3",
+   "addr": "0x40020034",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CPAR3",
+   "addr": "0x40020038",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CMAR3",
+   "addr": "0x4002003C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCCFGR3",
+   "addr": "0x40020040",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCR4",
+   "addr": "0x40020044",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CNDTR4",
+   "addr": "0x40020048",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CPAR4",
+   "addr": "0x4002004C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CMAR4",
+   "addr": "0x40020050",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCCFGR4",
+   "addr": "0x40020054",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCR5",
+   "addr": "0x40020058",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CNDTR5",
+   "addr": "0x4002005C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CPAR5",
+   "addr": "0x40020060",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CMAR5",
+   "addr": "0x40020064",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "DMA",
+   "reg": "CCCFGR5",
+   "addr": "0x40020068",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "DMA",
+    "enr_addr": "0x40021070",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "RCC",
+   "reg": "CR",
+   "addr": "0x40021000",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "ICSCR",
+   "addr": "0x40021008",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CFGR1",
+   "addr": "0x40021014",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CFGR2",
+   "addr": "0x40021018",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "PLLCFGR1",
+   "addr": "0x40021024",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "ECSCR",
+   "addr": "0x40021038",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CIER",
+   "addr": "0x4002103C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CIFR",
+   "addr": "0x40021040",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CICR",
+   "addr": "0x40021044",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "AHBRSTR1",
+   "addr": "0x40021048",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "AHBRSTR2",
+   "addr": "0x4002104C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBRSTR1",
+   "addr": "0x40021058",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBRSTR2",
+   "addr": "0x4002105C",
+   "category": "direct",
+   "kb_missing_reset": true
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBRSTR3",
+   "addr": "0x40021060",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBRSTR4",
+   "addr": "0x40021064",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "AHBENR1",
+   "addr": "0x40021070",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "AHBENR2",
+   "addr": "0x40021074",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBENR1",
+   "addr": "0x40021080",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBENR2",
+   "addr": "0x40021084",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBENR3",
+   "addr": "0x40021088",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "APBENR4",
+   "addr": "0x4002108C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CCIPR1",
+   "addr": "0x40021098",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CCIPR2",
+   "addr": "0x4002109C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CCIPR3",
+   "addr": "0x400210A0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "BDCR",
+   "addr": "0x400210B0",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "RCC",
+   "reg": "CSR",
+   "addr": "0x400210B4",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "ACR",
+   "addr": "0x40022000",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "KEYR",
+   "addr": "0x40022008",
+   "category": "skip_write_cmd",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "OPTKEYR",
+   "addr": "0x4002200C",
+   "category": "skip_write_cmd",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "SR",
+   "addr": "0x40022010",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "CR",
+   "addr": "0x40022014",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "OPTR1",
+   "addr": "0x40022020",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "OPTR2",
+   "addr": "0x40022024",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "WRPR0",
+   "addr": "0x40022028",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "PCROPR0",
+   "addr": "0x4002202C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "SECR0",
+   "addr": "0x40022030",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "WRPR1",
+   "addr": "0x40022034",
+   "category": "direct",
+   "kb_missing_reset": true
+  },
+  {
+   "peri": "FLASH",
+   "reg": "PCROPR1",
+   "addr": "0x40022038",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "SECR1",
+   "addr": "0x4002203C",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "FLASH",
+   "reg": "OPTBFB",
+   "addr": "0x40022060",
+   "category": "direct",
+   "kb_missing_reset": true
+  },
+  {
+   "peri": "CRC",
+   "reg": "DR",
+   "addr": "0x40023000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "CRC",
+    "enr_addr": "0x40021070",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "CRC",
+   "reg": "IDR",
+   "addr": "0x40023004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "CRC",
+    "enr_addr": "0x40021070",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "CRC",
+   "reg": "CR",
+   "addr": "0x40023008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "CRC",
+    "enr_addr": "0x40021070",
+    "mask": 65536
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "MODER",
+   "addr": "0x40024000",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "OTYPER",
+   "addr": "0x40024004",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "OSPDDER",
+   "addr": "0x40024008",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "PUPDR",
+   "addr": "0x4002400C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "IDR",
+   "addr": "0x40024010",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "ODR",
+   "addr": "0x40024014",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "BSRR",
+   "addr": "0x40024018",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "LCKR",
+   "addr": "0x4002401C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "AFRL",
+   "addr": "0x40024020",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "AFRH",
+   "addr": "0x40024024",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOA",
+   "reg": "BRR",
+   "addr": "0x40024028",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOA",
+    "enr_addr": "0x40021074",
+    "mask": 1
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "MODER",
+   "addr": "0x40024400",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "OTYPER",
+   "addr": "0x40024404",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "OSPDDER",
+   "addr": "0x40024408",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "PUPDR",
+   "addr": "0x4002440C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "IDR",
+   "addr": "0x40024410",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "ODR",
+   "addr": "0x40024414",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "BSRR",
+   "addr": "0x40024418",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "LCKR",
+   "addr": "0x4002441C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "AFRL",
+   "addr": "0x40024420",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "AFRH",
+   "addr": "0x40024424",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOB",
+   "reg": "BRR",
+   "addr": "0x40024428",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOB",
+    "enr_addr": "0x40021074",
+    "mask": 2
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "MODER",
+   "addr": "0x40024800",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "OTYPER",
+   "addr": "0x40024804",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "OSPDDER",
+   "addr": "0x40024808",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "PUPDR",
+   "addr": "0x4002480C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "IDR",
+   "addr": "0x40024810",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "ODR",
+   "addr": "0x40024814",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "BSRR",
+   "addr": "0x40024818",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "LCKR",
+   "addr": "0x4002481C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "AFRL",
+   "addr": "0x40024820",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "AFRH",
+   "addr": "0x40024824",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOC",
+   "reg": "BRR",
+   "addr": "0x40024828",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOC",
+    "enr_addr": "0x40021074",
+    "mask": 4
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "MODER",
+   "addr": "0x40024C00",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "OTYPER",
+   "addr": "0x40024C04",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "OSPDDER",
+   "addr": "0x40024C08",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "PUPDR",
+   "addr": "0x40024C0C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "IDR",
+   "addr": "0x40024C10",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "ODR",
+   "addr": "0x40024C14",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "BSRR",
+   "addr": "0x40024C18",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "LCKR",
+   "addr": "0x40024C1C",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "AFRL",
+   "addr": "0x40024C20",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "AFRH",
+   "addr": "0x40024C24",
+   "category": "needs_clock",
+   "kb_missing_reset": true,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "GPIOD",
+   "reg": "BRR",
+   "addr": "0x40024C28",
+   "category": "needs_clock",
+   "kb_missing_reset": false,
+   "clk": {
+    "periph": "GPIOD",
+    "enr_addr": "0x40021074",
+    "mask": 8
+   }
+  },
+  {
+   "peri": "DBGMCU",
+   "reg": "IDCODE",
+   "addr": "0xE0042000",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "DBGMCU",
+   "reg": "CR1",
+   "addr": "0xE0042004",
+   "category": "direct",
+   "kb_missing_reset": false
+  },
+  {
+   "peri": "DBGMCU",
+   "reg": "CR2",
+   "addr": "0xE0042008",
+   "category": "direct",
+   "kb_missing_reset": false
+  }
+ ]
+}

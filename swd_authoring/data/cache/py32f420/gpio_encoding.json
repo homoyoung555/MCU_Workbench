@@ -1,0 +1,553 @@
+{
+  "peripheral": "GPIO",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "GPIO",
+      "register": "MODER",
+      "field": "MODE0",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "GPIO_MODE_INPUT",
+          "value": 0,
+          "description": "Input Floating Mode",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_OUTPUT_PP",
+          "value": 1,
+          "description": "Output Push Pull Mode",
+          "abs_value": 1
+        },
+        {
+          "symbol": "GPIO_MODE_OUTPUT_OD",
+          "value": 1,
+          "description": "Output Open Drain Mode",
+          "abs_value": 1
+        },
+        {
+          "symbol": "GPIO_MODE_AF_PP",
+          "value": 2,
+          "description": "Alternate Function Push Pull Mode",
+          "abs_value": 2
+        },
+        {
+          "symbol": "GPIO_MODE_AF_OD",
+          "value": 2,
+          "description": "Alternate Function Open Drain Mode",
+          "abs_value": 2
+        },
+        {
+          "symbol": "GPIO_MODE_ANALOG",
+          "value": 3,
+          "description": "Analog Mode",
+          "abs_value": 3
+        },
+        {
+          "symbol": "GPIO_MODE_IT_RISING",
+          "value": 0,
+          "description": "External Interrupt Mode with Rising edge trigger detection",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_IT_FALLING",
+          "value": 0,
+          "description": "External Interrupt Mode with Falling edge trigger detection",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_IT_RISING_FALLING",
+          "value": 0,
+          "description": "External Interrupt Mode with Rising/Falling edge trigger detection",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_EVT_RISING",
+          "value": 0,
+          "description": "External Event Mode with Rising edge trigger detection",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_EVT_FALLING",
+          "value": 0,
+          "description": "External Event Mode with Falling edge trigger detection",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_EVT_RISING_FALLING",
+          "value": 0,
+          "description": "External Event Mode with Rising/Falling edge trigger detection",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [
+        "init_ir/output/gpio_init.json (tree-sitter)",
+        "py32f420_hal_gpio.h"
+      ],
+      "confidence": "c_placement",
+      "pin_templated": true,
+      "note": "Mode is a HAL semantic word: bits[1:0] -> MODER (this entry), bit4 -> OTYPER, bits[16+] select EXTI IT/EVT + edge - EXTI/SYSCFG setup is composer scope."
+    },
+    {
+      "peripheral": "GPIO",
+      "register": "OTYPER",
+      "field": "OT0",
+      "bit_offset": 0,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "GPIO_MODE_OUTPUT_PP",
+          "value": 0,
+          "description": "Output Push Pull Mode",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_OUTPUT_OD",
+          "value": 1,
+          "description": "Output Open Drain Mode",
+          "abs_value": 1
+        },
+        {
+          "symbol": "GPIO_MODE_AF_PP",
+          "value": 0,
+          "description": "Alternate Function Push Pull Mode",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_MODE_AF_OD",
+          "value": 1,
+          "description": "Alternate Function Open Drain Mode",
+          "abs_value": 1
+        }
+      ],
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Mode",
+      "source_chain": [
+        "init_ir/output/gpio_init.json (tree-sitter)",
+        "py32f420_hal_gpio.h"
+      ],
+      "confidence": "c_placement",
+      "pin_templated": true,
+      "note": "Output-type slice of the Mode word; written only for output/AF modes."
+    },
+    {
+      "peripheral": "GPIO",
+      "register": "PUPDR",
+      "field": "PUPD0",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "GPIO_NOPULL",
+          "value": 0,
+          "description": "No Pull-up or Pull-down activation",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_PULLUP",
+          "value": 1,
+          "description": "Pull-up activation",
+          "abs_value": 1
+        },
+        {
+          "symbol": "GPIO_PULLDOWN",
+          "value": 2,
+          "description": "Pull-down activation",
+          "abs_value": 2
+        }
+      ],
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Pull",
+      "source_chain": [
+        "init_ir/output/gpio_init.json (tree-sitter)",
+        "py32f420_hal_gpio.h"
+      ],
+      "confidence": "c_placement",
+      "pin_templated": true,
+      "note": "Raw 2-bit pull configuration."
+    },
+    {
+      "peripheral": "GPIO",
+      "register": "OSPEEDR",
+      "field": "OSPEED0",
+      "bit_offset": 0,
+      "bit_width": 2,
+      "encodings": [
+        {
+          "symbol": "GPIO_SPEED_FREQ_LOW",
+          "value": 0,
+          "description": "Low speed",
+          "abs_value": 0
+        },
+        {
+          "symbol": "GPIO_SPEED_FREQ_MEDIUM",
+          "value": 1,
+          "description": "Medium speed",
+          "abs_value": 1
+        },
+        {
+          "symbol": "GPIO_SPEED_FREQ_HIGH",
+          "value": 2,
+          "description": "High speed",
+          "abs_value": 2
+        },
+        {
+          "symbol": "GPIO_SPEED_FREQ_VERY_HIGH",
+          "value": 3,
+          "description": "Very high speed",
+          "abs_value": 3
+        }
+      ],
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Speed",
+      "source_chain": [
+        "init_ir/output/gpio_init.json (tree-sitter)",
+        "py32f420_hal_gpio.h"
+      ],
+      "confidence": "c_placement",
+      "pin_templated": true,
+      "note": "Raw 2-bit speed configuration."
+    }
+  ],
+  "multi_field_encodings": [
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_SET",
+      "abs_value": 65535,
+      "fields": [
+        {
+          "register": "BSRR",
+          "field": "BS0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS1",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS2",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS3",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS4",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS5",
+          "value": 1,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS6",
+          "value": 1,
+          "bit_offset": 6,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS7",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS8",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS9",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS10",
+          "value": 1,
+          "bit_offset": 10,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS11",
+          "value": 1,
+          "bit_offset": 11,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS12",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS13",
+          "value": 1,
+          "bit_offset": 13,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS14",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        },
+        {
+          "register": "BSRR",
+          "field": "BS15",
+          "value": 1,
+          "bit_offset": 15,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_GPIO_WritePin",
+      "init_struct_field": "PinState",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "GPIO",
+      "symbol": "GPIO_PIN_RESET",
+      "abs_value": 65535,
+      "fields": [
+        {
+          "register": "BRR",
+          "field": "BR0",
+          "value": 1,
+          "bit_offset": 0,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR1",
+          "value": 1,
+          "bit_offset": 1,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR2",
+          "value": 1,
+          "bit_offset": 2,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR3",
+          "value": 1,
+          "bit_offset": 3,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR4",
+          "value": 1,
+          "bit_offset": 4,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR5",
+          "value": 1,
+          "bit_offset": 5,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR6",
+          "value": 1,
+          "bit_offset": 6,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR7",
+          "value": 1,
+          "bit_offset": 7,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR8",
+          "value": 1,
+          "bit_offset": 8,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR9",
+          "value": 1,
+          "bit_offset": 9,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR10",
+          "value": 1,
+          "bit_offset": 10,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR11",
+          "value": 1,
+          "bit_offset": 11,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR12",
+          "value": 1,
+          "bit_offset": 12,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR13",
+          "value": 1,
+          "bit_offset": 13,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR14",
+          "value": 1,
+          "bit_offset": 14,
+          "bit_width": 1
+        },
+        {
+          "register": "BRR",
+          "field": "BR15",
+          "value": 1,
+          "bit_offset": 15,
+          "bit_width": 1
+        }
+      ],
+      "init_struct": "fn:HAL_GPIO_WritePin",
+      "init_struct_field": "PinState",
+      "description": "",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "numeric_fields": [
+    {
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Alternate",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "AFRL",
+        "field": "AFSEL0"
+      },
+      "pin_templated": true,
+      "note": "AF number 0..15; AFRL pins 0-7, AFRH pins 8-15, 4 bits per pin."
+    },
+    {
+      "init_struct": "GPIO_InitTypeDef",
+      "init_struct_field": "Alternate",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "AFRH",
+        "field": "AFSEL8"
+      },
+      "pin_templated": true,
+      "note": "AF number 0..15; AFRL pins 0-7, AFRH pins 8-15, 4 bits per pin."
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "GPIO_InitTypeDef",
+      "field": "Pin",
+      "ref": "GPIO_pins",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "GPIO_InitTypeDef",
+      "field": "Mode",
+      "ref": "GPIO_mode",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "GPIO_InitTypeDef",
+      "field": "Pull",
+      "ref": "GPIO_pull",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "GPIO_InitTypeDef",
+      "field": "Speed",
+      "ref": "GPIO_speed",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "GPIO_InitTypeDef",
+      "field": "Alternate",
+      "ref": "GPIOEx_Alternate_function_selection",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "fn:HAL_GPIO_WritePin",
+      "field": "PinState",
+      "ref": "IS:IS_GPIO_PIN_ACTION",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 4,
+    "multi_field_count": 0,
+    "total_encodings": 23,
+    "unresolved_count": 41,
+    "numeric_field_count": 2,
+    "gpio_backfill": true,
+    "llm_applied": true
+  }
+}

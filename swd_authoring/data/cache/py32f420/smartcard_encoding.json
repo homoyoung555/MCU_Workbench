@@ -1,0 +1,624 @@
+{
+  "peripheral": "SMARTCARD",
+  "chip": "py32f420",
+  "field_encodings": [
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR2",
+      "field": "CPOL",
+      "bit_offset": 10,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_POLARITY_LOW",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "CLKPolarity",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR2",
+      "field": "CPHA",
+      "bit_offset": 9,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_PHASE_1EDGE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "CLKPhase",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR2",
+      "field": "LBCL",
+      "bit_offset": 8,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_LASTBIT_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "CLKLastBit",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR3",
+      "field": "NACK",
+      "bit_offset": 4,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_NACK_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        },
+        {
+          "symbol": "SMARTCARD_NACK_ENABLE",
+          "value": 1,
+          "description": "",
+          "abs_value": 16
+        }
+      ],
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "NACKEnable",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR2",
+      "field": "RTOEN",
+      "bit_offset": 25,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_TIMEOUT_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "TimeOutEnable",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR1",
+      "field": "TX_INV",
+      "bit_offset": 26,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_ADVFEATURE_TXINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "TxPinLevelInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR1",
+      "field": "DATAINV",
+      "bit_offset": 27,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_ADVFEATURE_DATAINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "DataInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR1",
+      "field": "MSB",
+      "bit_offset": 15,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_ADVFEATURE_MSBFIRST_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "MSBFirst",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR1",
+      "field": "RX_INV",
+      "bit_offset": 25,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_ADVFEATURE_RXINV_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "RxPinLevelInvert",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "peripheral": "SMARTCARD",
+      "register": "CR1",
+      "field": "SWAP",
+      "bit_offset": 18,
+      "bit_width": 1,
+      "encodings": [
+        {
+          "symbol": "SMARTCARD_ADVFEATURE_SWAP_DISABLE",
+          "value": 0,
+          "description": "",
+          "abs_value": 0
+        }
+      ],
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "Swap",
+      "source_chain": [
+        "llm:MiniMax-M2.7-Highspeed"
+      ],
+      "confidence": "llm_inferred",
+      "llm_confidence": "high"
+    }
+  ],
+  "multi_field_encodings": [],
+  "numeric_fields": [
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "TimeOutValue",
+      "is_macro": "IS_SMARTCARD_TIMEOUT_VALUE",
+      "min": 0,
+      "max": 16777215,
+      "placement": null
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "AutoRetryCount",
+      "is_macro": "IS_SMARTCARD_AUTORETRY_COUNT",
+      "min": 0,
+      "max": 7,
+      "placement": null
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "M0"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "WordLength",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "M1"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "StopBits",
+      "is_macro": null,
+      "min": 0,
+      "max": 3,
+      "placement": {
+        "register": "CR2",
+        "field": "STOP"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "Parity",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "PS"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "Parity",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "PCE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "Mode",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "TE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "Mode",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "RE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "Prescaler",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "GTPR",
+        "field": "PSC"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "GuardTime",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "GTPR",
+        "field": "GT"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "BlockLength",
+      "is_macro": null,
+      "min": 0,
+      "max": 255,
+      "placement": {
+        "register": "RTOR",
+        "field": "BLEN"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "init_struct_field": "TxCompletionIndication",
+      "is_macro": null,
+      "min": 0,
+      "max": 1,
+      "placement": {
+        "register": "CR1",
+        "field": "TCIE"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": null,
+      "min": 0,
+      "max": 15,
+      "placement": {
+        "register": "BRR",
+        "field": "DIV_FRA"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "SMARTCARD_InitTypeDef",
+      "init_struct_field": "BaudRate",
+      "is_macro": null,
+      "min": 0,
+      "max": 4095,
+      "placement": {
+        "register": "BRR",
+        "field": "DIV_MAN"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "high"
+    },
+    {
+      "init_struct": "fn:HAL_SMARTCARDEx_SetTxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "is_macro": null,
+      "min": 0,
+      "max": 7,
+      "placement": {
+        "register": "CR1",
+        "field": "TXFTCFG"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    },
+    {
+      "init_struct": "fn:HAL_SMARTCARDEx_SetRxFifoThreshold",
+      "init_struct_field": "Threshold",
+      "is_macro": null,
+      "min": 0,
+      "max": 7,
+      "placement": {
+        "register": "CR1",
+        "field": "RXFTCFG"
+      },
+      "source": "llm_inferred",
+      "llm_confidence": "medium"
+    }
+  ],
+  "config_units": [
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "BaudRate",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "WordLength",
+      "ref": "SMARTCARD_Word_Length",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "StopBits",
+      "ref": "SMARTCARD_Stop_Bits",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "Parity",
+      "ref": "SMARTCARD_Parity",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "Mode",
+      "ref": "SMARTCARD_Mode",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "CLKPolarity",
+      "ref": "SMARTCARD_Clock_Polarity",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "CLKPhase",
+      "ref": "SMARTCARD_Clock_Phase",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "CLKLastBit",
+      "ref": "SMARTCARD_Last_Bit",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "Prescaler",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "GuardTime",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "NACKEnable",
+      "ref": "SMARTCARD_NACK_Enable",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "TimeOutEnable",
+      "ref": "SMARTCARD_Timeout_Enable",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "TimeOutValue",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "BlockLength",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "SMARTCARD_InitTypeDef",
+      "field": "AutoRetryCount",
+      "ref": null,
+      "kind": "struct",
+      "type": "uint8_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "AdvFeatureInit",
+      "ref": "SMARTCARDEx_Advanced_Features_Initialization_Type",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "TxPinLevelInvert",
+      "ref": "SMARTCARD_Tx_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "RxPinLevelInvert",
+      "ref": "SMARTCARD_Rx_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "DataInvert",
+      "ref": "SMARTCARD_Data_Inv",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "Swap",
+      "ref": "SMARTCARD_Rx_Tx_Swap",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "MSBFirst",
+      "ref": "SMARTCARD_MSB_First",
+      "kind": "struct",
+      "type": "uint32_t"
+    },
+    {
+      "struct": "SMARTCARD_AdvFeatureInitTypeDef",
+      "field": "TxCompletionIndication",
+      "ref": "SMARTCARDEx_Transmission_Completion_Indication",
+      "kind": "struct",
+      "type": "uint16_t"
+    },
+    {
+      "struct": "fn:HAL_SMARTCARDEx_SetTxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_SMARTCARD_TXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    },
+    {
+      "struct": "fn:HAL_SMARTCARDEx_SetRxFifoThreshold",
+      "field": "Threshold",
+      "ref": "IS:IS_SMARTCARD_RXFIFO_THRESHOLD",
+      "kind": "param",
+      "type": "param"
+    }
+  ],
+  "stats": {
+    "field_encoding_count": 10,
+    "multi_field_count": 0,
+    "total_encodings": 0,
+    "unresolved_count": 64,
+    "numeric_field_count": 17,
+    "llm_applied": true
+  }
+}

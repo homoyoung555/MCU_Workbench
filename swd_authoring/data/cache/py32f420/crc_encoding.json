@@ -1,0 +1,15 @@
+{
+  "peripheral": "CRC",
+  "chip": "py32f420",
+  "field_encodings": [],
+  "multi_field_encodings": [],
+  "numeric_fields": [],
+  "config_units": [],
+  "stats": {
+    "field_encoding_count": 0,
+    "multi_field_count": 0,
+    "total_encodings": 0,
+    "unresolved_count": 1,
+    "numeric_field_count": 0
+  }
+}
